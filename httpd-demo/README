@@ -1,0 +1,15 @@
+## Default httpd image configuration
+Backup original httpd.conf
+docker cp demohttpd:/usr/local/apache2/conf/httpd.conf httpd.conf.origin
+ErrorLog /proc/self/fd/2
+CustomLog /proc/self/fd/1 common
+
+docker exec demohttpd cat /usr/local/apache2/htdocs/index.html
+<html><body><h1>It works!</h1></body></html>
+
+## How to enable log for rewrite_module
+LoadModule rewrite_module modules/mod_rewrite.so
+LogLevel alert rewrite:trace3 alias:debug
+RewriteEngine On
+RewriteRule /a.html /b.html [R=301,L]
+
