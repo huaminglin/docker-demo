@@ -13,3 +13,16 @@ LogLevel alert rewrite:trace3 alias:debug
 RewriteEngine On
 RewriteRule /a.html /b.html [R=301,L]
 
+
+## apachectl -l
+docker exec -it demohttpd apachectl -l
+Compiled in modules:
+  core.c
+  mod_so.c
+  http_core.c
+
+## apachectl configtest
+docker exec -it demohttpd apachectl configtest
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+Syntax OK
+
