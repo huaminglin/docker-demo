@@ -1,0 +1,7 @@
+docker exec demotomcat ls  /usr/local/tomcat/webapps
+ROOT
+docs
+examples
+host-manager
+manager
+
