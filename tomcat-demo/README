@@ -1,7 +1,27 @@
-docker exec demotomcat ls  /usr/local/tomcat/webapps
+## docker exec demotomcat ls /usr/local/tomcat/webapps
 ROOT
 docs
 examples
 host-manager
 manager
+
+## docker exec demotomcat ls -al /usr/lib/jvm/java-8-openjdk-amd64/bin/
+total 12
+drwxr-xr-x 1 root root 4096 Aug 14 22:44 .
+drwxr-xr-x 1 root root 4096 Aug 14 22:44 ..
+lrwxrwxrwx 1 root root   15 Aug  9 22:11 java -> ../jre/bin/java
+-rwxr-xr-x 1 root root 2806 Aug  9 22:11 java-rmi.cgi
+lrwxrwxrwx 1 root root   14 Aug  9 22:11 jjs -> ../jre/bin/jjs
+lrwxrwxrwx 1 root root   18 Aug  9 22:11 keytool -> ../jre/bin/keytool
+lrwxrwxrwx 1 root root   15 Aug  9 22:11 orbd -> ../jre/bin/orbd
+lrwxrwxrwx 1 root root   18 Aug  9 22:11 pack200 -> ../jre/bin/pack200
+lrwxrwxrwx 1 root root   21 Aug  9 22:11 policytool -> ../jre/bin/policytool
+lrwxrwxrwx 1 root root   15 Aug  9 22:11 rmid -> ../jre/bin/rmid
+lrwxrwxrwx 1 root root   22 Aug  9 22:11 rmiregistry -> ../jre/bin/rmiregistry
+lrwxrwxrwx 1 root root   21 Aug  9 22:11 servertool -> ../jre/bin/servertool
+lrwxrwxrwx 1 root root   20 Aug  9 22:11 tnameserv -> ../jre/bin/tnameserv
+lrwxrwxrwx 1 root root   20 Aug  9 22:11 unpack200 -> ../jre/bin/unpack200
+
+## server.xml
+docker cp demotomcat:/usr/local/tomcat/conf/server.xml server.xml.origin
 

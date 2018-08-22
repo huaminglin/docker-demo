@@ -1,0 +1,62 @@
+## keytool -genkey --help
+docker exec -it demotomcat keytool -genkey --help
+keytool -genkeypair [OPTION]...
+
+Generates a key pair
+
+Options:
+
+ -alias <alias>                  alias name of the entry to process
+ -keyalg <keyalg>                key algorithm name
+ -keysize <keysize>              key bit size
+ -sigalg <sigalg>                signature algorithm name
+ -destalias <destalias>          destination alias
+ -dname <dname>                  distinguished name
+ -startdate <startdate>          certificate validity start date/time
+ -ext <value>                    X.509 extension
+ -validity <valDays>             validity number of days
+ -keypass <arg>                  key password
+ -keystore <keystore>            keystore name
+ -storepass <arg>                keystore password
+ -storetype <storetype>          keystore type
+ -providername <providername>    provider name
+ -providerclass <providerclass>  provider class name
+ -providerarg <arg>              provider argument
+ -providerpath <pathlist>        provider classpath
+ -v                              verbose output
+ -protected                      password through protected mechanism
+
+Use "keytool -help" for all available commands
+
+
+## docker exec demotomcat keytool -exportcert --help
+keytool -exportcert [OPTION]...
+
+Exports certificate
+
+Options:
+
+ -rfc                            output in RFC style
+ -alias <alias>                  alias name of the entry to process
+ -file <filename>                output file name
+ -keystore <keystore>            keystore name
+ -storepass <arg>                keystore password
+ -storetype <storetype>          keystore type
+ -providername <providername>    provider name
+ -providerclass <providerclass>  provider class name
+ -providerarg <arg>              provider argument
+ -providerpath <pathlist>        provider classpath
+ -v                              verbose output
+ -protected                      password through protected mechanism
+
+
+## Generate a default type keystore
+docker exec -it demotomcat keytool -genkey -alias tomcat -keyalg RSA -storepass storechangeit -keypass keychangeit -keystore /root/tomcat.jks
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /root/tomcat.jks -destkeystore /root/tomcat.jks -deststoretype pkcs12".
+
+## keytool -genkey -storetype pkcs12 -storepass storechangeit -keypass keychangeit
+docker exec -it demotomcat keytool -genkey -alias tomcat -keyalg RSA -storepass storechangeit -keypass keychangeit -keystore /root/tomcat.jks -storetype pkcs12
+Warning:  Different store and key passwords not supported for PKCS12 KeyStores. Ignoring user-specified -keypass value.
+

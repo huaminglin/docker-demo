@@ -1,0 +1,17 @@
+## curl https://127.0.0.1:10443/
+curl: (60) SSL certificate problem: self signed certificate
+More details here: https://curl.haxx.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not establish a secure connection to it.
+To learn more about this situation and how to fix it, please visit the web page mentioned above.
+
+## curl insecure
+curl --insecure https://127.0.0.1:10443/
+
+
+## curl certificate
+curl --cacert keytool/tomcata.pem https://127.0.0.1:10443/
+
+When cn is 'myfirst mylast', the following error happens:
+curl: (51) SSL: certificate subject name 'myfirst mylast' does not match target host name '127.0.0.1'
+
