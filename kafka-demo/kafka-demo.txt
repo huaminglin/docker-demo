@@ -1,0 +1,8 @@
+$KAFKA_HOME/bin/kafka-topics.sh --create --topic test --zookeeper kafka-demo_zookeeper_1:2181 --replication-factor 1 --partitions 1
+
+$KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper kafka-demo_zookeeper_1:2181
+
+$KAFKA_HOME/bin/kafka-console-producer.sh --topic=test --broker-list kafka-demo_kafka_1:9092
+
+$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server kafka-demo_kafka_1:9092 --from-beginning --topic test
+
