@@ -1,0 +1,2 @@
+## Kibana Index Pattern
+http://127.0.0.1:5601/app/kibana#/management
