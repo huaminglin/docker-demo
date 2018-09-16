@@ -1,0 +1,5 @@
+## Post a log to fluentd through HTTP API
+curl -X POST -d 'json={"action":"login","user":2}' http://localhost:24280/td.testdb.www_access
+
+## Check the latest log sent to fluentd
+docker exec demofluentd cat /fluentd/log/data.log
