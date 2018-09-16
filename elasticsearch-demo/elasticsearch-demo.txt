@@ -1,0 +1,18 @@
+## Check status
+http://127.0.0.1:9200/
+http://127.0.0.1:9200/_cat/health
+http://127.0.0.1:9200/_cat/nodes?v
+http://localhost:9200/_cat/indices?v
+http://localhost:9200/_mapping?pretty=true
+
+## Create Index
+curl -X PUT 'http://localhost:9200/customer?pretty'
+
+## Create a document
+curl -X PUT  -H "Content-Type: application/json" -d '{"name": "John Doe"}' http://localhost:9200/customer/_doc/1?pretty
+
+## View the document
+http://localhost:9200/customer/_doc/1?pretty
+http://localhost:9200/customer/_search
+http://localhost:9200/customer/_search?q=name:Joh -> no match
+http://localhost:9200/customer/_search?q=name:John -> match John Doe"
