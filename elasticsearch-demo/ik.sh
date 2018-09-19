@@ -2,9 +2,9 @@
 
 cd $(dirname $0)
 
-docker cp /home/myname/Downloads/elasticsearch-analysis-ik-6.4.0.zip demoelasticsearch:/tmp
+docker cp /home/myname/Downloads/elasticsearch-analysis-ik-6.4.0.zip elasticsearch-demo_elasticsearch_1:/tmp
 
-docker start demoelasticsearch
-docker exec -it demoelasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///tmp/elasticsearch-analysis-ik-6.4.0.zip
+docker start elasticsearch-demo_elasticsearch_1
+docker exec -it elasticsearch-demo_elasticsearch_1 /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///tmp/elasticsearch-analysis-ik-6.4.0.zip
 
-docker restart demoelasticsearch
+docker restart elasticsearch-demo_elasticsearch_1
