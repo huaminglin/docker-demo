@@ -8,6 +8,10 @@ docker exec -it kafka-demo_kafka_1 /bin/bash -c 'kafka-console-producer --topic=
 # Start a console to listen a topic:
 docker exec -it kafka-demo_kafka_1 /bin/bash -c 'kafka-console-consumer --bootstrap-server kafka-demo_kafka_1:9092 --from-beginning --topic test'
 
+## Kafdrop
+http://localhost:9010
+
+
 ## Check kafka-demo_zookeeper_1 running command
 docker exec -it kafka-demo_zookeeper_1 /bin/bash -c 'cat /proc/1/cmdline | tr \\0 \\n'
 java
