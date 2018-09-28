@@ -1,0 +1,10 @@
+Kafka Development Environment
+
+docker run --rm --net=host landoop/fast-data-dev
+
+docker run --rm --net=host -e ADV_HOST=<IP> landoop/fast-data-dev
+
+http://127.0.0.1:3030/
+
+It seems there is no way to add new topic or check topic consumers.
+Maybe I need to learn how to use Kafka built-in scripts to check status.

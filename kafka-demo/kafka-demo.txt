@@ -10,7 +10,11 @@ docker exec -it kafka-demo_kafka_1 /bin/bash -c 'kafka-console-consumer --bootst
 
 ## Kafdrop
 http://localhost:9010
+It seems Kafdrop doesn't work well with Kafka 2.0: it can't list topic consumers.
 
+## Kafka manager
+http://localhost:9000
+It seems Kafdrop doesn't work well with Kafka 2.0: it can't list any Kafka cluster.
 
 ## Check kafka-demo_zookeeper_1 running command
 docker exec -it kafka-demo_zookeeper_1 /bin/bash -c 'cat /proc/1/cmdline | tr \\0 \\n'

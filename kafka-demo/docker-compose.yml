@@ -24,4 +24,9 @@ services:
     environment:
       ZK_HOSTS: zookeeper:2181
       LISTEN: 9010
-
+  kafkamanager:
+    image: sheepkiller/kafka-manager
+    ports:
+      - "9000:9000"
+    environment:
+      ZK_HOSTS: zookeeper:2181
