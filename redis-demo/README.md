@@ -1,4 +1,5 @@
 ## redis-cli
-docker exec -it demoredis redis-cli info
+docker-compose exec client bash
+redis-cli -h server info
 
 ## redis-server
