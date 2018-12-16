@@ -4,7 +4,7 @@ services:
     image: redis:5.0
     ports:
       - 6379:6379
-    command: ["redis-server", "--appendonly", "yes"]
+    command: ["redis-server"]
   client:
     image: redis:5.0
     entrypoint: /bin/bash
