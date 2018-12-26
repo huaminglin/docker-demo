@@ -30,6 +30,7 @@ secure-file-priv=/var/lib/mysql-files
 user=mysql
 
 log-error=/var/log/mysqld.log
+log_error_verbosity=3 # 2: error and warning messages only
 pid-file=/var/run/mysqld/mysqld.pid
 
 general_log=on

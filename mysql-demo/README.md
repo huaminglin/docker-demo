@@ -115,7 +115,25 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 2018-12-26T09:10:12.818395Z	   12 Connect	healthchecker@localhost on  using Socket
 2018-12-26T09:10:12.819086Z	   12 Quit	
 
-docker exec demomysql mysql mysql -e "show tables"
+## is not allowed to connect to this MySQL server
+docker-compose exec client mysql -h server
+ERROR 1130 (HY000): Host '172.29.0.3' is not allowed to connect to this MySQL server
+
+docker-compose exec server mysql -pdemo mysql -e "SELECT host FROM mysql.user WHERE User = 'root'"
++-----------+
+| host      |
++-----------+
+| localhost |
++-----------+
+
+docker-compose exec server mysql -pdemo mysql -e "show variables like \"%\"" | grep bind
+| bind_address                                             | *
+| mysqlx_bind_address                                      | *
+
+docker-compose exec server tail -f /var/log/mysql.general.log
+docker-compose exec server tail -f /var/log/mysqld.log
+
+docker-compose exec server mysql -pdemo mysql -e "CREATE USER 'root'@'172.%' IDENTIFIED BY 'demo';GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.%';FLUSH PRIVILEGES;"
 
 ## Character set of connection
 docker-compose exec server mysql -pdemo mysql -e "SHOW SESSION VARIABLES LIKE 'character\_set\_%'"
