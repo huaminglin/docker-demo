@@ -160,6 +160,25 @@ docker-compose exec server bash -c "tail -f /var/log/mysql.general.log /var/log/
 2018-12-27T07:40:52.035878Z	   16 Query	SELECT DATABASE()
 2018-12-27T07:40:52.044675Z	   16 Query	show tables
 
+## Connection without password
+docker-compose exec server bash -c "tail -f /var/log/mysql.general.log /var/log/mysqld.log"
+docker-compose exec client mysql -h server
+ERROR 1045 (28000): Access denied for user 'root'@'172.30.0.3' (using password: NO)
+
+==> /var/log/mysql.general.log <==
+2018-12-27T11:14:54.687513Z	   48 Connect	root@172.30.0.3 on  using SSL/TLS
+2018-12-27T11:14:54.687606Z	   48 Connect	Access denied for user 'root'@'172.30.0.3' (using password: NO)
+==> /var/log/mysqld.log <==
+2018-12-27T11:14:54.687626Z 48 [Note] [MY-010926] [Server] Access denied for user 'root'@'172.30.0.3' (using password: NO)
+
+## There is no connection log for the MySQL Workbench from another network
+MySQL server runs on the docker container of Linux virtual machine.
+MySQL Workbench runs on the Windows who hosts Linux virtual machine.
+Error Code: 1130 Host 'xxx' is not allowed to connect to this MySQL server	
+
+Conclusion: "ERROR 1045 (28000)" vs "Error Code: 1130"
+"ERROR 1045 (28000)" is written to error log, but "Error Code: 1130" is not.
+
 ## Character set of connection
 docker-compose exec server mysql -pdemo mysql -e "SHOW SESSION VARIABLES LIKE 'character\_set\_%'"
 +--------------------------+--------+
