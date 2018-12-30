@@ -21,3 +21,17 @@ services:
     tty: true
     networks:
       - mysql
+  client2:
+    image: mysql/mysql-server:8.0
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
+    networks:
+      - mysql
+  client3:
+    image: amouat/network-utils
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
+    networks:
+      - mysql

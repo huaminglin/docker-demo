@@ -178,6 +178,56 @@ Error Code: 1130 Host 'xxx' is not allowed to connect to this MySQL server
 
 Conclusion: "ERROR 1045 (28000)" vs "Error Code: 1130"
 "ERROR 1045 (28000)" is written to error log, but "Error Code: 1130" is not.
+Maybe "Error Code: 1130" is specific for the connection error from unknown host (no mapping in the user table).
+
+## MySQL and DNS
+docker-compose exec server mysql -pdemo mysql -e "show variables like \"%host%\"" 
+mysql: [Warning] Using a password on the command line interface can be insecure.
++-------------------------------+--------------+
+| Variable_name                 | Value        |
++-------------------------------+--------------+
+| host_cache_size               | 279          |
+| hostname                      | 37e2d8ee3098 |
+| performance_schema_hosts_size | -1           |
+| report_host                   |              |
++-------------------------------+--------------+
+
+docker-compose exec server mysql -pdemo mysql -e "show variables like \"%resolve%\"" 
+mysql: [Warning] Using a password on the command line interface can be insecure.
++-------------------+-------+
+| Variable_name     | Value |
++-------------------+-------+
+| skip_name_resolve | ON    |
++-------------------+-------+
+
+Note: skip_name_resolve is on by default for mysql/mysql-server:8.0 image.
+
+## MySQL: remove skip_name_resolve and skip-host-cache from my-log.cnf
+docker-compose exec client mysql -h server -pdemo mysql -e "show tables"
+
+docker-compose exec server mysql -pdemo performance_schema -e "select IP, HOST from host_cache"
+mysql: [Warning] Using a password on the command line interface can be insecure.
++------------+--------------------------------------+
+| IP         | HOST                                 |
++------------+--------------------------------------+
+| 172.30.0.4 | mysql-demo_client_1.mysql-demo_mysql |
++------------+--------------------------------------+
+
+docker-compose exec server mysql -pdemo performance_schema -e "select * from hosts"
+mysql: [Warning] Using a password on the command line interface can be insecure.
++--------------------------------------+---------------------+-------------------+
+| HOST                                 | CURRENT_CONNECTIONS | TOTAL_CONNECTIONS |
++--------------------------------------+---------------------+-------------------+
+| NULL                                 |                  41 |                46 |
+| localhost                            |                   1 |                11 |
+| mysql-demo_client_1.mysql-demo_mysql |                   0 |                 2 |
++--------------------------------------+---------------------+-------------------+
+
+docker-compose exec client mysql -h server
+ERROR 1045 (28000): Access denied for user 'root'@'mysql-demo_client_1.mysql-demo_mysql' (using password: NO)
+docker-compose exec client2 mysql -h server
+ERROR 1130 (HY000): Host 'mysql-demo_client2_1.mysql-demo_mysql' is not allowed to connect to this MySQL server
+Conclusion: "ERROR 1045" is for connection from host in user table, and "ERROR 1130" is for host not in user table.
 
 ## Connection status from localhost
 docker-compose exec server mysql -pdemo mysql -e "status"
