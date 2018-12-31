@@ -55,6 +55,11 @@ hexdump /tmp/t1.MYD
 0000010 6161 a5c2 6262 6262                    
 0000018
 
+hexdump -C /tmp/t1.MYD
+00000000  03 00 14 00 fc 07 61 61  61 a5 62 62 62 0a 61 61  |......aaa.bbb.aa|
+00000010  61 61 c2 a5 62 62 62 62                           |aa..bbbb|
+00000018
+
 od -tx1 /tmp/t1.MYD
 0000000 03 00 14 00 fc 07 61 61 61 a5 62 62 62 0a 61 61
 0000020 61 61 c2 a5 62 62 62 62
@@ -269,5 +274,32 @@ utf8 connection	1
 
 Conclusion: Character Set Introducer has higher priority than character_set_connection. The String literal doesn't convert to character_set_connection. The String literal doesn't convert to Character Set Introducer either. It just keeps its byte value. The MySQL parser tries to convert the raw bytes into Character Set Introducer.
 
+## character set and its binary value
+select CONVERT('a' using utf8) = CONVERT('a' using latin1);
+select CONVERT('¥' using utf8) = CONVERT('¥' using latin1);
+Set Terminal > Preferences > Unnamed > Compatibility > Encoding: Western - ISO-8859-1
+
+docker-compose exec server bash -c "mysql --default-character-set=latin1 -pdemo mysql < /sql/query-latin1.sql"
+HEX(BINARY CONVERT('¥' using utf8))	HEX(BINARY CONVERT('¥' using latin1))	CONVERT('¥' using utf8) = CONVERT('¥' using latin1)	BINARY CONVERT('¥' using utf8) = BINARY CONVERT('¥' using latin1)
+C2A5	A5	1	0
+
+docker-compose exec server bash -c "mysql --default-character-set=utf8mb4 -pdemo mysql < /sql/query-latin1.sql"
+HEX(BINARY CONVERT('?' using utf8))	HEX(BINARY CONVERT('?' using latin1))	CONVERT('?' using utf8) = CONVERT('?' using latin1)	BINARY CONVERT('?' using utf8) = BINARY CONVERT('?' using latin1)
+3F	3F	1	1
+
+docker-compose exec server bash -c "mysql --default-character-set=utf8mb4 -pdemo mysql < /sql/query-utf8.sql"
+HEX(BINARY CONVERT('Â¥' using utf8))	HEX(BINARY CONVERT('Â¥' using latin1))	CONVERT('Â¥' using utf8) = CONVERT('Â¥' using latin1)	BINARY CONVERT('Â¥' using utf8) = BINARY CONVERT('Â¥' using latin1)
+C2A5	A5	1	0
+
+docker-compose exec server bash -c "mysql --default-character-set=latin1 -pdemo mysql < /sql/query-utf8.sql"
+HEX(BINARY CONVERT('Â¥' using utf8))	HEX(BINARY CONVERT('Â¥' using latin1))	CONVERT('Â¥' using utf8) = CONVERT('Â¥' using latin1)	BINARY CONVERT('Â¥' using utf8) = BINARY CONVERT('Â¥' using latin1)
+C382C2A5	C2A5	1	0
+
+Conclusion: 
+Each MySQL string belongs to a character set;
+Strings in different character set can be equal as long as they are the same character sequence;
+BINARY() and HEX() can be used to view a MySQL string in binary mode.
+
 ## Encoding conversions from MySQL CLI to MySQL server
 Terminal Encoding Settings -> character_set_client -> character_set_connection -> The internal operation character set -> character_set_results
+
