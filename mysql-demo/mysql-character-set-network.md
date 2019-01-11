@@ -155,5 +155,14 @@ Character "是" in utf8 has no mapping in latin1, and it is converted into "?".
 5) sql source file --> network -> from character_set_client to character_set_connection -> sql process -> from CHARSET() to character_set_results --> network -> Client Terminal
 6) If a character in set1 has no mapping in set2, it is converted into "?" by MySQL server.
 
-## Questions: 
-1) "select col1 from t3", does mysql server convert the column data from its character set to character_set_connection and finally to character_set_results?
+## MySQL variable is converted directly from its charset() to character_set_results, no charset() to character_set_connection is used.
+Set Terminal > Preferences > Unnamed > Compatibility > Encoding: Unicode - UTF-8
+
+docker-compose exec server bash -c "mysql -pdemo -e \"SET character_set_connection='latin1'; SET character_set_results='utf8'; SELECT _utf8 X'e698af';\""
++-----------------+
+| _utf8 X'e698af' |
++-----------------+
+| 是             |
++-----------------+
+
+charset(_utf8 X'e698af') is utf8, character_set_connection is latin1, so if charset() to character_set_connection happens, "是" will be converted into "?".
