@@ -18,6 +18,8 @@ services:
   client:
     image: mysql/mysql-server:8.0
     entrypoint: /bin/bash
+    volumes:
+      - ./sql:/sql
     stdin_open: true
     tty: true
     networks:

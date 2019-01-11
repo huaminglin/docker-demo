@@ -15,4 +15,4 @@ sleep 20
 docker-compose exec server mysql -pdemo mysql -e "CREATE USER 'root'@'mysql-demo_client_1%' IDENTIFIED BY 'demo';"
 
 docker-compose exec server mysql -pdemo mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'mysql-demo_client_1%';FLUSH PRIVILEGES;"
-docker-compose exec server mysql -pdemo mysql -e "show variables like \"%general%\""
+docker-compose exec server mysql -pdemo mysql -e "SHOW VARIABLES LIKE \"%general%\""
