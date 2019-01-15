@@ -1,4 +1,19 @@
 ## Character set of connection
+a. Default global value
+docker-compose exec server mysql -pdemo mysql -e "SHOW GLOBAL VARIABLES LIKE 'character\_set\_%'"
+mysql: [Warning] Using a password on the command line interface can be insecure.
++--------------------------+--------+
+| Variable_name            | Value  |
++--------------------------+--------+
+| character_set_client     | utf8   |
+| character_set_connection | utf8   |
+| character_set_database   | utf8   |
+| character_set_filesystem | binary |
+| character_set_results    | utf8   |
+| character_set_server     | utf8   |
+| character_set_system     | utf8   |
+
+b. Connection from localhost
 docker-compose exec server mysql -pdemo mysql -e "SHOW SESSION VARIABLES LIKE 'character\_set\_%'"
 +--------------------------+--------+
 | Variable_name            | Value  |
@@ -12,6 +27,104 @@ docker-compose exec server mysql -pdemo mysql -e "SHOW SESSION VARIABLES LIKE 'c
 | character_set_system     | utf8   |
 +--------------------------+--------+
 
+Note: How does character_set_client become latin1 when the default value is utf8?
+
+c. Connection from another container
+docker run -it --rm --net=container:mysql-demo_server_1 -v /var/tmp:/capture itsthenetwork/alpine-tcpdump:latest -v -i eth0 -w /capture/mysql-demo_server_1-login-container.pcap
+
+docker-compose exec client mysql --version
+mysql  Ver 8.0.13 for Linux on x86_64 (MySQL Community Server - GPL)
+
+docker-compose exec client mysql -h server -pdemo mysql -e "SHOW SESSION VARIABLES LIKE 'character\_set\_%'"
+mysql: [Warning] Using a password on the command line interface can be insecure.
++--------------------------+--------+
+| Variable_name            | Value  |
++--------------------------+--------+
+| character_set_client     | latin1 |
+| character_set_connection | latin1 |
+| character_set_database   | utf8   |
+| character_set_filesystem | binary |
+| character_set_results    | latin1 |
+| character_set_server     | utf8   |
+| character_set_system     | utf8   |
++--------------------------+--------+
+
+
+There is something in the TCP packages which will affect the connection default character set values
+    Server Greeting
+        Protocol: 10
+        Version: 8.0.13
+        Thread ID: 103
+        Salt: xl\t~M\036{e
+        Server Capabilities: 0xffff
+        Server Language: utf8 COLLATE utf8_general_ci (33)
+        Server Status: 0x0002
+        Extended Server Capabilities: 0xc3ff
+        Authentication Plugin Length: 21
+        Unused: 00000000000000000000
+        Salt: 7MCg89O>9aBB
+        Authentication Plugin: caching_sha2_password
+
+    Login Request
+        Client Capabilities: 0xaa0d
+        Extended Client Capabilities: 0x01bf
+        MAX Packet: 16777216
+        Charset: latin1 COLLATE latin1_swedish_ci (8)
+        Username: [Empty]
+
+d. Connection from a host outside of docker container
+docker run -it --rm --net=container:mysql-demo_server_1 -v /var/tmp:/capture itsthenetwork/alpine-tcpdump:latest -v -i eth0 -w /capture/mysql-demo_server_1-login-client-old.pcap
+
+mysql --version
+mysql  Ver 14.14 Distrib 5.7.24, for Linux (x86_64) using  EditLine wrapper
+
+mysql -pdemo -h 127.0.0.1 -P 6603 -u root mysql -e "SHOW SESSION VARIABLES LIKE 'character\_set\_%'"
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
++--------------------------+--------+
+| Variable_name            | Value  |
++--------------------------+--------+
+| character_set_client     | utf8   |
+| character_set_connection | utf8   |
+| character_set_database   | utf8   |
+| character_set_filesystem | binary |
+| character_set_results    | utf8   |
+| character_set_server     | utf8   |
+| character_set_system     | utf8   |
++--------------------------+--------+
+
+There is something in the TCP packages which will affect the connection default character set values
+(1) MySQL server greeting message to client
+    Server Greeting
+        Protocol: 10
+        Version: 8.0.13
+        Thread ID: 5972
+        Salt: \016j\021\177 J\a0
+        Server Capabilities: 0xffff
+        Server Language: utf8 COLLATE utf8_general_ci (33)
+        Server Status: 0x0002
+        Extended Server Capabilities: 0xc3ff
+        Authentication Plugin Length: 21
+        Unused: 00000000000000000000
+        Salt: ?-=8@>;/\021)6.
+        Authentication Plugin: caching_sha2_password
+(2) MySQL client login request to server
+    Login Request
+        Client Capabilities: 0xa28f
+        Extended Client Capabilities: 0x013e
+        MAX Packet: 16777215
+        Charset: utf8 COLLATE utf8_general_ci (33)
+        Username: root
+        Password: c2635b5c97415bf0446142f858b1fd6eb3278820b74f8ce6...
+        Schema: mysql
+        Client Auth Plugin: caching_sha2_password
+        Connection Attributes
+
+f. Conclusion
+MySQL Client Login Request has a charset field:  Charset: utf8 COLLATE utf8_general_ci, and this field does affect the default session values.
+This means a MySQL client can use "Login Request" in the HandShake process to set charset.
+
+## Check collation
 docker-compose exec server mysql -pdemo mysql -e "SHOW SESSION VARIABLES LIKE 'collation\_%'"
 +----------------------+-------------------+
 | Variable_name        | Value             |
