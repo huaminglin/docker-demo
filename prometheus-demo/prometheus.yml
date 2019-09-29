@@ -30,3 +30,8 @@ scrape_configs:
     # scheme defaults to 'http'.
     static_configs:
     - targets: ['actuator:8080']
+  - job_name: 'cadvisor'
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+    - targets: ['cadvisor:8080']
