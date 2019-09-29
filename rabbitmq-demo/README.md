@@ -1,3 +1,5 @@
+http://127.0.0.1:15672/
+
 docker exec -it rabbitmq bash
 
 rabbitmqadmin list users
