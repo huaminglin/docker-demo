@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  consul:
+    image: consul
+    network_mode: "host"
+    command: agent -dev -server -node=firstconsul -config-dir=/consul.d -dns-port=53 -bind=172.17.0.1 -client=172.17.0.1 -recursor=8.8.8.8
+    environment:
+      CONSUL_ALLOW_PRIVILEGED_PORTS: ""
+    volumes:
+      - ./consul.d:/consul.d
+  client:
+    image: nicolaka/netshoot
+    network_mode: "bridge"
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
+    dns:
+      - 172.17.0.1
