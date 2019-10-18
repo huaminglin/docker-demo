@@ -67,3 +67,5 @@ docker logs consul-bridge_consul_1
 docker exec consul-bridge_client_1 dig @172.17.0.1 -p 53 consul.service.consul SRV
 
 docker exec consul-bridge_client_1 dig consul.service.consul SRV
+
+http://172.17.0.1:8500/ui/dc1/services
