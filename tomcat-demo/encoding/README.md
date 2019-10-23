@@ -2,6 +2,26 @@ http://127.0.0.1:18030/examples/jsp/encoding.jsp
 
 http://127.0.0.1:18030/examples/jsp/encoding-non.jsp
 
+## how a GET request and encoding works on the client side (Use mitmproxy to track the request)
+1. The GET request sent to the server from browser address bar directly
+http://127.0.0.1:18030/examples/jsp/encoding.jsp?mymethod=GET&mydata=中文
+GET http://x.x.x.x:18030/examples/jsp/encoding.jsp?mymethod=GET&mydata=%E4%B8%AD%E6%96%87 HTTP/1.1
+Note: UTF-8 is used for Chrome on Linux (Version 70.0.3538.77 (Official Build) (64-bit))
+
+2. The GET request sent to the server from a page with content-type encoiding UTF-8
+http://127.0.0.1:18030/examples/jsp/encoding.jsp
+GET http://x.x.x.x:18030/examples/jsp/encoding.jsp?mymethod=GET&mydata=%E4%B8%AD%E6%96%87 HTTP/1.1
+
+3. The GET request sent to the server from a page with content-type encoiding ISO-8859-1
+http://127.0.0.1:18030/examples/jsp/encoding-ISO-8859-1.jsp
+GET http://x.x.x.x:18030/examples/jsp/encoding-ISO-8859-1.jsp?mymethod=GET&mydata=%26%2320013%3B%26%2325991%3B HTTP/1.1
+Note: &#20013;&#25991; is used to generate query string.
+
+4. The GET request sent to the server from a page without content-type encoiding
+Use Firefox (69.0.2 (64-bit)). It supports to view page info. It shows "Text Encoding: windows-1252".
+GET http://x.x.x.x:18030/examples/jsp/encoding-non.jsp?mymethod=GET&mydata=%26%2320013%3B%26%2325991%3B HTTP/1.1
+Note: &#20013;&#25991; is used to generate query string.
+
 ## How do GET method and encoding work?
 1. update.sh and encoding.jsp
 <pre>Query string: mymethod=GET&mydata=%E4%B8%AD%E6%96%87
