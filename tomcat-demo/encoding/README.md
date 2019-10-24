@@ -24,13 +24,37 @@ Note:
   &#20013;&#25991; is used to generate query string.
   document.characterSet: windows-1252
 
-Conclusion: A web page can submit character which is not supported by the page encoding. Numeric character reference is used to encode the character into ASCII characters.
+5. Conclusion: A web page can submit character which is not supported by the page encoding. Numeric character reference is used to encode the character into ASCII characters.
 
 ## how a Ajax request and encoding works on the client side (Use mitmproxy to track the request)
 Content-Type:	application/x-www-form-urlencoded; charset=UTF-8
 Referer:	http://x.x.x.x:18030/examples/jsp/encoding-ISO-8859-1.jsp
 Payload: {"a":"\xe4\xb8\xad\xe6\x96\x87"}
 Conclusion: Even in a page with ISO-8859-1 encoding, "application/x-www-form-urlencoded; charset=UTF-8" is used for ajax request.
+
+## how a POST request and encoding works on the client side (Use mitmproxy to track the request)
+1. The POST request sent to the server from a page with content-type encoiding UTF-8
+http://127.0.0.1:18030/examples/jsp/encoding.jsp
+POST
+ http://x.x.x.x:18030/examples/jsp/encoding.jsp
+ HTTP/1.1
+Content-Type
+:	application/x-www-form-urlencoded
+Payload:
+mymethod=POST&mydata=%E4%B8%AD%E6%96%87
+
+2. The POST request sent to the server from a page with content-type encoiding ISO-8859-1
+http://127.0.0.1:18030/examples/jsp/encoding-ISO-8859-1.jsp
+POST
+ http://x.x.x.x:18030/examples/jsp/encoding-ISO-8859-1.jsp
+ HTTP/1.1
+Content-Type
+:	application/x-www-form-urlencoded
+Payload:
+mymethod=POST&mydata=%26%2320013%3B%26%2325991%3B
+Note: &#20013;&#25991; is used to generate payload.
+
+3. Conclusion: A web page can submit character which is not supported by the page encoding. Numeric character reference is used to encode the character into ASCII characters.
 
 ## How do GET method and encoding work?
 1. update.sh and encoding.jsp

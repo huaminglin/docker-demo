@@ -60,7 +60,7 @@ docker logs consul-bridge_consul_1
     2019/10/02 09:10:56 [DEBUG] agent: Node info in sync
     2019/10/02 09:11:17 [DEBUG] manager: Rebalanced 1 servers, next active server is firstconsul.dc1 (Addr: tcp/172.17.0.1:8300) (DC: dc1)
     2019/10/02 09:11:17 [DEBUG] consul: Skipping self join check for "firstconsul" since the cluster is too small
-    2019/10/02 09:11:35 [DEBUG] http: Request GET /v1/agent/members?segment=_all (790.589µs) from=10.175.5.83:36106
+    2019/10/02 09:11:35 [DEBUG] http: Request GET /v1/agent/members?segment=_all (790.589µs) from=x.x.x.x:36106
 
 ########################################################
 ## Check the DNS service
