@@ -20,7 +20,17 @@ Note: &#20013;&#25991; is used to generate query string.
 4. The GET request sent to the server from a page without content-type encoiding
 Use Firefox (69.0.2 (64-bit)). It supports to view page info. It shows "Text Encoding: windows-1252".
 GET http://x.x.x.x:18030/examples/jsp/encoding-non.jsp?mymethod=GET&mydata=%26%2320013%3B%26%2325991%3B HTTP/1.1
-Note: &#20013;&#25991; is used to generate query string.
+Note:
+  &#20013;&#25991; is used to generate query string.
+  document.characterSet: windows-1252
+
+Conclusion: A web page can submit character which is not supported by the page encoding. Numeric character reference is used to encode the character into ASCII characters.
+
+## how a Ajax request and encoding works on the client side (Use mitmproxy to track the request)
+Content-Type:	application/x-www-form-urlencoded; charset=UTF-8
+Referer:	http://x.x.x.x:18030/examples/jsp/encoding-ISO-8859-1.jsp
+Payload: {"a":"\xe4\xb8\xad\xe6\x96\x87"}
+Conclusion: Even in a page with ISO-8859-1 encoding, "application/x-www-form-urlencoded; charset=UTF-8" is used for ajax request.
 
 ## How do GET method and encoding work?
 1. update.sh and encoding.jsp

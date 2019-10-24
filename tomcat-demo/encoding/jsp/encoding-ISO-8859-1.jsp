@@ -41,5 +41,21 @@
      document.characterSet: <script>
        document.write(document.characterSet);
      </script>
+     <span id="cnText">&#20013;&#25991;</span>
    </body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+      if (console) {
+          var value = "&#20013;&#25991;";
+          console.log(value); // For JavaScript, Numeric character reference is keep.
+          value = $('#cnText').html(); // For html content, Numeric character reference is resolved.
+          console.log(value); // Now we get a non-ISO-8859-1 string value.
+          value = JSON.stringify({"a": value});
+          console.log(value);
+          $.post({
+            url: 'ajax.jsp',
+            data: value
+          });
+      }
+   </script>
 </html>
