@@ -54,7 +54,7 @@ Payload:
 mymethod=POST&mydata=%26%2320013%3B%26%2325991%3B
 Note: &#20013;&#25991; is used to generate payload.
 
-3. Conclusion: A web page can submit character which is not supported by the page encoding. Numeric character reference is used to encode the character into ASCII characters.
+3. Conclusion: A web page (by POST method) can submit character which is not supported by the page encoding. Numeric character reference is used to encode the character into ASCII characters.
 
 ## How do GET method and encoding work?
 1. update.sh and encoding.jsp

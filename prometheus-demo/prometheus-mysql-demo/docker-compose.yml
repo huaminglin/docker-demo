@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  mymysql:
+    image: mysql/mysql-server:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=demo
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 3306:3306
+  bdd:
+    image: prom/mysqld-exporter
+    environment:
+      - DATA_SOURCE_NAME=root:demo@(mymysql:3306)/sys
+    ports:
+      - 9104:9104
