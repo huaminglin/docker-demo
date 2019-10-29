@@ -9,7 +9,7 @@ admin_password = password
 
 ## grafana
 http://localhost:3000/login
-admin/admin
+admin/password
 
 ## Use provisioning to load a datasource by config file:
 Step 1: Use "grafana/datasources.yaml" to search sample yml on the Internet.

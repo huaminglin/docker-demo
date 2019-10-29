@@ -10,6 +10,19 @@ services:
   bdd:
     image: prom/mysqld-exporter
     environment:
-      - DATA_SOURCE_NAME=root:demo@(mymysql:3306)/sys
+      - DATA_SOURCE_NAME=root:demo@(mymysql:3306)/
     ports:
       - 9104:9104
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana:/etc/grafana
+      - ./dashboards:/etc/dashboards
