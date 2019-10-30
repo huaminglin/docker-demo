@@ -1,0 +1,159 @@
+# HELP jvm_classes_unloaded_classes_total The total number of classes unloaded since the Java virtual machine has started execution
+# TYPE jvm_classes_unloaded_classes_total counter
+jvm_classes_unloaded_classes_total{application="spring-boot-actuator-demo",} 1.0
+# HELP jvm_memory_used_bytes The amount of used memory
+# TYPE jvm_memory_used_bytes gauge
+jvm_memory_used_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Metaspace",} 4.7703664E7
+jvm_memory_used_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Old Gen",} 1.467132E7
+jvm_memory_used_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Survivor Space",} 5160976.0
+jvm_memory_used_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Compressed Class Space",} 5946696.0
+jvm_memory_used_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Eden Space",} 1.56960888E8
+jvm_memory_used_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Code Cache",} 1.4652224E7
+# HELP tomcat_sessions_active_max_sessions
+# TYPE tomcat_sessions_active_max_sessions gauge
+tomcat_sessions_active_max_sessions{application="spring-boot-actuator-demo",} 0.0
+# HELP process_files_max_files The maximum file descriptor count
+# TYPE process_files_max_files gauge
+process_files_max_files{application="spring-boot-actuator-demo",} 1048576.0
+# HELP tomcat_global_error_total
+# TYPE tomcat_global_error_total counter
+tomcat_global_error_total{application="spring-boot-actuator-demo",name="http-nio-8080",} 0.0
+# HELP tomcat_sessions_created_sessions_total
+# TYPE tomcat_sessions_created_sessions_total counter
+tomcat_sessions_created_sessions_total{application="spring-boot-actuator-demo",} 0.0
+# HELP tomcat_threads_config_max_threads
+# TYPE tomcat_threads_config_max_threads gauge
+tomcat_threads_config_max_threads{application="spring-boot-actuator-demo",name="http-nio-8080",} 200.0
+# HELP jvm_gc_memory_allocated_bytes_total Incremented for an increase in the size of the young generation memory pool after one GC to before the next
+# TYPE jvm_gc_memory_allocated_bytes_total counter
+jvm_gc_memory_allocated_bytes_total{application="spring-boot-actuator-demo",} 1.61480704E8
+# HELP jvm_threads_live_threads The current number of live threads including both daemon and non-daemon threads
+# TYPE jvm_threads_live_threads gauge
+jvm_threads_live_threads{application="spring-boot-actuator-demo",} 21.0
+# HELP tomcat_sessions_rejected_sessions_total
+# TYPE tomcat_sessions_rejected_sessions_total counter
+tomcat_sessions_rejected_sessions_total{application="spring-boot-actuator-demo",} 0.0
+# HELP system_load_average_1m The sum of the number of runnable entities queued to available processors and the number of runnable entities running on the available processors averaged over a period of time
+# TYPE system_load_average_1m gauge
+system_load_average_1m{application="spring-boot-actuator-demo",} 1.1376953125
+# HELP tomcat_global_request_seconds
+# TYPE tomcat_global_request_seconds summary
+tomcat_global_request_seconds_count{application="spring-boot-actuator-demo",name="http-nio-8080",} 6.0
+tomcat_global_request_seconds_sum{application="spring-boot-actuator-demo",name="http-nio-8080",} 0.422
+# HELP jvm_threads_daemon_threads The current number of live daemon threads
+# TYPE jvm_threads_daemon_threads gauge
+jvm_threads_daemon_threads{application="spring-boot-actuator-demo",} 16.0
+# HELP tomcat_sessions_alive_max_seconds
+# TYPE tomcat_sessions_alive_max_seconds gauge
+tomcat_sessions_alive_max_seconds{application="spring-boot-actuator-demo",} 0.0
+# HELP logback_events_total Number of error level events that made it to the logs
+# TYPE logback_events_total counter
+logback_events_total{application="spring-boot-actuator-demo",level="debug",} 0.0
+logback_events_total{application="spring-boot-actuator-demo",level="info",} 10.0
+logback_events_total{application="spring-boot-actuator-demo",level="trace",} 0.0
+logback_events_total{application="spring-boot-actuator-demo",level="warn",} 0.0
+logback_events_total{application="spring-boot-actuator-demo",level="error",} 0.0
+# HELP jvm_classes_loaded_classes The number of classes that are currently loaded in the Java virtual machine
+# TYPE jvm_classes_loaded_classes gauge
+jvm_classes_loaded_classes{application="spring-boot-actuator-demo",} 9064.0
+# HELP jvm_gc_live_data_size_bytes Size of old generation memory pool after a full GC
+# TYPE jvm_gc_live_data_size_bytes gauge
+jvm_gc_live_data_size_bytes{application="spring-boot-actuator-demo",} 0.0
+# HELP process_start_time_seconds Start time of the process since unix epoch.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{application="spring-boot-actuator-demo",} 1.57244084952E9
+# HELP tomcat_threads_busy_threads
+# TYPE tomcat_threads_busy_threads gauge
+tomcat_threads_busy_threads{application="spring-boot-actuator-demo",name="http-nio-8080",} 1.0
+# HELP jvm_gc_memory_promoted_bytes_total Count of positive increases in the size of the old generation memory pool before GC to after GC
+# TYPE jvm_gc_memory_promoted_bytes_total counter
+jvm_gc_memory_promoted_bytes_total{application="spring-boot-actuator-demo",} 8192.0
+# HELP tomcat_sessions_expired_sessions_total
+# TYPE tomcat_sessions_expired_sessions_total counter
+tomcat_sessions_expired_sessions_total{application="spring-boot-actuator-demo",} 0.0
+# HELP tomcat_global_request_max_seconds
+# TYPE tomcat_global_request_max_seconds gauge
+tomcat_global_request_max_seconds{application="spring-boot-actuator-demo",name="http-nio-8080",} 0.294
+# HELP jvm_buffer_memory_used_bytes An estimate of the memory that the Java virtual machine is using for this buffer pool
+# TYPE jvm_buffer_memory_used_bytes gauge
+jvm_buffer_memory_used_bytes{application="spring-boot-actuator-demo",id="mapped",} 0.0
+jvm_buffer_memory_used_bytes{application="spring-boot-actuator-demo",id="direct",} 57344.0
+# HELP jvm_threads_peak_threads The peak live thread count since the Java virtual machine started or peak was reset
+# TYPE jvm_threads_peak_threads gauge
+jvm_threads_peak_threads{application="spring-boot-actuator-demo",} 21.0
+# HELP process_uptime_seconds The uptime of the Java virtual machine
+# TYPE process_uptime_seconds gauge
+process_uptime_seconds{application="spring-boot-actuator-demo",} 96.757
+# HELP http_server_requests_seconds
+# TYPE http_server_requests_seconds summary
+http_server_requests_seconds_count{application="spring-boot-actuator-demo",exception="None",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 6.0
+http_server_requests_seconds_sum{application="spring-boot-actuator-demo",exception="None",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.326936849
+# HELP http_server_requests_seconds_max
+# TYPE http_server_requests_seconds_max gauge
+http_server_requests_seconds_max{application="spring-boot-actuator-demo",exception="None",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.207636438
+# HELP jvm_memory_committed_bytes The amount of memory in bytes that is committed for the Java virtual machine to use
+# TYPE jvm_memory_committed_bytes gauge
+jvm_memory_committed_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Metaspace",} 5.046272E7
+jvm_memory_committed_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Old Gen",} 5.767168E7
+jvm_memory_committed_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Survivor Space",} 5242880.0
+jvm_memory_committed_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Compressed Class Space",} 6422528.0
+jvm_memory_committed_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Eden Space",} 1.92937984E8
+jvm_memory_committed_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Code Cache",} 1.5794176E7
+# HELP jvm_gc_pause_seconds Time spent in GC pause
+# TYPE jvm_gc_pause_seconds summary
+jvm_gc_pause_seconds_count{action="end of minor GC",application="spring-boot-actuator-demo",cause="Allocation Failure",} 1.0
+jvm_gc_pause_seconds_sum{action="end of minor GC",application="spring-boot-actuator-demo",cause="Allocation Failure",} 0.014
+# HELP jvm_gc_pause_seconds_max Time spent in GC pause
+# TYPE jvm_gc_pause_seconds_max gauge
+jvm_gc_pause_seconds_max{action="end of minor GC",application="spring-boot-actuator-demo",cause="Allocation Failure",} 0.014
+# HELP tomcat_sessions_active_current_sessions
+# TYPE tomcat_sessions_active_current_sessions gauge
+tomcat_sessions_active_current_sessions{application="spring-boot-actuator-demo",} 0.0
+# HELP tomcat_global_sent_bytes_total
+# TYPE tomcat_global_sent_bytes_total counter
+tomcat_global_sent_bytes_total{application="spring-boot-actuator-demo",name="http-nio-8080",} 71963.0
+# HELP system_cpu_count The number of processors available to the Java virtual machine
+# TYPE system_cpu_count gauge
+system_cpu_count{application="spring-boot-actuator-demo",} 12.0
+# HELP tomcat_threads_current_threads
+# TYPE tomcat_threads_current_threads gauge
+tomcat_threads_current_threads{application="spring-boot-actuator-demo",name="http-nio-8080",} 10.0
+# HELP jvm_gc_max_data_size_bytes Max size of old generation memory pool
+# TYPE jvm_gc_max_data_size_bytes gauge
+jvm_gc_max_data_size_bytes{application="spring-boot-actuator-demo",} 0.0
+# HELP system_cpu_usage The "recent cpu usage" for the whole system
+# TYPE system_cpu_usage gauge
+system_cpu_usage{application="spring-boot-actuator-demo",} 0.1977699530516432
+# HELP tomcat_global_received_bytes_total
+# TYPE tomcat_global_received_bytes_total counter
+tomcat_global_received_bytes_total{application="spring-boot-actuator-demo",name="http-nio-8080",} 0.0
+# HELP jvm_buffer_count_buffers An estimate of the number of buffers in the pool
+# TYPE jvm_buffer_count_buffers gauge
+jvm_buffer_count_buffers{application="spring-boot-actuator-demo",id="mapped",} 0.0
+jvm_buffer_count_buffers{application="spring-boot-actuator-demo",id="direct",} 7.0
+# HELP jvm_threads_states_threads The current number of threads having NEW state
+# TYPE jvm_threads_states_threads gauge
+jvm_threads_states_threads{application="spring-boot-actuator-demo",state="timed-waiting",} 3.0
+jvm_threads_states_threads{application="spring-boot-actuator-demo",state="terminated",} 0.0
+jvm_threads_states_threads{application="spring-boot-actuator-demo",state="new",} 0.0
+jvm_threads_states_threads{application="spring-boot-actuator-demo",state="blocked",} 0.0
+jvm_threads_states_threads{application="spring-boot-actuator-demo",state="waiting",} 12.0
+jvm_threads_states_threads{application="spring-boot-actuator-demo",state="runnable",} 6.0
+# HELP jvm_memory_max_bytes The maximum amount of memory in bytes that can be used for memory management
+# TYPE jvm_memory_max_bytes gauge
+jvm_memory_max_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Metaspace",} -1.0
+jvm_memory_max_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Old Gen",} 6.8943872E8
+jvm_memory_max_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Survivor Space",} 5242880.0
+jvm_memory_max_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Compressed Class Space",} 1.073741824E9
+jvm_memory_max_bytes{application="spring-boot-actuator-demo",area="heap",id="PS Eden Space",} 3.30825728E8
+jvm_memory_max_bytes{application="spring-boot-actuator-demo",area="nonheap",id="Code Cache",} 2.5165824E8
+# HELP jvm_buffer_total_capacity_bytes An estimate of the total capacity of the buffers in this pool
+# TYPE jvm_buffer_total_capacity_bytes gauge
+jvm_buffer_total_capacity_bytes{application="spring-boot-actuator-demo",id="mapped",} 0.0
+jvm_buffer_total_capacity_bytes{application="spring-boot-actuator-demo",id="direct",} 57344.0
+# HELP process_cpu_usage The "recent cpu usage" for the Java Virtual Machine process
+# TYPE process_cpu_usage gauge
+process_cpu_usage{application="spring-boot-actuator-demo",} 0.004120070629782225
+# HELP process_files_open_files The open file descriptor count
+# TYPE process_files_open_files gauge
+process_files_open_files{application="spring-boot-actuator-demo",} 26.0
