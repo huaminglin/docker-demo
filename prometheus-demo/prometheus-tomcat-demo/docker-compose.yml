@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  grafana:
+    image: grafana/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=password
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./dashboards:/etc/dashboards
+  tomcat:
+    image: tomcat:8.5
+    environment:
+      - _JAVA_OPTIONS="-javaagent:/usr/local/tomcat/jmx_exporter/jmx_prometheus_javaagent-0.12.0.jar=0.0.0.0:9151:/usr/local/tomcat/jmx_exporter/all.yaml"
+    volumes:
+      - ./jmx_exporter:/usr/local/tomcat/jmx_exporter
+    ports:
+      - 8080:8080
+      - 9151:9151

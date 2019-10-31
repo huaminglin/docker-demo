@@ -1,0 +1,333 @@
+# HELP jmx_exporter_build_info A metric with a constant '1' value labeled with the version of the JMX exporter.
+# TYPE jmx_exporter_build_info gauge
+jmx_exporter_build_info{version="0.12.0",name="jmx_prometheus_javaagent",} 1.0
+# HELP jmx_config_reload_success_total Number of times configuration have successfully been reloaded.
+# TYPE jmx_config_reload_success_total counter
+jmx_config_reload_success_total 0.0
+# HELP jmx_config_reload_failure_total Number of times configuration have failed to be reloaded.
+# TYPE jmx_config_reload_failure_total counter
+jmx_config_reload_failure_total 0.0
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 10.06
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.57252282684E9
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 85.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1048576.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 6.607425536E9
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 1.69672704E8
+# HELP jvm_memory_bytes_used Used bytes of a given JVM memory area.
+# TYPE jvm_memory_bytes_used gauge
+jvm_memory_bytes_used{area="heap",} 6.1524152E7
+jvm_memory_bytes_used{area="nonheap",} 2.6968072E7
+# HELP jvm_memory_bytes_committed Committed (bytes) of a given JVM memory area.
+# TYPE jvm_memory_bytes_committed gauge
+jvm_memory_bytes_committed{area="heap",} 1.11149056E8
+jvm_memory_bytes_committed{area="nonheap",} 2.78528E7
+# HELP jvm_memory_bytes_max Max (bytes) of a given JVM memory area.
+# TYPE jvm_memory_bytes_max gauge
+jvm_memory_bytes_max{area="heap",} 9.19076864E8
+jvm_memory_bytes_max{area="nonheap",} -1.0
+# HELP jvm_memory_bytes_init Initial bytes of a given JVM memory area.
+# TYPE jvm_memory_bytes_init gauge
+jvm_memory_bytes_init{area="heap",} 6.5011712E7
+jvm_memory_bytes_init{area="nonheap",} 2555904.0
+# HELP jvm_memory_pool_bytes_used Used bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_used gauge
+jvm_memory_pool_bytes_used{pool="Code Cache",} 8371520.0
+jvm_memory_pool_bytes_used{pool="Metaspace",} 1.676072E7
+jvm_memory_pool_bytes_used{pool="Compressed Class Space",} 1835832.0
+jvm_memory_pool_bytes_used{pool="PS Eden Space",} 4.1411584E7
+jvm_memory_pool_bytes_used{pool="PS Survivor Space",} 2588688.0
+jvm_memory_pool_bytes_used{pool="PS Old Gen",} 1.752388E7
+# HELP jvm_memory_pool_bytes_committed Committed bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_committed gauge
+jvm_memory_pool_bytes_committed{pool="Code Cache",} 8454144.0
+jvm_memory_pool_bytes_committed{pool="Metaspace",} 1.7432576E7
+jvm_memory_pool_bytes_committed{pool="Compressed Class Space",} 1966080.0
+jvm_memory_pool_bytes_committed{pool="PS Eden Space",} 6.5011712E7
+jvm_memory_pool_bytes_committed{pool="PS Survivor Space",} 2621440.0
+jvm_memory_pool_bytes_committed{pool="PS Old Gen",} 4.3515904E7
+# HELP jvm_memory_pool_bytes_max Max bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_max gauge
+jvm_memory_pool_bytes_max{pool="Code Cache",} 2.5165824E8
+jvm_memory_pool_bytes_max{pool="Metaspace",} -1.0
+jvm_memory_pool_bytes_max{pool="Compressed Class Space",} 1.073741824E9
+jvm_memory_pool_bytes_max{pool="PS Eden Space",} 3.31874304E8
+jvm_memory_pool_bytes_max{pool="PS Survivor Space",} 2621440.0
+jvm_memory_pool_bytes_max{pool="PS Old Gen",} 6.8943872E8
+# HELP jvm_memory_pool_bytes_init Initial bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_init gauge
+jvm_memory_pool_bytes_init{pool="Code Cache",} 2555904.0
+jvm_memory_pool_bytes_init{pool="Metaspace",} 0.0
+jvm_memory_pool_bytes_init{pool="Compressed Class Space",} 0.0
+jvm_memory_pool_bytes_init{pool="PS Eden Space",} 1.6252928E7
+jvm_memory_pool_bytes_init{pool="PS Survivor Space",} 2621440.0
+jvm_memory_pool_bytes_init{pool="PS Old Gen",} 4.3515904E7
+# HELP jvm_buffer_pool_used_bytes Used bytes of a given JVM buffer pool.
+# TYPE jvm_buffer_pool_used_bytes gauge
+jvm_buffer_pool_used_bytes{pool="direct",} 24576.0
+jvm_buffer_pool_used_bytes{pool="mapped",} 0.0
+# HELP jvm_buffer_pool_capacity_bytes Bytes capacity of a given JVM buffer pool.
+# TYPE jvm_buffer_pool_capacity_bytes gauge
+jvm_buffer_pool_capacity_bytes{pool="direct",} 24576.0
+jvm_buffer_pool_capacity_bytes{pool="mapped",} 0.0
+# HELP jvm_buffer_pool_used_buffers Used buffers of a given JVM buffer pool.
+# TYPE jvm_buffer_pool_used_buffers gauge
+jvm_buffer_pool_used_buffers{pool="direct",} 3.0
+jvm_buffer_pool_used_buffers{pool="mapped",} 0.0
+# HELP jvm_gc_collection_seconds Time spent in a given JVM garbage collector in seconds.
+# TYPE jvm_gc_collection_seconds summary
+jvm_gc_collection_seconds_count{gc="PS Scavenge",} 5.0
+jvm_gc_collection_seconds_sum{gc="PS Scavenge",} 0.077
+jvm_gc_collection_seconds_count{gc="PS MarkSweep",} 0.0
+jvm_gc_collection_seconds_sum{gc="PS MarkSweep",} 0.0
+# HELP jvm_classes_loaded The number of classes that are currently loaded in the JVM
+# TYPE jvm_classes_loaded gauge
+jvm_classes_loaded 2740.0
+# HELP jvm_classes_loaded_total The total number of classes that have been loaded since the JVM has started execution
+# TYPE jvm_classes_loaded_total counter
+jvm_classes_loaded_total 2740.0
+# HELP jvm_classes_unloaded_total The total number of classes that have been unloaded since the JVM has started execution
+# TYPE jvm_classes_unloaded_total counter
+jvm_classes_unloaded_total 0.0
+# HELP tomcat_bytesreceived_total Tomcat global bytesReceived
+# TYPE tomcat_bytesreceived_total counter
+tomcat_bytesreceived_total{port="8009",protocol="ajp-nio",} 0.0
+tomcat_bytesreceived_total{port="8080",protocol="http-nio",} 0.0
+# HELP tomcat_errorcount_total Tomcat global errorCount
+# TYPE tomcat_errorcount_total counter
+tomcat_errorcount_total{port="8009",protocol="ajp-nio",} 0.0
+tomcat_errorcount_total{port="8080",protocol="http-nio",} 0.0
+# HELP tomcat_requestcount_total Tomcat global requestCount
+# TYPE tomcat_requestcount_total counter
+tomcat_requestcount_total{port="8009",protocol="ajp-nio",} 0.0
+tomcat_requestcount_total{port="8080",protocol="http-nio",} 0.0
+# HELP tomcat_session_sessioncounter_total Tomcat session sessionCounter total
+# TYPE tomcat_session_sessioncounter_total counter
+tomcat_session_sessioncounter_total{context="/manager",host="localhost",} 0.0
+tomcat_session_sessioncounter_total{context="/docs",host="localhost",} 0.0
+tomcat_session_sessioncounter_total{context="/",host="localhost",} 0.0
+tomcat_session_sessioncounter_total{context="/host-manager",host="localhost",} 0.0
+tomcat_session_sessioncounter_total{context="/examples",host="localhost",} 0.0
+# HELP tomcat_threadpool_pollerthreadcount Tomcat threadpool pollerThreadCount
+# TYPE tomcat_threadpool_pollerthreadcount gauge
+tomcat_threadpool_pollerthreadcount{port="8009",protocol="ajp-nio",} 2.0
+tomcat_threadpool_pollerthreadcount{port="8080",protocol="http-nio",} 2.0
+# HELP tomcat_session_rejectedsessions_total Tomcat session rejectedSessions total
+# TYPE tomcat_session_rejectedsessions_total counter
+tomcat_session_rejectedsessions_total{context="/manager",host="localhost",} 0.0
+tomcat_session_rejectedsessions_total{context="/docs",host="localhost",} 0.0
+tomcat_session_rejectedsessions_total{context="/",host="localhost",} 0.0
+tomcat_session_rejectedsessions_total{context="/host-manager",host="localhost",} 0.0
+tomcat_session_rejectedsessions_total{context="/examples",host="localhost",} 0.0
+# HELP tomcat_session_expiredsessions_total Tomcat session expiredSessions total
+# TYPE tomcat_session_expiredsessions_total counter
+tomcat_session_expiredsessions_total{context="/manager",host="localhost",} 0.0
+tomcat_session_expiredsessions_total{context="/docs",host="localhost",} 0.0
+tomcat_session_expiredsessions_total{context="/",host="localhost",} 0.0
+tomcat_session_expiredsessions_total{context="/host-manager",host="localhost",} 0.0
+tomcat_session_expiredsessions_total{context="/examples",host="localhost",} 0.0
+# HELP tomcat_session_processingtime_total Tomcat session processingTime total
+# TYPE tomcat_session_processingtime_total counter
+tomcat_session_processingtime_total{context="/manager",host="localhost",} 0.0
+tomcat_session_processingtime_total{context="/docs",host="localhost",} 0.0
+tomcat_session_processingtime_total{context="/",host="localhost",} 0.0
+tomcat_session_processingtime_total{context="/host-manager",host="localhost",} 0.0
+tomcat_session_processingtime_total{context="/examples",host="localhost",} 0.0
+# HELP tomcat_servlet_processingtime_total Tomcat servlet processingTime total
+# TYPE tomcat_servlet_processingtime_total counter
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="stock",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="RequestHeaderExample",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="SessionExample",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="ServletToJsp",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="jsp",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/host-manager",servlet="HostManager",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="numberwriter",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/manager",servlet="default",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/",servlet="default",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="CompressionFilterTestServlet",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="async3",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="async2",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="async1",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/host-manager",servlet="default",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="async0",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/host-manager",servlet="HTMLHostManager",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/manager",servlet="Manager",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="RequestParamExample",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/docs",servlet="jsp",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="default",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/",servlet="jsp",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/host-manager",servlet="jsp",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/manager",servlet="Status",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/manager",servlet="JMXProxy",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/manager",servlet="HTMLManager",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="CookieExample",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="bytecounter",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/manager",servlet="jsp",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/docs",servlet="default",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="RequestInfoExample",} 0.0
+tomcat_servlet_processingtime_total{module="localhost/examples",servlet="HelloWorldExample",} 0.0
+# HELP tomcat_threadpool_connectioncount Tomcat threadpool connectionCount
+# TYPE tomcat_threadpool_connectioncount gauge
+tomcat_threadpool_connectioncount{port="8009",protocol="ajp-nio",} 1.0
+tomcat_threadpool_connectioncount{port="8080",protocol="http-nio",} 1.0
+# HELP tomcat_maxtime_total Tomcat global maxTime
+# TYPE tomcat_maxtime_total counter
+tomcat_maxtime_total{port="8009",protocol="ajp-nio",} 0.0
+tomcat_maxtime_total{port="8080",protocol="http-nio",} 0.0
+# HELP tomcat_bytessent_total Tomcat global bytesSent
+# TYPE tomcat_bytessent_total counter
+tomcat_bytessent_total{port="8009",protocol="ajp-nio",} 0.0
+tomcat_bytessent_total{port="8080",protocol="http-nio",} 0.0
+# HELP tomcat_servlet_errorcount_total Tomcat servlet errorCount total
+# TYPE tomcat_servlet_errorcount_total counter
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="stock",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="RequestHeaderExample",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="SessionExample",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="ServletToJsp",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="jsp",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/host-manager",servlet="HostManager",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="numberwriter",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/manager",servlet="default",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/",servlet="default",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="CompressionFilterTestServlet",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="async3",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="async2",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="async1",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/host-manager",servlet="default",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="async0",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/host-manager",servlet="HTMLHostManager",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/manager",servlet="Manager",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="RequestParamExample",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/docs",servlet="jsp",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="default",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/",servlet="jsp",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/host-manager",servlet="jsp",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/manager",servlet="Status",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/manager",servlet="JMXProxy",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/manager",servlet="HTMLManager",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="CookieExample",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="bytecounter",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/manager",servlet="jsp",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/docs",servlet="default",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="RequestInfoExample",} 0.0
+tomcat_servlet_errorcount_total{module="localhost/examples",servlet="HelloWorldExample",} 0.0
+# HELP tomcat_servlet_maxtime_total Tomcat servlet maxTime total
+# TYPE tomcat_servlet_maxtime_total counter
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="stock",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="RequestHeaderExample",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="SessionExample",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="ServletToJsp",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="jsp",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/host-manager",servlet="HostManager",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="numberwriter",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/manager",servlet="default",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/",servlet="default",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="CompressionFilterTestServlet",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="async3",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="async2",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="async1",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/host-manager",servlet="default",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="async0",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/host-manager",servlet="HTMLHostManager",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/manager",servlet="Manager",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="RequestParamExample",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/docs",servlet="jsp",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="default",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/",servlet="jsp",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/host-manager",servlet="jsp",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/manager",servlet="Status",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/manager",servlet="JMXProxy",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/manager",servlet="HTMLManager",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="CookieExample",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="bytecounter",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/manager",servlet="jsp",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/docs",servlet="default",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="RequestInfoExample",} 0.0
+tomcat_servlet_maxtime_total{module="localhost/examples",servlet="HelloWorldExample",} 0.0
+# HELP tomcat_servlet_requestcount_total Tomcat servlet requestCount total
+# TYPE tomcat_servlet_requestcount_total counter
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="stock",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="RequestHeaderExample",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="SessionExample",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="ServletToJsp",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="jsp",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/host-manager",servlet="HostManager",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="numberwriter",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/manager",servlet="default",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/",servlet="default",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="CompressionFilterTestServlet",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="async3",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="async2",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="async1",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/host-manager",servlet="default",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="async0",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/host-manager",servlet="HTMLHostManager",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/manager",servlet="Manager",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="RequestParamExample",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/docs",servlet="jsp",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="default",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/",servlet="jsp",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/host-manager",servlet="jsp",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/manager",servlet="Status",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/manager",servlet="JMXProxy",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/manager",servlet="HTMLManager",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="CookieExample",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="bytecounter",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/manager",servlet="jsp",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/docs",servlet="default",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="RequestInfoExample",} 0.0
+tomcat_servlet_requestcount_total{module="localhost/examples",servlet="HelloWorldExample",} 0.0
+# HELP tomcat_threadpool_keepalivecount Tomcat threadpool keepAliveCount
+# TYPE tomcat_threadpool_keepalivecount gauge
+tomcat_threadpool_keepalivecount{port="8009",protocol="ajp-nio",} 0.0
+tomcat_threadpool_keepalivecount{port="8080",protocol="http-nio",} 0.0
+# HELP tomcat_threadpool_currentthreadcount Tomcat threadpool currentThreadCount
+# TYPE tomcat_threadpool_currentthreadcount gauge
+tomcat_threadpool_currentthreadcount{port="8009",protocol="ajp-nio",} 10.0
+tomcat_threadpool_currentthreadcount{port="8080",protocol="http-nio",} 10.0
+# HELP tomcat_threadpool_currentthreadsbusy Tomcat threadpool currentThreadsBusy
+# TYPE tomcat_threadpool_currentthreadsbusy gauge
+tomcat_threadpool_currentthreadsbusy{port="8009",protocol="ajp-nio",} 0.0
+tomcat_threadpool_currentthreadsbusy{port="8080",protocol="http-nio",} 0.0
+# HELP tomcat_processingtime_total Tomcat global processingTime
+# TYPE tomcat_processingtime_total counter
+tomcat_processingtime_total{port="8009",protocol="ajp-nio",} 0.0
+tomcat_processingtime_total{port="8080",protocol="http-nio",} 0.0
+# HELP jmx_scrape_duration_seconds Time this JMX scrape took, in seconds.
+# TYPE jmx_scrape_duration_seconds gauge
+jmx_scrape_duration_seconds 0.178794428
+# HELP jmx_scrape_error Non-zero if this scrape failed.
+# TYPE jmx_scrape_error gauge
+jmx_scrape_error 0.0
+# HELP jvm_info JVM version info
+# TYPE jvm_info gauge
+jvm_info{version="1.8.0_232-b09",vendor="Oracle Corporation",runtime="OpenJDK Runtime Environment",} 1.0
+# HELP jvm_threads_current Current thread count of a JVM
+# TYPE jvm_threads_current gauge
+jvm_threads_current 42.0
+# HELP jvm_threads_daemon Daemon thread count of a JVM
+# TYPE jvm_threads_daemon gauge
+jvm_threads_daemon 41.0
+# HELP jvm_threads_peak Peak thread count of a JVM
+# TYPE jvm_threads_peak gauge
+jvm_threads_peak 42.0
+# HELP jvm_threads_started_total Started thread count of a JVM
+# TYPE jvm_threads_started_total counter
+jvm_threads_started_total 45.0
+# HELP jvm_threads_deadlocked Cycles of JVM-threads that are in deadlock waiting to acquire object monitors or ownable synchronizers
+# TYPE jvm_threads_deadlocked gauge
+jvm_threads_deadlocked 0.0
+# HELP jvm_threads_deadlocked_monitor Cycles of JVM-threads that are in deadlock waiting to acquire object monitors
+# TYPE jvm_threads_deadlocked_monitor gauge
+jvm_threads_deadlocked_monitor 0.0
