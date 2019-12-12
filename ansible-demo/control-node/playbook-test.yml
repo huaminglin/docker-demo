@@ -1,0 +1,10 @@
+---
+- hosts: testmanagedservers
+  remote_user: root
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: user1
+    - name: touch access log
+      command: touch /tmp/ansible_access.log
+
