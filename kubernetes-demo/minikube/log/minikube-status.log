@@ -1,0 +1,4 @@
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured

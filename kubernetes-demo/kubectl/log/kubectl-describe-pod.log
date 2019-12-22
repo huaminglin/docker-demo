@@ -1,0 +1,52 @@
+Name:         kubia-bwpxp
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.99.112
+Start Time:   Sun, 22 Dec 2019 23:16:05 +0800
+Labels:       run=kubia
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.6
+IPs:
+  IP:           172.17.0.6
+Controlled By:  ReplicationController/kubia
+Containers:
+  kubia:
+    Container ID:   docker://539fd472f7d99864a139bf9564a0691ab2d30be6f0d620fdfa0eb4fda1693372
+    Image:          luksa/kubia
+    Image ID:       docker-pullable://luksa/kubia@sha256:3f28e304dc0f63dc30f273a4202096f0fa0d08510bd2ee7e1032ce600616de24
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sun, 22 Dec 2019 23:20:35 +0800
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-cjfm4 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-cjfm4:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-cjfm4
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason   Age                From               Message
+  ----     ------   ----               ----               -------
+  Warning  Failed   59m                kubelet, minikube  Failed to pull image "luksa/kubia": rpc error: code = Unknown desc = context canceled
+  Warning  Failed   59m                kubelet, minikube  Error: ErrImagePull
+  Normal   BackOff  59m                kubelet, minikube  Back-off pulling image "luksa/kubia"
+  Warning  Failed   59m                kubelet, minikube  Error: ImagePullBackOff
+  Normal   Pulling  59m (x2 over 62m)  kubelet, minikube  Pulling image "luksa/kubia"
+  Normal   Pulled   58m                kubelet, minikube  Successfully pulled image "luksa/kubia"
+  Normal   Created  58m                kubelet, minikube  Created container kubia
+  Normal   Started  58m                kubelet, minikube  Started container kubia

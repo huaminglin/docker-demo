@@ -1,0 +1,9 @@
+|----------------------|---------------------------|-----------------------------|-----|
+|      NAMESPACE       |           NAME            |         TARGET PORT         | URL |
+|----------------------|---------------------------|-----------------------------|-----|
+| default              | kubernetes                | No node port                |
+| default              | kubia-http                | http://192.168.99.112:30752 |
+| kube-system          | kube-dns                  | No node port                |
+| kubernetes-dashboard | dashboard-metrics-scraper | No node port                |
+| kubernetes-dashboard | kubernetes-dashboard      | No node port                |
+|----------------------|---------------------------|-----------------------------|-----|

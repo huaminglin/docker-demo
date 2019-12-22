@@ -1,0 +1,483 @@
+==> Docker <==
+-- Logs begin at Sun 2019-12-22 13:36:51 UTC, end at Sun 2019-12-22 13:59:37 UTC. --
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.510911096Z" level=info msg="loading plugin "io.containerd.grpc.v1.healthcheck"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.510947856Z" level=info msg="loading plugin "io.containerd.grpc.v1.images"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.510982153Z" level=info msg="loading plugin "io.containerd.grpc.v1.leases"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511039435Z" level=info msg="loading plugin "io.containerd.grpc.v1.namespaces"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511085142Z" level=info msg="loading plugin "io.containerd.internal.v1.opt"..." type=io.containerd.internal.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511143365Z" level=info msg="loading plugin "io.containerd.grpc.v1.snapshots"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511179207Z" level=info msg="loading plugin "io.containerd.grpc.v1.tasks"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511210933Z" level=info msg="loading plugin "io.containerd.grpc.v1.version"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511241474Z" level=info msg="loading plugin "io.containerd.grpc.v1.introspection"..." type=io.containerd.grpc.v1
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511381565Z" level=info msg=serving... address="/var/run/docker/containerd/containerd-debug.sock"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511448575Z" level=info msg=serving... address="/var/run/docker/containerd/containerd.sock"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.511484198Z" level=info msg="containerd successfully booted in 0.007537s"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.525613599Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.525858762Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.525892931Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock 0  <nil>}] <nil>}" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.525907680Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.526744928Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.526808105Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.526862263Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock 0  <nil>}] <nil>}" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.526905763Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.540356938Z" level=warning msg="Your kernel does not support cgroup blkio weight"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.540402104Z" level=warning msg="Your kernel does not support cgroup blkio weight_device"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.540409810Z" level=warning msg="Your kernel does not support cgroup blkio throttle.read_bps_device"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.540415567Z" level=warning msg="Your kernel does not support cgroup blkio throttle.write_bps_device"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.540421717Z" level=warning msg="Your kernel does not support cgroup blkio throttle.read_iops_device"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.540427773Z" level=warning msg="Your kernel does not support cgroup blkio throttle.write_iops_device"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.540595539Z" level=info msg="Loading containers: start."
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.591559845Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.627738600Z" level=info msg="Loading containers: done."
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.644218510Z" level=info msg="Docker daemon" commit=633a0ea838 graphdriver(s)=overlay2 version=19.03.5
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.644313135Z" level=info msg="Daemon has completed initialization"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.653893072Z" level=info msg="API listen on /var/run/docker.sock"
+Dec 22 13:37:06 minikube dockerd[2449]: time="2019-12-22T13:37:06.653951297Z" level=info msg="API listen on [::]:2376"
+Dec 22 13:37:06 minikube systemd[1]: Started Docker Application Container Engine.
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.037085231Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/a0f7520eab083b15dc247cd5b489af95cebd80a8fb6e51f167bde592ffa478d6/shim.sock" debug=false pid=3932
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.058746707Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/25ea5f8260de2f1a793490be63dd365511255fd66b7fe3d5acacd279f051437f/shim.sock" debug=false pid=3945
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.092582317Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/358eb2041449cb077487086975874d45a9aa9f54f8bf8cdb78cad9aeb2ca8728/shim.sock" debug=false pid=3963
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.150724063Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/0bb2057e3c01acd2520374b8cf5f197bf699e968d8eafd78990f27a70050e98b/shim.sock" debug=false pid=3988
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.153921360Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/ed4174f73e4e520041baaa0b5e5973cee0cbcdb0e3594027757e2fc761d8a8c2/shim.sock" debug=false pid=3997
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.351098896Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/3546a2441a45cc40f5fe9b8b366e4eb03349fe055fe2e55461e9d853ba9b319a/shim.sock" debug=false pid=4163
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.370718790Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/671bd06ea9e00b41ae65bdb0087fe85e70b6fe77f0c95e06ebb9f4c60b6ea204/shim.sock" debug=false pid=4178
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.428911640Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/fde2e37123ccf992a53404789ce5c2e6f1d3e4336899dd585de0c9b3a39995ca/shim.sock" debug=false pid=4213
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.441650559Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/4100e7406b093216eb7fed63f58271a7b4b59c57ee48480726da136dd6dfc4df/shim.sock" debug=false pid=4235
+Dec 22 13:37:36 minikube dockerd[2449]: time="2019-12-22T13:37:36.483510762Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/dbfc2261c56aa03dfd9c915c7be168518ab8c1ab6304d9a6acbb9386ec951635/shim.sock" debug=false pid=4260
+Dec 22 13:37:50 minikube dockerd[2449]: time="2019-12-22T13:37:50.418873321Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/f54720d9527cd687f8fc9c29d6720df5d981651b744d7bc14d1fb5f31b8e53f7/shim.sock" debug=false pid=5060
+Dec 22 13:37:50 minikube dockerd[2449]: time="2019-12-22T13:37:50.629256315Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/0357db88e526dffb1e408714e27e8b931ae5e573644a286da197e7a220f4ab48/shim.sock" debug=false pid=5127
+Dec 22 13:37:50 minikube dockerd[2449]: time="2019-12-22T13:37:50.896550222Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/1819a2c2f419e10f1b0751ee2944787801ffc4b274d29e41384f5da22c86e0c1/shim.sock" debug=false pid=5207
+Dec 22 13:37:50 minikube dockerd[2449]: time="2019-12-22T13:37:50.924988894Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/d5f3f6a38b7e1d0091af5aeeb625cc77b487f9349f8b7f180b5de85216b8b554/shim.sock" debug=false pid=5223
+Dec 22 13:37:51 minikube dockerd[2449]: time="2019-12-22T13:37:51.295108066Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/2ad0aea74d2b451da405e036b2cfe9399b763b6b1dd236256918acfc97c7c230/shim.sock" debug=false pid=5391
+Dec 22 13:37:51 minikube dockerd[2449]: time="2019-12-22T13:37:51.406130103Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/0c9b6e6751cd4258c1bb3254f5a3b1aa57e9ed2a36adf0881cb640cd22e0898d/shim.sock" debug=false pid=5456
+Dec 22 13:37:52 minikube dockerd[2449]: time="2019-12-22T13:37:52.650238180Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/155a4a45c4ba5bdc58ce2dc3fdd0aa32d87ab9748c2b4739aab7d9a5cadab3db/shim.sock" debug=false pid=5547
+Dec 22 13:37:52 minikube dockerd[2449]: time="2019-12-22T13:37:52.812514182Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/cec299565cc816332500b7c20248b6cc0ea2c1ef8b96c89215d25c518f18f21f/shim.sock" debug=false pid=5589
+Dec 22 13:37:56 minikube dockerd[2449]: time="2019-12-22T13:37:56.120698215Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/17ce71bddaf811c9058b72157bf14df698ddb9a9f097169b32ec74b6a53a4273/shim.sock" debug=false pid=5702
+Dec 22 13:37:56 minikube dockerd[2449]: time="2019-12-22T13:37:56.473493154Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/bce01707229a3b3903eb2374f56a36afd2df443d887a993678a8791d216cfcbc/shim.sock" debug=false pid=5793
+Dec 22 13:38:11 minikube dockerd[2449]: time="2019-12-22T13:38:11.520266682Z" level=warning msg="Error getting v2 registry: Get https://registry.docker-cn.com/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"
+Dec 22 13:38:11 minikube dockerd[2449]: time="2019-12-22T13:38:11.520907270Z" level=info msg="Attempting next endpoint for pull after error: Get https://registry.docker-cn.com/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"
+Dec 22 13:38:21 minikube dockerd[2449]: time="2019-12-22T13:38:21.950192651Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/3a81bde300774cc50e4941ed5bc0445f6405ee9b22d69a07defe550329da4e90/shim.sock" debug=false pid=6140
+Dec 22 13:38:36 minikube dockerd[2449]: time="2019-12-22T13:38:36.876102969Z" level=warning msg="Error getting v2 registry: Get https://registry.docker-cn.com/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"
+Dec 22 13:38:36 minikube dockerd[2449]: time="2019-12-22T13:38:36.876186684Z" level=info msg="Attempting next endpoint for pull after error: Get https://registry.docker-cn.com/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"
+Dec 22 13:39:02 minikube dockerd[2449]: time="2019-12-22T13:39:02.506188574Z" level=info msg="shim containerd-shim started" address="/containerd-shim/moby/28d8cd453ea0168428543ea860ef9547b61d2ec21d0ee70bba4c2d2caf9ff975/shim.sock" debug=false pid=6627
+
+==> container status <==
+CONTAINER           IMAGE                                                                                                  CREATED             STATE               NAME                        ATTEMPT             POD ID
+28d8cd453ea01       kubernetesui/dashboard@sha256:fc90baec4fb62b809051a3227e71266c0427240685139bbd5673282715924ea7         20 minutes ago      Running             kubernetes-dashboard        0                   bce01707229a3
+3a81bde300774       kubernetesui/metrics-scraper@sha256:2026f9f7558d0f25cc6bab74ea201b4e9d5668fbc378ef64e13fddaea570efc0   21 minutes ago      Running             dashboard-metrics-scraper   0                   17ce71bddaf81
+cec299565cc81       4689081edb103                                                                                          21 minutes ago      Running             storage-provisioner         0                   155a4a45c4ba5
+0c9b6e6751cd4       70f311871ae12                                                                                          21 minutes ago      Running             coredns                     0                   1819a2c2f419e
+2ad0aea74d2b4       70f311871ae12                                                                                          21 minutes ago      Running             coredns                     0                   d5f3f6a38b7e1
+0357db88e526d       7d54289267dc5                                                                                          21 minutes ago      Running             kube-proxy                  0                   f54720d9527cd
+dbfc2261c56aa       5eb3b74868724                                                                                          22 minutes ago      Running             kube-controller-manager     0                   0bb2057e3c01a
+4100e7406b093       0cae8d5cc64c7                                                                                          22 minutes ago      Running             kube-apiserver              0                   358eb2041449c
+fde2e37123ccf       78c190f736b11                                                                                          22 minutes ago      Running             kube-scheduler              0                   ed4174f73e4e5
+671bd06ea9e00       303ce5db0e90d                                                                                          22 minutes ago      Running             etcd                        0                   25ea5f8260de2
+3546a2441a45c       bd12a212f9dcb                                                                                          22 minutes ago      Running             kube-addon-manager          0                   a0f7520eab083
+
+==> coredns ["0c9b6e6751cd"] <==
+.:53
+[INFO] plugin/reload: Running configuration MD5 = 4e235fcc3696966e76816bcd9034ebc7
+CoreDNS-1.6.5
+linux/amd64, go1.13.4, c2fd1b2
+
+==> coredns ["2ad0aea74d2b"] <==
+.:53
+[INFO] plugin/reload: Running configuration MD5 = 4e235fcc3696966e76816bcd9034ebc7
+CoreDNS-1.6.5
+linux/amd64, go1.13.4, c2fd1b2
+
+==> dmesg <==
+[  +5.005090] hpet1: lost 318 rtc interrupts
+[  +5.003174] hpet1: lost 319 rtc interrupts
+[  +5.002403] hpet1: lost 318 rtc interrupts
+[  +5.002417] hpet1: lost 318 rtc interrupts
+[Dec22 13:55] hpet1: lost 319 rtc interrupts
+[  +5.003634] hpet1: lost 318 rtc interrupts
+[  +5.004565] hpet1: lost 318 rtc interrupts
+[  +5.004354] hpet1: lost 319 rtc interrupts
+[  +5.003211] hpet1: lost 318 rtc interrupts
+[  +5.002852] hpet1: lost 318 rtc interrupts
+[  +5.002534] hpet1: lost 318 rtc interrupts
+[  +5.003046] hpet1: lost 319 rtc interrupts
+[  +5.006603] hpet1: lost 318 rtc interrupts
+[  +5.003924] hpet1: lost 318 rtc interrupts
+[  +5.002928] hpet1: lost 318 rtc interrupts
+[  +5.003668] hpet1: lost 319 rtc interrupts
+[Dec22 13:56] hpet1: lost 318 rtc interrupts
+[  +5.007714] hpet1: lost 319 rtc interrupts
+[  +5.004374] hpet1: lost 319 rtc interrupts
+[  +5.005260] hpet1: lost 319 rtc interrupts
+[  +5.004876] hpet1: lost 318 rtc interrupts
+[  +5.001581] hpet1: lost 318 rtc interrupts
+[  +5.006117] hpet1: lost 319 rtc interrupts
+[  +5.000259] hpet1: lost 318 rtc interrupts
+[  +5.002516] hpet1: lost 318 rtc interrupts
+[  +5.008258] hpet1: lost 319 rtc interrupts
+[  +5.006152] hpet1: lost 318 rtc interrupts
+[  +5.005471] hpet1: lost 318 rtc interrupts
+[Dec22 13:57] hpet1: lost 319 rtc interrupts
+[  +5.003321] hpet1: lost 318 rtc interrupts
+[  +5.002648] hpet1: lost 319 rtc interrupts
+[  +5.002690] hpet1: lost 318 rtc interrupts
+[  +5.002687] hpet1: lost 319 rtc interrupts
+[  +5.005032] hpet1: lost 319 rtc interrupts
+[  +5.008595] hpet1: lost 318 rtc interrupts
+[  +5.007929] hpet1: lost 320 rtc interrupts
+[  +5.002016] hpet1: lost 318 rtc interrupts
+[  +5.005913] hpet1: lost 318 rtc interrupts
+[  +5.002874] hpet1: lost 319 rtc interrupts
+[  +5.003640] hpet1: lost 319 rtc interrupts
+[Dec22 13:58] hpet1: lost 318 rtc interrupts
+[  +5.004242] hpet1: lost 318 rtc interrupts
+[  +5.006558] hpet1: lost 320 rtc interrupts
+[  +5.005453] hpet1: lost 318 rtc interrupts
+[  +5.003469] hpet1: lost 318 rtc interrupts
+[  +5.003237] hpet1: lost 319 rtc interrupts
+[  +5.000265] hpet1: lost 318 rtc interrupts
+[  +5.007318] hpet1: lost 319 rtc interrupts
+[  +4.999707] hpet1: lost 318 rtc interrupts
+[  +5.000766] hpet1: lost 318 rtc interrupts
+[  +5.003212] hpet1: lost 318 rtc interrupts
+[  +5.001439] hpet1: lost 318 rtc interrupts
+[Dec22 13:59] hpet1: lost 318 rtc interrupts
+[  +5.003716] hpet1: lost 318 rtc interrupts
+[  +5.000492] hpet1: lost 319 rtc interrupts
+[  +5.000162] hpet1: lost 318 rtc interrupts
+[  +5.003753] hpet1: lost 318 rtc interrupts
+[  +5.000961] hpet1: lost 318 rtc interrupts
+[  +5.000368] hpet1: lost 318 rtc interrupts
+[  +5.008445] hpet1: lost 318 rtc interrupts
+
+==> kernel <==
+ 13:59:37 up 23 min,  0 users,  load average: 0.99, 1.18, 1.03
+Linux minikube 4.19.81 #1 SMP Tue Dec 10 16:09:50 PST 2019 x86_64 GNU/Linux
+PRETTY_NAME="Buildroot 2019.02.7"
+
+==> kube-addon-manager ["3546a2441a45"] <==
+error: no objects passed to apply
+error: no objects passed to apply
+error: no objects passed to apply
+deployment.apps/dashboard-metrics-scraper unchanged
+deployment.apps/kubernetes-dashboard unchanged
+namespace/kubernetes-dashboard unchanged
+role.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+serviceaccount/kubernetes-dashboard unchanged
+secret/kubernetes-dashboard-certs unchanged
+secret/kubernetes-dashboard-csrf unchanged
+secret/kubernetes-dashboard-key-holder unchanged
+service/kubernetes-dashboard unchanged
+service/dashboard-metrics-scraper unchanged
+serviceaccount/storage-provisioner unchanged
+INFO: == Kubernetes addon reconcile completed at 2019-12-22T13:59:26+00:00 ==
+INFO: Leader election disabled.
+INFO: == Kubernetes addon ensure completed at 2019-12-22T13:59:26+00:00 ==
+INFO: == Reconciling with deprecated label ==
+INFO: == Reconciling with addon-manager label ==
+clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+configmap/kubernetes-dashboard-settings unchanged
+deployment.apps/dashboard-metrics-scraper unchanged
+deployment.apps/kubernetes-dashboard unchanged
+namespace/kubernetes-dashboard unchanged
+role.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+serviceaccount/kubernetes-dashboard unchanged
+secret/kubernetes-dashboard-certs unchanged
+secret/kubernetes-dashboard-csrf unchanged
+secret/kubernetes-dashboard-key-holder unchanged
+service/kubernetes-dashboard unchanged
+service/dashboard-metrics-scraper unchanged
+serviceaccount/storage-provisioner unchanged
+INFO: == Kubernetes addon reconcile completed at 2019-12-22T13:59:30+00:00 ==
+INFO: Leader election disabled.
+INFO: == Kubernetes addon ensure completed at 2019-12-22T13:59:31+00:00 ==
+INFO: == Reconciling with deprecated label ==
+INFO: == Reconciling with addon-manager label ==
+clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+configmap/kubernetes-dashboard-settings unchanged
+deployment.apps/dashboard-metrics-scraper unchanged
+deployment.apps/kubernetes-dashboard unchanged
+namespace/kubernetes-dashboard unchanged
+role.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard unchanged
+serviceaccount/kubernetes-dashboard unchanged
+secret/kubernetes-dashboard-certs unchanged
+secret/kubernetes-dashboard-csrf unchanged
+secret/kubernetes-dashboard-key-holder unchanged
+service/kubernetes-dashboard unchanged
+service/dashboard-metrics-scraper unchanged
+serviceaccount/storage-provisioner unchanged
+INFO: == Kubernetes addon reconcile completed at 2019-12-22T13:59:36+00:00 ==
+INFO: Leader election disabled.
+INFO: == Kubernetes addon ensure completed at 2019-12-22T13:59:36+00:00 ==
+INFO: == Reconciling with deprecated label ==
+INFO: == Reconciling with addon-manager label ==
+
+==> kube-apiserver ["4100e7406b09"] <==
+W1222 13:37:38.678894       1 genericapiserver.go:404] Skipping API node.k8s.io/v1alpha1 because it has no resources.
+W1222 13:37:38.692662       1 genericapiserver.go:404] Skipping API rbac.authorization.k8s.io/v1alpha1 because it has no resources.
+W1222 13:37:38.695276       1 genericapiserver.go:404] Skipping API scheduling.k8s.io/v1alpha1 because it has no resources.
+W1222 13:37:38.704259       1 genericapiserver.go:404] Skipping API storage.k8s.io/v1alpha1 because it has no resources.
+W1222 13:37:38.717634       1 genericapiserver.go:404] Skipping API apps/v1beta2 because it has no resources.
+W1222 13:37:38.717707       1 genericapiserver.go:404] Skipping API apps/v1beta1 because it has no resources.
+I1222 13:37:38.724526       1 plugins.go:158] Loaded 11 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,MutatingAdmissionWebhook,RuntimeClass.
+I1222 13:37:38.724589       1 plugins.go:161] Loaded 7 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,Priority,PersistentVolumeClaimResize,ValidatingAdmissionWebhook,RuntimeClass,ResourceQuota.
+I1222 13:37:38.725767       1 client.go:361] parsed scheme: "endpoint"
+I1222 13:37:38.725825       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379 0  <nil>}]
+I1222 13:37:38.731393       1 client.go:361] parsed scheme: "endpoint"
+I1222 13:37:38.731425       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379 0  <nil>}]
+I1222 13:37:40.236652       1 secure_serving.go:178] Serving securely on [::]:8443
+I1222 13:37:40.236733       1 autoregister_controller.go:140] Starting autoregister controller
+I1222 13:37:40.236739       1 cache.go:32] Waiting for caches to sync for autoregister controller
+I1222 13:37:40.236789       1 controller.go:81] Starting OpenAPI AggregationController
+I1222 13:37:40.236872       1 dynamic_cafile_content.go:166] Starting request-header::/var/lib/minikube/certs/front-proxy-ca.crt
+I1222 13:37:40.236943       1 dynamic_serving_content.go:129] Starting serving-cert::/var/lib/minikube/certs/apiserver.crt::/var/lib/minikube/certs/apiserver.key
+I1222 13:37:40.237006       1 tlsconfig.go:219] Starting DynamicServingCertificateController
+I1222 13:37:40.237890       1 apiservice_controller.go:94] Starting APIServiceRegistrationController
+I1222 13:37:40.237915       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+I1222 13:37:40.237931       1 crd_finalizer.go:263] Starting CRDFinalizer
+I1222 13:37:40.238307       1 cluster_authentication_trust_controller.go:440] Starting cluster_authentication_trust_controller controller
+I1222 13:37:40.238333       1 shared_informer.go:197] Waiting for caches to sync for cluster_authentication_trust_controller
+I1222 13:37:40.238351       1 crdregistration_controller.go:111] Starting crd-autoregister controller
+I1222 13:37:40.238413       1 shared_informer.go:197] Waiting for caches to sync for crd-autoregister
+I1222 13:37:40.240167       1 available_controller.go:386] Starting AvailableConditionController
+I1222 13:37:40.240227       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+I1222 13:37:40.240248       1 dynamic_cafile_content.go:166] Starting client-ca-bundle::/var/lib/minikube/certs/ca.crt
+I1222 13:37:40.247984       1 controller.go:85] Starting OpenAPI controller
+I1222 13:37:40.248006       1 customresource_discovery_controller.go:208] Starting DiscoveryController
+I1222 13:37:40.248025       1 naming_controller.go:288] Starting NamingConditionController
+I1222 13:37:40.248039       1 establishing_controller.go:73] Starting EstablishingController
+I1222 13:37:40.248046       1 nonstructuralschema_controller.go:191] Starting NonStructuralSchemaConditionController
+I1222 13:37:40.248065       1 apiapproval_controller.go:185] Starting KubernetesAPIApprovalPolicyConformantConditionController
+I1222 13:37:40.248087       1 dynamic_cafile_content.go:166] Starting client-ca-bundle::/var/lib/minikube/certs/ca.crt
+I1222 13:37:40.248130       1 dynamic_cafile_content.go:166] Starting request-header::/var/lib/minikube/certs/front-proxy-ca.crt
+E1222 13:37:40.284934       1 controller.go:151] Unable to remove old endpoints from kubernetes service: StorageError: key not found, Code: 1, Key: /registry/masterleases/192.168.99.112, ResourceVersion: 0, AdditionalErrorMsg: 
+I1222 13:37:40.338304       1 cache.go:39] Caches are synced for autoregister controller
+I1222 13:37:40.338734       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+I1222 13:37:40.341222       1 shared_informer.go:204] Caches are synced for crd-autoregister 
+I1222 13:37:40.341246       1 shared_informer.go:204] Caches are synced for cluster_authentication_trust_controller 
+I1222 13:37:40.342103       1 cache.go:39] Caches are synced for AvailableConditionController controller
+I1222 13:37:41.236481       1 controller.go:107] OpenAPI AggregationController: Processing item 
+I1222 13:37:41.236718       1 controller.go:130] OpenAPI AggregationController: action for item : Nothing (removed from the queue).
+I1222 13:37:41.236794       1 controller.go:130] OpenAPI AggregationController: action for item k8s_internal_local_delegation_chain_0000000000: Nothing (removed from the queue).
+I1222 13:37:41.250871       1 storage_scheduling.go:133] created PriorityClass system-node-critical with value 2000001000
+I1222 13:37:41.255427       1 storage_scheduling.go:133] created PriorityClass system-cluster-critical with value 2000000000
+I1222 13:37:41.255500       1 storage_scheduling.go:142] all system priority classes are created successfully or already exist.
+I1222 13:37:41.575526       1 controller.go:606] quota admission added evaluator for: roles.rbac.authorization.k8s.io
+I1222 13:37:41.601270       1 controller.go:606] quota admission added evaluator for: rolebindings.rbac.authorization.k8s.io
+W1222 13:37:41.659173       1 lease.go:224] Resetting endpoints for master service "kubernetes" to [192.168.99.112]
+I1222 13:37:41.659756       1 controller.go:606] quota admission added evaluator for: endpoints
+I1222 13:37:42.451682       1 controller.go:606] quota admission added evaluator for: leases.coordination.k8s.io
+I1222 13:37:42.841440       1 controller.go:606] quota admission added evaluator for: serviceaccounts
+I1222 13:37:42.852368       1 controller.go:606] quota admission added evaluator for: deployments.apps
+I1222 13:37:43.080031       1 controller.go:606] quota admission added evaluator for: daemonsets.apps
+I1222 13:37:49.739141       1 controller.go:606] quota admission added evaluator for: controllerrevisions.apps
+I1222 13:37:49.836121       1 controller.go:606] quota admission added evaluator for: replicasets.apps
+E1222 13:48:34.750041       1 watcher.go:214] watch chan error: etcdserver: mvcc: required revision has been compacted
+
+==> kube-controller-manager ["dbfc2261c56a"] <==
+I1222 13:37:49.237333       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for horizontalpodautoscalers.autoscaling
+I1222 13:37:49.237426       1 controllermanager.go:533] Started "resourcequota"
+I1222 13:37:49.237743       1 resource_quota_controller.go:271] Starting resource quota controller
+I1222 13:37:49.237789       1 shared_informer.go:197] Waiting for caches to sync for resource quota
+I1222 13:37:49.237864       1 resource_quota_monitor.go:303] QuotaMonitor running
+I1222 13:37:49.382488       1 controllermanager.go:533] Started "disruption"
+W1222 13:37:49.382546       1 controllermanager.go:525] Skipping "nodeipam"
+I1222 13:37:49.382903       1 disruption.go:330] Starting disruption controller
+I1222 13:37:49.382931       1 shared_informer.go:197] Waiting for caches to sync for disruption
+I1222 13:37:49.630623       1 controllermanager.go:533] Started "pvc-protection"
+W1222 13:37:49.630656       1 controllermanager.go:525] Skipping "root-ca-cert-publisher"
+I1222 13:37:49.631293       1 pvc_protection_controller.go:100] Starting PVC protection controller
+I1222 13:37:49.631357       1 shared_informer.go:197] Waiting for caches to sync for PVC protection
+I1222 13:37:49.635299       1 shared_informer.go:197] Waiting for caches to sync for garbage collector
+I1222 13:37:49.648710       1 shared_informer.go:204] Caches are synced for namespace 
+W1222 13:37:49.649195       1 actual_state_of_world.go:506] Failed to update statusUpdateNeeded field in actual state of world: Failed to set statusUpdateNeeded to needed true, because nodeName="minikube" does not exist
+I1222 13:37:49.676133       1 shared_informer.go:204] Caches are synced for TTL 
+I1222 13:37:49.681773       1 shared_informer.go:204] Caches are synced for job 
+I1222 13:37:49.681890       1 shared_informer.go:204] Caches are synced for PV protection 
+I1222 13:37:49.681972       1 shared_informer.go:204] Caches are synced for attach detach 
+I1222 13:37:49.683184       1 shared_informer.go:204] Caches are synced for HPA 
+I1222 13:37:49.683322       1 shared_informer.go:204] Caches are synced for certificate-csrsigning 
+I1222 13:37:49.685712       1 shared_informer.go:204] Caches are synced for bootstrap_signer 
+I1222 13:37:49.696463       1 shared_informer.go:204] Caches are synced for GC 
+I1222 13:37:49.703621       1 shared_informer.go:204] Caches are synced for expand 
+I1222 13:37:49.719152       1 shared_informer.go:204] Caches are synced for certificate-csrapproving 
+I1222 13:37:49.721671       1 shared_informer.go:204] Caches are synced for taint 
+I1222 13:37:49.721855       1 node_lifecycle_controller.go:1443] Initializing eviction metric for zone: 
+W1222 13:37:49.721980       1 node_lifecycle_controller.go:1058] Missing timestamp for Node minikube. Assuming now as a timestamp.
+I1222 13:37:49.722067       1 node_lifecycle_controller.go:1259] Controller detected that zone  is now in state Normal.
+I1222 13:37:49.722306       1 taint_manager.go:186] Starting NoExecuteTaintManager
+I1222 13:37:49.722690       1 event.go:281] Event(v1.ObjectReference{Kind:"Node", Namespace:"", Name:"minikube", UID:"58ff76e8-1e38-48e4-8816-dc94f59d8604", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RegisteredNode' Node minikube event: Registered Node minikube in Controller
+I1222 13:37:49.731433       1 shared_informer.go:204] Caches are synced for service account 
+I1222 13:37:49.732042       1 shared_informer.go:204] Caches are synced for daemon sets 
+I1222 13:37:49.732630       1 shared_informer.go:204] Caches are synced for persistent volume 
+I1222 13:37:49.732759       1 shared_informer.go:204] Caches are synced for PVC protection 
+I1222 13:37:49.732795       1 shared_informer.go:204] Caches are synced for stateful set 
+I1222 13:37:49.738025       1 shared_informer.go:204] Caches are synced for ClusterRoleAggregator 
+I1222 13:37:49.750834       1 event.go:281] Event(v1.ObjectReference{Kind:"DaemonSet", Namespace:"kube-system", Name:"kube-proxy", UID:"ac396ce0-5bcc-46a0-92c8-c07d2d51abc1", APIVersion:"apps/v1", ResourceVersion:"189", FieldPath:""}): type: 'Normal' reason: 'SuccessfulCreate' Created pod: kube-proxy-9knpv
+E1222 13:37:49.761962       1 clusterroleaggregation_controller.go:180] edit failed with : Operation cannot be fulfilled on clusterroles.rbac.authorization.k8s.io "edit": the object has been modified; please apply your changes to the latest version and try again
+E1222 13:37:49.765160       1 clusterroleaggregation_controller.go:180] view failed with : Operation cannot be fulfilled on clusterroles.rbac.authorization.k8s.io "view": the object has been modified; please apply your changes to the latest version and try again
+I1222 13:37:49.782081       1 shared_informer.go:204] Caches are synced for ReplicaSet 
+I1222 13:37:49.831922       1 shared_informer.go:204] Caches are synced for deployment 
+I1222 13:37:49.842300       1 event.go:281] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"kube-system", Name:"coredns", UID:"9cd92cec-45dd-424e-99e0-e0f96f0c88aa", APIVersion:"apps/v1", ResourceVersion:"179", FieldPath:""}): type: 'Normal' reason: 'ScalingReplicaSet' Scaled up replica set coredns-7f9c544f75 to 2
+I1222 13:37:49.845430       1 event.go:281] Event(v1.ObjectReference{Kind:"ReplicaSet", Namespace:"kube-system", Name:"coredns-7f9c544f75", UID:"ca7bbe84-f197-42fb-b360-f09a6c744ba8", APIVersion:"apps/v1", ResourceVersion:"339", FieldPath:""}): type: 'Normal' reason: 'SuccessfulCreate' Created pod: coredns-7f9c544f75-zbqqz
+I1222 13:37:49.857289       1 event.go:281] Event(v1.ObjectReference{Kind:"ReplicaSet", Namespace:"kube-system", Name:"coredns-7f9c544f75", UID:"ca7bbe84-f197-42fb-b360-f09a6c744ba8", APIVersion:"apps/v1", ResourceVersion:"339", FieldPath:""}): type: 'Normal' reason: 'SuccessfulCreate' Created pod: coredns-7f9c544f75-rpx24
+I1222 13:37:49.881909       1 shared_informer.go:204] Caches are synced for ReplicationController 
+I1222 13:37:50.139253       1 shared_informer.go:204] Caches are synced for resource quota 
+I1222 13:37:50.184216       1 shared_informer.go:204] Caches are synced for endpoint 
+I1222 13:37:50.188908       1 shared_informer.go:204] Caches are synced for disruption 
+I1222 13:37:50.189669       1 disruption.go:338] Sending events to api server.
+I1222 13:37:50.235945       1 shared_informer.go:204] Caches are synced for garbage collector 
+I1222 13:37:50.260714       1 shared_informer.go:204] Caches are synced for garbage collector 
+I1222 13:37:50.260744       1 garbagecollector.go:138] Garbage collector: all resource monitors have synced. Proceeding to collect garbage
+I1222 13:37:50.985422       1 shared_informer.go:197] Waiting for caches to sync for resource quota
+I1222 13:37:50.985458       1 shared_informer.go:204] Caches are synced for resource quota 
+I1222 13:37:55.726339       1 event.go:281] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"kubernetes-dashboard", Name:"dashboard-metrics-scraper", UID:"5c77c2a9-8ba9-407a-bd06-11e98651c42f", APIVersion:"apps/v1", ResourceVersion:"425", FieldPath:""}): type: 'Normal' reason: 'ScalingReplicaSet' Scaled up replica set dashboard-metrics-scraper-7b64584c5c to 1
+I1222 13:37:55.736650       1 event.go:281] Event(v1.ObjectReference{Kind:"ReplicaSet", Namespace:"kubernetes-dashboard", Name:"dashboard-metrics-scraper-7b64584c5c", UID:"afb9d890-6dc2-4fed-a6ad-348445c0771f", APIVersion:"apps/v1", ResourceVersion:"426", FieldPath:""}): type: 'Normal' reason: 'SuccessfulCreate' Created pod: dashboard-metrics-scraper-7b64584c5c-zvpx8
+I1222 13:37:55.759580       1 event.go:281] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"kubernetes-dashboard", Name:"kubernetes-dashboard", UID:"2793cfb9-c32f-4403-9735-861a747480a9", APIVersion:"apps/v1", ResourceVersion:"436", FieldPath:""}): type: 'Normal' reason: 'ScalingReplicaSet' Scaled up replica set kubernetes-dashboard-79d9cd965 to 1
+I1222 13:37:55.768061       1 event.go:281] Event(v1.ObjectReference{Kind:"ReplicaSet", Namespace:"kubernetes-dashboard", Name:"kubernetes-dashboard-79d9cd965", UID:"dc2a0746-5e04-4d79-9bfa-1e0623a1b32a", APIVersion:"apps/v1", ResourceVersion:"437", FieldPath:""}): type: 'Normal' reason: 'SuccessfulCreate' Created pod: kubernetes-dashboard-79d9cd965-qmv5c
+
+==> kube-proxy ["0357db88e526"] <==
+W1222 13:37:51.039210       1 server_others.go:323] Unknown proxy mode "", assuming iptables proxy
+I1222 13:37:51.057818       1 node.go:135] Successfully retrieved node IP: 192.168.99.112
+I1222 13:37:51.057850       1 server_others.go:145] Using iptables Proxier.
+W1222 13:37:51.057943       1 proxier.go:286] clusterCIDR not specified, unable to distinguish between internal and external traffic
+I1222 13:37:51.058553       1 server.go:571] Version: v1.17.0
+I1222 13:37:51.059226       1 conntrack.go:100] Set sysctl 'net/netfilter/nf_conntrack_max' to 131072
+I1222 13:37:51.063662       1 conntrack.go:52] Setting nf_conntrack_max to 131072
+I1222 13:37:51.063875       1 conntrack.go:83] Setting conntrack hashsize to 32768
+I1222 13:37:51.066888       1 conntrack.go:100] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_established' to 86400
+I1222 13:37:51.066930       1 conntrack.go:100] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_close_wait' to 3600
+I1222 13:37:51.067402       1 config.go:313] Starting service config controller
+I1222 13:37:51.067625       1 shared_informer.go:197] Waiting for caches to sync for service config
+I1222 13:37:51.068605       1 config.go:131] Starting endpoints config controller
+I1222 13:37:51.068624       1 shared_informer.go:197] Waiting for caches to sync for endpoints config
+I1222 13:37:51.170621       1 shared_informer.go:204] Caches are synced for service config 
+I1222 13:37:51.170783       1 shared_informer.go:204] Caches are synced for endpoints config 
+
+==> kube-scheduler ["fde2e37123cc"] <==
+I1222 13:37:37.502686       1 serving.go:312] Generated self-signed cert in-memory
+W1222 13:37:38.078689       1 configmap_cafile_content.go:102] unable to load initial CA bundle for: "client-ca::kube-system::extension-apiserver-authentication::client-ca-file" due to: configmap "extension-apiserver-authentication" not found
+W1222 13:37:38.078756       1 configmap_cafile_content.go:102] unable to load initial CA bundle for: "client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" due to: configmap "extension-apiserver-authentication" not found
+W1222 13:37:40.305171       1 authentication.go:348] Unable to get configmap/extension-apiserver-authentication in kube-system.  Usually fixed by 'kubectl create rolebinding -n kube-system ROLEBINDING_NAME --role=extension-apiserver-authentication-reader --serviceaccount=YOUR_NS:YOUR_SA'
+W1222 13:37:40.306155       1 authentication.go:296] Error looking up in-cluster authentication configuration: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+W1222 13:37:40.306250       1 authentication.go:297] Continuing without authentication configuration. This may treat all requests as anonymous.
+W1222 13:37:40.306293       1 authentication.go:298] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+W1222 13:37:40.333765       1 authorization.go:47] Authorization is disabled
+W1222 13:37:40.333823       1 authentication.go:92] Authentication is disabled
+I1222 13:37:40.333833       1 deprecated_insecure_serving.go:51] Serving healthz insecurely on [::]:10251
+I1222 13:37:40.336114       1 secure_serving.go:178] Serving securely on 127.0.0.1:10259
+I1222 13:37:40.336191       1 configmap_cafile_content.go:205] Starting client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1222 13:37:40.339455       1 shared_informer.go:197] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1222 13:37:40.336323       1 tlsconfig.go:219] Starting DynamicServingCertificateController
+E1222 13:37:40.349315       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+E1222 13:37:40.350124       1 reflector.go:156] k8s.io/kubernetes/cmd/kube-scheduler/app/server.go:246: Failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+E1222 13:37:40.350646       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+E1222 13:37:40.351005       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+E1222 13:37:40.351142       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+E1222 13:37:40.351281       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+E1222 13:37:40.351383       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+E1222 13:37:40.351465       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+E1222 13:37:40.351547       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+E1222 13:37:40.351627       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+E1222 13:37:40.351853       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1beta1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+E1222 13:37:40.351996       1 reflector.go:156] k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:209: Failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+E1222 13:37:41.351706       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+E1222 13:37:41.352342       1 reflector.go:156] k8s.io/kubernetes/cmd/kube-scheduler/app/server.go:246: Failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+E1222 13:37:41.353528       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+E1222 13:37:41.354951       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+E1222 13:37:41.357016       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+E1222 13:37:41.358828       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+E1222 13:37:41.359886       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+E1222 13:37:41.361508       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+E1222 13:37:41.366191       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+E1222 13:37:41.371217       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+E1222 13:37:41.373431       1 reflector.go:156] k8s.io/client-go/informers/factory.go:135: Failed to list *v1beta1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+E1222 13:37:41.375472       1 reflector.go:156] k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:209: Failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+I1222 13:37:42.437223       1 leaderelection.go:242] attempting to acquire leader lease  kube-system/kube-scheduler...
+I1222 13:37:42.441154       1 shared_informer.go:204] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file 
+I1222 13:37:42.453225       1 leaderelection.go:252] successfully acquired lease kube-system/kube-scheduler
+
+==> kubelet <==
+-- Logs begin at Sun 2019-12-22 13:36:51 UTC, end at Sun 2019-12-22 13:59:38 UTC. --
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.093100    4736 server.go:143] Starting to listen on 0.0.0.0:10250
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.097574    4736 volume_manager.go:265] Starting Kubelet Volume Manager
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.088135    4736 server.go:1113] Started kubelet
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.100036    4736 server.go:354] Adding debug handlers to kubelet server.
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.097770    4736 desired_state_of_world_populator.go:138] Desired state populator starts to run
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.126875    4736 status_manager.go:157] Starting to sync pod status with apiserver
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.126936    4736 kubelet.go:1820] Starting kubelet main sync loop.
+Dec 22 13:37:46 minikube kubelet[4736]: E1222 13:37:46.126966    4736 kubelet.go:1844] skipping pod synchronization - [container runtime status check may not have completed yet, PLEG is not healthy: pleg has yet to be successful]
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.205483    4736 kubelet_node_status.go:294] Setting node annotation to enable volume controller attach/detach
+Dec 22 13:37:46 minikube kubelet[4736]: E1222 13:37:46.229904    4736 kubelet.go:1844] skipping pod synchronization - container runtime status check may not have completed yet
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.231461    4736 kubelet_node_status.go:70] Attempting to register node minikube
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.238281    4736 kubelet_node_status.go:112] Node minikube was previously registered
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.238383    4736 kubelet_node_status.go:73] Successfully registered node minikube
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.251329    4736 cpu_manager.go:173] [cpumanager] starting with none policy
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.251354    4736 cpu_manager.go:174] [cpumanager] reconciling every 10s
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.251370    4736 policy_none.go:43] [cpumanager] none policy: Start
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.253954    4736 plugin_manager.go:114] Starting Kubelet Plugin Manager
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506440    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "kubeconfig" (UniqueName: "kubernetes.io/host-path/9166767a49e1c4eadb6c0ded1b065218-kubeconfig") pod "kube-addon-manager-minikube" (UID: "9166767a49e1c4eadb6c0ded1b065218")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506523    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "etcd-certs" (UniqueName: "kubernetes.io/host-path/e6977a6929eb0e109649abdb25d5b05d-etcd-certs") pod "etcd-minikube" (UID: "e6977a6929eb0e109649abdb25d5b05d")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506543    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "ca-certs" (UniqueName: "kubernetes.io/host-path/6f1f20c7e1968ee6eaeeb75228863478-ca-certs") pod "kube-apiserver-minikube" (UID: "6f1f20c7e1968ee6eaeeb75228863478")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506561    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "k8s-certs" (UniqueName: "kubernetes.io/host-path/6f1f20c7e1968ee6eaeeb75228863478-k8s-certs") pod "kube-apiserver-minikube" (UID: "6f1f20c7e1968ee6eaeeb75228863478")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506586    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "ca-certs" (UniqueName: "kubernetes.io/host-path/8b1b1c5a29ce12015e1ea464711b4e49-ca-certs") pod "kube-controller-manager-minikube" (UID: "8b1b1c5a29ce12015e1ea464711b4e49")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506604    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "flexvolume-dir" (UniqueName: "kubernetes.io/host-path/8b1b1c5a29ce12015e1ea464711b4e49-flexvolume-dir") pod "kube-controller-manager-minikube" (UID: "8b1b1c5a29ce12015e1ea464711b4e49")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506622    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "usr-share-ca-certificates" (UniqueName: "kubernetes.io/host-path/8b1b1c5a29ce12015e1ea464711b4e49-usr-share-ca-certificates") pod "kube-controller-manager-minikube" (UID: "8b1b1c5a29ce12015e1ea464711b4e49")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506640    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "addons" (UniqueName: "kubernetes.io/host-path/9166767a49e1c4eadb6c0ded1b065218-addons") pod "kube-addon-manager-minikube" (UID: "9166767a49e1c4eadb6c0ded1b065218")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506703    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "etcd-data" (UniqueName: "kubernetes.io/host-path/e6977a6929eb0e109649abdb25d5b05d-etcd-data") pod "etcd-minikube" (UID: "e6977a6929eb0e109649abdb25d5b05d")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506726    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "usr-share-ca-certificates" (UniqueName: "kubernetes.io/host-path/6f1f20c7e1968ee6eaeeb75228863478-usr-share-ca-certificates") pod "kube-apiserver-minikube" (UID: "6f1f20c7e1968ee6eaeeb75228863478")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506743    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "k8s-certs" (UniqueName: "kubernetes.io/host-path/8b1b1c5a29ce12015e1ea464711b4e49-k8s-certs") pod "kube-controller-manager-minikube" (UID: "8b1b1c5a29ce12015e1ea464711b4e49")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506760    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "kubeconfig" (UniqueName: "kubernetes.io/host-path/8b1b1c5a29ce12015e1ea464711b4e49-kubeconfig") pod "kube-controller-manager-minikube" (UID: "8b1b1c5a29ce12015e1ea464711b4e49")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506796    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "kubeconfig" (UniqueName: "kubernetes.io/host-path/75516e998e1ab97384d969d8ccd139db-kubeconfig") pod "kube-scheduler-minikube" (UID: "75516e998e1ab97384d969d8ccd139db")
+Dec 22 13:37:46 minikube kubelet[4736]: I1222 13:37:46.506808    4736 reconciler.go:156] Reconciler: start to sync state
+Dec 22 13:37:49 minikube kubelet[4736]: I1222 13:37:49.925047    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "lib-modules" (UniqueName: "kubernetes.io/host-path/df5795de-d860-43f4-a7a3-e265fd1c6e9b-lib-modules") pod "kube-proxy-9knpv" (UID: "df5795de-d860-43f4-a7a3-e265fd1c6e9b")
+Dec 22 13:37:49 minikube kubelet[4736]: I1222 13:37:49.925115    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "xtables-lock" (UniqueName: "kubernetes.io/host-path/df5795de-d860-43f4-a7a3-e265fd1c6e9b-xtables-lock") pod "kube-proxy-9knpv" (UID: "df5795de-d860-43f4-a7a3-e265fd1c6e9b")
+Dec 22 13:37:49 minikube kubelet[4736]: I1222 13:37:49.925149    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "kube-proxy" (UniqueName: "kubernetes.io/configmap/df5795de-d860-43f4-a7a3-e265fd1c6e9b-kube-proxy") pod "kube-proxy-9knpv" (UID: "df5795de-d860-43f4-a7a3-e265fd1c6e9b")
+Dec 22 13:37:49 minikube kubelet[4736]: I1222 13:37:49.925178    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "kube-proxy-token-t97cq" (UniqueName: "kubernetes.io/secret/df5795de-d860-43f4-a7a3-e265fd1c6e9b-kube-proxy-token-t97cq") pod "kube-proxy-9knpv" (UID: "df5795de-d860-43f4-a7a3-e265fd1c6e9b")
+Dec 22 13:37:50 minikube kubelet[4736]: I1222 13:37:50.025598    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "coredns-token-6c2sv" (UniqueName: "kubernetes.io/secret/c3274d7a-213a-422a-b488-a8a80cb18bdf-coredns-token-6c2sv") pod "coredns-7f9c544f75-rpx24" (UID: "c3274d7a-213a-422a-b488-a8a80cb18bdf")
+Dec 22 13:37:50 minikube kubelet[4736]: I1222 13:37:50.025716    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "config-volume" (UniqueName: "kubernetes.io/configmap/6b388577-bd11-4499-bf77-3b45bf019374-config-volume") pod "coredns-7f9c544f75-zbqqz" (UID: "6b388577-bd11-4499-bf77-3b45bf019374")
+Dec 22 13:37:50 minikube kubelet[4736]: I1222 13:37:50.025806    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "config-volume" (UniqueName: "kubernetes.io/configmap/c3274d7a-213a-422a-b488-a8a80cb18bdf-config-volume") pod "coredns-7f9c544f75-rpx24" (UID: "c3274d7a-213a-422a-b488-a8a80cb18bdf")
+Dec 22 13:37:50 minikube kubelet[4736]: I1222 13:37:50.025899    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "coredns-token-6c2sv" (UniqueName: "kubernetes.io/secret/6b388577-bd11-4499-bf77-3b45bf019374-coredns-token-6c2sv") pod "coredns-7f9c544f75-zbqqz" (UID: "6b388577-bd11-4499-bf77-3b45bf019374")
+Dec 22 13:37:51 minikube kubelet[4736]: W1222 13:37:51.227443    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kube-system/coredns-7f9c544f75-rpx24 through plugin: invalid network status for
+Dec 22 13:37:51 minikube kubelet[4736]: W1222 13:37:51.315030    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kube-system/coredns-7f9c544f75-zbqqz through plugin: invalid network status for
+Dec 22 13:37:51 minikube kubelet[4736]: W1222 13:37:51.315223    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kube-system/coredns-7f9c544f75-zbqqz through plugin: invalid network status for
+Dec 22 13:37:51 minikube kubelet[4736]: W1222 13:37:51.316901    4736 pod_container_deletor.go:75] Container "1819a2c2f419e10f1b0751ee2944787801ffc4b274d29e41384f5da22c86e0c1" not found in pod's containers
+Dec 22 13:37:51 minikube kubelet[4736]: W1222 13:37:51.322104    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kube-system/coredns-7f9c544f75-rpx24 through plugin: invalid network status for
+Dec 22 13:37:51 minikube kubelet[4736]: W1222 13:37:51.490823    4736 pod_container_deletor.go:75] Container "d5f3f6a38b7e1d0091af5aeeb625cc77b487f9349f8b7f180b5de85216b8b554" not found in pod's containers
+Dec 22 13:37:52 minikube kubelet[4736]: I1222 13:37:52.447530    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "tmp" (UniqueName: "kubernetes.io/host-path/eedfbbc0-f673-4bdf-ba34-964efd35361c-tmp") pod "storage-provisioner" (UID: "eedfbbc0-f673-4bdf-ba34-964efd35361c")
+Dec 22 13:37:52 minikube kubelet[4736]: I1222 13:37:52.448303    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "storage-provisioner-token-278pl" (UniqueName: "kubernetes.io/secret/eedfbbc0-f673-4bdf-ba34-964efd35361c-storage-provisioner-token-278pl") pod "storage-provisioner" (UID: "eedfbbc0-f673-4bdf-ba34-964efd35361c")
+Dec 22 13:37:52 minikube kubelet[4736]: W1222 13:37:52.499537    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kube-system/coredns-7f9c544f75-rpx24 through plugin: invalid network status for
+Dec 22 13:37:52 minikube kubelet[4736]: W1222 13:37:52.506675    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kube-system/coredns-7f9c544f75-zbqqz through plugin: invalid network status for
+Dec 22 13:37:55 minikube kubelet[4736]: I1222 13:37:55.872449    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "kubernetes-dashboard-token-5z6cf" (UniqueName: "kubernetes.io/secret/2218028e-825d-49e7-83b0-9873a82350d7-kubernetes-dashboard-token-5z6cf") pod "dashboard-metrics-scraper-7b64584c5c-zvpx8" (UID: "2218028e-825d-49e7-83b0-9873a82350d7")
+Dec 22 13:37:55 minikube kubelet[4736]: I1222 13:37:55.874276    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "tmp-volume" (UniqueName: "kubernetes.io/empty-dir/2218028e-825d-49e7-83b0-9873a82350d7-tmp-volume") pod "dashboard-metrics-scraper-7b64584c5c-zvpx8" (UID: "2218028e-825d-49e7-83b0-9873a82350d7")
+Dec 22 13:37:55 minikube kubelet[4736]: I1222 13:37:55.974694    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "kubernetes-dashboard-token-5z6cf" (UniqueName: "kubernetes.io/secret/46fc2716-d5ea-4996-b2b8-f90934b97b01-kubernetes-dashboard-token-5z6cf") pod "kubernetes-dashboard-79d9cd965-qmv5c" (UID: "46fc2716-d5ea-4996-b2b8-f90934b97b01")
+Dec 22 13:37:55 minikube kubelet[4736]: I1222 13:37:55.974758    4736 reconciler.go:209] operationExecutor.VerifyControllerAttachedVolume started for volume "tmp-volume" (UniqueName: "kubernetes.io/empty-dir/46fc2716-d5ea-4996-b2b8-f90934b97b01-tmp-volume") pod "kubernetes-dashboard-79d9cd965-qmv5c" (UID: "46fc2716-d5ea-4996-b2b8-f90934b97b01")
+Dec 22 13:37:56 minikube kubelet[4736]: W1222 13:37:56.504524    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kubernetes-dashboard/dashboard-metrics-scraper-7b64584c5c-zvpx8 through plugin: invalid network status for
+Dec 22 13:37:56 minikube kubelet[4736]: W1222 13:37:56.678210    4736 pod_container_deletor.go:75] Container "bce01707229a3b3903eb2374f56a36afd2df443d887a993678a8791d216cfcbc" not found in pod's containers
+Dec 22 13:37:56 minikube kubelet[4736]: W1222 13:37:56.678695    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kubernetes-dashboard/kubernetes-dashboard-79d9cd965-qmv5c through plugin: invalid network status for
+Dec 22 13:37:56 minikube kubelet[4736]: W1222 13:37:56.682929    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kubernetes-dashboard/dashboard-metrics-scraper-7b64584c5c-zvpx8 through plugin: invalid network status for
+Dec 22 13:37:57 minikube kubelet[4736]: W1222 13:37:57.693357    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kubernetes-dashboard/kubernetes-dashboard-79d9cd965-qmv5c through plugin: invalid network status for
+Dec 22 13:38:22 minikube kubelet[4736]: W1222 13:38:22.908355    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kubernetes-dashboard/dashboard-metrics-scraper-7b64584c5c-zvpx8 through plugin: invalid network status for
+Dec 22 13:39:03 minikube kubelet[4736]: W1222 13:39:03.258828    4736 docker_sandbox.go:394] failed to read pod IP from plugin/docker: Couldn't find network status for kubernetes-dashboard/kubernetes-dashboard-79d9cd965-qmv5c through plugin: invalid network status for
+
+==> kubernetes-dashboard ["28d8cd453ea0"] <==
+2019/12/22 13:39:02 Starting overwatch
+2019/12/22 13:39:02 Using namespace: kubernetes-dashboard
+2019/12/22 13:39:02 Using in-cluster config to connect to apiserver
+2019/12/22 13:39:02 Using secret token for csrf signing
+2019/12/22 13:39:02 Initializing csrf token from kubernetes-dashboard-csrf secret
+2019/12/22 13:39:02 Empty token. Generating and storing in a secret kubernetes-dashboard-csrf
+2019/12/22 13:39:02 Successful initial request to the apiserver, version: v1.17.0
+2019/12/22 13:39:02 Generating JWE encryption key
+2019/12/22 13:39:02 New synchronizer has been registered: kubernetes-dashboard-key-holder-kubernetes-dashboard. Starting
+2019/12/22 13:39:02 Starting secret synchronizer for kubernetes-dashboard-key-holder in namespace kubernetes-dashboard
+2019/12/22 13:39:02 Initializing JWE encryption key from synchronized object
+2019/12/22 13:39:02 Creating in-cluster Sidecar client
+2019/12/22 13:39:02 Serving insecurely on HTTP port: 9090
+2019/12/22 13:39:02 Successful request to sidecar
+
+==> storage-provisioner ["cec299565cc8"] <==

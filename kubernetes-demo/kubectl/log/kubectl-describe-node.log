@@ -1,0 +1,73 @@
+Name:               minikube
+Roles:              master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=minikube
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/master=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Sun, 22 Dec 2019 21:37:40 +0800
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  minikube
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 22 Dec 2019 23:14:29 +0800
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 22 Dec 2019 23:14:34 +0800   Sun, 22 Dec 2019 21:37:36 +0800   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 22 Dec 2019 23:14:34 +0800   Sun, 22 Dec 2019 21:37:36 +0800   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 22 Dec 2019 23:14:34 +0800   Sun, 22 Dec 2019 21:37:36 +0800   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 22 Dec 2019 23:14:34 +0800   Sun, 22 Dec 2019 21:37:40 +0800   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.99.112
+  Hostname:    minikube
+Capacity:
+  cpu:                2
+  ephemeral-storage:  17784772Ki
+  hugepages-2Mi:      0
+  memory:             1986524Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  17784772Ki
+  hugepages-2Mi:      0
+  memory:             1986524Ki
+  pods:               110
+System Info:
+  Machine ID:                 2bbd1a191d75470aba18a6bcc680f58d
+  System UUID:                72366f88-b622-447c-a5fd-fb4c19388705
+  Boot ID:                    89c667d6-88a0-466a-8555-cf90ba77c664
+  Kernel Version:             4.19.81
+  OS Image:                   Buildroot 2019.02.7
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.5
+  Kubelet Version:            v1.17.0
+  Kube-Proxy Version:         v1.17.0
+Non-terminated Pods:          (11 in total)
+  Namespace                   Name                                          CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                          ------------  ----------  ---------------  -------------  ---
+  kube-system                 coredns-7f9c544f75-rpx24                      100m (5%)     0 (0%)      70Mi (3%)        170Mi (8%)     96m
+  kube-system                 coredns-7f9c544f75-zbqqz                      100m (5%)     0 (0%)      70Mi (3%)        170Mi (8%)     96m
+  kube-system                 etcd-minikube                                 0 (0%)        0 (0%)      0 (0%)           0 (0%)         96m
+  kube-system                 kube-addon-manager-minikube                   5m (0%)       0 (0%)      50Mi (2%)        0 (0%)         96m
+  kube-system                 kube-apiserver-minikube                       250m (12%)    0 (0%)      0 (0%)           0 (0%)         96m
+  kube-system                 kube-controller-manager-minikube              200m (10%)    0 (0%)      0 (0%)           0 (0%)         96m
+  kube-system                 kube-proxy-9knpv                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         96m
+  kube-system                 kube-scheduler-minikube                       100m (5%)     0 (0%)      0 (0%)           0 (0%)         96m
+  kube-system                 storage-provisioner                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         96m
+  kubernetes-dashboard        dashboard-metrics-scraper-7b64584c5c-zvpx8    0 (0%)        0 (0%)      0 (0%)           0 (0%)         96m
+  kubernetes-dashboard        kubernetes-dashboard-79d9cd965-qmv5c          0 (0%)        0 (0%)      0 (0%)           0 (0%)         96m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                755m (37%)  0 (0%)
+  memory             190Mi (9%)  340Mi (17%)
+  ephemeral-storage  0 (0%)      0 (0%)
+Events:              <none>

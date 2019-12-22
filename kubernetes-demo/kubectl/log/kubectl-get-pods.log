@@ -1,0 +1,2 @@
+NAME          READY   STATUS              RESTARTS   AGE
+kubia-bwpxp   0/1     ContainerCreating   0          2m50s
