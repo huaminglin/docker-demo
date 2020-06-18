@@ -1,0 +1,6 @@
+pg_waldump -p /var/lib/postgresql/data/pg_wal -s 0/1645DA0
+rmgr: Standby     len (rec/tot):     50/    50, tx:          0, lsn: 0/01645DA0, prev 0/01645D68, desc: RUNNING_XACTS nextXid 488 latestCompletedXid 487 oldestRunningXid 488
+rmgr: XLOG        len (rec/tot):    114/   114, tx:          0, lsn: 0/01645DD8, prev 0/01645DA0, desc: CHECKPOINT_ONLINE redo 0/1645DA0; tli 1; prev tli 1; fpw true; xid 0:488; oid 24576; multi 1; offset 0; oldest xid 480 in DB 1; oldest multi 1 in DB 1; oldest/newest commit timestamp xid: 0/0; oldest running xid 488; online
+rmgr: Standby     len (rec/tot):     50/    50, tx:          0, lsn: 0/01645E50, prev 0/01645DD8, desc: RUNNING_XACTS nextXid 488 latestCompletedXid 487 oldestRunningXid 488
+pg_waldump: fatal: error in WAL record at 0/1645E50: invalid record length at 0/1645E88: wanted 24, got 0
+

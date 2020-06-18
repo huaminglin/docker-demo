@@ -1,0 +1,31 @@
+mydb=# \df pg_start_backup
+                                                        List of functions
+   Schema   |      Name       | Result data type |                          Argument data types                           | Type 
+------------+-----------------+------------------+------------------------------------------------------------------------+------
+ pg_catalog | pg_start_backup | pg_lsn           | label text, fast boolean DEFAULT false, exclusive boolean DEFAULT true | func
+(1 row)
+
+
+\df pg_stop_backup
+                                                                             List of functions
+   Schema   |      Name      | Result data type |                                                Argument data types                                                | Type 
+------------+----------------+------------------+-------------------------------------------------------------------------------------------------------------------+------
+ pg_catalog | pg_stop_backup | pg_lsn           |                                                                                                                   | func
+ pg_catalog | pg_stop_backup | SETOF record     | exclusive boolean, wait_for_archive boolean DEFAULT true, OUT lsn pg_lsn, OUT labelfile text, OUT spcmapfile text | func
+(2 rows)
+
+
+select pg_start_backup('test', true, true);
+ pg_start_backup 
+-----------------
+ 0/2000028
+(1 row)
+
+
+select pg_stop_backup();
+NOTICE:  WAL archiving is not enabled; you must ensure that all required WAL segments are copied through other means to complete the backup
+ pg_stop_backup 
+----------------
+ 0/2000138
+(1 row)
+
