@@ -1,0 +1,15 @@
+./psql.sh 
+psql (12.1 (Debian 12.1-1.pgdg100+1))
+Type "help" for help.
+
+pgdemo=# \i error.sql
+BEGIN
+ ?column? 
+----------
+        1
+(1 row)
+
+psql:error.sql:3: ERROR:  division by zero
+psql:error.sql:4: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ROLLBACK
+
