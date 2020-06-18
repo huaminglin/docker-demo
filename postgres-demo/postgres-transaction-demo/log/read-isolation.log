@@ -1,0 +1,63 @@
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/read-isolation.sh
+sleep 10 seconds ...
+BEGIN
+BEGIN
+       ?column?        
+-----------------------
+ sql 1: sleep 1 second
+(1 row)
+
+           ?column?            
+-------------------------------
+ sql 2: sleeping 2 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ id 
+----
+  1
+(1 row)
+
+UPDATE 1
+          ?column?          
+----------------------------
+ sql 1: sleep 5 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ ?column? | id 
+----------+----
+ sql 2    |  0
+(1 row)
+
+   ?column?    
+---------------
+ sql 2: commit
+(1 row)
+
+COMMIT
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ ?column? | id 
+----------+----
+ sql 1    |  1
+(1 row)
+
+   ?column?    
+---------------
+ sql 1: commit
+(1 row)
+
+COMMIT
+

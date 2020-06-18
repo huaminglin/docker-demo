@@ -13,3 +13,8 @@ By executing that wrong SQL-statement, postgreSQL will not terminate the executi
 error.sql
 error.log
 
+
+## MVCC update: A transaction doesn't read the uncommitted data from another transaction
+
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/read-isolation.sh
+
