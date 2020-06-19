@@ -26,7 +26,7 @@ A writing transaction blocks another writing transaction.
 
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/write-isolation.sh
 
-## MVCC update: Nonrepeatable Read
+## MVCC update: Read Committed Isolation Level(Nonrepeatable Read)
 
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/non-repeatable-read.sh
 
@@ -34,3 +34,14 @@ In the second txn, "select * from t_isolation where id=0" return different value
 
 By default, PostgreSQL uses "Read Committed Isolation Level".
 Dirty Read is not possible, but Nonrepeatable Read is possible.
+
+## MVCC update: Repeatable Read Isolation Level(serialization failures)
+
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-failure.sh
+
+The repeated reads keep the same during the second transaction.
+"could not serialize access due to concurrent update" when the second txn tries to update a row which is updated(and committed) during the second txn.
+
+Conclusion:
+Repeatable Read Isolation Level works like a "Optimistic Locking", which detects the conflict as late as possible.
+The "version" is got when a transaction is started for Repeatable Read Isolation Level.
