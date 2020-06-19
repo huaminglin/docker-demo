@@ -25,3 +25,12 @@ sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/read-isolation.
 A writing transaction blocks another writing transaction.
 
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/write-isolation.sh
+
+## MVCC update: Nonrepeatable Read
+
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/non-repeatable-read.sh
+
+In the second txn, "select * from t_isolation where id=0" return different values.
+
+By default, PostgreSQL uses "Read Committed Isolation Level".
+Dirty Read is not possible, but Nonrepeatable Read is possible.
