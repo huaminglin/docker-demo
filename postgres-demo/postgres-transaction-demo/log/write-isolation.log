@@ -1,0 +1,70 @@
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/write-isolation.sh
+TRUNCATE TABLE
+INSERT 0 1
+sleep 10 seconds ...
+BEGIN
+       ?column?        
+-----------------------
+ sql 1: sleep 1 second
+(1 row)
+
+BEGIN
+           ?column?            
+-------------------------------
+ sql 2: sleeping 2 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+   ?column?   | id 
+--------------+----
+ sql1 updated |  1
+(1 row)
+
+UPDATE 1
+          ?column?          
+----------------------------
+ sql 1: sleep 5 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ ?column? | id 
+----------+----
+ sql 1    |  1
+(1 row)
+
+   ?column?    
+---------------
+ sql 1: commit
+(1 row)
+
+COMMIT
+   ?column?   | id 
+--------------+----
+ sql2 updated |  2
+(1 row)
+
+UPDATE 1
+ ?column? | id 
+----------+----
+ sql 2    |  2
+(1 row)
+
+   ?column?    
+---------------
+ sql 2: commit
+(1 row)
+
+COMMIT

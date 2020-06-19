@@ -13,8 +13,15 @@ By executing that wrong SQL-statement, postgreSQL will not terminate the executi
 error.sql
 error.log
 
+## MVCC update: read and write
 
-## MVCC update: A transaction doesn't read the uncommitted data from another transaction
+A transaction doesn't read the uncommitted data from another transaction.
+A writing transaction doesn't block a reading transaction.
 
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/read-isolation.sh
 
+## MVCC update: write and write
+
+A writing transaction blocks another writing transaction.
+
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/write-isolation.sh
