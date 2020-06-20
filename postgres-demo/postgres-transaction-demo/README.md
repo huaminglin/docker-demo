@@ -35,6 +35,10 @@ In the second txn, "select * from t_isolation where id=0" return different value
 By default, PostgreSQL uses "Read Committed Isolation Level".
 Dirty Read is not possible, but Nonrepeatable Read is possible.
 
+## MVCC update: Read Committed Isolation Level(Phantom Read)
+
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/phantom-read.sh
+
 ## MVCC update: Repeatable Read Isolation Level(serialization failures)
 
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-failure.sh

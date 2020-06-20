@@ -1,0 +1,95 @@
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/phantom-read.sh
+TRUNCATE TABLE
+INSERT 0 1
+sleep 10 seconds ...
+BEGIN
+BEGIN
+       ?column?        
+-----------------------
+ sql 1: sleep 2 second
+(1 row)
+
+           ?column?            
+-------------------------------
+ sql 2: sleeping 1 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+               ?column?                | id | name  
+---------------------------------------+----+-------
+ sql 2 first read: before txn-1 insert |  0 | name0
+(1 row)
+
+           ?column?            
+-------------------------------
+ sql 2: sleeping 2 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+   ?column?   | id | name 
+--------------+----+------
+ sql1 updated |  1 | txn1
+(1 row)
+
+INSERT 0 1
+          ?column?          
+----------------------------
+ sql 1: sleep 5 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+                    ?column?                    | id | name  
+------------------------------------------------+----+-------
+ sql 2 second read: when txn-1 is runing insert |  0 | name0
+(1 row)
+
+           ?column?            
+-------------------------------
+ sql 2: sleeping 5 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ ?column? | id | name  
+----------+----+-------
+ sql 1    |  0 | name0
+(1 row)
+
+   ?column?    
+---------------
+ sql 1: commit
+(1 row)
+
+COMMIT
+ pg_sleep 
+----------
+ 
+(1 row)
+
+               ?column?               | id | name  
+--------------------------------------+----+-------
+ sql 2 third read: after txn-1 insert |  0 | name0
+ sql 2 third read: after txn-1 insert |  1 | txn1
+(2 rows)
+
+   ?column?    
+---------------
+ sql 2: commit
+(1 row)
+
+COMMIT
