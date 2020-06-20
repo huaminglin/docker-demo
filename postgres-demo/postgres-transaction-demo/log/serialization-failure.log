@@ -3,10 +3,25 @@ TRUNCATE TABLE
 INSERT 0 1
 sleep 20 seconds ...
 BEGIN
-BEGIN
+ ?column? | xmin | xmax | txid_current | id | name  
+----------+------+------+--------------+----+-------
+ sql 1    |  526 |    0 |          527 |  0 | name0
+(1 row)
+
        ?column?        
 -----------------------
  sql 1: sleep 2 second
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+BEGIN
+ ?column? | xmin | xmax | txid_current | id | name  
+----------+------+------+--------------+----+-------
+ sql 2    |  526 |    0 |          528 |  0 | name0
 (1 row)
 
            ?column?            
@@ -71,10 +86,10 @@ UPDATE 1
 (1 row)
 
 INSERT 0 1
- ?column? | id | name 
-----------+----+------
- sql 1    |  0 | txn1
- sql 1    |  0 | txn1
+ ?column? | xmin | xmax | txid_current | id | name 
+----------+------+------+--------------+----+------
+ sql 1    |  527 |    0 |          527 |  0 | txn1
+ sql 1    |  527 |    0 |          527 |  0 | txn1
 (2 rows)
 
    ?column?    
@@ -93,11 +108,11 @@ COMMIT
  sql 2 third read: after txn-1 update |  0 | name0
 (1 row)
 
-          ?column?          | id | name  
-----------------------------+----+-------
- sql 2 third read: all rows |  0 | name0
+          ?column?          | xmin | xmax | txid_current | id | name  
+----------------------------+------+------+--------------+----+-------
+ sql 2 third read: all rows |  526 |  527 |          528 |  0 | name0
 (1 row)
 
-psql:/sql/serialization-failure-2.sql:14: ERROR:  could not serialize access due to concurrent update
-psql:/sql/serialization-failure-2.sql:16: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+psql:/sql/serialization-failure-2.sql:16: ERROR:  could not serialize access due to concurrent update
+psql:/sql/serialization-failure-2.sql:18: ERROR:  current transaction is aborted, commands ignored until end of transaction block
 ROLLBACK

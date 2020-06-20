@@ -3,10 +3,25 @@ TRUNCATE TABLE
 INSERT 0 1
 sleep 10 seconds ...
 BEGIN
-BEGIN
+ ?column? | xmin | xmax | txid_current | id | name  
+----------+------+------+--------------+----+-------
+ sql 1    |  538 |    0 |          539 |  0 | name0
+(1 row)
+
        ?column?        
 -----------------------
  sql 1: sleep 2 second
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+BEGIN
+ ?column? | xmin | xmax | txid_current | id | name  
+----------+------+------+--------------+----+-------
+ sql 2    |  538 |    0 |          540 |  0 | name0
 (1 row)
 
            ?column?            
@@ -34,9 +49,9 @@ BEGIN
  
 (1 row)
 
-   ?column?   | id | name 
---------------+----+------
- sql1 updated |  1 | txn1
+   ?column?    | id | name 
+---------------+----+------
+ sql1 inserted |  1 | txn1
 (1 row)
 
 INSERT 0 1
@@ -65,10 +80,11 @@ INSERT 0 1
  
 (1 row)
 
- ?column? | id | name  
-----------+----+-------
- sql 1    |  0 | name0
-(1 row)
+ ?column? | xmin | xmax | txid_current | id | name  
+----------+------+------+--------------+----+-------
+ sql 1    |  538 |    0 |          539 |  0 | name0
+ sql 1    |  539 |    0 |          539 |  1 | txn1
+(2 rows)
 
    ?column?    
 ---------------
@@ -81,10 +97,10 @@ COMMIT
  
 (1 row)
 
-               ?column?               | id | name  
---------------------------------------+----+-------
- sql 2 third read: after txn-1 insert |  0 | name0
- sql 2 third read: after txn-1 insert |  1 | txn1
+               ?column?               | xmin | xmax | txid_current | id | name  
+--------------------------------------+------+------+--------------+----+-------
+ sql 2 third read: after txn-1 insert |  538 |    0 |          540 |  0 | name0
+ sql 2 third read: after txn-1 insert |  539 |    0 |          540 |  1 | txn1
 (2 rows)
 
    ?column?    
