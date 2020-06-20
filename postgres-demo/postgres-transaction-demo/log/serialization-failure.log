@@ -65,10 +65,17 @@ UPDATE 1
  
 (1 row)
 
+   ?column?    | id | name 
+---------------+----+------
+ sql1 inserted |  0 | txn1
+(1 row)
+
+INSERT 0 1
  ?column? | id | name 
 ----------+----+------
  sql 1    |  0 | txn1
-(1 row)
+ sql 1    |  0 | txn1
+(2 rows)
 
    ?column?    
 ---------------
@@ -86,6 +93,11 @@ COMMIT
  sql 2 third read: after txn-1 update |  0 | name0
 (1 row)
 
-psql:/sql/serialization-failure-2.sql:12: ERROR:  could not serialize access due to concurrent update
-psql:/sql/serialization-failure-2.sql:14: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+          ?column?          | id | name  
+----------------------------+----+-------
+ sql 2 third read: all rows |  0 | name0
+(1 row)
+
+psql:/sql/serialization-failure-2.sql:14: ERROR:  could not serialize access due to concurrent update
+psql:/sql/serialization-failure-2.sql:16: ERROR:  current transaction is aborted, commands ignored until end of transaction block
 ROLLBACK

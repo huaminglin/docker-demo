@@ -44,6 +44,7 @@ sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/phantom-read.sh
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-failure.sh
 
 The repeated reads keep the same during the second transaction.
+The row added by first transaction is not returned in the query all in the second transaction.
 "could not serialize access due to concurrent update" when the second txn tries to update a row which is updated(and committed) during the second txn.
 
 Conclusion:
