@@ -57,3 +57,21 @@ The "version" is got when a transaction is started for Repeatable Read Isolation
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-failure-concurrency.sh
 
 The second transaction is blocked until the first transaction commit/abort its update.
+
+## serialization anomaly
+
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-anomaly.sh
+
+ERROR:  could not serialize access due to read/write dependencies among transactions
+DETAIL:  Reason code: Canceled on identification as a pivot, during commit attempt.
+HINT:  The transaction might succeed if retried.
+
+This is because if A had executed before B, B would have computed the sum 330, not 300, and similarly the other order would have resulted in a different sum computed by A.
+
+When relying on Serializable transactions to prevent anomalies, it is important that any data read from a permanent user table not be considered valid until the transaction which read it has successfully committed.
+
+To guarantee true serializability PostgreSQL uses predicate locking, which means that it keeps locks which allow it to determine when a write would have had an impact on the result of a previous read from a concurrent transaction, had it run first.
+
+Predicate locks in PostgreSQL, like in most other database systems, are based on data actually accessed by a transaction.
+
+These will show up in the pg_locks system view with a mode of SIReadLock.

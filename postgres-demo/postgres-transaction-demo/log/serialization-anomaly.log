@@ -1,0 +1,35 @@
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-anomaly.sh
+sleep 10 seconds ...
+BEGIN
+INSERT 0 1
+ pg_sleep 
+----------
+ 
+(1 row)
+
+BEGIN
+INSERT 0 1
+ pg_sleep 
+----------
+ 
+(1 row)
+
+   ?column?    
+---------------
+ sql 1: commit
+(1 row)
+
+COMMIT
+ pg_sleep 
+----------
+ 
+(1 row)
+
+   ?column?    
+---------------
+ sql 2: commit
+(1 row)
+
+psql:/sql/serialization-anomaly-2.sql:7: ERROR:  could not serialize access due to read/write dependencies among transactions
+DETAIL:  Reason code: Canceled on identification as a pivot, during commit attempt.
+HINT:  The transaction might succeed if retried.
