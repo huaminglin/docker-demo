@@ -50,3 +50,10 @@ The row added by first transaction is not returned in the query all in the secon
 Conclusion:
 Repeatable Read Isolation Level works like a "Optimistic Locking", which detects the conflict as late as possible.
 The "version" is got when a transaction is started for Repeatable Read Isolation Level.
+
+
+## MVCC update: Repeatable Read Isolation Level(serialization failures)(Two transactions update a same row)
+
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-failure-concurrency.sh
+
+The second transaction is blocked until the first transaction commit/abort its update.

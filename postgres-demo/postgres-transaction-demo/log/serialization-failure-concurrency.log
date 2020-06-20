@@ -1,0 +1,56 @@
+sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-failure-concurrency.sh
+TRUNCATE TABLE
+INSERT 0 1
+sleep 20 seconds ...
+BEGIN
+BEGIN
+           ?column?            
+-------------------------------
+ sql 2: sleeping 2 seconds ...
+(1 row)
+
+       ?column?        
+-----------------------
+ sql 1: sleep 1 second
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+   ?column?   | id | name 
+--------------+----+------
+ sql1 updated |  0 | txn1
+(1 row)
+
+UPDATE 1
+          ?column?          
+----------------------------
+ sql 1: sleep 5 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ ?column? | id | name 
+----------+----+------
+ sql 1    |  0 | txn1
+(1 row)
+
+   ?column?    
+---------------
+ sql 1: commit
+(1 row)
+
+COMMIT
+psql:/sql/serialization-failure-concurrency-2.sql:4: ERROR:  could not serialize access due to concurrent update
+psql:/sql/serialization-failure-concurrency-2.sql:6: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ROLLBACK
