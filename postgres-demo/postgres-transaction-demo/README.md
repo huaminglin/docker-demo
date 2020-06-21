@@ -56,6 +56,8 @@ The "version" is got when a transaction is started for Repeatable Read Isolation
 
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-failure-concurrency.sh
 
+The two sql files have no select on t_isolation, so the block comes from the udpate statement.
+
 The second transaction is blocked until the first transaction commit/abort its update.
 
 ## serialization anomaly
