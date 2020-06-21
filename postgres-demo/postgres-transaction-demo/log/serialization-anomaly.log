@@ -1,14 +1,51 @@
 sudo docker exec postgres-transaction-demo_client_1 bash -c /sql/serialization-anomaly.sh
 sleep 10 seconds ...
 BEGIN
+ ?column? | txid_current 
+----------+--------------
+ sql 1    |          495
+(1 row)
+
 INSERT 0 1
+ ?column? |   locktype    | database | relation | page | tuple | virtualxid | transactionid | classid | objid | objsubid | virtualtransaction | pid |       mode       | granted | fastpath 
+----------+---------------+----------+----------+------+-------+------------+---------------+---------+-------+----------+--------------------+-----+------------------+---------+----------
+ sql 1    | virtualxid    |          |          |      |       | 4/2        |               |         |       |          | 4/2                |  80 | ExclusiveLock    | t       | t
+ sql 1    | relation      |    16384 |    12143 |      |       |            |               |         |       |          | 3/2                |  81 | AccessShareLock  | t       | t
+ sql 1    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 3/2                |  81 | AccessShareLock  | t       | t
+ sql 1    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 3/2                |  81 | RowExclusiveLock | t       | t
+ sql 1    | virtualxid    |          |          |      |       | 3/2        |               |         |       |          | 3/2                |  81 | ExclusiveLock    | t       | t
+ sql 1    | transactionid |          |          |      |       |            |           495 |         |       |          | 3/2                |  81 | ExclusiveLock    | t       | f
+ sql 1    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 3/2                |  81 | SIReadLock       | t       | f
+(7 rows)
+
  pg_sleep 
 ----------
  
 (1 row)
 
 BEGIN
+ ?column? | txid_current 
+----------+--------------
+ sql 2    |          496
+(1 row)
+
 INSERT 0 1
+ ?column? |   locktype    | database | relation | page | tuple | virtualxid | transactionid | classid | objid | objsubid | virtualtransaction | pid |       mode       | granted | fastpath 
+----------+---------------+----------+----------+------+-------+------------+---------------+---------+-------+----------+--------------------+-----+------------------+---------+----------
+ sql 2    | relation      |    16384 |    12143 |      |       |            |               |         |       |          | 4/3                |  80 | AccessShareLock  | t       | t
+ sql 2    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 4/3                |  80 | AccessShareLock  | t       | t
+ sql 2    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 4/3                |  80 | RowExclusiveLock | t       | t
+ sql 2    | virtualxid    |          |          |      |       | 4/3        |               |         |       |          | 4/3                |  80 | ExclusiveLock    | t       | t
+ sql 2    | relation      |    16384 |    12143 |      |       |            |               |         |       |          | 3/2                |  81 | AccessShareLock  | t       | t
+ sql 2    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 3/2                |  81 | AccessShareLock  | t       | t
+ sql 2    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 3/2                |  81 | RowExclusiveLock | t       | t
+ sql 2    | virtualxid    |          |          |      |       | 3/2        |               |         |       |          | 3/2                |  81 | ExclusiveLock    | t       | t
+ sql 2    | transactionid |          |          |      |       |            |           495 |         |       |          | 3/2                |  81 | ExclusiveLock    | t       | f
+ sql 2    | transactionid |          |          |      |       |            |           496 |         |       |          | 4/3                |  80 | ExclusiveLock    | t       | f
+ sql 2    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 3/2                |  81 | SIReadLock       | t       | f
+ sql 2    | relation      |    16384 |    16391 |      |       |            |               |         |       |          | 4/3                |  80 | SIReadLock       | t       | f
+(12 rows)
+
  pg_sleep 
 ----------
  
@@ -30,6 +67,6 @@ COMMIT
  sql 2: commit
 (1 row)
 
-psql:/sql/serialization-anomaly-2.sql:7: ERROR:  could not serialize access due to read/write dependencies among transactions
+psql:/sql/serialization-anomaly-2.sql:9: ERROR:  could not serialize access due to read/write dependencies among transactions
 DETAIL:  Reason code: Canceled on identification as a pivot, during commit attempt.
 HINT:  The transaction might succeed if retried.
