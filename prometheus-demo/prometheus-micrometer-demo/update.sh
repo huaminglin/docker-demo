@@ -2,6 +2,6 @@
 
 cd $(dirname $0)
 
-docker-compose down
-docker-compose up --no-start
-docker-compose start
+sudo docker-compose down
+sudo docker-compose up --no-start
+sudo docker-compose start

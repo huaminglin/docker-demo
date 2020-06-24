@@ -19,6 +19,8 @@ services:
     image: huaminglin/micrometer-demo:1.0-SNAPSHOT
     environment:
       - "_JAVA_OPTIONS=-Xms50m -Xmx100m"
+      - "server_tomcat_accesslog_enabled=true"
+      - "server_tomcat_accesslog_directory=/root"
     ports:
       - 8080:8080
     cpu_count: 2
