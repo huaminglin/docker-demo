@@ -1,12 +1,13 @@
 version: '3.3'
 services:
   server:
-    image: redis:5.0
+    image: redis:6.0
     ports:
       - 6379:6379
     command: ["redis-server"]
   client:
-    image: redis:5.0
+    image: redis:6.0
     entrypoint: /bin/bash
     stdin_open: true
     tty: true
+
