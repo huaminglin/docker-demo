@@ -1,0 +1,50 @@
+########################################
+# JAVA_OPTS=-javaagent:/opt/hazelcast/lib/jmx_prometheus_javaagent.jar=8080:/opt/hazelcast/jmx_agent_config.yaml -Djava.net.preferIPv4Stack=true -Djava.util.logging.config.file=/opt/hazelcast/logging.properties -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.nio=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED -Xms256M -Xmx512M -Dhazelcast.local.publicAddress=server01:5701 -Dhazelcast.jmx=true -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+# CLASSPATH=/opt/hazelcast/*:/opt/hazelcast/lib/*:/opt/hazelcast/CLASSPATH_EXT/*
+# starting now....
+########################################
++ exec java -server -javaagent:/opt/hazelcast/lib/jmx_prometheus_javaagent.jar=8080:/opt/hazelcast/jmx_agent_config.yaml -Djava.net.preferIPv4Stack=true -Djava.util.logging.config.file=/opt/hazelcast/logging.properties -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.nio=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED -Xms256M -Xmx512M -Dhazelcast.local.publicAddress=server01:5701 -Dhazelcast.jmx=true -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false com.hazelcast.core.server.HazelcastMemberStarter
+Jul 01, 2020 1:52:25 PM com.hazelcast.internal.config.AbstractConfigLocator
+INFO: Loading 'hazelcast.xml' from the working directory.
+Jul 01, 2020 1:52:26 PM com.hazelcast.instance.AddressPicker
+INFO: [LOCAL] [dev] [4.0] Prefer IPv4 stack is true, prefer IPv6 addresses is false
+Jul 01, 2020 1:52:26 PM com.hazelcast.instance.AddressPicker
+INFO: [LOCAL] [dev] [4.0] Picked [192.168.160.3]:5701, using socket ServerSocket[addr=/0.0.0.0,localport=5701], bind any local is true
+Jul 01, 2020 1:52:26 PM com.hazelcast.instance.AddressPicker
+INFO: [LOCAL] [dev] [4.0] Using public address: [server01]:5701
+Jul 01, 2020 1:52:26 PM com.hazelcast.system
+INFO: [server01]:5701 [dev] [4.0] Hazelcast 4.0 (20200204 - 8b959f5) starting at [server01]:5701
+Jul 01, 2020 1:52:26 PM com.hazelcast.system
+INFO: [server01]:5701 [dev] [4.0] Copyright (c) 2008-2020, Hazelcast, Inc. All Rights Reserved.
+Jul 01, 2020 1:52:26 PM com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator
+INFO: [server01]:5701 [dev] [4.0] Backpressure is disabled
+Jul 01, 2020 1:52:26 PM com.hazelcast.instance.impl.Node
+INFO: [server01]:5701 [dev] [4.0] Creating MulticastJoiner
+Jul 01, 2020 1:52:26 PM com.hazelcast.cp.CPSubsystem
+WARNING: [server01]:5701 [dev] [4.0] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+Jul 01, 2020 1:52:26 PM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [server01]:5701 [dev] [4.0] Starting 8 partition threads and 5 generic threads (1 dedicated for priority tasks)
+Jul 01, 2020 1:52:26 PM com.hazelcast.internal.diagnostics.Diagnostics
+INFO: [server01]:5701 [dev] [4.0] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+Jul 01, 2020 1:52:26 PM com.hazelcast.core.LifecycleService
+INFO: [server01]:5701 [dev] [4.0] [server01]:5701 is STARTING
+Jul 01, 2020 1:52:29 PM com.hazelcast.internal.cluster.ClusterService
+INFO: [server01]:5701 [dev] [4.0] 
+
+Members {size:1, ver:1} [
+        Member [server01]:5701 - 9f9c42f3-898e-4233-9260-f1b6809b2bb7 this
+]
+
+Jul 01, 2020 1:52:29 PM com.hazelcast.internal.jmx.ManagementService
+INFO: [server01]:5701 [dev] [4.0] Hazelcast JMX agent enabled.
+Jul 01, 2020 1:52:29 PM com.hazelcast.core.LifecycleService
+INFO: [server01]:5701 [dev] [4.0] [server01]:5701 is STARTED
+Jul 01, 2020 1:52:29 PM com.hazelcast.internal.nio.tcp.TcpIpConnection
+INFO: [server01]:5701 [dev] [4.0] Initialized new cluster connection between /192.168.160.3:5701 and /192.168.160.2:37905
+Jul 01, 2020 1:52:35 PM com.hazelcast.internal.cluster.ClusterService
+INFO: [server01]:5701 [dev] [4.0] 
+
+Members {size:2, ver:2} [
+        Member [server01]:5701 - 9f9c42f3-898e-4233-9260-f1b6809b2bb7 this
+        Member [server02]:5701 - f6e8ae99-c5aa-4f8f-b948-1d34e81ebfb2
+]

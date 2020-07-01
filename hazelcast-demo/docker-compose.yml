@@ -1,0 +1,33 @@
+version: '2.4'
+services:
+  server01:
+    image: hazelcast/hazelcast:4.0
+    ports:
+      - 5701:5701
+      - 18080:8080
+      - 9999:9999
+    environment:
+      - "JAVA_OPTS=-Xms256M -Xmx512M -Dhazelcast.local.publicAddress=server01:5701 -Dhazelcast.jmx=true -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      - "PROMETHEUS_PORT=8080"
+      - "LOGGING_LEVEL=INFO"
+      - "CLASSPATH=/opt/hazelcast/CLASSPATH_EXT/*"
+    volumes:
+      - $HOME/.m2/repository/org/codehaus/groovy/groovy/3.0.4/groovy-3.0.4.jar:/opt/hazelcast/CLASSPATH_EXT/groovy-3.0.4.jar
+      - $HOME/.m2/repository/org/codehaus/groovy/groovy-jsr223/3.0.4/groovy-jsr223-3.0.4.jar:/opt/hazelcast/CLASSPATH_EXT/groovy-jsr223-3.0.4.jar
+      - ./hazelcast.xml:/opt/hazelcast/hazelcast.xml
+  server02:
+    image: hazelcast/hazelcast:4.0
+    ports:
+      - 5702:5701
+    environment:
+      - "JAVA_OPTS=-Xms256M -Xmx512M -Dhazelcast.local.publicAddress=server02:5701"
+  hmc:
+    image: hazelcast/management-center:4.0.3
+    ports:
+      - 17080:8080
+    environment:
+      CONTAINER_SUPPORT: "false"
+      MIN_HEAP_SIZE: 256M
+      MAX_HEAP_SIZE: 521M
+      MC_ADMIN_USER: admin
+      MC_ADMIN_PASSWORD: password1

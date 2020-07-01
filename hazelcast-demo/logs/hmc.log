@@ -1,0 +1,18 @@
+using manual heap sizing by specifying MIN_HEAP_SIZE or MAX_HEAP_SIZE or custom settings configure by JAVA_OPTS
+Creating admin user
+No security provider is configured in Management Center. Setting security provider to the default one.
+Successfully created user 'admin' with 'admin' role.
+User created successfully
+##################################################
+# initialisation complete, starting now....
+##################################################
++ exec java --add-opens java.base/java.lang=ALL-UNNAMED -server -Dhazelcast.mc.home=/data -Djava.net.preferIPv4Stack=true -Xms256M -Xmx521M -cp /opt/hazelcast/management-center/hazelcast-management-center-4.0.3.war -Dhazelcast.mc.contextPath=/ -Dhazelcast.mc.http.port=8080 -Dhazelcast.mc.https.port=8443 com.hazelcast.webmonitor.Launcher
+2020-07-01 13:52:25 [main] INFO  c.h.webmonitor.config.BuildInfo - Hazelcast Management Center 4.0.3
+2020-07-01 13:52:28 [main] INFO  c.h.webmonitor.config.SqlDbConfig - Checking DB for required migrations.
+2020-07-01 13:52:29 [main] INFO  c.h.webmonitor.config.SqlDbConfig - Number of applied DB migrations: 0.
+2020-07-01 13:52:29 [main] INFO  c.h.webmonitor.config.AppConfig - Creating cache with maxSize=768
+2020-07-01 13:52:29 [main] INFO  c.h.w.storage.DiskUsageMonitor - Monitoring /data [mode=purge, interval=1000ms, limit=512 MB]
+2020-07-01 13:52:29 [main] INFO  c.h.w.s.s.impl.DisableLoginStrategy - Login will be disabled for 5 seconds after 3 failed login attempts. For every 3 consecutive failed login attempts, disable period will be multiplied by 10.
+2020-07-01 13:52:30 [main] INFO  com.hazelcast.webmonitor.Launcher - 
+
+Hazelcast Management Center successfully started at http://localhost:8080/
