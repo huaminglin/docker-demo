@@ -40,3 +40,14 @@ http://127.0.0.1:17080/dev/console
 ## MulticastJoiner is used to create cluster by default
 
 com.hazelcast.internal.cluster.impl.MulticastJoiner
+
+## tcpdump
+
+cat hazelcast-demo_server01_1.pcap | tcpdump -n -r - net 192.168.160.0/24 -w $HOME/hazelcast-demo_server01_1.pcap
+
+```pcap
+22:05:29.410586 IP (tos 0x0, ttl 32, id 27839, offset 0, flags [DF], proto UDP (17), length 269)
+    192.168.160.3.54327 > 224.2.2.3.54327: [bad udp cksum 0x43bc -> 0xce3f!] UDP, length 241
+```
+
+224.2.2.3.54327 is multicast address.
