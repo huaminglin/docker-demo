@@ -3,7 +3,7 @@ services:
   server01:
     image: hazelcast/hazelcast:4.0
     ports:
-      - 5701:5701
+      - 15701:5701
       - 18080:8080
       - 9999:9999
     environment:
@@ -17,10 +17,8 @@ services:
       - ./hazelcast.xml:/opt/hazelcast/hazelcast.xml
   server02:
     image: hazelcast/hazelcast:4.0
-    ports:
-      - 5702:5701
     environment:
-      - "JAVA_OPTS=-Xms256M -Xmx512M -Dhazelcast.local.publicAddress=server02:5701"
+      - "JAVA_OPTS=-Xms256M -Xmx512M"
   hmc:
     image: hazelcast/management-center:4.0.3
     ports:
@@ -31,3 +29,17 @@ services:
       MAX_HEAP_SIZE: 521M
       MC_ADMIN_USER: admin
       MC_ADMIN_PASSWORD: password1
+  client01:
+    image: hazelcast/hazelcast:4.0
+    entrypoint: /usr/bin/java -Xms256M -Xmx512M -Djava.net.preferIPv4Stack=true -classpath /opt/hazelcast/lib/hazelcast-all-4.0.jar com.hazelcast.client.console.ClientConsoleApp
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./hazelcast-client.xml:/opt/hazelcast/hazelcast-client.xml
+  client02:
+    image: hazelcast/hazelcast:4.0
+    entrypoint: /usr/bin/java -Xms256M -Xmx512M -Djava.net.preferIPv4Stack=true -classpath /opt/hazelcast/lib/hazelcast-all-4.0.jar com.hazelcast.client.console.ClientConsoleApp
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./hazelcast-client.xml:/opt/hazelcast/hazelcast-client.xml
