@@ -14,4 +14,4 @@ if [ -f /var/tmp/$1.pcap ]; then
 fi
 touch /var/tmp/$1.pcap
 wireshark -k -i <(tail -f -c +0 /var/tmp/$1.pcap) &
-sudo docker run -it --rm --net=container:$1 -v /var/tmp:/capture corfr/tcpdump -v -i eth0 -w /capture/$1.pcap
+sudo docker run -it --rm --net=container:$1 -v /var/tmp:/capture nicolaka/netshoot tcpdump  -v -i eth0 -w /capture/$1.pcap
