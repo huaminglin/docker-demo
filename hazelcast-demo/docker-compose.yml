@@ -14,11 +14,15 @@ services:
     volumes:
       - $HOME/.m2/repository/org/codehaus/groovy/groovy/3.0.4/groovy-3.0.4.jar:/opt/hazelcast/CLASSPATH_EXT/groovy-3.0.4.jar
       - $HOME/.m2/repository/org/codehaus/groovy/groovy-jsr223/3.0.4/groovy-jsr223-3.0.4.jar:/opt/hazelcast/CLASSPATH_EXT/groovy-jsr223-3.0.4.jar
+      - $HOME/hazelcast-scheduler-demo-1.0-SNAPSHOT.jar:/opt/hazelcast/CLASSPATH_EXT/hazelcast-scheduler-demo-1.0-SNAPSHOT.jar
       - ./hazelcast.xml:/opt/hazelcast/hazelcast.xml
   server02:
     image: hazelcast/hazelcast:4.0
     environment:
       - "JAVA_OPTS=-Xms256M -Xmx512M"
+      - "CLASSPATH=/opt/hazelcast/CLASSPATH_EXT/*"
+    volumes:
+      - $HOME/hazelcast-scheduler-demo-1.0-SNAPSHOT.jar:/opt/hazelcast/CLASSPATH_EXT/hazelcast-scheduler-demo-1.0-SNAPSHOT.jar
   hmc:
     image: hazelcast/management-center:4.0.3
     ports:
