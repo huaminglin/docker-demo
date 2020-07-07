@@ -1,0 +1,45 @@
+sudo docker exec postgres-lock-demo_client_1 bash -c /sql/select_for_fk.sh
+sleep 10 seconds ...
+BEGIN
+ ?column? | id | currency_id | balance 
+----------+----+-------------+---------
+ sql 1    |  1 |           1 |     100
+(1 row)
+
+          ?column?          
+----------------------------
+ sql 1: sleep 5 seconds ...
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+BEGIN
+ ?column? | id | name 
+----------+----+------
+ sql 2    |  1 | EUR
+(1 row)
+
+UPDATE 1
+ ?column? | id | name 
+----------+----+------
+ sql 2    |  1 | name
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+   ?column?    
+---------------
+ sql 1: commit
+(1 row)
+
+COMMIT
+psql:/sql/select_for_fk-2.sql:6: ERROR:  update or delete on table "t_currency" violates foreign key constraint "t_account_currency_id_fkey" on table "t_account"
+DETAIL:  Key (id)=(1) is still referenced from table "t_account".
+psql:/sql/select_for_fk-2.sql:7: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ROLLBACK
