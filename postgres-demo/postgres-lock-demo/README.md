@@ -12,6 +12,18 @@ Conclusion:
 
 "SELECT FOR UPDATE" does block "SELECT FOR UPDATE" on the same row
 
+```update sql
+The FOR UPDATE lock mode is also acquired by any DELETE on a row, and also by an UPDATE that modifies the values on certain columns.
+Currently, the set of columns considered for the UPDATE case are those that have a unique index on them that can be used in a foreign key (so partial indexes and expressional indexes are not considered),
+but this may change in the future.
+```
+
+The above document mention update on columns which have a unique index on them.
+
+But from the demo, the update without unique index is blocked too.
+
+In seems "for update lock" is required no matter what kind of a column is updated.
+
 ## select for and options
 
 sudo docker exec postgres-lock-demo_client_1 bash -c /sql/select_for_option.sh

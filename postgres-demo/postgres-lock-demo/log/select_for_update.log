@@ -1,9 +1,8 @@
-sudo docker exec postgres-lock-demo_client_1 bash -c /sql/select_for_update.sh
 sleep 10 seconds ...
 BEGIN
- ?column? | id | name 
-----------+----+------
- sql 1    |  1 | EUR
+ ?column? | id | name | description 
+----------+----+------+-------------
+ sql 1    |  1 | EUR  | 
 (1 row)
 
           ?column?          
@@ -11,29 +10,35 @@ BEGIN
  sql 1: sleep 5 seconds ...
 (1 row)
 
- pg_sleep 
-----------
- 
+ ?column? | pg_sleep 
+----------+----------
+ sql 3    | 
+(1 row)
+
+ ?column? | pg_sleep 
+----------+----------
+ sql 2    | 
 (1 row)
 
 BEGIN
- ?column? | id | name 
-----------+----+------
- sql 2    |  1 | EUR
+BEGIN
+ ?column? | id | name | description 
+----------+----+------+-------------
+ sql 2    |  1 | EUR  | 
 (1 row)
 
- ?column? | id | name 
-----------+----+------
- sql 2    |  2 | USD
+ ?column? | id | name | description 
+----------+----+------+-------------
+ sql 2    |  2 | USD  | 
 (1 row)
 
- ?column? | id | name 
-----------+----+------
+ ?column? | id | name | description 
+----------+----+------+-------------
 (0 rows)
 
- pg_sleep 
-----------
- 
+ ?column? | pg_sleep 
+----------+----------
+ sql1     | 
 (1 row)
 
    ?column?    
@@ -42,9 +47,22 @@ BEGIN
 (1 row)
 
 COMMIT
- ?column? | id | name 
-----------+----+------
- sql 2    |  1 | EUR
+UPDATE 1
+ ?column? | id | name | description 
+----------+----+------+-------------
+ sql 3    |  1 | EUR  | new
+(1 row)
+
+UPDATE 1
+   ?column?    
+---------------
+ sql 3: commit
+(1 row)
+
+COMMIT
+ ?column? | id | name | description 
+----------+----+------+-------------
+ sql 2    |  1 | new  | new
 (1 row)
 
    ?column?    
