@@ -48,3 +48,15 @@ these two kinds of operations(delete the currency or change currency to use a di
 So when the row in t_account is locked, the update on t_currency might be blocked.
 
 If "ON UPDATE CASCADE ON DELETE CASCADE" is disabled for column definition, update on t_currency will never need a lock on t_account.
+
+## Dead lock detection
+
+sudo docker exec postgres-lock-demo_client_1 bash -c /sql/deadlock.sh
+
+```
+psql:/sql/deadlock-2.sql:4: ERROR:  deadlock detected
+DETAIL:  Process 81 waits for ShareLock on transaction 496; blocked by process 82.
+Process 82 waits for ShareLock on transaction 497; blocked by process 81.
+HINT:  See server log for query details.
+CONTEXT:  while updating tuple (0,1) in relation "t_deadlock"
+```

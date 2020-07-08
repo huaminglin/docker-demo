@@ -7,3 +7,6 @@ CREATE TABLE t_account (id int, currency_id int REFERENCES t_currency (id) , bal
 --ON UPDATE CASCADE ON DELETE CASCADE
 INSERT INTO t_account VALUES (1, 1, 100);
 INSERT INTO t_account VALUES (2, 1, 200);
+
+CREATE TABLE t_deadlock (id int);
+INSERT INTO t_deadlock VALUES (1), (2);
