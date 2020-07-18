@@ -1,0 +1,27 @@
+version: '3.3'
+networks:
+  postgres:
+    driver: bridge
+services:
+  server:
+    image: postgres:12.1
+    environment:
+      - POSTGRES_USER=pgdemo
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - 5432:5432
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    networks:
+      - postgres
+  client:
+    image: postgres:12.1
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./sql:/sql
+    working_dir: /sql
+    networks:
+      - postgres
+
