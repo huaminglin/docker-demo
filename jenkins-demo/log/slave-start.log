@@ -1,0 +1,71 @@
+Failed to obtain http://master:8080/computer/slave1/slave-agent.jnlp?encrypt=true
+java.net.ConnectException: Connection refused (Connection refused)
+        at java.net.PlainSocketImpl.socketConnect(Native Method)
+        at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+        at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+        at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+        at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+        at java.net.Socket.connect(Socket.java:607)
+        at java.net.Socket.connect(Socket.java:556)
+        at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+        at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+        at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+        at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+        at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+        at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+        at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+        at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+        at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+        at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+        at hudson.remoting.Launcher.parseJnlpArguments(Launcher.java:513)
+        at hudson.remoting.Launcher.run(Launcher.java:347)
+        at hudson.remoting.Launcher.main(Launcher.java:298)
+Waiting 10 seconds before retry
+Aug 01, 2020 3:52:36 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: slave1
+Aug 01, 2020 3:52:36 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+Aug 01, 2020 3:52:36 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.3
+Aug 01, 2020 3:52:36 PM hudson.remoting.Engine startEngine
+WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
+Aug 01, 2020 3:52:36 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://master:8080/]
+Aug 01, 2020 3:52:36 PM hudson.remoting.jnlp.Main$CuiListener error
+SEVERE: http://master:8080/tcpSlaveAgentListener/ is invalid: 404 Not Found
+java.io.IOException: http://master:8080/tcpSlaveAgentListener/ is invalid: 404 Not Found
+        at org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver.resolve(JnlpAgentEndpointResolver.java:222)
+        at hudson.remoting.Engine.innerRun(Engine.java:693)
+        at hudson.remoting.Engine.run(Engine.java:518)
+
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: slave1
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+Aug 01, 2020 3:53:36 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.3
+Aug 01, 2020 3:53:36 PM hudson.remoting.Engine startEngine
+WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://master:8080/]
+Aug 01, 2020 3:53:36 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, JNLP-connect, Ping, JNLP2-connect]
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Agent discovery successful
+  Agent address: master
+  Agent port:    50000
+  Identity:      af:fa:12:b3:4d:90:39:cc:e6:a3:c1:a7:84:8c:0e:6b
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Handshaking
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connecting to master:50000
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Trying protocol: JNLP4-connect
+Aug 01, 2020 3:53:36 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Remote identity confirmed: af:fa:12:b3:4d:90:39:cc:e6:a3:c1:a7:84:8c:0e:6b
+Aug 01, 2020 3:53:37 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connected
+Aug 01, 2020 3:53:38 PM org.jenkinsci.remoting.util.AnonymousClassWarnings warn
+WARNING: Attempt to (de-)serialize anonymous class jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$2; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
+Aug 01, 2020 3:53:39 PM org.jenkinsci.remoting.util.AnonymousClassWarnings warn
+WARNING: Attempt to (de-)serialize anonymous class hudson.FilePath$20; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/

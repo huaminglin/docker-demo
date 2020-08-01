@@ -1,0 +1,20 @@
+version: '3.3'
+networks:
+  jenkins:
+    driver: bridge
+services:
+  master:
+    image: jenkins
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/tmp/jenkins_home:/var/jenkins_home
+    networks:
+      - jenkins
+  slave:
+    image: jenkins/agent
+    volumes:
+      - /var/tmp/jenkins_slave_home:/workspace/remote
+    command: "java -jar /usr/share/jenkins/slave.jar -jnlpUrl http://master:8080/computer/slave1/slave-agent.jnlp -secret 7208793d9fef46681eb51b5d3907d9046ed741c2b8cb9d19064b1373bed6b6ea"
+    networks:
+      - jenkins
