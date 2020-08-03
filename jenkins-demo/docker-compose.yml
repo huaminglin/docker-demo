@@ -4,9 +4,12 @@ networks:
     driver: bridge
 services:
   master:
-    image: jenkins
+    image: jenkins/jenkins:lts
     ports:
       - 8080:8080
+      - 5005:5005
+    environment:
+      - "DEBUG=true"
     volumes:
       - /var/tmp/jenkins_home:/var/jenkins_home
     networks:
