@@ -5,6 +5,10 @@
 Make sure 1000:1000 owns /var/tmp/jenkins_home.
 
 
+Check /usr/local/bin/jenkins.sh for more configuration
+
+JENKINS_OPTS is used to pass parameters to jenkins.war
+
 ## Setup a slave node
 
 1) Add a slave on management console
@@ -42,3 +46,78 @@ By default, builds of this project may be executed on any build agents that are 
 When this option is checked, you have the possibility to ensure that builds of this project only occur on a certain agent, or set of agents.
 
 For example, if your project should only be built on a certain operating system, or on machines that have a certain set of tools installed, or even one specific machine, you can restrict this project to only execute on agents that that meet those criteria.
+
+## Logs on the system
+
+Jenkins uses java.util.logging for logging.
+
+The java.util.logging system by default sends every log above INFO to stdout.
+
+1) Manage Jenkins > System Log: Log Recorders
+
+2) Support Core Plugin,
+
+3) -Djava.util.logging.config.file=<pathTo>/logging.properties
+
+Note: it seems logger level configuration doesn't work.
+
+
+## JDK tools inside Docker container and /proc/sys/kernel/yama/ptrace_scope
+
+```
+jinfo 6
+sun.jvm.hotspot.debugger.DebuggerException: sun.jvm.hotspot.debugger.DebuggerException: Can't attach to the process: ptrace(PTRACE_ATTACH, ..) failed for 6: Operation not permitted
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal$LinuxDebuggerLocalWorkerThread.execute(LinuxDebuggerLocal.java:163)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.attach(LinuxDebuggerLocal.java:278)
+        at sun.jvm.hotspot.HotSpotAgent.attachDebugger(HotSpotAgent.java:671)
+        at sun.jvm.hotspot.HotSpotAgent.setupDebuggerLinux(HotSpotAgent.java:611)
+        at sun.jvm.hotspot.HotSpotAgent.setupDebugger(HotSpotAgent.java:337)
+        at sun.jvm.hotspot.HotSpotAgent.go(HotSpotAgent.java:304)
+        at sun.jvm.hotspot.HotSpotAgent.attach(HotSpotAgent.java:140)
+        at sun.jvm.hotspot.tools.Tool.start(Tool.java:185)
+        at sun.jvm.hotspot.tools.Tool.execute(Tool.java:118)
+        at sun.jvm.hotspot.tools.PMap.main(PMap.java:72)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at sun.tools.jmap.JMap.runTool(JMap.java:201)
+        at sun.tools.jmap.JMap.main(JMap.java:130)
+Caused by: sun.jvm.hotspot.debugger.DebuggerException: Can't attach to the process: ptrace(PTRACE_ATTACH, ..) failed for 6: Operation not permitted
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.attach0(Native Method)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.access$100(LinuxDebuggerLocal.java:62)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal$1AttachTask.doit(LinuxDebuggerLocal.java:269)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal$LinuxDebuggerLocalWorkerThread.run(LinuxDebuggerLocal.java:138)
+```
+
+```
+jinfo 6
+Attaching to process ID 6, please wait...
+Error attaching to process: sun.jvm.hotspot.debugger.DebuggerException: cannot open binary file
+sun.jvm.hotspot.debugger.DebuggerException: sun.jvm.hotspot.debugger.DebuggerException: cannot open binary file
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal$LinuxDebuggerLocalWorkerThread.execute(LinuxDebuggerLocal.java:163)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.attach(LinuxDebuggerLocal.java:278)
+        at sun.jvm.hotspot.HotSpotAgent.attachDebugger(HotSpotAgent.java:671)
+        at sun.jvm.hotspot.HotSpotAgent.setupDebuggerLinux(HotSpotAgent.java:611)
+        at sun.jvm.hotspot.HotSpotAgent.setupDebugger(HotSpotAgent.java:337)
+        at sun.jvm.hotspot.HotSpotAgent.go(HotSpotAgent.java:304)
+        at sun.jvm.hotspot.HotSpotAgent.attach(HotSpotAgent.java:140)
+        at sun.jvm.hotspot.tools.Tool.start(Tool.java:185)
+        at sun.jvm.hotspot.tools.Tool.execute(Tool.java:118)
+        at sun.jvm.hotspot.tools.JInfo.main(JInfo.java:138)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at sun.tools.jinfo.JInfo.runTool(JInfo.java:108)
+        at sun.tools.jinfo.JInfo.main(JInfo.java:76)
+Caused by: sun.jvm.hotspot.debugger.DebuggerException: cannot open binary file
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.attach0(Native Method)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.access$100(LinuxDebuggerLocal.java:62)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal$1AttachTask.doit(LinuxDebuggerLocal.java:269)
+        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal$LinuxDebuggerLocalWorkerThread.run(LinuxDebuggerLocal.java:138)
+```
+
+sudo docker exec --user root jenkins-demo_master_1 bash -c 'echo 0 > /proc/sys/kernel/yama/ptrace_scope'
+
+sudo docker exec -it jenkins-demo_master_1 bash

@@ -1,4 +1,4 @@
-version: '3.3'
+version: '2.4'
 networks:
   jenkins:
     driver: bridge
@@ -9,9 +9,10 @@ services:
       - 8080:8080
       - 5005:5005
     environment:
-      - "DEBUG=true"
+      - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,address=0.0.0.0:5005,server=y,suspend=n -Djava.util.logging.config.file=/logging.properties"
     volumes:
       - /var/tmp/jenkins_home:/var/jenkins_home
+      - ./logging.properties:/logging.properties
     networks:
       - jenkins
   slave:
