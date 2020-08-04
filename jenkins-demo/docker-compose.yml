@@ -8,13 +8,17 @@ services:
     ports:
       - 8080:8080
       - 5005:5005
+      - 9999:9999
+      - 1099:1099
     environment:
       - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,address=0.0.0.0:5005,server=y,suspend=n -Djava.util.logging.config.file=/logging.properties"
     volumes:
       - /var/tmp/jenkins_home:/var/jenkins_home
       - ./logging.properties:/logging.properties
+      - ./jstatd.all.policy:/jstatd.all.policy
     networks:
       - jenkins
+    privileged: true
   slave:
     image: jenkins/agent
     volumes:

@@ -120,4 +120,42 @@ Caused by: sun.jvm.hotspot.debugger.DebuggerException: cannot open binary file
 
 sudo docker exec --user root jenkins-demo_master_1 bash -c 'echo 0 > /proc/sys/kernel/yama/ptrace_scope'
 
+```
+bash: /proc/sys/kernel/yama/ptrace_scope: Read-only file system
+```
+
+Note: Need "privileged: true" in the docker-compose.yml
+
+"cap_add:      - SYS_PTRACE" is not required.
+
 sudo docker exec -it jenkins-demo_master_1 bash
+
+## VisualVM JMX Connection
+
+-Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+
+VisualVM > Add Remote Host
+
+VisualVM > Remote > Add JMX Connection
+
+## VisualVM jstatd Connection (The target Jenkins JVM runs Java 8)
+
+sudo docker exec jenkins-demo_master_1 jstatd -p 1099 -J-Djava.security.policy=/jstatd.all.policy
+
+VisualVM > Add Remote Host
+
+VisualVM > Remote > Add JMX Connection
+
+```
+jstatd
+Could not create remote object
+access denied ("java.util.PropertyPermission" "java.rmi.server.ignoreSubClasses" "write")
+java.security.AccessControlException: access denied ("java.util.PropertyPermission" "java.rmi.server.ignoreSubClasses" "write")
+        at java.security.AccessControlContext.checkPermission(AccessControlContext.java:472)
+        at java.security.AccessController.checkPermission(AccessController.java:886)
+        at java.lang.SecurityManager.checkPermission(SecurityManager.java:549)
+        at java.lang.System.setProperty(System.java:794)
+        at sun.tools.jstatd.Jstatd.main(Jstatd.java:139)
+```
+
+Note: ""privileged: true"" fixes the above issue.
