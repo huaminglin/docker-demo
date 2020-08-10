@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# This script is used to monitor network tracfic on the container network.
+# So we can run the target application in container and analyze its network behavior.
+
 cd $(dirname $0)
 
 target_container=$1

@@ -12,3 +12,8 @@ http://127.0.0.1:9090/targets
 http://localhost:3000/
 
 admin/password
+
+## 
+
+sum(rate(http_server_requests_seconds_count[1m]))
+
