@@ -1,0 +1,3 @@
+jcmd 7 VM.flags
+7:
+-XX:CICompilerCount=4 -XX:InitialHeapSize=8388608 -XX:MaxHeapSize=3986685952 -XX:MaxNewSize=1328545792 -XX:MinHeapDeltaBytes=524288 -XX:NewSize=2621440 -XX:OldSize=5767168 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC

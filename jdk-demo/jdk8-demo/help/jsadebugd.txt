@@ -1,0 +1,9 @@
+jsadebugd
+Usage: jsadebugd [options] <pid> [server-id]
+                (to connect to a live java process)
+   or  jsadebugd [options] <executable> <core> [server-id]
+                (to connect to a core file produced by <executable>)
+                server-id is an optional unique id for this debug server, needed 
+                if multiple debug servers are run on the same machine
+where options include:
+   -h | -help   to print this help message

@@ -1,0 +1,16 @@
+jmap -clstats 7
+Attaching to process ID 7, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.265-b01
+finding class loader instances ..done.
+computing per loader stat ..done.
+please wait.. computing liveness.......................................liveness analysis may be inaccurate ...
+class_loader    classes bytes   parent_loader   alive?  type
+
+<bootstrap>     789     1512957   null          live    <internal>
+0x00000006d28685a0      279     622650    null          live    sun/misc/Launcher$ExtClassLoader@0x00000007c000f6b0
+0x00000006d287ccb0      0       0       0x00000006d28685a0      live    sun/misc/Launcher$AppClassLoader@0x00000007c000f318
+0x00000006d26d3900      0       0       0x00000006d28685a0      live    jdk/nashorn/internal/runtime/StructureLoader@0x00000007c00670f8
+
+total = 4       1068    2135607     N/A         alive=4, dead=0     N/A

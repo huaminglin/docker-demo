@@ -1,0 +1,47 @@
+idlj
+com.sun.tools.corba.se.idl.InvalidArgument: No IDL file was specified.
+
+Compiler Usage:
+
+    java com.sun.tools.corba.se.idl.toJavaPortable.Compile [options] <idl file>
+
+where <idl file> is the name of a file containing IDL definitions, and
+[options] is any combination of the options listed below.  The options
+are optional and may appear in any order; <idl file> is required and
+must appear last.
+ 
+Options:
+-d <symbol>               This is equivalent to the following line in an
+                          IDL file:  #define <symbol>
+-emitAll                  Emit all types, including those found in #included files.
+-f<side>                  Define what bindings to emit.  <side> is one of client,
+                          server, all, serverTIE, allTIE.  serverTIE and allTIE
+                          cause delegate model skeletons to be emitted.  If this
+                          flag is not used, -fclient is assumed.
+-i <include path>         By default, the current directory is scanned for
+                          included files.  This option adds another directory.
+-keep                     If a file to be generated already exists, do not
+                          overwrite it.  By default it is overwritten.
+-noWarn                   Suppress warnings.
+-oldImplBase              Generate skeletons compatible with old (pre-1.4) JDK ORBs.
+-pkgPrefix <t> <prefix>   When the type or module name <t> is encountered at
+                          file scope, begin the Java package name for all files
+                          generated for <t> with <prefix>.
+-pkgTranslate <t> <pkg>   When the type or module name <t> in encountered, replace
+                          it with <pkg> in the generated java package.  Note that
+                          pkgPrefix changes are made first.  <t> must match the
+                          full package name exactly.  Also, <t> must not be
+                          org, org.omg, or any subpackage of org.omg.
+-skeletonName <xxx%yyy>   Name the skeleton according to the pattern.
+                          The defaults are:
+                          %POA for the POA base class (-fserver or -fall) 
+                          _%ImplBase for the oldImplBase base class
+                          (-oldImplBase and (-fserver or -fall)).
+-td <dir>                 use <dir> for the output directory instead of
+                          the current directory.
+-tieName <xxx%yyy>        Name the tie according to the pattern.  The defaults are:
+                          %POATie for the POA tie (-fserverTie or -fallTie) 
+                          %_Tie for the oldImplBase tie
+                          (-oldImplBase and (-fserverTie or -fallTie)).
+-v, -verbose              Verbose mode.
+-version                  Display the version number and quit.

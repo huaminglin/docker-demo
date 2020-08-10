@@ -1,0 +1,70 @@
+sudo docker exec jdk8-demo_server_1 cat /proc/sys/kernel/yama/ptrace_scope
+1
+
+sudo docker exec jdk8-demo_server_1 jps
+6 Shell
+30 Jps
+
+sudo docker exec jdk8-demo_server_1 jinfo 6
+Attaching to process ID 6, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.265-b01
+Java System Properties:
+
+java.runtime.name = OpenJDK Runtime Environment
+java.vm.version = 25.265-b01
+sun.boot.library.path = /usr/local/openjdk-8/jre/lib/amd64
+java.vendor.url = http://java.oracle.com/
+java.vm.vendor = Oracle Corporation
+path.separator = :
+file.encoding.pkg = sun.io
+java.vm.name = OpenJDK 64-Bit Server VM
+sun.os.patch.level = unknown
+sun.java.launcher = SUN_STANDARD
+user.dir = /
+java.vm.specification.name = Java Virtual Machine Specification
+java.runtime.version = 1.8.0_265-b01
+java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+os.arch = amd64
+java.endorsed.dirs = /usr/local/openjdk-8/jre/lib/endorsed
+java.io.tmpdir = /tmp
+line.separator = 
+
+java.vm.specification.vendor = Oracle Corporation
+os.name = Linux
+application.home = /usr/local/openjdk-8
+sun.jnu.encoding = UTF-8
+java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+java.specification.name = Java Platform API Specification
+java.class.version = 52.0
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+os.version = 5.4.0-42-generic
+user.home = /root
+user.timezone = Etc/UTC
+java.awt.printerjob = sun.print.PSPrinterJob
+file.encoding = UTF-8
+java.specification.version = 1.8
+user.name = root
+java.class.path = /usr/local/openjdk-8/lib/tools.jar:/usr/local/openjdk-8/classes
+java.vm.specification.version = 1.8
+sun.arch.data.model = 64
+sun.java.command = jdk.nashorn.tools.Shell -scripting
+java.home = /usr/local/openjdk-8/jre
+user.language = en
+java.specification.vendor = Oracle Corporation
+awt.toolkit = sun.awt.X11.XToolkit
+java.vm.info = mixed mode
+java.version = 1.8.0_265
+java.ext.dirs = /usr/local/openjdk-8/jre/lib/ext:/usr/java/packages/lib/ext
+sun.boot.class.path = /usr/local/openjdk-8/jre/lib/resources.jar:/usr/local/openjdk-8/jre/lib/rt.jar:/usr/local/openjdk-8/jre/lib/sunrsasign.jar:/usr/local/openjdk-8/jre/lib/jsse.jar:/usr/local/openjdk-8/jre/lib/jce.jar:/usr/local/openjdk-8/jre/lib/charsets.jar:/usr/local/openjdk-8/jre/lib/jfr.jar:/usr/local/openjdk-8/jre/classes
+java.vendor = Oracle Corporation
+file.separator = /
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding = UnicodeLittle
+sun.cpu.endian = little
+sun.cpu.isalist = 
+
+VM Flags:
+Non-default VM flags: -XX:CICompilerCount=4 -XX:InitialHeapSize=8388608 -XX:MaxHeapSize=3986685952 -XX:MaxNewSize=1328545792 -XX:MinHeapDeltaBytes=524288 -XX:NewSize=2621440 -XX:OldSize=5767168 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC 
+Command line:  -Dapplication.home=/usr/local/openjdk-8 -Xms8m

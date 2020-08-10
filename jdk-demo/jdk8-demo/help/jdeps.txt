@@ -1,0 +1,45 @@
+jdeps
+Usage: jdeps <options> <classes...>
+where <classes> can be a pathname to a .class file, a directory, a JAR file,
+or a fully-qualified class name.  Possible options include:
+  -dotoutput <dir>                   Destination directory for DOT file output
+  -s           -summary              Print dependency summary only
+  -v           -verbose              Print all class level dependencies
+                                     Equivalent to -verbose:class -filter:none.
+  -verbose:package                   Print package-level dependencies excluding
+                                     dependencies within the same package by default
+  -verbose:class                     Print class-level dependencies excluding
+                                     dependencies within the same package by default
+  -cp <path>   -classpath <path>     Specify where to find class files
+  -p <pkgname> -package <pkgname>    Finds dependences matching the given package name
+                                     (may be given multiple times)
+  -e <regex>   -regex <regex>        Finds dependences matching the given pattern
+                                     (-p and -e are exclusive)
+  -f <regex>   -filter <regex>       Filter dependences matching the given pattern
+                                     If given multiple times, the last one will be used.
+  -filter:package                    Filter dependences within the same package (default)
+  -filter:archive                    Filter dependences within the same archive
+  -filter:none                       No -filter:package and -filter:archive filtering
+                                     Filtering specified via the -filter option still applies.
+  -include <regex>                   Restrict analysis to classes matching pattern
+                                     This option filters the list of classes to
+                                     be analyzed.  It can be used together with
+                                     -p and -e which apply pattern to the dependences
+  -P           -profile              Show profile or the file containing a package
+  -apionly                           Restrict analysis to APIs i.e. dependences
+                                     from the signature of public and protected
+                                     members of public classes including field
+                                     type, method parameter types, returned type,
+                                     checked exception types etc
+  -R           -recursive            Recursively traverse all dependencies.
+                                     The -R option implies -filter:none.  If -p, -e, -f
+                                     option is specified, only the matching dependences
+                                     are analyzed.
+  -jdkinternals                      Finds class-level dependences on JDK internal APIs.
+                                     By default, it analyzes all classes on -classpath
+                                     and input files unless -include option is specified.
+                                     This option cannot be used with -p, -e and -s options.
+                                     WARNING: JDK internal APIs may not be accessible in
+                                     the next release.
+  -version                           Version information
+  

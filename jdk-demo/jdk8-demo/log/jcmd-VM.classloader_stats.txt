@@ -1,0 +1,9 @@
+jcmd 7 VM.classloader_stats
+7:
+ClassLoader         Parent              CLD*               Classes   ChunkSz   BlockSz  Type
+0x00000007c000f6b0  0x0000000000000000  0x00007f560010f090     293   2273280   2238824  sun.misc.Launcher$ExtClassLoader
+0x0000000000000000  0x0000000000000000  0x00007f560002d770     893   5545984   5515600  <boot class loader>
+                                                               392    827392    464704   + unsafe anonymous classes
+Total = 2                                                     1578   8646656   8219128  
+ChunkSz: Total size of all allocated metaspace chunks
+BlockSz: Total size of all allocated metaspace blocks (each chunk has several blocks)

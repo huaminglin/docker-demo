@@ -1,0 +1,61 @@
+hsdb> help
+Available commands:
+  assert true | false
+  attach pid | exec core
+  buildreplayjars [ all | app | boot ]  | [ prefix ]
+  class name
+  classes
+  detach
+  dis address [length]
+  disassemble address
+  dumpcfg { -a | id }
+  dumpclass { address | name } [ directory ]
+  dumpcodecache
+  dumpheap [ file ]
+  dumpideal { -a | id }
+  dumpilt { -a | id }
+  dumpreplaydata { <address > | -a | <thread_id> }
+  echo [ true | false ]
+  examine [ address/count ] | [ address,address]
+  field [ type [ name fieldtype isStatic offset address ] ]
+  findpc address
+  flags [ flag | -nd ]
+  help [ command ]
+  history
+  inspect expression
+  intConstant [ name [ value ] ]
+  jdis address
+  jhisto
+  jseval script
+  jsload file
+  jstack [-v]
+  livenmethods
+  longConstant [ name [ value ] ]
+  mem address [ length ]
+  pmap
+  print expression
+  printall
+  printas type expression
+  printmdo [ -a | expression ]
+  printstatics [ type ]
+  pstack [-v]
+  quit
+  reattach
+  revptrs address
+  scanoops start end [ type ]
+  search [ heap | perm | rawheap | codecache | threads ] value
+  source filename
+  symbol address
+  symboldump
+  symboltable name
+  sysprops
+  thread { -a | id }
+  threads
+  tokenize ...
+  type [ type [ name super isOop isInteger isUnsigned size ] ]
+  universe
+  verbose true | false
+  versioncheck [ true | false ]
+  vmstructsdump
+  whatis address
+  where { -a | id }

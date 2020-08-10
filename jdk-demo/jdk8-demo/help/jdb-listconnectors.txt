@@ -1,0 +1,88 @@
+jdb -listconnectors
+
+  Connector: com.sun.jdi.CommandLineLaunch  Transport: dt_socket
+    description: Launches target using Sun Java VM command line and attaches to it
+
+    Argument: home Default value: /usr/local/openjdk-8/jre
+    description: Home directory of the SDK or runtime environment used to launch the application
+
+    Argument: options (no default)
+    description: Launched VM options
+
+    Required Argument: main (no default)
+    description: Main class and arguments, or if -jar is an option, the main jar file and arguments
+
+    Argument: suspend Default value: true
+    description: All threads will be suspended before execution of main
+
+    Required Argument: quote Default value: "
+    description: Character used to combine space-delimited text into a single command line argument
+
+    Required Argument: vmexec Default value: java
+    description: Name of the Java VM launcher
+
+  Connector: com.sun.jdi.RawCommandLineLaunch  Transport: dt_socket
+    description: Launches target using user-specified command line and attaches to it
+
+    Required Argument: command (no default)
+    description: Raw command to start the debugged application VM
+
+    Required Argument: quote Default value: "
+    description: Character used to combine space-delimited text into a single command line argument
+
+    Required Argument: address (no default)
+    description: Address from which to listen for a connection after the raw command is run
+
+  Connector: com.sun.jdi.SocketAttach  Transport: dt_socket
+    description: Attaches by socket to other VMs
+
+    Argument: timeout (no default)
+    description: Timeout while waiting to attach 
+
+    Argument: hostname Default value: c27c5638658c
+    description: Machine name to which to attach for VM connections
+
+    Required Argument: port (no default)
+    description: Port number to which to attach for VM connections
+
+  Connector: com.sun.jdi.SocketListen  Transport: dt_socket
+    description: Accepts socket connections initiated by other VMs
+
+    Argument: timeout (no default)
+    description: Timeout while waiting for connection
+
+    Argument: port (no default)
+    description: Port number at which to listen for VM connections
+
+    Argument: localAddress (no default)
+    description: Local address that the listener binds to
+
+  Connector: com.sun.jdi.ProcessAttach  Transport: local
+    description: Attaches to debuggee by process-id (pid)
+
+    Required Argument: pid (no default)
+    description: pid
+
+    Argument: timeout (no default)
+    description: Timeout while waiting to attach 
+
+  Connector: sun.jvm.hotspot.jdi.SACoreAttachingConnector  Transport: filesystem
+    description: This connector allows you to attach to a core file using the Serviceability Agent
+
+    Required Argument: javaExecutable (no default)
+    description: Pathname of Java Executable
+
+    Argument: core Default value: core
+    description: Pathname of a corefile from a Java Process
+
+  Connector: sun.jvm.hotspot.jdi.SADebugServerAttachingConnector  Transport: RMI
+    description: This connector allows you to attach to a Java Process via a debug server with the Serviceability Agent
+
+    Required Argument: debugServerName (no default)
+    description: Name of a remote SA Debug Server
+
+  Connector: sun.jvm.hotspot.jdi.SAPIDAttachingConnector  Transport: local process
+    description: This connector allows you to attach to a Java process using the Serviceability Agent
+
+    Required Argument: pid (no default)
+    description: PID of a Java process

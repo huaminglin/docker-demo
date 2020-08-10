@@ -1,0 +1,206 @@
+jcmd 7 VM.dynlibs
+7:
+Dynamic libraries:
+6d2600000-6d2b80000 rw-p 00000000 00:00 0 
+6d2b80000-770d00000 ---p 00000000 00:00 0 
+770d00000-772900000 rw-p 00000000 00:00 0 
+772900000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c0140000 rw-p 00000000 00:00 0 
+7c0140000-800000000 ---p 00000000 00:00 0 
+55f218b18000-55f218b19000 r-xp 00000000 fd:00 8015306                    /usr/local/openjdk-8/bin/jjs
+55f218d18000-55f218d19000 r--p 00000000 fd:00 8015306                    /usr/local/openjdk-8/bin/jjs
+55f218d19000-55f218d1a000 rw-p 00001000 fd:00 8015306                    /usr/local/openjdk-8/bin/jjs
+55f2195cf000-55f2195f0000 rw-p 00000000 00:00 0                          [heap]
+7f5594000000-7f5595002000 rw-p 00000000 00:00 0 
+7f5595002000-7f5598000000 ---p 00000000 00:00 0 
+7f5598000000-7f5598021000 rw-p 00000000 00:00 0 
+7f5598021000-7f559c000000 ---p 00000000 00:00 0 
+7f559fa59000-7f559fa5c000 ---p 00000000 00:00 0 
+7f559fa5c000-7f559fb5a000 rw-p 00000000 00:00 0 
+7f559fb5a000-7f559fbd4000 r--s 01103000 fd:00 8015831                    /usr/local/openjdk-8/lib/tools.jar
+7f559fbd4000-7f559fbec000 r-xp 00000000 fd:00 8015739                    /usr/local/openjdk-8/jre/lib/amd64/libnet.so
+7f559fbec000-7f559fdeb000 ---p 00018000 fd:00 8015739                    /usr/local/openjdk-8/jre/lib/amd64/libnet.so
+7f559fdeb000-7f559fdec000 r--p 00017000 fd:00 8015739                    /usr/local/openjdk-8/jre/lib/amd64/libnet.so
+7f559fdec000-7f559fded000 rw-p 00018000 fd:00 8015739                    /usr/local/openjdk-8/jre/lib/amd64/libnet.so
+7f559fded000-7f559fdfe000 r-xp 00000000 fd:00 8015740                    /usr/local/openjdk-8/jre/lib/amd64/libnio.so
+7f559fdfe000-7f559fffe000 ---p 00011000 fd:00 8015740                    /usr/local/openjdk-8/jre/lib/amd64/libnio.so
+7f559fffe000-7f559ffff000 r--p 00011000 fd:00 8015740                    /usr/local/openjdk-8/jre/lib/amd64/libnio.so
+7f559ffff000-7f55a0000000 rw-p 00012000 fd:00 8015740                    /usr/local/openjdk-8/jre/lib/amd64/libnio.so
+7f55a0000000-7f55a0323000 rw-p 00000000 00:00 0 
+7f55a0323000-7f55a4000000 ---p 00000000 00:00 0 
+7f55a4000000-7f55a4021000 rw-p 00000000 00:00 0 
+7f55a4021000-7f55a8000000 ---p 00000000 00:00 0 
+7f55a8000000-7f55a81cb000 rw-p 00000000 00:00 0 
+7f55a81cb000-7f55ac000000 ---p 00000000 00:00 0 
+7f55ac000000-7f55ac38a000 rw-p 00000000 00:00 0 
+7f55ac38a000-7f55b0000000 ---p 00000000 00:00 0 
+7f55b0000000-7f55b0021000 rw-p 00000000 00:00 0 
+7f55b0021000-7f55b4000000 ---p 00000000 00:00 0 
+7f55b4000000-7f55b4135000 rw-p 00000000 00:00 0 
+7f55b4135000-7f55b8000000 ---p 00000000 00:00 0 
+7f55b8000000-7f55b8021000 rw-p 00000000 00:00 0 
+7f55b8021000-7f55bc000000 ---p 00000000 00:00 0 
+7f55bc000000-7f55bc021000 rw-p 00000000 00:00 0 
+7f55bc021000-7f55c0000000 ---p 00000000 00:00 0 
+7f55c0000000-7f55c0021000 rw-p 00000000 00:00 0 
+7f55c0021000-7f55c4000000 ---p 00000000 00:00 0 
+7f55c4000000-7f55c4032000 rw-p 00000000 00:00 0 
+7f55c4032000-7f55c8000000 ---p 00000000 00:00 0 
+7f55c8000000-7f55c8021000 rw-p 00000000 00:00 0 
+7f55c8021000-7f55cc000000 ---p 00000000 00:00 0 
+7f55cc06a000-7f55cc09b000 rw-p 00000000 00:00 0 
+7f55cc09b000-7f55cc0b6000 r--s 001d6000 fd:00 8015771                    /usr/local/openjdk-8/jre/lib/ext/nashorn.jar
+7f55cc0b6000-7f55cc0b7000 ---p 00000000 00:00 0 
+7f55cc0b7000-7f55cc1b7000 rw-p 00000000 00:00 0 
+7f55cc1b7000-7f55cc1ba000 ---p 00000000 00:00 0 
+7f55cc1ba000-7f55cc2b8000 rw-p 00000000 00:00 0 
+7f55cc2b8000-7f55cc2b9000 ---p 00000000 00:00 0 
+7f55cc2b9000-7f55cc2bc000 ---p 00000000 00:00 0 
+7f55cc2bc000-7f55cc3b9000 rw-p 00000000 00:00 0 
+7f55cc3b9000-7f55cc3ba000 ---p 00000000 00:00 0 
+7f55cc3ba000-7f55cc3bd000 ---p 00000000 00:00 0 
+7f55cc3bd000-7f55cc4ba000 rw-p 00000000 00:00 0 
+7f55cc4ba000-7f55cc4bb000 ---p 00000000 00:00 0 
+7f55cc4bb000-7f55cc4be000 ---p 00000000 00:00 0 
+7f55cc4be000-7f55cc5bb000 rw-p 00000000 00:00 0 
+7f55cc5bb000-7f55cc5bc000 ---p 00000000 00:00 0 
+7f55cc5bc000-7f55cc5bf000 ---p 00000000 00:00 0 
+7f55cc5bf000-7f55cc6bc000 rw-p 00000000 00:00 0 
+7f55cc6bc000-7f55cc6bf000 ---p 00000000 00:00 0 
+7f55cc6bf000-7f55cc7bd000 rw-p 00000000 00:00 0 
+7f55cc7bd000-7f55cc930000 r--p 00000000 fd:00 5922654                    /usr/lib/locale/C.UTF-8/LC_COLLATE
+7f55cc930000-7f55d4000000 rw-p 00000000 00:00 0 
+7f55d4000000-7f55d4021000 rw-p 00000000 00:00 0 
+7f55d4021000-7f55d8000000 ---p 00000000 00:00 0 
+7f55d8000000-7f55d8021000 rw-p 00000000 00:00 0 
+7f55d8021000-7f55dc000000 ---p 00000000 00:00 0 
+7f55dc000000-7f55dc021000 rw-p 00000000 00:00 0 
+7f55dc021000-7f55e0000000 ---p 00000000 00:00 0 
+7f55e0000000-7f55e0021000 rw-p 00000000 00:00 0 
+7f55e0021000-7f55e4000000 ---p 00000000 00:00 0 
+7f55e4000000-7f55e4021000 rw-p 00000000 00:00 0 
+7f55e4021000-7f55e8000000 ---p 00000000 00:00 0 
+7f55e8000000-7f55e8021000 rw-p 00000000 00:00 0 
+7f55e8021000-7f55ec000000 ---p 00000000 00:00 0 
+7f55ec004000-7f55ec036000 r--p 00000000 fd:00 5922655                    /usr/lib/locale/C.UTF-8/LC_CTYPE
+7f55ec036000-7f55ec039000 ---p 00000000 00:00 0 
+7f55ec039000-7f55ec137000 rw-p 00000000 00:00 0 
+7f55ec137000-7f55ec13a000 ---p 00000000 00:00 0 
+7f55ec13a000-7f55ec238000 rw-p 00000000 00:00 0 
+7f55ec238000-7f55ec239000 ---p 00000000 00:00 0 
+7f55ec239000-7f55edfcb000 rw-p 00000000 00:00 0 
+7f55edfcb000-7f55ee19d000 r--s 03ca8000 fd:00 8015804                    /usr/local/openjdk-8/jre/lib/rt.jar
+7f55ee19d000-7f55ee953000 rw-p 00000000 00:00 0 
+7f55ee953000-7f55eea13000 ---p 00000000 00:00 0 
+7f55eea13000-7f55ef180000 rw-p 00000000 00:00 0 
+7f55ef180000-7f55ef181000 ---p 00000000 00:00 0 
+7f55ef181000-7f55ef281000 rw-p 00000000 00:00 0 
+7f55ef281000-7f55ef282000 ---p 00000000 00:00 0 
+7f55ef282000-7f55ef382000 rw-p 00000000 00:00 0 
+7f55ef382000-7f55ef383000 ---p 00000000 00:00 0 
+7f55ef383000-7f55ef483000 rw-p 00000000 00:00 0 
+7f55ef483000-7f55ef484000 ---p 00000000 00:00 0 
+7f55ef484000-7f55ef584000 rw-p 00000000 00:00 0 
+7f55ef584000-7f55ef585000 ---p 00000000 00:00 0 
+7f55ef585000-7f55ef685000 rw-p 00000000 00:00 0 
+7f55ef685000-7f55ef686000 ---p 00000000 00:00 0 
+7f55ef686000-7f55ef786000 rw-p 00000000 00:00 0 
+7f55ef786000-7f55ef787000 ---p 00000000 00:00 0 
+7f55ef787000-7f55ef887000 rw-p 00000000 00:00 0 
+7f55ef887000-7f55ef888000 ---p 00000000 00:00 0 
+7f55ef888000-7f55ef98b000 rw-p 00000000 00:00 0 
+7f55ef98b000-7f55efe7c000 ---p 00000000 00:00 0 
+7f55efe7c000-7f55efe7f000 rw-p 00000000 00:00 0 
+7f55efe7f000-7f55f036f000 ---p 00000000 00:00 0 
+7f55f036f000-7f55f037e000 rw-p 00000000 00:00 0 
+7f55f037e000-7f55f05e9000 ---p 00000000 00:00 0 
+7f55f05e9000-7f55f05f7000 rw-p 00000000 00:00 0 
+7f55f05f7000-7f55f09aa000 ---p 00000000 00:00 0 
+7f55f09aa000-7f55f0cca000 rwxp 00000000 00:00 0 
+7f55f0cca000-7f55ff9aa000 ---p 00000000 00:00 0 
+7f55ff9aa000-7f55ff9c5000 r-xp 00000000 fd:00 8015748                    /usr/local/openjdk-8/jre/lib/amd64/libzip.so
+7f55ff9c5000-7f55ffbc4000 ---p 0001b000 fd:00 8015748                    /usr/local/openjdk-8/jre/lib/amd64/libzip.so
+7f55ffbc4000-7f55ffbc5000 r--p 0001a000 fd:00 8015748                    /usr/local/openjdk-8/jre/lib/amd64/libzip.so
+7f55ffbc5000-7f55ffbc6000 rw-p 0001b000 fd:00 8015748                    /usr/local/openjdk-8/jre/lib/amd64/libzip.so
+7f55ffbc6000-7f55ffbee000 r-xp 00000000 fd:00 8015727                    /usr/local/openjdk-8/jre/lib/amd64/libjava.so
+7f55ffbee000-7f55ffded000 ---p 00028000 fd:00 8015727                    /usr/local/openjdk-8/jre/lib/amd64/libjava.so
+7f55ffded000-7f55ffdee000 r--p 00027000 fd:00 8015727                    /usr/local/openjdk-8/jre/lib/amd64/libjava.so
+7f55ffdee000-7f55ffdf0000 rw-p 00028000 fd:00 8015727                    /usr/local/openjdk-8/jre/lib/amd64/libjava.so
+7f55ffdf0000-7f55ffdfe000 r-xp 00000000 fd:00 8015747                    /usr/local/openjdk-8/jre/lib/amd64/libverify.so
+7f55ffdfe000-7f55ffffd000 ---p 0000e000 fd:00 8015747                    /usr/local/openjdk-8/jre/lib/amd64/libverify.so
+7f55ffffd000-7f55fffff000 r--p 0000d000 fd:00 8015747                    /usr/local/openjdk-8/jre/lib/amd64/libverify.so
+7f55fffff000-7f5600000000 rw-p 0000f000 fd:00 8015747                    /usr/local/openjdk-8/jre/lib/amd64/libverify.so
+7f5600000000-7f560042d000 rw-p 00000000 00:00 0 
+7f560042d000-7f5604000000 ---p 00000000 00:00 0 
+7f5604010000-7f5604011000 r--p 00000000 fd:00 5922662                    /usr/lib/locale/C.UTF-8/LC_NUMERIC
+7f5604011000-7f5604012000 r--p 00000000 fd:00 5922665                    /usr/lib/locale/C.UTF-8/LC_TIME
+7f5604012000-7f5604013000 r--p 00000000 fd:00 5922660                    /usr/lib/locale/C.UTF-8/LC_MONETARY
+7f5604013000-7f5604014000 r--p 00000000 fd:00 5922659                    /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+7f5604014000-7f560401b000 r--s 00000000 fd:00 5922935                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f560401b000-7f56040e9000 rw-p 00000000 00:00 0 
+7f56040e9000-7f56040f1000 rw-s 00000000 fd:00 6579572                    /tmp/hsperfdata_root/7
+7f56040f1000-7f56040f4000 r--p 00000000 fd:00 5793989                    /lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f56040f4000-7f56040fb000 r-xp 00003000 fd:00 5793989                    /lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f56040fb000-7f56040fd000 r--p 0000a000 fd:00 5793989                    /lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f56040fd000-7f56040fe000 ---p 0000c000 fd:00 5793989                    /lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f56040fe000-7f56040ff000 r--p 0000c000 fd:00 5793989                    /lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f56040ff000-7f5604100000 rw-p 0000d000 fd:00 5793989                    /lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f5604100000-7f5604106000 rw-p 00000000 00:00 0 
+7f5604106000-7f5604107000 r--p 00000000 fd:00 5922663                    /usr/lib/locale/C.UTF-8/LC_PAPER
+7f5604107000-7f5604108000 r--p 00000000 fd:00 5922661                    /usr/lib/locale/C.UTF-8/LC_NAME
+7f5604108000-7f5604109000 r--p 00000000 fd:00 5922653                    /usr/lib/locale/C.UTF-8/LC_ADDRESS
+7f5604109000-7f560410a000 r--p 00000000 fd:00 5922664                    /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+7f560410a000-7f560410c000 r--p 00000000 fd:00 5794010                    /lib/x86_64-linux-gnu/librt-2.28.so
+7f560410c000-7f5604110000 r-xp 00002000 fd:00 5794010                    /lib/x86_64-linux-gnu/librt-2.28.so
+7f5604110000-7f5604112000 r--p 00006000 fd:00 5794010                    /lib/x86_64-linux-gnu/librt-2.28.so
+7f5604112000-7f5604113000 r--p 00007000 fd:00 5794010                    /lib/x86_64-linux-gnu/librt-2.28.so
+7f5604113000-7f5604114000 rw-p 00008000 fd:00 5794010                    /lib/x86_64-linux-gnu/librt-2.28.so
+7f5604114000-7f5604115000 ---p 00000000 00:00 0 
+7f5604115000-7f5604118000 ---p 00000000 00:00 0 
+7f5604118000-7f5604215000 rw-p 00000000 00:00 0 
+7f5604215000-7f5604222000 r--p 00000000 fd:00 5793972                    /lib/x86_64-linux-gnu/libm-2.28.so
+7f5604222000-7f56042c1000 r-xp 0000d000 fd:00 5793972                    /lib/x86_64-linux-gnu/libm-2.28.so
+7f56042c1000-7f5604396000 r--p 000ac000 fd:00 5793972                    /lib/x86_64-linux-gnu/libm-2.28.so
+7f5604396000-7f5604397000 r--p 00180000 fd:00 5793972                    /lib/x86_64-linux-gnu/libm-2.28.so
+7f5604397000-7f5604398000 rw-p 00181000 fd:00 5793972                    /lib/x86_64-linux-gnu/libm-2.28.so
+7f5604398000-7f5604ff4000 r-xp 00000000 fd:00 8015752                    /usr/local/openjdk-8/jre/lib/amd64/server/libjvm.so
+7f5604ff4000-7f56051f4000 ---p 00c5c000 fd:00 8015752                    /usr/local/openjdk-8/jre/lib/amd64/server/libjvm.so
+7f56051f4000-7f560529d000 r--p 00c5c000 fd:00 8015752                    /usr/local/openjdk-8/jre/lib/amd64/server/libjvm.so
+7f560529d000-7f56052c6000 rw-p 00d05000 fd:00 8015752                    /usr/local/openjdk-8/jre/lib/amd64/server/libjvm.so
+7f56052c6000-7f560530a000 rw-p 00000000 00:00 0 
+7f560530a000-7f560532c000 r--p 00000000 fd:00 5793947                    /lib/x86_64-linux-gnu/libc-2.28.so
+7f560532c000-7f5605474000 r-xp 00022000 fd:00 5793947                    /lib/x86_64-linux-gnu/libc-2.28.so
+7f5605474000-7f56054c0000 r--p 0016a000 fd:00 5793947                    /lib/x86_64-linux-gnu/libc-2.28.so
+7f56054c0000-7f56054c1000 ---p 001b6000 fd:00 5793947                    /lib/x86_64-linux-gnu/libc-2.28.so
+7f56054c1000-7f56054c5000 r--p 001b6000 fd:00 5793947                    /lib/x86_64-linux-gnu/libc-2.28.so
+7f56054c5000-7f56054c7000 rw-p 001ba000 fd:00 5793947                    /lib/x86_64-linux-gnu/libc-2.28.so
+7f56054c7000-7f56054cb000 rw-p 00000000 00:00 0 
+7f56054cb000-7f56054cc000 r--p 00000000 fd:00 5793957                    /lib/x86_64-linux-gnu/libdl-2.28.so
+7f56054cc000-7f56054cd000 r-xp 00001000 fd:00 5793957                    /lib/x86_64-linux-gnu/libdl-2.28.so
+7f56054cd000-7f56054ce000 r--p 00002000 fd:00 5793957                    /lib/x86_64-linux-gnu/libdl-2.28.so
+7f56054ce000-7f56054cf000 r--p 00002000 fd:00 5793957                    /lib/x86_64-linux-gnu/libdl-2.28.so
+7f56054cf000-7f56054d0000 rw-p 00003000 fd:00 5793957                    /lib/x86_64-linux-gnu/libdl-2.28.so
+7f56054d0000-7f56054e6000 r-xp 00000000 fd:00 8015822                    /usr/local/openjdk-8/lib/amd64/jli/libjli.so
+7f56054e6000-7f56056e5000 ---p 00016000 fd:00 8015822                    /usr/local/openjdk-8/lib/amd64/jli/libjli.so
+7f56056e5000-7f56056e6000 r--p 00015000 fd:00 8015822                    /usr/local/openjdk-8/lib/amd64/jli/libjli.so
+7f56056e6000-7f56056e7000 rw-p 00016000 fd:00 8015822                    /usr/local/openjdk-8/lib/amd64/jli/libjli.so
+7f56056e7000-7f56056ed000 r--p 00000000 fd:00 5794006                    /lib/x86_64-linux-gnu/libpthread-2.28.so
+7f56056ed000-7f56056fc000 r-xp 00006000 fd:00 5794006                    /lib/x86_64-linux-gnu/libpthread-2.28.so
+7f56056fc000-7f5605702000 r--p 00015000 fd:00 5794006                    /lib/x86_64-linux-gnu/libpthread-2.28.so
+7f5605702000-7f5605703000 r--p 0001a000 fd:00 5794006                    /lib/x86_64-linux-gnu/libpthread-2.28.so
+7f5605703000-7f5605704000 rw-p 0001b000 fd:00 5794006                    /lib/x86_64-linux-gnu/libpthread-2.28.so
+7f5605704000-7f560570a000 rw-p 00000000 00:00 0 
+7f560570a000-7f560570b000 r--p 00000000 fd:00 5922657                    /usr/lib/locale/C.UTF-8/LC_MEASUREMENT
+7f560570b000-7f560570c000 r--p 00000000 fd:00 5922656                    /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+7f560570c000-7f560570d000 rw-p 00000000 00:00 0 
+7f560570d000-7f560570e000 r--p 00000000 00:00 0 
+7f560570e000-7f560570f000 r--p 00000000 fd:00 5793933                    /lib/x86_64-linux-gnu/ld-2.28.so
+7f560570f000-7f560572d000 r-xp 00001000 fd:00 5793933                    /lib/x86_64-linux-gnu/ld-2.28.so
+7f560572d000-7f5605735000 r--p 0001f000 fd:00 5793933                    /lib/x86_64-linux-gnu/ld-2.28.so
+7f5605735000-7f5605736000 r--p 00026000 fd:00 5793933                    /lib/x86_64-linux-gnu/ld-2.28.so
+7f5605736000-7f5605737000 rw-p 00027000 fd:00 5793933                    /lib/x86_64-linux-gnu/ld-2.28.so
+7f5605737000-7f5605738000 rw-p 00000000 00:00 0 
+7fffe0464000-7fffe0485000 rw-p 00000000 00:00 0                          [stack]
+7fffe055d000-7fffe0560000 r--p 00000000 00:00 0                          [vvar]
+7fffe0560000-7fffe0561000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

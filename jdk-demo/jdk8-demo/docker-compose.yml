@@ -1,0 +1,26 @@
+version: '3.3'
+networks:
+  jdk8:
+    driver: bridge
+services:
+  server:
+    image: openjdk:8u265-jdk
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
+    ports:
+      - 1099:1099
+      - 7000:7000
+    networks:
+      - jdk8
+    privileged: true
+    volumes:
+      - ./mount:/mount
+      - /tmp/docker-container:/mounttmp
+  client:
+    image: openjdk:8u265-jdk
+    entrypoint: /bin/bash
+    stdin_open: true
+    tty: true
+    networks:
+      - jdk8
