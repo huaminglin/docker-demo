@@ -5,7 +5,7 @@
 💔  The "minikube" cluster has been deleted.
 🔥  Successfully deleted profile "minikube"
 I1222 21:36:12.810055   17046 notify.go:125] Checking for updates...
-I1222 21:36:13.931659   17046 start.go:255] hostinfo: {"hostname":"myname-MS-7850","uptime":25224,"bootTime":1576996549,"procs":389,"os":"linux","platform":"ubuntu","platformFamily":"debian","platformVersion":"18.04","kernelVersion":"5.0.0-37-generic","virtualizationSystem":"kvm","virtualizationRole":"host","hostid":"705ceed5-9261-42a7-9ea0-9577ca5b8de4"}
+I1222 21:36:13.931659   17046 start.go:255] hostinfo: {"hostname":"myhostname","uptime":25224,"bootTime":1576996549,"procs":389,"os":"linux","platform":"ubuntu","platformFamily":"debian","platformVersion":"18.04","kernelVersion":"5.0.0-37-generic","virtualizationSystem":"kvm","virtualizationRole":"host","hostid":"705ceed5-9261-42a7-9ea0-9577ca5b8de4"}
 I1222 21:36:13.932347   17046 start.go:265] virtualization: kvm host
 😄  minikube v1.6.2 on Ubuntu 18.04
 I1222 21:36:13.932483   17046 start.go:555] selectDriver: flag="virtualbox", old=<nil>

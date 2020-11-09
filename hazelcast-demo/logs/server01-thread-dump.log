@@ -671,7 +671,7 @@ Full thread dump OpenJDK 64-Bit Server VM (11.0.5+10-alpine-r0 mixed mode):
    Locked ownable synchronizers:
         - None
 
-"RMI TCP Connection(1)-10.0.0.211" - Thread t@63
+"RMI TCP Connection(1)-x.x.x.x" - Thread t@63
    java.lang.Thread.State: RUNNABLE
         at java.base@11.0.5/java.net.SocketInputStream.socketRead0(Native Method)
         at java.base@11.0.5/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)

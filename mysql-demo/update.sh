@@ -19,3 +19,4 @@ docker-compose exec server mysql -pdemo mysql -e "CREATE USER 'root'@'172.30.0.1
 docker-compose exec server mysql -pdemo mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.30.0.1';FLUSH PRIVILEGES;"
 
 docker-compose exec server mysql -pdemo mysql -e "SHOW VARIABLES LIKE \"%general%\""
+
