@@ -1,0 +1,206 @@
+java -jar $HOME/bin/exhibitor-1.6.0.jar --help
+Exhibitor v1.6.0
+ -?,--help                     Print this help
+ -c,--configtype <arg>         Defines which configuration type you want
+                               to use. Choices are: "file", "s3",
+                               "zookeeper", "consul" or "none". Additional
+                               config will be required depending on which
+                               type you are using.
+    --configcheckms <arg>      Period (ms) to check for shared config
+                               updates. Default is: 30000
+    --defaultconfig <arg>      Full path to a file that contains
+                               initial/default values for
+                               Exhibitor/ZooKeeper config values. The file
+                               is a standard property file. The property
+                               names are listed below. The file can
+                               specify some or all of the properties.
+    --headingtext <arg>        Extra text to display in UI header
+    --hostname <arg>           Hostname to use for this JVM. Default is:
+                               myhostname
+    --jquerystyle <arg>        Styling used for the JQuery-based UI.
+                               Currently available options: red, black,
+                               custom
+    --loglines <arg>           Max lines of logging to keep in memory for
+                               display. Default is 1000.
+    --nodemodification <arg>   If true, the Explorer UI will allow nodes
+                               to be modified (use with caution). Default
+                               is true.
+    --port <arg>               Port for the HTTP Server. Default is: 8080
+    --prefspath <arg>          Certain values (such as Control Panel
+                               values) are stored in a preferences file.
+                               By default, Preferences.userRoot() is used.
+                               Use this option to specify a different file
+                               path.
+    --servo <arg>              true/false (default is false). If enabled,
+                               ZooKeeper will be queried once a minute for
+                               its state via the 'mntr' four letter word
+                               (this requires ZooKeeper 3.4.x+). Servo
+                               will be used to publish this data via JMX.
+    --timeout <arg>            Connection timeout (ms) for ZK connections.
+                               Default is 30000.
+
+== S3 Options ==
+    --s3credentials <arg>   Optional credentials to use for s3backup or
+                            s3config. Argument is the path to an AWS
+                            credential properties file with two
+                            properties:
+                            com.netflix.exhibitor.s3.access-key-id and
+                            com.netflix.exhibitor.s3.access-secret-key
+    --s3proxy <arg>         Optional configuration used when when
+                            connecting to S3 via a proxy. Argument is the
+                            path to an AWS credential properties file with
+                            four properties (only host, port and protocol
+                            are required if using a proxy):
+                            com.netflix.exhibitor.s3.proxy-host,
+                            com.netflix.exhibitor.s3.proxy-port,
+                            com.netflix.exhibitor.s3.proxy-username,
+                            com.netflix.exhibitor.s3.proxy-password
+    --s3region <arg>        Optional region for S3 calls (e.g.
+                            "eu-west-1"). Will be used to set the S3
+                            client's endpoint.
+
+== Configuration Options for Type "s3" ==
+    --s3config <arg>         The bucket name and key to store the config
+                             (s3credentials may be provided as well).
+                             Argument is [bucket name]:[key].
+    --s3configprefix <arg>   When using AWS S3 shared config files, the
+                             prefix to use for values such as locks.
+                             Default is exhibitor-
+
+== Configuration Options for Type "zookeeper" ==
+    --zkconfigconnect <arg>         The initial connection string for
+                                    ZooKeeper shared config storage. E.g:
+                                    "host1:2181,host2:2181..."
+    --zkconfigexhibitorpath <arg>   Used if the ZooKeeper shared config is
+                                    also running Exhibitor. This is the
+                                    URI path for the REST call. The
+                                    default is: /
+    --zkconfigexhibitorport <arg>   Used if the ZooKeeper shared config is
+                                    also running Exhibitor. This is the
+                                    port that Exhibitor is listening on.
+                                    IMPORTANT: if this value is not set it
+                                    implies that Exhibitor is not being
+                                    used on the ZooKeeper shared config.
+    --zkconfigpollms <arg>          The period in ms to check for changes
+                                    in the config ensemble. The default
+                                    is: 10000
+    --zkconfigretry <arg>           The retry values to use in the form
+                                    sleep-ms:retry-qty. The default is:
+                                    1000:3
+    --zkconfigzpath <arg>           The base ZPath that Exhibitor should
+                                    use. E.g: "/exhibitor/config"
+
+== Configuration Options for Type "file" ==
+    --fsconfigdir <arg>          Directory to store Exhibitor properties
+                                 (cannot be used with s3config). Exhibitor
+                                 uses file system locks so you can specify
+                                 a shared location so as to enable
+                                 complete ensemble management. Default
+                                 location is
+                                 /home/myname/workspace/docker-demo
+    --fsconfiglockprefix <arg>   A prefix for a locking mechanism. Used in
+                                 conjunction with fsconfigdir. Default is
+                                 exhibitor-lock-
+    --fsconfigname <arg>         The name of the file to store config in.
+                                 Used in conjunction with fsconfigdir.
+                                 Default is exhibitor.properties
+
+== Configuration Options for Type "consul" ==
+    --consulacltoken <arg>            Optional Consul ACL token
+    --consulhost <arg>                Consul host; defaults to "localhost"
+    --consulport <arg>                Consul HTTP(s) port; defaults to
+                                      8500
+    --consulprefix <arg>              Prefix in the key-value store under
+                                      which to store Exhibitor data, e.g.
+                                      "exhibitor/"
+    --consulssl <arg>                 If true, enables Consul
+                                      communication over SSL
+    --consulsslcacert <arg>           Path to the consul CA cert file
+    --consulsslprotocol <arg>         Consul SSL/TLS protocol; defaults to
+                                      "TLSv1.2"
+    --consulsslverifyhostname <arg>   If true, verify SSL hostnames
+
+== Configuration Options for Type "none" ==
+    --noneconfigdir <arg>   Directory to store the local configuration
+                            file. Config type "none" is a special purpose
+                            type that should only be used when running a
+                            second ZooKeeper ensemble that is used for
+                            storing config. DO NOT USE THIS MODE for a
+                            normal ZooKeeper ensemble.
+
+== Backup Options ==
+    --filesystembackup <arg>   If true, enables file system backup of
+                               ZooKeeper log files.
+    --s3backup <arg>           If true, enables AWS S3 backup of ZooKeeper
+                               log files (s3credentials may be provided as
+                               well).
+
+== Authorization Options ==
+    --realm <arg>        Specifies the realm as [realm name]:[path/url].
+                         The path/url must point to a realm properties
+                         file as described here (see HashUserRealm):
+                         http://docs.codehaus.org/display/JETTY/Realms
+    --remoteauth <arg>   Exhibitor uses the Jersey Client to remotely
+                         connect to each Exhibitor instance in the
+                         ensemble. If you have security enabled for
+                         Exhibitor you also need to specify authorization
+                         for the remote client. The argument for
+                         remoteauth is: <type>:<realm-user>. "type" must
+                         be either "basic" or "digest". "realm-user" is
+                         the user to use from the realm file.
+    --security <arg>     Path to a web.xml file with security information
+                         (all other tags are ignored). See
+                         http://docs.oracle.com/javaee/6/tutorial/doc/gkba
+                         a.html.
+
+== Deprecated Authorization Options ==
+    --basicauthrealm <arg>    Basic Auth Realm to Protect the Exhibitor UI
+                              (DEPRECATED - use --security/--realm
+                              instead)
+    --consolepassword <arg>   Basic Auth Password to Protect the Exhibitor
+                              UI (DEPRECATED - use --security/--realm
+                              instead)
+    --consoleuser <arg>       Basic Auth Username to Protect the Exhibitor
+                              UI (DEPRECATED - use --security/--realm
+                              instead)
+    --curatorpassword <arg>   Basic Auth Password to Protect cluster list
+                              api (DEPRECATED - use --security/--realm
+                              instead)
+    --curatoruser <arg>       Basic Auth Password to Protect the cluster
+                              list api (DEPRECATED - use
+                              --security/--realm instead)
+
+== ACL Options ==
+    --aclid <arg>       Enable ACL for Exhibitor's internal ZooKeeper
+                        connection. This sets the ACL's ID.
+    --aclperms <arg>    Enable ACL for Exhibitor's internal ZooKeeper
+                        connection. This sets the ACL's Permissions - a
+                        comma list of possible permissions. If this isn't
+                        specified the permission is set to ALL. Values:
+                        read, write, create, delete, admin
+    --aclscheme <arg>   Enable ACL for Exhibitor's internal ZooKeeper
+                        connection. This sets the ACL's Scheme.
+
+== Default Property Names ==
+        log-index-directory
+        zookeeper-install-directory
+        zookeeper-data-directory
+        zookeeper-log-directory
+        servers-spec
+        backup-extra
+        zoo-cfg-extra
+        java-environment
+        log4j-properties
+        client-port
+        connect-port
+        election-port
+        check-ms
+        cleanup-period-ms
+        cleanup-max-files
+        backup-max-store-ms
+        backup-period-ms
+        auto-manage-instances
+        auto-manage-instances-settling-period-ms
+        observer-threshold
+        auto-manage-instances-fixed-ensemble-size
+        auto-manage-instances-apply-all-at-once
