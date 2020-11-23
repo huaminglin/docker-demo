@@ -1,0 +1,28 @@
+Waiting for server:27017...
+Mon Nov 23 12:12:46 UTC 2020 retrying to connect to server:27017 (2/5)
+Mon Nov 23 12:12:47 UTC 2020 retrying to connect to server:27017 (3/5)
+Mon Nov 23 12:12:48 UTC 2020 retrying to connect to server:27017 (4/5)
+Mon Nov 23 12:12:49 UTC 2020 retrying to connect to server:27017 (5/5)
+Welcome to mongo-express
+------------------------
+
+
+Mongo Express server listening at http://0.0.0.0:8081
+Waiting for server:27017...
+Welcome to mongo-express
+------------------------
+
+
+Mongo Express server listening at http://0.0.0.0:8081
+Database connected
+Admin Database connected
+[0mGET / [32m200[0m 107.803 ms - 5712[0m
+[0mGET /public/css/bootstrap.min.css [32m200[0m 13.267 ms - 121457[0m
+[0mGET /public/css/style.css [32m200[0m 7.383 ms - 1883[0m
+[0mGET /public/css/bootstrap-theme.min.css [32m200[0m 8.143 ms - 23411[0m
+[0mGET /public/img/mongo-express-logo.png [32m200[0m 3.993 ms - 17847[0m
+[0mGET /public/vendor-a6502aaae055f01bdcc3.min.js [32m200[0m 4.570 ms - 130496[0m
+[0mGET /public/index-0d94eb863f41a0adfbe0.min.js [32m200[0m 1.917 ms - 1033[0m
+[0mGET /public/fonts/glyphicons-halflings-regular.woff2 [32m200[0m 3.682 ms - 18028[0m
+[0mGET /public/img/gears.gif [32m200[0m 2.580 ms - 50281[0m
+[0mGET /db// [33m404[0m 16.393 ms - 143[0m
