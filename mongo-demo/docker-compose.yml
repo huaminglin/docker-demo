@@ -1,0 +1,25 @@
+version: '3.3'
+networks:
+  mongo:
+    driver: bridge
+services:
+  server:
+    image: mongo:4.2
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: dbadmin
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: mydemo
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - mongo
+  client:
+    image: mongo:4.2
+    command: ["/bin/bash"]
+    stdin_open: true
+    tty: true
+    networks:
+      - mongo
+    depends_on: ["server"]
