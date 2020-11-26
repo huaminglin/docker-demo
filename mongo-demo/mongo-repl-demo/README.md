@@ -274,3 +274,10 @@ Error: error: {
 myrepl:SECONDARY>
 ```
 
+## Failover: Kill the primary and verify that a secondary becomes primary
+
+sudo docker stop mongo-repl-demo_repl01_1
+
+sudo docker exec -it mongo-repl-demo_repl02_1 mongo
+
+myrepl:PRIMARY>
