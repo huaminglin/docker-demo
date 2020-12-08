@@ -56,3 +56,17 @@ SERVER_NAME=127.0.0.1
 ```
 
 Conclusion: "REDIRECT_TARGET" is not exposed to the CGI script.
+
+## Verify "httpd-foreground -D REDIRECT_TARGET=f -D REDIRECT_TARGET2=g" and ${REDIRECT_TARGET2}
+
+<http://127.0.0.1:18020/server-info>
+
+551: RewriteRule /d.html /${REDIRECT_TARGET2}.html [R=301,L]
+
+555: RewriteRule /e.html /H.html [R=301,L]
+
+Conclusion:
+
+httpd -D name can't provide value, and it is not reachable by ${}.
+
+Define Directive can provide value, and it's reachable by ${}.
