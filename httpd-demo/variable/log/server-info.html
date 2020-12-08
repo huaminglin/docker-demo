@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Server Information</title>
+</head>
+<body><h1 style="text-align: center">Apache Server Information</h1>
+<dl><dt><tt>Subpages:<br><a href="http://127.0.0.1:18020/server-info?config">Configuration Files</a>, <a href="http://127.0.0.1:18020/server-info?server">Server Settings</a>, <a href="http://127.0.0.1:18020/server-info?list">Module List</a>, <a href="http://127.0.0.1:18020/server-info?hooks">Active Hooks</a>, <a href="http://127.0.0.1:18020/server-info?providers">Available Providers</a></tt></dt></dl><hr><dl><dt><tt>Sections:<br><a href="#modules">Loaded Modules</a>, <a href="#server">Server Settings</a>, <a href="#startup_hooks">Startup Hooks</a>, <a href="#request_hooks">Request Hooks</a>, <a href="#other_hooks">Other Hooks</a>, <a href="#providers">Providers</a></tt></dt></dl><hr><h2><a name="modules">Loaded Modules</a></h2><dl><dt><tt><a href="#core.c">core.c</a>, <a href="#event.c">event.c</a>, <a href="#http_core.c">http_core.c</a>, <a href="#mod_access_compat.c">mod_access_compat.c</a>, <a href="#mod_alias.c">mod_alias.c</a>, <a href="#mod_auth_basic.c">mod_auth_basic.c</a>, <a href="#mod_authn_core.c">mod_authn_core.c</a>, <a href="#mod_authn_file.c">mod_authn_file.c</a>, <a href="#mod_authz_core.c">mod_authz_core.c</a>, <a href="#mod_authz_groupfile.c">mod_authz_groupfile.c</a>, <a href="#mod_authz_host.c">mod_authz_host.c</a>, <a href="#mod_authz_user.c">mod_authz_user.c</a>, <a href="#mod_autoindex.c">mod_autoindex.c</a>, <a href="#mod_dir.c">mod_dir.c</a>, <a href="#mod_env.c">mod_env.c</a>, <a href="#mod_filter.c">mod_filter.c</a>, <a href="#mod_headers.c">mod_headers.c</a>, <a href="#mod_info.c">mod_info.c</a>, <a href="#mod_log_config.c">mod_log_config.c</a>, <a href="#mod_mime.c">mod_mime.c</a>, <a href="#mod_reqtimeout.c">mod_reqtimeout.c</a>, <a href="#mod_rewrite.c">mod_rewrite.c</a>, <a href="#mod_setenvif.c">mod_setenvif.c</a>, <a href="#mod_so.c">mod_so.c</a>, <a href="#mod_status.c">mod_status.c</a>, <a href="#mod_unixd.c">mod_unixd.c</a>, <a href="#mod_version.c">mod_version.c</a>, </tt></dt></dl><hr><h2><a name="server">Server Settings</a></h2><dl><dt><strong>Server Version:</strong> <font size="+1"><tt>Apache/2.4.41 (Unix)</tt></font></dt>
+<dt><strong>Server Built:</strong> <font size="+1"><tt>Dec 28 2019 13:11:03</tt></font></dt>
+<dt><strong>Server loaded APR Version:</strong> <tt>1.6.5</tt></dt>
+<dt><strong>Compiled with APR Version:</strong> <tt>1.6.5</tt></dt>
+<dt><strong>Server loaded APU Version:</strong> <tt>1.6.1</tt></dt>
+<dt><strong>Compiled with APU Version:</strong> <tt>1.6.1</tt></dt>
+<dt><strong>Module Magic Number:</strong> <tt>20120211:88</tt></dt>
+<dt><strong>Hostname/port:</strong> <tt>127.0.0.1:18020</tt></dt>
+<dt><strong>Timeouts:</strong> <tt>connection: 60 &nbsp;&nbsp; keep-alive: 5</tt></dt><dt><strong>MPM Name:</strong> <tt>event</tt></dt>
+<dt><strong>MPM Information:</strong> <tt>Max Daemons: 3 Threaded: yes Forked: yes</tt></dt>
+<dt><strong>Server Architecture:</strong> <tt>64-bit</tt></dt>
+<dt><strong>Server Root:</strong> <tt>/usr/local/apache2</tt></dt>
+<dt><strong>Config File:</strong> <tt>/usr/local/apache2/conf/httpd.conf</tt></dt>
+<dt><strong>Server Built With:</strong>
+<tt style="white-space: pre;">
+ -D APR_HAS_SENDFILE
+ -D APR_HAS_MMAP
+ -D APR_HAVE_IPV6 (IPv4-mapped addresses enabled)
+ -D APR_USE_SYSVSEM_SERIALIZE
+ -D SINGLE_LISTEN_UNSERIALIZED_ACCEPT
+ -D APR_HAS_OTHER_CHILD
+ -D AP_HAVE_RELIABLE_PIPED_LOGS
+ -D HTTPD_ROOT="/usr/local/apache2"
+ -D SUEXEC_BIN="/usr/local/apache2/bin/suexec"
+ -D DEFAULT_PIDLOG="logs/httpd.pid"
+ -D DEFAULT_SCOREBOARD="logs/apache_runtime_status"
+ -D DEFAULT_ERRORLOG="logs/error_log"
+ -D AP_TYPES_CONFIG_FILE="conf/mime.types"
+ -D SERVER_CONFIG_FILE="conf/httpd.conf"
+</tt></dt>
+</dl><hr><h2><a name="startup_hooks">Startup Hooks</a></h2>
+<dl><dt><strong>Pre-Config:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; -10 <a href="#event.c">event.c</a> <br>&nbsp;&nbsp; -10 <a href="#mod_log_config.c">mod_log_config.c</a> <br>&nbsp;&nbsp; 00 <a href="#mod_unixd.c">mod_unixd.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_authz_host.c">mod_authz_host.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_authz_core.c">mod_authz_core.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_headers.c">mod_headers.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_rewrite.c">mod_rewrite.c</a> <br>&nbsp;&nbsp; 20 <a href="#mod_status.c">mod_status.c</a> <br>&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Check Configuration:</strong>
+ <br><tt>
+&nbsp;&nbsp; 00 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 00 <a href="#mod_info.c">mod_info.c</a> <br>&nbsp;&nbsp; 10 <a href="#http_core.c">http_core.c</a> <br>&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_authz_core.c">mod_authz_core.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_log_config.c">mod_log_config.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Test Configuration:</strong>
+ <br><tt>
+&nbsp;&nbsp; 00 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 00 <a href="#mod_unixd.c">mod_unixd.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_so.c">mod_so.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Post Configuration:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#http_core.c">http_core.c</a> <br>&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_authz_host.c">mod_authz_host.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_mime.c">mod_mime.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_headers.c">mod_headers.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_status.c">mod_status.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_rewrite.c">mod_rewrite.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Open Logs:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#event.c">event.c</a> <br>&nbsp;&nbsp; -10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_log_config.c">mod_log_config.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Pre-MPM:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>MPM:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Drop Privileges:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#mod_unixd.c">mod_unixd.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Retrieve Optional Functions:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_authn_file.c">mod_authn_file.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_authz_groupfile.c">mod_authz_groupfile.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Child Init:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_log_config.c">mod_log_config.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_status.c">mod_status.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_rewrite.c">mod_rewrite.c</a> <br>
+  </tt>
+</dt>
+</dl>
+<hr>
+<h2><a name="request_hooks">Request Hooks</a></h2>
+<dl><dt><strong>Pre-Connection:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#event.c">event.c</a> <br>&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Create Connection:</strong>
+ <br><tt>
+&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Process Connection:</strong>
+ <br><tt>
+&nbsp;&nbsp; 00 <a href="#mod_reqtimeout.c">mod_reqtimeout.c</a> <br>&nbsp;&nbsp; 30 <a href="#http_core.c">http_core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Create Request:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 30 <a href="#http_core.c">http_core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Pre-Read Request:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_reqtimeout.c">mod_reqtimeout.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Post-Read Request:</strong>
+ <br><tt>
+&nbsp;&nbsp; 00 <a href="#mod_headers.c">mod_headers.c</a> <br>&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_reqtimeout.c">mod_reqtimeout.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_setenvif.c">mod_setenvif.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Header Parse:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#mod_setenvif.c">mod_setenvif.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>HTTP Scheme:</strong>
+ <br><tt>
+&nbsp;&nbsp; 30 <a href="#http_core.c">http_core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Default Port:</strong>
+ <br><tt>
+&nbsp;&nbsp; 30 <a href="#http_core.c">http_core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Quick Handler:</strong>
+ <br><tt>
+
+  </tt>
+</dt>
+<dt><strong>Translate Name:</strong>
+ <br><tt>
+&nbsp;&nbsp; 00 <a href="#mod_rewrite.c">mod_rewrite.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_alias.c">mod_alias.c</a> <br>&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Map to Storage:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#http_core.c">http_core.c</a> <br>&nbsp;&nbsp; 10 <a href="#http_core.c">http_core.c</a> <br>&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Check Access:</strong>
+ <br><tt>
+&nbsp;&nbsp; 20 <a href="#mod_authz_core.c">mod_authz_core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Check Access (legacy):</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#mod_access_compat.c">mod_access_compat.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Verify User ID:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#mod_auth_basic.c">mod_auth_basic.c</a> <br>&nbsp;&nbsp; 20 <a href="#mod_authn_core.c">mod_authn_core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Note Authentication Failure:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#mod_auth_basic.c">mod_auth_basic.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Verify User Access:</strong>
+ <br><tt>
+&nbsp;&nbsp; 20 <a href="#mod_authz_core.c">mod_authz_core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Check Type:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#mod_mime.c">mod_mime.c</a> <br>&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Fixups:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 00 <a href="#mod_rewrite.c">mod_rewrite.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_env.c">mod_env.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_alias.c">mod_alias.c</a> <br>&nbsp;&nbsp; 20 <a href="#mod_auth_basic.c">mod_auth_basic.c</a> <br>&nbsp;&nbsp; 20 <a href="#mod_headers.c">mod_headers.c</a> <br>&nbsp;&nbsp; 20 <a href="#mod_dir.c">mod_dir.c</a> <br>&nbsp;&nbsp; 20 <a href="#mod_rewrite.c">mod_rewrite.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Insert Filters:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_filter.c">mod_filter.c</a> <br>&nbsp;&nbsp; 20 <a href="#mod_headers.c">mod_headers.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Content Handlers:</strong>
+ <br><tt>
+&nbsp;&nbsp; -10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_status.c">mod_status.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_autoindex.c">mod_autoindex.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_info.c">mod_info.c</a> <br>&nbsp;&nbsp; 10 <a href="#mod_rewrite.c">mod_rewrite.c</a> <br>&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Transaction Logging:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#mod_log_config.c">mod_log_config.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Insert Errors:</strong>
+ <br><tt>
+&nbsp;&nbsp; 20 <a href="#mod_headers.c">mod_headers.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Generate Log ID:</strong>
+ <br><tt>
+&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+</dl>
+<hr>
+<h2><a name="other_hooks">Other Hooks</a></h2>
+<dl><dt><strong>Monitor:</strong>
+ <br><tt>
+
+  </tt>
+</dt>
+<dt><strong>Child Status:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>End Generation:</strong>
+ <br><tt>
+
+  </tt>
+</dt>
+<dt><strong>Error Logging:</strong>
+ <br><tt>
+
+  </tt>
+</dt>
+<dt><strong>Query MPM Attributes:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Query MPM Name:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Register Timed Callback:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#event.c">event.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Extend Expression Parser:</strong>
+ <br><tt>
+&nbsp;&nbsp; 10 <a href="#core.c">core.c</a> <br>&nbsp;&nbsp; 30 <a href="#core.c">core.c</a> <br>
+  </tt>
+</dt>
+<dt><strong>Set Management Items:</strong>
+ <br><tt>
+
+  </tt>
+</dt>
+</dl>
+<hr>
+<h2><a name="providers">Providers</a></h2>
+<dl><dt><strong>authn</strong> (version <tt>0</tt>):
+ <br>
+<tt>&nbsp;&nbsp;file</tt><br>
+</dt>
+<dt><strong>authz</strong> (version <tt>0</tt>):
+ <br>
+<tt>&nbsp;&nbsp;all</tt><br><tt>&nbsp;&nbsp;env</tt><br><tt>&nbsp;&nbsp;expr</tt><br><tt>&nbsp;&nbsp;file-group</tt><br><tt>&nbsp;&nbsp;forward-dns</tt><br><tt>&nbsp;&nbsp;group</tt><br><tt>&nbsp;&nbsp;host</tt><br><tt>&nbsp;&nbsp;ip</tt><br><tt>&nbsp;&nbsp;local</tt><br><tt>&nbsp;&nbsp;method</tt><br><tt>&nbsp;&nbsp;user</tt><br><tt>&nbsp;&nbsp;valid-user</tt><br>
+</dt>
+</dl>
+<hr>
+<dl><dt><a name="core.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?core.c">core.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>yes</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt>, <tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Pre-Connection</tt>, <tt>Create Connection</tt>, <tt>Create Request</tt>, <tt>Translate Name</tt>, <tt>Map to Storage</tt>, <tt>Check Type</tt>, <tt>Fixups</tt>, <tt>Insert Filters</tt>, <tt>Content Handlers</tt>, <tt>Generate Log ID</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>&lt;Directory&gt; - <i>Container for directives affecting resources located in the specified directories</i></tt></dd>
+<dd><tt>&lt;Location&gt; - <i>Container for directives affecting resources accessed through the specified URL paths</i></tt></dd>
+<dd><tt>&lt;VirtualHost&gt; - <i>Container to map directives to a particular virtual host, takes one or more host addresses</i></tt></dd>
+<dd><tt>&lt;Files&gt; - <i>Container for directives affecting files matching specified patterns</i></tt></dd>
+<dd><tt>&lt;Limit&gt; - <i>Container for authentication directives when accessed using specified HTTP methods</i></tt></dd>
+<dd><tt>&lt;LimitExcept&gt; - <i>Container for authentication directives
+ to be applied when any HTTP method other than those specified is used 
+to access the resource</i></tt></dd>
+<dd><tt>&lt;IfModule&gt; - <i>Container for directives based on existence of specified modules</i></tt></dd>
+<dd><tt>&lt;IfDefine&gt; - <i>Container for directives based on existence of command line defines</i></tt></dd>
+<dd><tt>&lt;IfFile&gt; - <i>Container for directives based on existence of files on disk</i></tt></dd>
+<dd><tt>&lt;IfDirective&gt; - <i>Container for directives based on existence of named directive</i></tt></dd>
+<dd><tt>&lt;IfSection&gt; - <i>Container for directives based on existence of named section</i></tt></dd>
+<dd><tt>&lt;DirectoryMatch&gt; - <i>Container for directives affecting resources located in the specified directories</i></tt></dd>
+<dd><tt>&lt;LocationMatch&gt; - <i>Container for directives affecting resources accessed through the specified URL paths</i></tt></dd>
+<dd><tt>&lt;FilesMatch&gt; - <i>Container for directives affecting files matching specified patterns</i></tt></dd>
+<dd><tt>AddDefaultCharset - <i>The name of the default charset to add to any Content-Type without one or 'Off' to disable</i></tt></dd>
+<dd><tt>AcceptPathInfo - <i>Set to on or off for PATH_INFO to be accepted by handlers, or default for the per-handler preference</i></tt></dd>
+<dd><tt>Define - <i>Define a variable, optionally to a value.  Same as passing -D to the command line.</i></tt></dd>
+<dd><tt>UnDefine - <i>Undefine the existence of a variable. Undo a Define.</i></tt></dd>
+<dd><tt>Error - <i>Generate error message from within configuration</i></tt></dd>
+<dd><tt>&lt;If&gt; - <i>Container for directives to be conditionally applied</i></tt></dd>
+<dd><tt>&lt;ElseIf&gt; - <i>Container for directives to be conditionally applied</i></tt></dd>
+<dd><tt>&lt;Else&gt; - <i>Container for directives to be conditionally applied</i></tt></dd>
+<dd><tt>AccessFileName - <i>Name(s) of per-directory config files (default: .htaccess)</i></tt></dd>
+<dd><tt>DocumentRoot - <i>Root directory of the document tree</i></tt></dd>
+<dd><tt>ErrorDocument - <i>Change responses for HTTP errors</i></tt></dd>
+<dd><tt>AllowOverride - <i>Controls what groups of directives can be configured by per-directory config files</i></tt></dd>
+<dd><tt>AllowOverrideList - <i>Controls what individual directives can be configured by per-directory config files</i></tt></dd>
+<dd><tt>Options - <i>Set a number of attributes for a given directory</i></tt></dd>
+<dd><tt>DefaultType - <i>the default media type for otherwise untyped files (DEPRECATED)</i></tt></dd>
+<dd><tt>FileETag - <i>Specify components used to construct a file's ETag</i></tt></dd>
+<dd><tt>EnableMMAP - <i>Controls whether memory-mapping may be used to read files</i></tt></dd>
+<dd><tt>EnableSendfile - <i>Controls whether sendfile may be used to transmit files</i></tt></dd>
+<dd><tt>Protocol - <i>Set the Protocol for httpd to use.</i></tt></dd>
+<dd><tt>AcceptFilter - <i>Set the Accept Filter to use for a protocol</i></tt></dd>
+<dd><tt>Port - <i>Port was replaced with Listen in Apache 2.0</i></tt></dd>
+<dd><tt>HostnameLookups - <i>"on" to enable, "off" to disable reverse DNS lookups, or "double" to enable double-reverse DNS lookups</i></tt></dd>
+<dd><tt>ServerAdmin - <i>The email address of the server administrator</i></tt></dd>
+<dd><tt>ServerName - <i>The hostname and port of the server</i></tt></dd>
+<dd><tt>ServerSignature - <i>En-/disable server signature (on|off|email)</i></tt></dd>
+<dd><tt>ServerRoot - <i>Common directory of server-related files (logs, confs, etc.)</i></tt></dd>
+<dd><tt>DefaultRuntimeDir - <i>Common directory for run-time files (shared memory, locks, etc.)</i></tt></dd>
+<dd><tt>ErrorLog - <i>The filename of the error log</i></tt></dd>
+<dd><tt>ErrorLogFormat - <i>Format string for the ErrorLog</i></tt></dd>
+<dd><tt>ServerAlias - <i>A name or names alternately used to access the server</i></tt></dd>
+<dd><tt>ServerPath - <i>The pathname the server can be reached at</i></tt></dd>
+<dd><tt>Timeout - <i>Timeout duration (sec)</i></tt></dd>
+<dd><tt>ContentDigest - <i>whether or not to send a Content-MD5 header with each request</i></tt></dd>
+<dd><tt>UseCanonicalName - <i>How to work out the ServerName : Port when constructing URLs</i></tt></dd>
+<dd><tt>UseCanonicalPhysicalPort - <i>Whether to use the physical Port when constructing URLs</i></tt></dd>
+<dd><tt>Include - <i>Name(s) of the config file(s) to be included; fails if the wildcard does not match at least one file</i></tt></dd>
+<dd><tt>IncludeOptional - <i>Name or pattern of the config file(s) to be included; ignored if the file does not exist or the pattern does not match any files</i></tt></dd>
+<dd><tt>LogLevel - <i>Level of verbosity in error logging</i></tt></dd>
+<dd><tt>NameVirtualHost - <i>A numeric IP address:port, or the name of a host</i></tt></dd>
+<dd><tt>ServerTokens - <i>Determine tokens displayed in the Server: header - Min(imal), Major, Minor, Prod(uctOnly), OS, or Full</i></tt></dd>
+<dd><tt>LimitRequestLine - <i>Limit on maximum size of an HTTP request line</i></tt></dd>
+<dd><tt>LimitRequestFieldsize - <i>Limit on maximum size of an HTTP request header field</i></tt></dd>
+<dd><tt>LimitRequestFields - <i>Limit (0 = unlimited) on max number of header fields in a request message</i></tt></dd>
+<dd><tt>LimitRequestBody - <i>Limit (in bytes) on maximum size of request message body</i></tt></dd>
+<dd><tt>LimitXMLRequestBody - <i>Limit (in bytes) on maximum size of an XML-based request body</i></tt></dd>
+<dd><tt>Mutex - <i>mutex (or "default") and mechanism</i></tt></dd>
+<dd><tt>MaxRanges - <i>Maximum number of Ranges in a request before returning the entire resource, or 0 for unlimited</i></tt></dd>
+<dd><tt>MaxRangeOverlaps - <i>Maximum number of overlaps in Ranges in a request before returning the entire resource, or 0 for unlimited</i></tt></dd>
+<dd><tt>MaxRangeReversals - <i>Maximum number of reversals in Ranges in a request before returning the entire resource, or 0 for unlimited</i></tt></dd>
+<dd><tt>RLimitCPU - <i>Soft/hard limits for max CPU usage in seconds</i></tt></dd>
+<dd><tt>RLimitMEM - <i>Soft/hard limits for max memory usage per process</i></tt></dd>
+<dd><tt>RLimitNPROC - <i>soft/hard limits for max number of processes per uid</i></tt></dd>
+<dd><tt>RegexDefaultOptions - <i>default options for regexes (prefixed by '+' to add, '-' to del)</i></tt></dd>
+<dd><tt>LimitInternalRecursion - <i>maximum recursion depth of internal redirects and subrequests</i></tt></dd>
+<dd><tt>CGIPassAuth - <i>Controls whether HTTP authorization headers, normally hidden, will be passed to scripts</i></tt></dd>
+<dd><tt>CGIVar - <i>Controls how some CGI variables are set</i></tt></dd>
+<dd><tt>QualifyRedirectURL - <i>Controls whether HTTP authorization headers, normally hidden, will be passed to scripts</i></tt></dd>
+<dd><tt>ForceType - <i>a mime type that overrides other configured type</i></tt></dd>
+<dd><tt>SetHandler - <i>a handler name that overrides any other configured handler</i></tt></dd>
+<dd><tt>SetOutputFilter - <i>filter (or ; delimited list of filters) to be run on the request content</i></tt></dd>
+<dd><tt>SetInputFilter - <i>filter (or ; delimited list of filters) to be run on the request body</i></tt></dd>
+<dd><tt>AllowEncodedSlashes - <i>Allow URLs containing '/' encoded as '%2F'</i></tt></dd>
+<dd><tt>ScoreBoardFile - <i>A file for Apache to maintain runtime process management information</i></tt></dd>
+<dd><tt>ExtendedStatus - <i>"On" to track extended status information, "Off" to disable</i></tt></dd>
+<dd><tt>SeeRequestTail - <i>For extended status, "On" to see the last 63 chars of the request line, "Off" (default) to see the first 63</i></tt></dd>
+<dd><tt>PidFile - <i>A file for logging the server process ID</i></tt></dd>
+<dd><tt>MaxRequestsPerChild - <i>Maximum number of connections a particular child serves before dying. (DEPRECATED, use MaxConnectionsPerChild)</i></tt></dd>
+<dd><tt>MaxConnectionsPerChild - <i>Maximum number of connections a particular child serves before dying.</i></tt></dd>
+<dd><tt>CoreDumpDirectory - <i>The location of the directory Apache changes to before dumping core</i></tt></dd>
+<dd><tt>MaxMemFree - <i>Maximum number of 1k blocks a particular child's allocator may hold.</i></tt></dd>
+<dd><tt>ThreadStackSize - <i>Size in bytes of stack used by threads handling client connections</i></tt></dd>
+<dd><tt>TraceEnable - <i>'on' (default), 'off' or 'extended' to trace request body content</i></tt></dd>
+<dd><tt>MergeTrailers - <i>merge request trailers into request headers or not</i></tt></dd>
+<dd><tt>Protocols - <i>Controls which protocols are allowed</i></tt></dd>
+<dd><tt>ProtocolsHonorOrder - <i>'off' (default) or 'on' to respect given order of protocols, by default the client specified order determines selection</i></tt></dd>
+<dd><tt>HttpProtocolOptions - <i>'Allow0.9' or 'Require1.0' (default); 
+'RegisteredMethods' or 'LenientMethods' (default); 'Unsafe' or 'Strict' 
+(default). Sets HTTP acceptance rules</i></tt></dd>
+<dd><tt>RegisterHttpMethod - <i>Registers non-standard HTTP methods</i></tt></dd>
+<dd><tt>MergeSlashes - <i>Controls whether consecutive slashes in the URI path are merged</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;229:&nbsp;ServerAdmin <i>you@example.com</i></tt></dd>
+<dd><tt>&nbsp;245:&nbsp;&lt;Directory /&gt;</tt></dd>
+<dd><tt>&nbsp;246:&nbsp;&nbsp;&nbsp;AllowOverride <i>none</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Directory&gt;</tt></dd><dd><tt>&nbsp;262:&nbsp;DocumentRoot <i>"/usr/local/apache2/htdocs"</i></tt></dd>
+<dd><tt>&nbsp;263:&nbsp;&lt;Directory "/usr/local/apache2/htdocs"&gt;</tt></dd>
+<dd><tt>&nbsp;276:&nbsp;&nbsp;&nbsp;Options <i>Indexes FollowSymLinks</i></tt></dd>
+<dd><tt>&nbsp;283:&nbsp;&nbsp;&nbsp;AllowOverride <i>None</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Directory&gt;</tt></dd><dd><tt>&nbsp;314:&nbsp;ErrorLog <i>/proc/self/fd/2</i></tt></dd>
+<dd><tt>&nbsp;321:&nbsp;LogLevel <i>warn</i></tt></dd>
+<dd><tt>&nbsp;395:&nbsp;&lt;Directory "/usr/local/apache2/cgi-bin"&gt;</tt></dd>
+<dd><tt>&nbsp;396:&nbsp;&nbsp;&nbsp;AllowOverride <i>None</i></tt></dd>
+<dd><tt>&nbsp;397:&nbsp;&nbsp;&nbsp;Options <i>None</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Directory&gt;</tt></dd><dd><tt>&nbsp;548:&nbsp;LogLevel <i>alert rewrite:trace3 alias:debug</i></tt></dd>
+<dd><tt>&nbsp;552:&nbsp;&lt;Location "/server-info"&gt;</tt></dd>
+<dd><tt>&nbsp;553:&nbsp;&nbsp;&nbsp;SetHandler <i>server-info</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Location&gt;</tt></dd></dl><hr>
+<dl><dt><a name="event.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?event.c">event.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt> <em>none</em></tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Pre-Connection</tt>, <tt>Pre-Read Request</tt>, <tt>Post-Read Request</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>ListenBacklog - <i>Maximum length of the queue of pending connections, as used by listen(2)</i></tt></dd>
+<dd><tt>ListenCoresBucketsRatio - <i>Ratio between the number of CPU cores (online) and the number of listeners buckets</i></tt></dd>
+<dd><tt>Listen - <i>A port number or a numeric IP address and a port number, and an optional protocol</i></tt></dd>
+<dd><tt>SendBufferSize - <i>Send buffer size in bytes</i></tt></dd>
+<dd><tt>ReceiveBufferSize - <i>Receive buffer size in bytes</i></tt></dd>
+<dd><tt>StartServers - <i>Number of child processes launched at server startup</i></tt></dd>
+<dd><tt>ServerLimit - <i>Maximum number of child processes for this run of Apache</i></tt></dd>
+<dd><tt>MinSpareThreads - <i>Minimum number of idle threads, to handle request spikes</i></tt></dd>
+<dd><tt>MaxSpareThreads - <i>Maximum number of idle threads</i></tt></dd>
+<dd><tt>MaxClients - <i>Deprecated name of MaxRequestWorkers</i></tt></dd>
+<dd><tt>MaxRequestWorkers - <i>Maximum number of threads alive at the same time</i></tt></dd>
+<dd><tt>ThreadsPerChild - <i>Number of threads each child creates</i></tt></dd>
+<dd><tt>ThreadLimit - <i>Maximum number of worker threads per child process for this run of Apache - Upper limit for ThreadsPerChild</i></tt></dd>
+<dd><tt>AsyncRequestWorkerFactor - <i>How many additional connects will be accepted per idle worker thread</i></tt></dd>
+<dd><tt>GracefulShutdownTimeout - <i>Maximum time in seconds to wait for child processes to complete transactions during shutdown</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;&nbsp;52:&nbsp;Listen <i>80</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="http_core.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?http_core.c">http_core.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt> <em>none</em></tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Process Connection</tt>, <tt>Create Request</tt>, <tt>HTTP Scheme</tt>, <tt>Default Port</tt>, <tt>Map to Storage</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>KeepAliveTimeout - <i>Keep-Alive timeout duration (sec)</i></tt></dd>
+<dd><tt>MaxKeepAliveRequests - <i>Maximum number of Keep-Alive requests per connection, or 0 for infinite</i></tt></dd>
+<dd><tt>KeepAlive - <i>Whether persistent connections should be On or Off</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_access_compat.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_access_compat.c">mod_access_compat.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Check Access (legacy)</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>order - <i>'allow,deny', 'deny,allow', or 'mutual-failure'</i></tt></dd>
+<dd><tt>allow - <i>'from' followed by hostnames or IP-address wildcards</i></tt></dd>
+<dd><tt>deny - <i>'from' followed by hostnames or IP-address wildcards</i></tt></dd>
+<dd><tt>Satisfy - <i>access policy if both allow and require used ('all' or 'any')</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_alias.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_alias.c">mod_alias.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt>, <tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Translate Name</tt>, <tt>Fixups</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>Alias - <i>a fakename and a realname, or a realname in a Location</i></tt></dd>
+<dd><tt>ScriptAlias - <i>a fakename and a realname, or a realname in a Location</i></tt></dd>
+<dd><tt>Redirect - <i>an optional status, then document to be redirected and destination URL</i></tt></dd>
+<dd><tt>AliasMatch - <i>a regular expression and a filename</i></tt></dd>
+<dd><tt>ScriptAliasMatch - <i>a regular expression and a filename</i></tt></dd>
+<dd><tt>RedirectMatch - <i>an optional status, then a regular expression and destination URL</i></tt></dd>
+<dd><tt>RedirectTemp - <i>a document to be redirected, then the destination URL</i></tt></dd>
+<dd><tt>RedirectPermanent - <i>a document to be redirected, then the destination URL</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;379:&nbsp;ScriptAlias <i>/cgi-bin/ "/usr/local/apache2/cgi-bin/"</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="mod_auth_basic.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_auth_basic.c">mod_auth_basic.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Verify User ID</tt>, <tt>Note Authentication Failure</tt>, <tt>Fixups</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>AuthBasicProvider - <i>specify the auth providers for a directory or location</i></tt></dd>
+<dd><tt>AuthBasicAuthoritative - <i>Set to 'Off' to allow access control to be passed along to lower modules if the UserID is not known to this module</i></tt></dd>
+<dd><tt>AuthBasicFake - <i>Fake basic authentication using the given 
+expressions for username and password, 'off' to disable. Password 
+defaults to 'password' if missing.</i></tt></dd>
+<dd><tt>AuthBasicUseDigestAlgorithm - <i>Set to 'MD5' to use the auth provider's authentication check for digest auth, using a hash of 'user:realm:pass'</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_authn_core.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_authn_core.c">mod_authn_core.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt>, <tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Verify User ID</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>AuthType - <i>an HTTP authorization type (e.g., "Basic")</i></tt></dd>
+<dd><tt>AuthName - <i>the authentication realm (e.g. "Members Only")</i></tt></dd>
+<dd><tt>&lt;AuthnProviderAlias&gt; - <i>container for grouping an authentication provider's directives under a provider alias</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_authn_file.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_authn_file.c">mod_authn_file.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt> <em>none</em></tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>AuthUserFile - <i>text file containing user IDs and passwords</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_authz_core.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_authz_core.c">mod_authz_core.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt>, <tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Check Access</tt>, <tt>Verify User Access</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>&lt;AuthzProviderAlias&gt; - <i>container for grouping an authorization provider's directives under a provider alias</i></tt></dd>
+<dd><tt>Require - <i>specifies authorization directives which one must pass (or not) for a request to suceeed</i></tt></dd>
+<dd><tt>&lt;RequireAll&gt; - <i>container for grouping authorization directives of which none must fail and at least one must pass for a request to succeed</i></tt></dd>
+<dd><tt>&lt;RequireAny&gt; - <i>container for grouping authorization directives of which one must pass for a request to succeed</i></tt></dd>
+<dd><tt>&lt;RequireNone&gt; - <i>container for grouping authorization directives of which none must pass for a request to succeed</i></tt></dd>
+<dd><tt>AuthMerging - <i>controls how a &lt;Directory&gt;, 
+&lt;Location&gt;, or similar directive's authorization directives are 
+combined with those of its predecessor</i></tt></dd>
+<dd><tt>AuthzSendForbiddenOnFailure - <i>Controls if an authorization 
+failure should result in a '403 FORBIDDEN' response instead of the 
+HTTP-conforming '401 UNAUTHORIZED'</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;245:&nbsp;&lt;Directory /&gt;</tt></dd>
+<dd><tt>&nbsp;247:&nbsp;&nbsp;&nbsp;Require <i>all denied</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Directory&gt;</tt></dd><dd><tt>&nbsp;263:&nbsp;&lt;Directory "/usr/local/apache2/htdocs"&gt;</tt></dd>
+<dd><tt>&nbsp;288:&nbsp;&nbsp;&nbsp;Require <i>all granted</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Directory&gt;</tt></dd><dd><tt>&nbsp;303:&nbsp;&lt;Files ".ht*"&gt;</tt></dd>
+<dd><tt>&nbsp;304:&nbsp;&nbsp;&nbsp;Require <i>all denied</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Files&gt;</tt></dd><dd><tt>&nbsp;395:&nbsp;&lt;Directory "/usr/local/apache2/cgi-bin"&gt;</tt></dd>
+<dd><tt>&nbsp;398:&nbsp;&nbsp;&nbsp;Require <i>all granted</i></tt></dd>
+<dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;/Directory&gt;</tt></dd></dl><hr>
+<dl><dt><a name="mod_authz_groupfile.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_authz_groupfile.c">mod_authz_groupfile.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt> <em>none</em></tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>AuthGroupFile - <i>text file containing group names and member user IDs</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_authz_host.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_authz_host.c">mod_authz_host.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt> <em>none</em></tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt> <em>none</em></tt></dt>
+<dt><strong>Module Directives:</strong> <tt>none</tt></dt></dl><hr>
+<dl><dt><a name="mod_authz_user.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_authz_user.c">mod_authz_user.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt> <em>none</em></tt></dt>
+<dt><strong>Module Directives:</strong></dt><dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_autoindex.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_autoindex.c">mod_autoindex.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>yes</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Content Handlers</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>AddIcon - <i>an icon URL followed by one or more filenames</i></tt></dd>
+<dd><tt>AddIconByType - <i>an icon URL followed by one or more MIME types</i></tt></dd>
+<dd><tt>AddIconByEncoding - <i>an icon URL followed by one or more content encodings</i></tt></dd>
+<dd><tt>AddAlt - <i>alternate descriptive text followed by one or more filenames</i></tt></dd>
+<dd><tt>AddAltByType - <i>alternate descriptive text followed by one or more MIME types</i></tt></dd>
+<dd><tt>AddAltByEncoding - <i>alternate descriptive text followed by one or more content encodings</i></tt></dd>
+<dd><tt>IndexOptions - <i>one or more index options [+|-][]</i></tt></dd>
+<dd><tt>IndexOrderDefault - <i>{Ascending,Descending} {Name,Size,Description,Date}</i></tt></dd>
+<dd><tt>IndexIgnore - <i>one or more file extensions</i></tt></dd>
+<dd><tt>IndexIgnoreReset - <i>Reset the inherited list of IndexIgnore filenames</i></tt></dd>
+<dd><tt>AddDescription - <i>Descriptive text followed by one or more filenames</i></tt></dd>
+<dd><tt>HeaderName - <i>a filename</i></tt></dd>
+<dd><tt>ReadmeName - <i>a filename</i></tt></dd>
+<dd><tt>FancyIndexing - <i>The FancyIndexing directive is no longer supported. Use IndexOptions FancyIndexing.</i></tt></dd>
+<dd><tt>DefaultIcon - <i>an icon URL</i></tt></dd>
+<dd><tt>IndexStyleSheet - <i>URL to style sheet</i></tt></dd>
+<dd><tt>IndexHeadInsert - <i>String to insert in HTML HEAD section</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_dir.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_dir.c">mod_dir.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Fixups</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>FallbackResource - <i>Set a default handler</i></tt></dd>
+<dd><tt>DirectoryIndex - <i>a list of file names</i></tt></dd>
+<dd><tt>DirectorySlash - <i>On or Off</i></tt></dd>
+<dd><tt>DirectoryCheckHandler - <i>On or Off</i></tt></dd>
+<dd><tt>DirectoryIndexRedirect - <i>On, Off, or a 3xx status code.</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;296:&nbsp;DirectoryIndex <i>index.html</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="mod_env.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_env.c">mod_env.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Fixups</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>PassEnv - <i>a list of environment variables to pass to CGI.</i></tt></dd>
+<dd><tt>SetEnv - <i>an environment variable name and optional value to pass to CGI.</i></tt></dd>
+<dd><tt>UnsetEnv - <i>a list of variables to remove from the CGI environment.</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_filter.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_filter.c">mod_filter.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Insert Filters</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>FilterDeclare - <i>filter-name [filter-type]</i></tt></dd>
+<dd><tt>FilterProvider - <i>filter-name provider-name match-expression</i></tt></dd>
+<dd><tt>FilterChain - <i>list of filter names with optional [+-=!@]</i></tt></dd>
+<dd><tt>FilterTrace - <i>filter-name debug-level</i></tt></dd>
+<dd><tt>AddOutputFilterByType - <i>output filter name followed by one or more content-types</i></tt></dd>
+<dd><tt>FilterProtocol - <i>filter-name [provider-name] protocol-args</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_headers.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_headers.c">mod_headers.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Post-Read Request</tt>, <tt>Fixups</tt>, <tt>Insert Filters</tt>, <tt>Insert Errors</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>Header - <i>an optional condition, an action, header and value followed by optional env clause</i></tt></dd>
+<dd><tt>RequestHeader - <i>an action, header and value followed by optional env clause</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;407:&nbsp;RequestHeader <i>unset Proxy early</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="mod_info.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_info.c">mod_info.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>yes</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Content Handlers</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>AddModuleInfo - <i>a module name and additional information on that module</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_log_config.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_log_config.c">mod_log_config.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Transaction Logging</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>CustomLog - <i>a file name, a custom log format string or format name, and an optional "env=" or "expr=" clause (see docs)</i></tt></dd>
+<dd><tt>GlobalLog - <i>Same as CustomLog, but forces virtualhosts to inherit the log</i></tt></dd>
+<dd><tt>TransferLog - <i>the filename of the access log</i></tt></dd>
+<dd><tt>LogFormat - <i>a log format string (see docs) and an optional format name</i></tt></dd>
+<dd><tt>BufferedLogs - <i>Enable Buffered Logging (experimental)</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;328:&nbsp;LogFormat <i>"%h %l %u %t \"%r\" %&gt;s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined</i></tt></dd>
+<dd><tt>&nbsp;329:&nbsp;LogFormat <i>"%h %l %u %t \"%r\" %&gt;s %b" common</i></tt></dd>
+<dd><tt>&nbsp;343:&nbsp;CustomLog <i>/proc/self/fd/1 common</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="mod_mime.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_mime.c">mod_mime.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Check Type</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>AddCharset - <i>a charset (e.g., iso-2022-jp), followed by one or more file extensions</i></tt></dd>
+<dd><tt>AddEncoding - <i>an encoding (e.g., gzip), followed by one or more file extensions</i></tt></dd>
+<dd><tt>AddHandler - <i>a handler name followed by one or more file extensions</i></tt></dd>
+<dd><tt>AddInputFilter - <i>input filter name (or ; delimited names) followed by one or more file extensions</i></tt></dd>
+<dd><tt>AddLanguage - <i>a language (e.g., fr), followed by one or more file extensions</i></tt></dd>
+<dd><tt>AddOutputFilter - <i>output filter name (or ; delimited names) followed by one or more file extensions</i></tt></dd>
+<dd><tt>AddType - <i>a mime type followed by one or more file extensions</i></tt></dd>
+<dd><tt>DefaultLanguage - <i>language to use for documents with no other language file extension</i></tt></dd>
+<dd><tt>MultiviewsMatch - <i>NegotiatedOnly (default), Handlers and/or Filters, or Any</i></tt></dd>
+<dd><tt>RemoveCharset - <i>one or more file extensions</i></tt></dd>
+<dd><tt>RemoveEncoding - <i>one or more file extensions</i></tt></dd>
+<dd><tt>RemoveHandler - <i>one or more file extensions</i></tt></dd>
+<dd><tt>RemoveInputFilter - <i>one or more file extensions</i></tt></dd>
+<dd><tt>RemoveLanguage - <i>one or more file extensions</i></tt></dd>
+<dd><tt>RemoveOutputFilter - <i>one or more file extensions</i></tt></dd>
+<dd><tt>RemoveType - <i>one or more file extensions</i></tt></dd>
+<dd><tt>TypesConfig - <i>the MIME types config file</i></tt></dd>
+<dd><tt>ModMimeUsePathInfo - <i>Set to 'yes' to allow mod_mime to use path info for type checking</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;415:&nbsp;TypesConfig <i>conf/mime.types</i></tt></dd>
+<dd><tt>&nbsp;432:&nbsp;AddType <i>application/x-compress .Z</i></tt></dd>
+<dd><tt>&nbsp;433:&nbsp;AddType <i>application/x-gzip .gz .tgz</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="mod_reqtimeout.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_reqtimeout.c">mod_reqtimeout.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Process Connection</tt>, <tt>Pre-Read Request</tt>, <tt>Post-Read Request</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>RequestReadTimeout - <i>Set various timeout parameters for TLS handshake and/or reading request headers and body</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_rewrite.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_rewrite.c">mod_rewrite.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>yes</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt>, <tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Translate Name</tt>, <tt>Fixups</tt>, <tt>Content Handlers</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>RewriteEngine - <i>On or Off to enable or disable (default) the whole rewriting engine</i></tt></dd>
+<dd><tt>RewriteOptions - <i>List of option strings to set</i></tt></dd>
+<dd><tt>RewriteBase - <i>the base URL of the per-directory context</i></tt></dd>
+<dd><tt>RewriteCond - <i>an input string and a to be applied regexp-pattern</i></tt></dd>
+<dd><tt>RewriteRule - <i>an URL-applied regexp-pattern and a substitution URL</i></tt></dd>
+<dd><tt>RewriteMap - <i>a mapname and a filename and options</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;549:&nbsp;RewriteEngine <i>On</i></tt></dd>
+<dd><tt>&nbsp;550:&nbsp;RewriteRule <i>/a.html /c.html [R=301,L]</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="mod_setenvif.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_setenvif.c">mod_setenvif.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Directory Config</tt>, <tt>Merge Directory Configs</tt>, <tt>Create Server Config</tt>, <tt>Merge Server Configs</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Post-Read Request</tt>, <tt>Header Parse</tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>SetEnvIf - <i>A header-name, regex and a list of variables.</i></tt></dd>
+<dd><tt>SetEnvIfNoCase - <i>a header-name, regex and a list of variables.</i></tt></dd>
+<dd><tt>SetEnvIfExpr - <i>an expression and a list of variables.</i></tt></dd>
+<dd><tt>BrowserMatch - <i>A browser regex and a list of variables.</i></tt></dd>
+<dd><tt>BrowserMatchNoCase - <i>A browser regex and a list of variables.</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_so.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_so.c">mod_so.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt>Create Server Config</tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt> <em>none</em></tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>LoadModule - <i>a module name and the name of a shared object file to load it from</i></tt></dd>
+<dd><tt>LoadFile - <i>shared object file or library to load into the server at runtime</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+<dl><dt><a name="mod_status.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_status.c">mod_status.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>yes</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt> <em>none</em></tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt>Content Handlers</tt></dt>
+<dt><strong>Module Directives:</strong> <tt>none</tt></dt></dl><hr>
+<dl><dt><a name="mod_unixd.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_unixd.c">mod_unixd.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt> <em>none</em></tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt> <em>none</em></tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>User - <i>Effective user id for this server</i></tt></dd>
+<dd><tt>Group - <i>Effective group id for this server</i></tt></dd>
+<dd><tt>ChrootDir - <i>The directory to chroot(2) into</i></tt></dd>
+<dd><tt>Suexec - <i>Enable or disable suEXEC support</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+<dd><tt><strong>In file: /usr/local/apache2/conf/httpd.conf</strong></tt></dd>
+<dd><tt>&nbsp;207:&nbsp;User <i>daemon</i></tt></dd>
+<dd><tt>&nbsp;208:&nbsp;Group <i>daemon</i></tt></dd>
+</dl><hr>
+<dl><dt><a name="mod_version.c"><strong>Module Name:</strong></a> <font size="+1"><tt><a href="http://127.0.0.1:18020/server-info?mod_version.c">mod_version.c</a></tt></font></dt>
+<dt><strong>Content handlers:</strong> <tt> <em>none</em></tt></dt><dt><strong>Configuration Phase Participation:</strong>
+<tt> <em>none</em></tt></dt><dt><strong>Request Phase Participation:</strong>
+<tt> <em>none</em></tt></dt>
+<dt><strong>Module Directives:</strong></dt><dd><tt>&lt;IfVersion&gt; - <i>a comparison operator, a version (and a delimiter)</i></tt></dd>
+<dt><strong>Current Configuration:</strong></dt>
+</dl><hr>
+
+</body></html>
