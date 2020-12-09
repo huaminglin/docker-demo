@@ -61,12 +61,16 @@ Conclusion: "REDIRECT_TARGET" is not exposed to the CGI script.
 
 <http://127.0.0.1:18020/server-info>
 
-551: RewriteRule /d.html /${REDIRECT_TARGET2}.html [R=301,L]
-
-555: RewriteRule /e.html /H.html [R=301,L]
+554: RewriteRule /a.html /e1.html [R=301,L]
+555: RewriteRule /d.html /.html [R=301,L]
+556: RewriteRule /e.html /d3.html [R=301,L]
+557: RewriteRule /f.html /${REDIRECT_TARGET4}.html [R=301,L]
+558: RewriteRule /g.html /d5.html [R=301,L]
 
 Conclusion:
 
-httpd -D name can't provide value, and it is not reachable by ${}.
-
-Define Directive can provide value, and it's reachable by ${}.
+554 -> ${} can resolve from an Environment Variable.
+555 -> ${} can resolve from an Environment Variable even when it has an empty value.
+556 -> ${} prefers "Define Directive" than Environment Variable.
+557 -> ${} doesn't resolve from "httpd -D name" since it doesn't provide value.
+558 -> ${} can resolve from "Define Directive".
