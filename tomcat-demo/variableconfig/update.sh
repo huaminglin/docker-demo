@@ -9,5 +9,5 @@ fi
 
 docker stop demotomcat
 docker rm demotomcat
-docker create --name demotomcat -e CATALINA_OPTS="-Dcatalina.config=/myhome/catalina.properties -DTOMCAT_HTTP_PORT=18082" -v $PWD/catalina.properties:/myhome/catalina.properties -p 10080:18080 -p 10443:8443 -v $PWD/server.xml:/usr/local/tomcat/conf/server.xml tomcat:8.5
+docker create --name demotomcat -e CATALINA_OPTS="-Dcatalina.config=file:///myhome/catalina.properties" -v $PWD/catalina.properties:/myhome/catalina.properties -p 10080:18080 -p 10443:8443 -v $PWD/server.xml:/usr/local/tomcat/conf/server.xml tomcat:9.0.30
 docker start demotomcat
