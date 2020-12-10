@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd $(dirname $0)
+
+if [ ! -f $PWD/server.xml ]; then
+    echo $PWD/server.xml should be a file.
+    exit 1
+fi
+
+docker stop demotomcat
+docker rm demotomcat
+docker create --name demotomcat -e CATALINA_OPTS="-Dcatalina.config=/myhome/catalina.properties -DTOMCAT_HTTP_PORT=18082" -v $PWD/catalina.properties:/myhome/catalina.properties -p 10080:18080 -p 10443:8443 -v $PWD/server.xml:/usr/local/tomcat/conf/server.xml tomcat:8.5
+docker start demotomcat
