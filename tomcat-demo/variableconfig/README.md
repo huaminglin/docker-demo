@@ -61,3 +61,9 @@ org.apache.catalina.startup.Bootstrap#init()
 ```
 
 Conclusion: From the source code, it seems CatalinaProperties is loaded as soon as Bootstrap is created.
+
+## The value provided by the catalina.properties overwrites -DTOMCAT_HTTP_PORT=18089
+
+docker logs demotomcat
+
+11-Dec-2020 06:15:08.318 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-18080"]
