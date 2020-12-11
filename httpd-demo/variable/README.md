@@ -61,16 +61,20 @@ Conclusion: "REDIRECT_TARGET" is not exposed to the CGI script.
 
 <http://127.0.0.1:18020/server-info>
 
-554: RewriteRule /a.html /e1.html [R=301,L]
-555: RewriteRule /d.html /.html [R=301,L]
-556: RewriteRule /e.html /d3.html [R=301,L]
-557: RewriteRule /f.html /${REDIRECT_TARGET4}.html [R=301,L]
-558: RewriteRule /g.html /d5.html [R=301,L]
+557: RewriteRule /a.html /e1.html [R=301,L]
+558: RewriteRule /d.html /.html [R=301,L]
+559: RewriteRule /e.html /d3.html [R=301,L]
+560: RewriteRule /f.html /${REDIRECT_TARGET4}.html [R=301,L]
+561: RewriteRule /g.html /d5.html [R=301,L]
+562: RewriteRule /h.html /d6.html [R=301,L]
+563: RewriteRule /i.html /d7.html [R=301,L]
 
 Conclusion:
 
-554 -> ${} can resolve from an Environment Variable.
-555 -> ${} can resolve from an Environment Variable even when it has an empty value.
-556 -> ${} prefers "Define Directive" than Environment Variable.
-557 -> ${} doesn't resolve from "httpd -D name" since it doesn't provide value.
-558 -> ${} can resolve from "Define Directive".
+557 -> ${} can resolve from an Environment Variable.
+558 -> ${} can resolve from an Environment Variable even when it has an empty value.
+559 -> ${} prefers "Define Directive" than Environment Variable.
+560 -> ${} doesn't resolve from "httpd -D name" since it doesn't provide value.
+561 -> ${} can resolve from "Define Directive".
+562 -> ${} can resolve from the included conf which locates outside the apache home folder.
+563 -> The Include directive supports ${} as its target.
