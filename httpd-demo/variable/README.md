@@ -80,3 +80,9 @@ Conclusion:
 562 -> ${} can resolve from the included conf which locates outside the apache home folder.
 563 -> The Include directive supports ${} as its target.
 564 -> The last define wins.
+
+## Verify RewriteMap content
+
+<http://127.0.0.1:18020/k.html>
+
+The page is redirected to <http://127.0.0.1:9090/k.html> sucessfully.
