@@ -68,6 +68,7 @@ Conclusion: "REDIRECT_TARGET" is not exposed to the CGI script.
 561: RewriteRule /g.html /d5.html [R=301,L]
 562: RewriteRule /h.html /d6.html [R=301,L]
 563: RewriteRule /i.html /d7.html [R=301,L]
+564: RewriteRule /j.html /d8.2.html [R=301,L]
 
 Conclusion:
 
@@ -78,3 +79,4 @@ Conclusion:
 561 -> ${} can resolve from "Define Directive".
 562 -> ${} can resolve from the included conf which locates outside the apache home folder.
 563 -> The Include directive supports ${} as its target.
+564 -> The last define wins.
