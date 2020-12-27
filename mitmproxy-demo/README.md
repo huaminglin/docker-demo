@@ -73,3 +73,9 @@ class MessageData(serializable.Serializable):
     timestamp_start: float
     timestamp_end: Optional[float]
 ```
+
+## sys.path in mimproxy
+
+sys.path: ['/script', '/usr/bin', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/python3.8/lib-dynload', '/usr/lib/python3.8/site-packages']
+
+__file__: /script/addon01.py

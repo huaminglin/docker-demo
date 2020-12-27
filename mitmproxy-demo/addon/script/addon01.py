@@ -1,4 +1,5 @@
-import mitmproxy.http
+import myutil
+
 
 class Addon01(object):
     def __init__(self):
@@ -7,7 +8,7 @@ class Addon01(object):
     def request(self, flow):
         print("Addon01: request")
         if flow.request.path == '/b.html':
-            flow.response = mitmproxy.http.HTTPResponse.make(200, b"Hello World", {"Content-Type": "text/html"})
+            flow.response = myutil.mock_response(b"Hello World")
         else:
             flow.request.headers["01count"] = str(self.num)
 
