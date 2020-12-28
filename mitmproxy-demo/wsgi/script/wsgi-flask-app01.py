@@ -5,10 +5,10 @@ This example shows how to graft a WSGI app onto mitmproxy. In this
 instance, we're using the Flask framework (http://flask.pocoo.org/) to expose
 a single simplest-possible page.
 """
+import flask
 from flask import Flask
 from flask import request
-from mitmproxy.addons import asgiapp
-from mitmproxy import ctx, http
+import wsgiapp
 
 app = Flask("proxapp01")
 
@@ -16,28 +16,37 @@ app = Flask("proxapp01")
 @app.route('/a.html')
 def hello_world_a() -> str:
     print('hello_world_a()')
-    return 'app01 a: Hello World!'
+    response = flask.make_response('app01 a: Hello World!', 200)
+    response.headers['X-mitmproxy-processed'] = 'processed'
+    return response
 
 
 @app.route('/b.html')
 def hello_world_b() -> str:
     print('hello_world_b(): begin')
     if request.args.get('age'):
-        return 'app01 b: ' + request.args.get('age')
+        response = flask.make_response('app01 b: ' + request.args.get('age'), 200)
+        response.headers['X-mitmproxy-processed'] = 'processed'
+        return response
 
     print('hello_world_b(): end')
+    response = flask.make_response('forward', 555)
+    response.headers['X-mitmproxy-forward'] = 'forward'
+    return response
 
 
-class MyWSGIApp(asgiapp.WSGIApp):
+class MyWSGIApp(wsgiapp.WSGIApp):
 
-    def __init__(self, wsgi_app, host: str, port: int):
-        super().__init__(wsgi_app, host, port)
+    def __init__(self, app, host, port):
+        super().__init__(app, host, port)
 
-    def should_serve(self, flow: http.HTTPFlow) -> bool:
-        print('flow.request.query', type(flow.request.query), flow.request.query)
-        if flow.request.path == '/b.html' and not flow.request.query:
-            return False
-        return super().should_serve(flow)
+    def serve(self, app, flow):
+        # wsgiapp.WSGIApp write to flow.client_conn.wfile directly.
+        # Switch to write to /dev/null, and modify wsgiapp.WSGIApp to set flow.response.
+        old_file = flow.client_conn.wfile
+        flow.client_conn.wfile = open('/dev/null', 'bw')
+        super().serve(app, flow)
+        flow.client_conn.wfile = old_file
 
 
 addons = [

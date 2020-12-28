@@ -6,4 +6,3 @@ sudo docker stop demomitmproxy
 sudo docker rm demomitmproxy
 sudo docker create --name demomitmproxy -p 6080:8080 -p 6081:8081 mitmproxy/mitmproxy:6.0.0 mitmweb --no-web-open-browser --web-host 0.0.0.0
 sudo docker start demomitmproxy
-

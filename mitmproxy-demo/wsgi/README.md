@@ -111,7 +111,7 @@ Addon02: response end
 172.17.0.1:38942: clientdisconnect
 ```
 
-Note: Addon02/request() can't get flask response; and we don't get any the flask logging;
+Note: Addon02/request() can't get flask response; the flask is executed async;
 
 Addon02/response() can get flask response.
 
@@ -156,8 +156,54 @@ Addon02: response end
 172.17.0.1:38980: clientdisconnect
 ```
 
+Note: flask expects a response.
+
 ## Is it possible mitmproxy.addons.asgiapp.WSGIApp to skip some pattern of requests
 
 We can extend ASGIApp and override 'def should_serve(self, flow: http.HTTPFlow) -> bool:'.
 
-In this way, we allow flask to mock some and forword the others.
+In this way, we allow flask to mock some and forward the others.
+
+Update:
+
+1) We can forward the request to the target server, but I can't find a way to write the new response to client.
+
+2) master.commands.call("replay.client", [new_flow]) is async.
+
+3) asgiapp.WSGIApp is async, and we can't get its response in the next addon02.request().
+
+## mitmproxy.tools.web.master.WebMaster
+
+```
+master <class 'mitmproxy.tools.web.master.WebMaster'> <mitmproxy.tools.web.master.WebMaster object at 0x7f07f3788040> ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_change_reverse_host', '_server', '_shutdown', '_sig_events_add', '_sig_events_refresh', '_sig_options_update', '_sig_settings_update', '_sig_view_add', '_sig_view_refresh', '_sig_view_remove', '_sig_view_update', 'addons', 'app', 'channel', 'commands', 'events', 'load_flow', 'log', 'options', 'run', 'run_loop', 'running', 'server', 'should_exit', 'shutdown', 'start', 'view', 'waiting_flows']
+```
+
+## mitmproxy.net.http.headers.Headers
+
+```
+flow.response.headers <class 'mitmproxy.net.http.headers.Headers'> Headers[(b'content-type', b'text/html; charset=utf-8'), (b'content-length', b'7'), (b'x-mitmproxy-forward', b'forward')] ['_MutableMapping__marker', '__abstractmethods__', '__bytes__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__slots__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_kconv', '_reduce_values', 'add', 'clear', 'copy', 'fields', 'from_state', 'get', 'get_all', 'get_state', 'insert', 'items', 'keys', 'pop', 'popitem', 'set_all', 'set_state', 'setdefault', 'update', 'values']
+```
+
+## The wsgiapp in the old mitmproxy 4.0.0
+
+err = app.serve(flow, flow.client_conn.wfile, **{"mitmproxy.master": ctx.master})
+
+So the flask response is written to flow.client_conn.wfile directly; which means the addon02.request() can't get its response as well.
+
+## Change wsgiapp to set flow.response
+
+1) "# Hyman fix: Create response for the next addon.request()" in wsgi.py
+
+2) "# Hyman fix: Don't kill since we don't write to client connection any more." in wsgiapp.py
+
+3) "# Switch flow.client_conn.wfile to /dev/null, and modify wsgiapp.WSGIApp to set flow.response." in wsgi-flask-app01.py
+
+4) "response.headers['X-mitmproxy-processed'] = 'processed'", always forward other requests.
+
+In this way, we create a mock server using flask; it will forward requests to the target host unless we set response.headers['X-mitmproxy-processed'].
+
+## mitmproxy.addons.asgiapp.WSGIApp
+
+TODO: The above solution is just a workaround. I need to learn more about asyncio and asgiapp.WSGIApp.
+
+We'd better keep up with the latest mitmproxy implementation and build the solution on top of it.
