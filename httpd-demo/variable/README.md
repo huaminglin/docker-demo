@@ -86,3 +86,7 @@ Conclusion:
 <http://127.0.0.1:18020/k.html>
 
 The page is redirected to <http://127.0.0.1:9090/k.html> sucessfully.
+
+## RewriteMap file ignore # character
+
+At lease, "# url http://127.0.0.1:9999" line dones't break the file.
