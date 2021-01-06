@@ -90,3 +90,12 @@ The page is redirected to <http://127.0.0.1:9090/k.html> sucessfully.
 ## RewriteMap file ignore # character
 
 At lease, "# url http://127.0.0.1:9999" line dones't break the file.
+
+## Environment variables and Define can be used to inject a command
+
+```
+ 571: RewriteMap cdnDomainMap rnd:/myhome/cdn.properties
+ 572: RewriteMap cdnDomainMap02 rnd:/myhome/cdn.properties
+ 573: RewriteMap cdnDomainMap03 rnd:/myhome/cdn.properties
+ 574: RewriteRule ^.*(/k\.html).*$ ${cdnDomainMap:url}$1 [R=302]
+```
