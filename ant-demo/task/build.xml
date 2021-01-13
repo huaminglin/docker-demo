@@ -1,0 +1,17 @@
+<?xml version = "1.0"?>
+<project name="myproject" default="info">
+   <property environment="env"/>
+   <property file="mybuild.properties"/>
+   <property file="resources/mybuild2.properties"/>
+   <property file="non-exist.properties"/> <!-- a non-existing properties file is allowed -->
+   <property name="var3" value="${env.MY_ENV_VAR_1}"/>
+   <target name="info">
+      <echo message="basedir: ${basedir}"/>
+      <echo message="user.dir: ${user.dir}"/>
+      <echo message="env.MY_ENV_VAR_1: ${env.MY_ENV_VAR_1}"/>
+      <echo message="env.MY_ENV_VAR_2: ${env.MY_ENV_VAR_2}"/>
+      <echo message="var3: ${var3}"/>
+      <echo message="var4: ${var4}"/>
+      <echo message="var5: ${var5}"/>
+   </target>
+</project>

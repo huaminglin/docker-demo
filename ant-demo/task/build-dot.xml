@@ -1,0 +1,7 @@
+<?xml version = "1.0"?>
+<project basedir="." name="dot" default="info">
+   <target name="info">
+      <echo message="basedir: ${basedir}"/>
+      <echo message="user.dir: ${user.dir}"/>
+   </target>
+</project>
