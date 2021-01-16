@@ -364,3 +364,8 @@ org.apache.catalina.startup.Catalina#createStartDigester
 
     }
 ```
+
+## ${} in web.xml
+
+http://127.0.0.1:8080/app01/mycgi2/
+
