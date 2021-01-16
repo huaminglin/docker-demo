@@ -33,9 +33,28 @@
         <servlet-name>CGIServlet</servlet-name>
         <servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
     </servlet>
+
+
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>readmeFile</param-name>
+            <param-value>${var_readme}</param-value>
+        </init-param>
+    </servlet>
+    
     <servlet-mapping>
         <servlet-name>CGIServlet</servlet-name>
         <url-pattern>/${var_mycgi}/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>

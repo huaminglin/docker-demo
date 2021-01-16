@@ -369,3 +369,47 @@ org.apache.catalina.startup.Catalina#createStartDigester
 
 http://127.0.0.1:8080/app01/mycgi2/
 
+
+org.apache.catalina.servlets.CGIServlet
+
+```
+<!doctype html><html lang="en"><head><title>HTTP Status 500 – Internal Server Error</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 500 – Internal Server Error</h1><hr class="line" /><p><b>Type</b> Exception Report</p><p><b>Message</b> Error instantiating servlet class [org.apache.catalina.servlets.CGIServlet]</p><p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p><p><b>Exception</b></p><pre>javax.servlet.ServletException: Error instantiating servlet class [org.apache.catalina.servlets.CGIServlet]
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:690)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	java.base&#47;java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base&#47;java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.base&#47;java.lang.Thread.run(Thread.java:834)
+</pre><p><b>Root Cause</b></p><pre>java.lang.SecurityException: Access to class [class org.apache.catalina.servlets.CGIServlet] is forbidden. It is a restricted class. A web application must be configured as privileged to be able to load it
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:690)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	java.base&#47;java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base&#47;java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.base&#47;java.lang.Thread.run(Thread.java:834)
+</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class="line" /><h3>Apache Tomcat/9.0.41</h3></body></html>
+```
+
+Note: The first request receives the above 500 page, the following requests receive 404 instead.
+
+## org.apache.catalina.servlets.DefaultServlet
+
+-Dvar_readme=readme
+
+http://127.0.0.1:8080/app01/a/
+
+Config DefaultServlet and demo variable in web.xml is resolved.
