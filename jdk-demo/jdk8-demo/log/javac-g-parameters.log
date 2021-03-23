@@ -1,0 +1,78 @@
+javac -g -parameters
+Classfile /tmp/Class1.class
+  Last modified Aug 6, 2020; size 537 bytes
+  MD5 checksum 1df3761934c515d9f008bb4e2a311fd7
+  Compiled from "Class1.java"
+public class Class1
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#21         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #22.#23        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = String             #24            // Class1
+   #4 = Methodref          #25.#26        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = Class              #24            // Class1
+   #6 = Class              #27            // java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               LClass1;
+  #14 = Utf8               main
+  #15 = Utf8               ([Ljava/lang/String;)V
+  #16 = Utf8               args
+  #17 = Utf8               [Ljava/lang/String;
+  #18 = Utf8               MethodParameters
+  #19 = Utf8               SourceFile
+  #20 = Utf8               Class1.java
+  #21 = NameAndType        #7:#8          // "<init>":()V
+  #22 = Class              #28            // java/lang/System
+  #23 = NameAndType        #29:#30        // out:Ljava/io/PrintStream;
+  #24 = Utf8               Class1
+  #25 = Class              #31            // java/io/PrintStream
+  #26 = NameAndType        #32:#33        // println:(Ljava/lang/String;)V
+  #27 = Utf8               java/lang/Object
+  #28 = Utf8               java/lang/System
+  #29 = Utf8               out
+  #30 = Utf8               Ljava/io/PrintStream;
+  #31 = Utf8               java/io/PrintStream
+  #32 = Utf8               println
+  #33 = Utf8               (Ljava/lang/String;)V
+{
+  public Class1();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LClass1;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #3                  // String Class1
+         5: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  args   [Ljava/lang/String;
+    MethodParameters:
+      Name                           Flags
+      args
+}
+SourceFile: "Class1.java"
