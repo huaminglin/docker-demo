@@ -1,0 +1,26 @@
+version: '2.4'
+services:
+  server01:
+    image: tomcat:9.0.43
+    ports:
+      - 10080:8080
+      - 10443:8443
+      - 9999:9999
+    environment:
+      - "JAVA_OPTS=-Xms256M -Xmx256M -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.rmi.port=9999 -Djava.rmi.server.hostname=${DOCKER_HOST_IP} -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.ssl=false"
+    volumes:
+      - ./tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ./manager/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
+      - ./server.xml:/usr/local/tomcat/conf/server.xml
+  server02:
+    image: tomcat:9.0.43
+    ports:
+      - 20080:8080
+      - 20443:8443
+      - 29999:9999
+    environment:
+      - "JAVA_OPTS=-Xms256M -Xmx256M -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.rmi.port=9999 -Djava.rmi.server.hostname=${DOCKER_HOST_IP} -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.ssl=false"
+    volumes:
+      - ./tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ./manager/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
+      - ./server.xml:/usr/local/tomcat/conf/server.xml
