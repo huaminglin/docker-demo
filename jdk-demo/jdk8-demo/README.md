@@ -8,6 +8,52 @@ sudo docker exec -it jdk8-demo_server_1 bash
 
 sudo docker exec -it jdk8-demo_client_1 bash
 
+```
+ls -1 /usr/local/openjdk-8/bin
+appletviewer
+clhsdb
+extcheck
+hsdb
+idlj
+jar
+jarsigner
+java
+java-rmi.cgi
+javac
+javadoc
+javah
+javap
+jcmd
+jconsole
+jdb
+jdeps
+jhat
+jinfo
+jjs
+jmap
+jps
+jrunscript
+jsadebugd
+jstack
+jstat
+jstatd
+keytool
+native2ascii
+orbd
+pack200
+policytool
+rmic
+rmid
+rmiregistry
+schemagen
+serialver
+servertool
+tnameserv
+unpack200
+wsgen
+wsimport
+xjc
+```
 
 ## jar files
 
@@ -246,4 +292,4 @@ RMI Server JStatRemoteHost not available
 
 Conclusion: jmap and jstack work well with jsadebugd; jps and jstat need "RMI Server JStatRemoteHost".
 
-From the remote access, we know jmap/jstack use different mechnism from jsp/jstat.
+From the remote access, we know jmap/jstack use different mechnism from jps/jstat.

@@ -2,6 +2,43 @@
 
 sudo docker exec -it jdk11-demo_server_1 bash
 
+```
+ls -1 /usr/local/openjdk-11/bin/
+jaotc
+jar
+jarsigner
+java
+javac
+javadoc
+javap
+jcmd
+jconsole
+jdb
+jdeprscan
+jdeps
+jfr
+jhsdb
+jimage
+jinfo
+jjs
+jlink
+jmap
+jmod
+jps
+jrunscript
+jshell
+jstack
+jstat
+jstatd
+keytool
+pack200
+rmic
+rmid
+rmiregistry
+serialver
+unpack200
+```
+
 ## jar files
 
 find / -iname "*.jar"
