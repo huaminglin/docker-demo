@@ -13,7 +13,7 @@ Catalina:type=Cluster,component=Member,name="tcp://192.168.192.3:20001"
 Catalina:type=Cluster,component=Member,name="tcp://{192, 168, 192, 2}:20001"
 ```
 
-##
+## JMX terminal
 
 ```
 java -jar jmxterm-1.0.2-uber.jar
@@ -109,3 +109,12 @@ Catalina:component=Deployer,type=Cluster
 Catalina:component=Member,name="tcp://192.168.192.3:20001",type=Cluster
 Catalina:component=Member,name="tcp://{192, 168, 192, 2}:20001",type=Cluster" is in the "beans" output.
 
+## tcpdump
+
+tcpdump -n -r tomcat-demo.pcap -vvv | less
+```
+02:30:37.881025 IP (tos 0x0, ttl 1, id 47661, offset 0, flags [DF], proto UDP (17), length 105)
+   192.168.192.2.10001 > 228.0.0.20.10001: [bad udp cksum 0x6526 -> 0xde94!] UDP, length 77
+02:30:39.072531 IP (tos 0x0, ttl 1, id 1320, offset 0, flags [DF], proto UDP (17), length 105)
+   192.168.192.4.10001 > 228.0.0.20.10001: [bad udp cksum 0x6528 -> 0x5aa8!] UDP, length 77
+```

@@ -24,3 +24,8 @@ services:
       - ./tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
       - ./manager/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
       - ./server.xml:/usr/local/tomcat/conf/server.xml
+  tcpdump:
+    image: nicolaka/netshoot
+    volumes:
+      - /tmp/tomcat-demo:/tmp/tomcat-demo
+    entrypoint: tcpdump -v -w /tmp/tomcat-demo/tomcat-demo.pcap
