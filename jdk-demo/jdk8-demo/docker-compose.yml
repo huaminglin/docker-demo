@@ -3,21 +3,21 @@ networks:
   jdk8:
     driver: bridge
 services:
-  server:
+  server01:
     image: openjdk:8u265-jdk
-    entrypoint: /bin/bash
-    stdin_open: true
-    tty: true
+    entrypoint: "jstatd -p 10086 -J-Djava.rmi.server.hostname=server01 -J-Djava.rmi.server.logCalls=true -J-Djava.security.policy=/jstatd.policy"
     ports:
       - 1099:1099
       - 7000:7000
+      - 10086:10086
     networks:
       - jdk8
     privileged: true
     volumes:
       - ./mount:/mount
       - /tmp/docker-container:/mounttmp
-  client:
+      - ./jstatd.policy:/jstatd.policy
+  client01:
     image: openjdk:8u265-jdk
     entrypoint: /bin/bash
     stdin_open: true
