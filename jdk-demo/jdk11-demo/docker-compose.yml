@@ -3,15 +3,17 @@ networks:
   jdk11:
     driver: bridge
 services:
-  server:
+  server01:
     image: openjdk:11.0.8-jdk
-    entrypoint: /bin/bash
-    stdin_open: true
-    tty: true
+    entrypoint: "jstatd -p 10086 -J-Djava.rmi.server.hostname=server01 -J-Djava.rmi.server.logCalls=true -J-Djava.security.policy=/jstatd.policy"
     networks:
       - jdk11
     privileged: true
-  client:
+    ports:
+      - 10086:10086
+    volumes:
+      - ./jstatd.policy:/jstatd.policy
+  client01:
     image: openjdk:11.0.8-jdk
     entrypoint: /bin/bash
     stdin_open: true

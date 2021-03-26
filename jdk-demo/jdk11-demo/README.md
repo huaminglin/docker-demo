@@ -1,5 +1,7 @@
 # Demo JDK built-in tools
 
+jstatd is a JDK built-in daemon, and we can run it as a target Java process.
+
 sudo docker exec -it jdk11-demo_server_1 bash
 
 ```
@@ -37,6 +39,14 @@ rmid
 rmiregistry
 serialver
 unpack200
+```
+
+## jstatd
+
+docker exec -it jdk11-demo_client01_1 jps -lvm server01:10086
+
+```
+1 jdk.jstatd/sun.tools.jstatd.Jstatd -p 10086 -Dapplication.home=/usr/local/openjdk-11 -Xms8m -Djava.rmi.server.hostname=server01 -Djava.rmi.server.logCalls=true -Djava.security.policy=/jstatd.policy -Djdk.module.main=jdk.jstatd
 ```
 
 ## jar files
