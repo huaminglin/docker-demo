@@ -1,0 +1,2584 @@
+docker exec demoattach jcmd 1 VM.class_hierarchy
+1:
+java.lang.Object/null
+|--java.net.Socket/null
+|--com.sun.jmx.mbeanserver.SecureClassLoaderRepository/null
+|--jdk.jfr.internal.RepositoryChunk/null
+|--sun.util.locale.ParseStatus/null
+|--java.lang.module.Configuration$$Lambda$111/0x0000000100173440/null
+|--java.io.FileInputStream$1/null
+|--jdk.internal.logger.DefaultLoggerFinder$1/null
+|--sun.util.calendar.CalendarUtils/null
+|--java.lang.invoke.LambdaForm$DMH/0x00000001000afc40/null
+|--java.security.SecureRandomParameters/null (intf)
+|--sun.rmi.transport.DGCImpl/null
+|--com.sun.jmx.mbeanserver.MBeanInstantiator/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$175/0x0000000100138840/null
+|--sun.util.cldr.CLDRBaseLocaleDataMetaInfo/null
+|--jdk.jfr.internal.PrivateAccess/null
+|  |--jdk.jfr.FlightRecorderPermission$InternalAccess/null
+|--java.util.Properties$LineReader/null
+|--jdk.internal.reflect.ClassDefiner$1/null
+|--sun.reflect.generics.tree.FieldTypeSignature/null (intf)
+|--java.security.PermissionsEnumerator/null
+|--java.util.logging.Logger$SystemLoggerHelper$1/null
+|--jdk.jfr.ValueDescriptor/null
+|--java.rmi.dgc.DGC/null (intf)
+|--sun.security.provider.Sun$1/null
+|--java.lang.module.Configuration$$Lambda$110/0x0000000100173040/null
+|--sun.util.locale.provider.LocaleDataMetaInfo/null (intf)
+|--java.util.Arrays/null
+|--jdk.internal.reflect.ClassDefiner/null
+|--sun.reflect.generics.tree.TypeArgument/null (intf)
+|--java.util.logging.Logger$SystemLoggerHelper/null
+|--java.lang.Package$VersionInfo/null
+|--java.util.regex.CharPredicates$$Lambda$22/0x00000001000af840/null
+|--java.net.Proxy/null
+|--sun.rmi.transport.ObjectEndpoint/null
+|--sun.net.www.MessageHeader/null
+|--jdk.jfr.internal.PlatformRecording/null
+|--com.sun.jmx.mbeanserver.ClassLoaderRepositorySupport$LoaderEntry/null
+|--jdk.internal.agent.Agent$StatusCollector$$Lambda$219/0x0000000100138440/null
+|--java.nio.charset.CodingErrorAction/null
+|--jdk.internal.org.objectweb.asm.MethodVisitor/null
+|  |--jdk.internal.org.objectweb.asm.MethodWriter/null
+|  |--jdk.jfr.internal.instrument.ConstructorWriter/null
+|  |--jdk.internal.org.objectweb.asm.commons.LocalVariablesSorter/null
+|  |  |--jdk.internal.org.objectweb.asm.commons.RemappingMethodAdapter/null
+|  |  |  |--jdk.jfr.internal.instrument.JIMethodInliningAdapter/null
+|  |  |--jdk.jfr.internal.instrument.JIMethodCallInliner/null
+|  |--java.lang.invoke.TypeConvertingMethodAdapter/null
+|  |  |--java.lang.invoke.InnerClassLambdaMetafactory$ForwardingMethodGenerator/null
+|  |--jdk.internal.org.objectweb.asm.tree.MethodNode/null
+|--sun.reflect.generics.tree.BaseType/null (intf)
+|--jdk.internal.reflect.MethodAccessorGenerator$1/null
+|--java.security.Security$1/null
+|--java.util.logging.LogManager$4/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$200/0x000000010015f440/null
+|--java.lang.Class$Atomic/null
+|--sun.rmi.transport.tcp.TCPTransport$AcceptLoop/null
+|--java.util.LinkedHashMap$LinkedHashIterator/null
+|  |--java.util.LinkedHashMap$LinkedKeyIterator/null
+|  |--java.util.LinkedHashMap$LinkedValueIterator/null
+|  |--java.util.LinkedHashMap$LinkedEntryIterator/null
+|--java.lang.WeakPairMap$Pair$Lookup/null
+|--jdk.jfr.internal.ShutdownHook$ExceptionHandler/null
+|--java.util.stream.Collectors$$Lambda$109/0x0000000100172c40/null
+|--com.sun.jmx.mbeanserver.ClassLoaderRepositorySupport/null
+|--jdk.management.jfr.SettingDescriptorInfo$1/null
+|--java.security.Security/null
+|--jdk.internal.reflect.Label$PatchInfo/null
+|--java.lang.Number/null
+|  |--java.lang.Short/null
+|  |--java.lang.Byte/null
+|  |--java.lang.Double/null
+|  |--java.lang.Float/null
+|  |--java.util.concurrent.atomic.AtomicLong/null
+|  |--java.util.concurrent.atomic.AtomicInteger/null
+|  |--java.util.concurrent.atomic.Striped64/null
+|  |  |--java.util.concurrent.atomic.LongAdder/null
+|  |--java.math.BigDecimal/null
+|  |--java.math.BigInteger/null
+|  |--java.lang.Long/null
+|  |--java.lang.Integer/null
+|--java.util.regex.Pattern$$Lambda$24/0x00000001000af440/null
+|--jdk.internal.util.xml.impl.Input/null
+|--jdk.internal.logger.BootstrapLogger$BootstrapExecutors/null
+|--sun.util.locale.provider.LocaleProviderAdapter$1/null
+|--java.lang.Class$ReflectionData/null
+|--java.lang.WeakPairMap$Pair/null (intf)
+|--jdk.internal.agent.Agent$StatusCollector$$Lambda$218/0x0000000100138040/null
+|--sun.rmi.runtime.NewThreadAction$2/null
+|--jdk.jfr.internal.ShutdownHook/null
+|--com.sun.jmx.mbeanserver.ModifiableClassLoaderRepository/null (intf)
+|--jdk.internal.org.objectweb.asm.Item/null
+|--jdk.internal.loader.BootLoader$PackageHelper/null
+|--jdk.management.jfr.SettingDescriptorInfo/null
+|--jdk.internal.reflect.Label/null
+|--java.lang.SecurityManager$1/null
+|--java.nio.charset.CharsetEncoder/null
+|  |--sun.nio.cs.UTF_8$Encoder/null
+|  |--sun.nio.cs.ISO_8859_1$Encoder/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$199/0x000000010015f040/null
+|--java.lang.Character/null
+|--jdk.internal.logger.BootstrapLogger$RedirectedLoggers/null
+|--jdk.internal.org.xml.sax.InputSource/null
+|--sun.util.resources.LocaleData/null
+|--java.lang.WeakPairMap/null
+|--java.util.stream.Collectors$$Lambda$108/0x0000000100172840/null
+|--sun.util.calendar.CalendarDate/null
+|  |--sun.util.calendar.BaseCalendar$Date/null
+|  |  |--sun.util.calendar.Gregorian$Date/null
+|--jdk.jfr.internal.instrument.ThrowableTracer/null
+|--sun.rmi.runtime.NewThreadAction$1/null
+|--javax.management.loading.ClassLoaderRepository/null (intf)
+|--sun.reflect.generics.tree.TypeSignature/null (intf)
+|--jdk.internal.jimage.ImageHeader/null
+|--jdk.internal.reflect.UTF8/null
+|--jdk.internal.module.Checks/null
+|--java.util.regex.Pattern$CharPredicate$$Lambda$23/0x00000001000af040/null
+|--java.lang.Boolean/null
+|--jdk.internal.util.xml.impl.Pair/null
+|--jdk.internal.agent.Agent$StatusCollector$$Lambda$221/0x0000000100137c40/null
+|--sun.nio.cs.Surrogate/null
+|--sun.rmi.runtime.NewThreadAction/null
+|--java.net.URLStreamHandler/null
+|  |--sun.net.www.protocol.jrt.Handler/null
+|  |--sun.net.www.protocol.file.Handler/null
+|--sun.util.locale.provider.LocaleResources/null
+|--java.lang.Module$ReflectionData/null
+|--sun.reflect.generics.tree.ReturnType/null (intf)
+|--com.sun.management.VMOption/null
+|--jdk.internal.org.objectweb.asm.ByteVector/null
+|--jdk.internal.module.Resources/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$201/0x000000010015ec40/null
+|--java.nio.Bits$1/null
+|--java.util.concurrent.locks.AbstractOwnableSynchronizer/null
+|  |--java.util.concurrent.locks.AbstractQueuedSynchronizer/null
+|  |  |--java.util.concurrent.locks.ReentrantLock$Sync/null
+|  |  |  |--java.util.concurrent.locks.ReentrantLock$NonfairSync/null
+|  |  |--java.util.concurrent.ThreadPoolExecutor$Worker/null
+|  |  |--java.util.concurrent.locks.ReentrantReadWriteLock$Sync/null
+|  |  |  |--java.util.concurrent.locks.ReentrantReadWriteLock$FairSync/null
+|--java.util.stream.Collectors$$Lambda$107/0x0000000100172440/null
+|--sun.nio.cs.Surrogate$Parser/null
+|--jdk.internal.loader.BuiltinClassLoader$LoadedModule/null
+|--jdk.internal.util.xml.impl.Attrs/null
+|--java.util.LinkedList$ListItr/null
+|--sun.rmi.server.Util$$Lambda$26/0x00000001000aec40/null
+|--jdk.internal.misc.JavaNioAccess$BufferPool/null (intf)
+|--java.net.ProxySelector/null
+|  |--sun.net.spi.DefaultProxySelector/null
+|--com.sun.management.internal.HotSpotDiagnostic/null
+|--jdk.internal.agent.Agent$StatusCollector$$Lambda$220/0x0000000100137840/null
+|--jdk.internal.logger.BootstrapLogger$DetectBackend$1/null
+|--jdk.internal.reflect.ClassFileAssembler/null
+|--sun.nio.cs.HistoricallyNamedCharset/null (intf)
+|--java.security.Provider$UString/null
+|--jdk.internal.org.xml.sax.Attributes/null (intf)
+|--jdk.jfr.MetadataDefinition/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$223/0x000000010015e840/null
+|--com.sun.management.HotSpotDiagnosticMXBean/null (intf)
+|--java.net.SocksSocketImpl$3/null
+|--java.util.HashMap$HashMapSpliterator/null
+|  |--java.util.HashMap$KeySpliterator/null
+|  |--java.util.HashMap$EntrySpliterator/null
+|  |--java.util.HashMap$ValueSpliterator/null
+|--java.lang.module.Resolver$$Lambda$106/0x0000000100172040/null
+|--jdk.internal.logger.BootstrapLogger$DetectBackend/null
+|--sun.security.action.GetPropertyAction/null
+|--jdk.internal.reflect.ByteVectorImpl/null
+|--java.lang.LiveStackFrame/null (intf)
+|--java.security.Provider$Service/null
+|--sun.util.locale.LanguageTag/null
+|--jdk.jfr.Period/null (intf)
+|--jdk.internal.loader.BuiltinClassLoader$$Lambda$25/0x00000001000ae840/null
+|--sun.net.NetHooks$Provider/null
+|  |--sun.net.sdp.SdpProvider/null
+|--java.nio.Bits/null
+|--sun.nio.ch.FileChannelImpl$1/null
+|--jdk.jfr.internal.PlatformRecording$$Lambda$226/0x0000000100137440/null
+|--sun.rmi.transport.tcp.TCPChannel/null
+|--sun.jvmstat.monitor.event.HostListener/0x00007fc0c81a5500 (intf)
+|--jdk.internal.reflect.ByteVector/null (intf)
+|--sun.reflect.generics.tree.FormalTypeParameter/null
+|--jdk.internal.logger.BootstrapLogger/null
+|--jdk.jfr.StackTrace/null (intf)
+|--jdk.jfr.internal.TypeLibrary$$Lambda$203/0x000000010015e440/null
+|--sun.net.NetHooks/null
+|--java.lang.StackFrameInfo/null
+|  |--java.lang.LiveStackFrameInfo/null
+|--java.lang.module.Resolver$$Lambda$105/0x0000000100171c40/null
+|--sun.rmi.transport.Channel/null (intf)
+|--sun.management.ManagementFactoryHelper$1/null
+|--sun.jvmstat.monitor.remote.RemoteHost/0x00007fc0c81a5500 (intf)
+|--jdk.internal.reflect.ByteVectorFactory/null
+|--java.lang.ThreadLocal/null
+|  |--jdk.internal.math.FloatingDecimal$1/null
+|  |--jdk.internal.math.FormattedFloatingDecimal$1/null
+|  |--jdk.jfr.events.SocketWriteEvent$1/null
+|  |--jdk.jfr.events.SocketReadEvent$1/null
+|  |--jdk.internal.misc.TerminatingThreadLocal/null
+|  |  |--sun.nio.ch.Util$1/null
+|  |  |--sun.nio.fs.NativeBuffers$1/null
+|  |--jdk.jfr.events.FileWriteEvent$1/null
+|  |--jdk.jfr.events.FileReadEvent$1/null
+|  |--java.lang.StringCoding$1/null
+|  |--jdk.jfr.events.FileForceEvent$1/null
+|  |--jdk.internal.misc.TerminatingThreadLocal$1/null
+|  |--java.lang.InheritableThreadLocal/null
+|  |--jdk.internal.jimage.ImageBufferCache$1/null
+|  |--java.util.concurrent.locks.ReentrantReadWriteLock$Sync$ThreadLocalHoldCounter/null
+|--sun.reflect.generics.tree.TypeTree/null (intf)
+|--java.util.Deque/null (intf)
+|--sun.util.logging.PlatformLogger$ConfigurableBridge/null (intf)
+|--jdk.jfr.Threshold/null (intf)
+|--jdk.internal.loader.BootLoader$PackageHelper$$Lambda$190/0x00000001000ae440/null
+|--java.lang.StackWalker$StackFrame/null (intf)
+|--java.net.URLConnection/null
+|  |--sun.net.www.URLConnection/null
+|  |  |--sun.net.www.protocol.jrt.JavaRuntimeURLConnection/null
+|--jdk.jfr.internal.RepositoryChunk$$Lambda$225/0x0000000100137040/null
+|--java.lang.management.BufferPoolMXBean/null (intf)
+|--sun.tools.jstatd.Jstatd/0x00007fc0c81a5500
+|--sun.util.locale.provider.JRELocaleProviderAdapter$$Lambda$163/0x00000001001bfc40/null
+|--sun.reflect.generics.tree.Tree/null (intf)
+|--java.util.Queue/null (intf)
+|--sun.util.logging.PlatformLogger$Bridge/null (intf)
+|--jdk.jfr.Label/null (intf)
+|--jdk.jfr.internal.TypeLibrary$$Lambda$202/0x000000010015e040/null
+|--jdk.internal.util.xml.impl.Parser/null
+|  |--jdk.internal.util.xml.impl.ParserSAX/null
+|--sun.security.provider.FileInputStreamPool/null
+|--java.util.stream.Collectors$$Lambda$104/0x0000000100171840/null
+|--java.util.PropertyPermissionCollection$1/null
+|--java.lang.StackStreamFactory$AbstractStackWalker/null
+|--java.net.URL$3/null
+|--java.lang.System$Logger/null (intf)
+|--sun.rmi.runtime.Log$$Lambda$27/0x00000001000ae040/null
+|--jdk.jfr.AnnotationElement/null
+|--com.sun.management.GcInfo/null
+|--jdk.internal.org.xml.sax.Locator/null (intf)
+|--sun.security.provider.NativePRNG$RandomIO/null
+|--jdk.jfr.internal.RepositoryChunk$$Lambda$228/0x0000000100136c40/null
+|--jdk.internal.org.objectweb.asm.ClassVisitor/null
+|  |--jdk.internal.org.objectweb.asm.ClassWriter/null
+|  |--jdk.jfr.internal.instrument.ConstructorTracerWriter/null
+|  |--jdk.jfr.internal.instrument.JIMethodMergeAdapter/null
+|  |--jdk.jfr.internal.instrument.JIInliner/null
+|  |--jdk.internal.org.objectweb.asm.tree.ClassNode/null
+|--java.lang.StackWalker/null
+|--sun.reflect.generics.parser.SignatureParser/null
+|--sun.util.locale.provider.JRELocaleProviderAdapter$$Lambda$162/0x00000001001bf840/null
+|--java.util.stream.Sink$ChainedReference/null
+|  |--java.util.stream.ReferencePipeline$2$1/null
+|  |--java.util.stream.ReferencePipeline$3$1/null
+|  |--java.util.stream.ReferencePipeline$7$1/null
+|  |--java.util.stream.DistinctOps$1$2/null
+|  |--java.util.stream.SliceOps$1$1/null
+|--java.net.InetSocketAddress$InetSocketAddressHolder/null
+|--java.util.TreeMap$PrivateEntryIterator/null
+|  |--java.util.TreeMap$ValueIterator/null
+|  |--java.util.TreeMap$KeyIterator/null
+|  |--java.util.TreeMap$EntryIterator/null
+|--java.rmi.registry.Registry/null (intf)
+|--jdk.internal.misc.JavaNetURLAccess/null (intf)
+|--jdk.jfr.internal.RequestEngine$$Lambda$222/0x000000010015dc40/null
+|--jdk.jfr.internal.TypeLibrary/null
+|--javax.management.openmbean.CompositeDataView/null (intf)
+|--jdk.internal.org.xml.sax.XMLReader/null (intf)
+|--sun.security.provider.NativePRNG$2/null
+|--java.util.stream.Collectors$$Lambda$103/0x0000000100171440/null
+|--sun.invoke.util.BytecodeDescriptor/null
+|--java.net.SocketPermissionCollection$1/null
+|--java.nio.Buffer/null
+|  |--java.nio.ByteBuffer/null
+|  |  |--java.nio.MappedByteBuffer/null
+|  |  |  |--java.nio.DirectByteBuffer/null
+|  |  |  |  |--java.nio.DirectByteBufferR/null
+|  |  |--java.nio.HeapByteBuffer/null
+|  |--java.nio.IntBuffer/null
+|  |  |--java.nio.DirectIntBufferU/null
+|  |  |  |--java.nio.DirectIntBufferRU/null
+|  |--java.nio.CharBuffer/null
+|  |  |--java.nio.HeapCharBuffer/null
+|--sun.util.locale.provider.ResourceBundleBasedAdapter/null (intf)
+|--java.net.InetAddress$CachedLocalHost/null
+|--java.net.URL$DefaultFactory/null
+|--java.nio.charset.spi.CharsetProvider/null
+|  |--sun.nio.cs.StandardCharsets/null
+|--sun.nio.ch.DirectBuffer/null (intf)
+|--jdk.jfr.internal.MetadataRepository/null
+|--com.sun.management.internal.DiagnosticCommandImpl$Wrapper/null
+|--jdk.jfr.internal.PlatformRecording$$Lambda$227/0x0000000100136840/null
+|--sun.security.provider.NativePRNG$1/null
+|--java.lang.invoke.InfoFromMemberName/null
+|--java.util.function.BiFunction/null (intf)
+|--java.util.stream.Streams/null
+|--java.lang.StackTraceElement/null
+|--java.net.SocketAddress/null
+|  |--java.net.InetSocketAddress/null
+|--java.net.URLStreamHandlerFactory/null (intf)
+|--jdk.jfr.internal.instrument.SocketChannelImplInstrumentor/null
+|--java.net.InetAddress$CachedAddresses/null
+|--jdk.internal.jimage.NativeImageBuffer$1/null
+|--java.nio.charset.Charset/null
+|  |--sun.nio.cs.Unicode/null
+|  |  |--sun.nio.cs.UTF_8/null
+|  |  |--sun.nio.cs.UTF_16/null
+|  |  |--sun.nio.cs.UTF_16LE/null
+|  |  |--sun.nio.cs.UTF_16BE/null
+|  |--sun.nio.cs.US_ASCII/null
+|  |--sun.nio.cs.ISO_8859_1/null
+|--java.util.stream.Collectors$$Lambda$102/0x0000000100171040/null
+|--jdk.internal.util.xml.SAXParser/null
+|  |--jdk.internal.util.xml.impl.SAXParserImpl/null
+|--java.lang.invoke.MethodHandleInfo/null (intf)
+|--sun.rmi.server.LoaderHandler$$Lambda$67/0x000000010010f440/null
+|--java.security.CodeSource/null
+|--java.util.stream.ForEachOps$ForEachOp/null
+|  |--java.util.stream.ForEachOps$ForEachOp$OfRef/null
+|--jdk.jfr.internal.instrument.SocketOutputStreamInstrumentor/null
+|--jdk.internal.jimage.NativeImageBuffer/null
+|--javax.management.ImmutableDescriptor/null
+|--sun.net.InetAddressCachePolicy$2/null
+|--com.sun.management.internal.DiagnosticCommandArgumentInfo/null
+|--jdk.internal.loader.URLClassPath/null
+|--sun.jvmstat.monitor.remote.RemoteVm/0x00007fc0c81a5500 (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100136440/null
+|--sun.security.action.GetBooleanAction/null
+|--sun.net.ext.ExtendedSocketOptions/null
+|  |--sun.net.ext.ExtendedSocketOptions$NoExtendedSocketOptions/null
+|--java.util.stream.TerminalSink/null (intf)
+|--jdk.jfr.internal.instrument.SocketInputStreamInstrumentor/null
+|--javax.management.Descriptor/null (intf)
+|--sun.util.locale.provider.LocaleProviderAdapter/null
+|  |--sun.util.locale.provider.JRELocaleProviderAdapter/null
+|  |  |--sun.util.cldr.CLDRLocaleProviderAdapter/null
+|  |  |--sun.util.locale.provider.FallbackLocaleProviderAdapter/null
+|  |  |  |--sun.util.locale.provider.LocaleProviderAdapter$NonExistentAdapter/null
+|--jdk.internal.jimage.BasicImageReader$1/null
+|--sun.net.InetAddressCachePolicy$1/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100170c40/null
+|--sun.jvmstat.perfdata.monitor.protocol.local.LocalVmManager$3/0x00007fc0c81a5500
+|--java.util.stream.Streams$AbstractStreamBuilderImpl/null
+|  |--java.util.stream.Streams$StreamBuilderImpl/null
+|--sun.rmi.server.LoaderHandler$$Lambda$66/0x000000010010f040/null
+|--java.util.stream.Sink/null (intf)
+|--sun.reflect.generics.repository.AbstractRepository/null
+|  |--sun.reflect.generics.repository.GenericDeclRepository/null
+|  |  |--sun.reflect.generics.repository.ConstructorRepository/null
+|  |  |  |--sun.reflect.generics.repository.MethodRepository/null
+|  |  |--sun.reflect.generics.repository.ClassRepository/null
+|--jdk.jfr.internal.instrument.FileChannelImplInstrumentor/null
+|--java.security.Principal/null (intf)
+|--sun.net.InetAddressCachePolicy/null
+|--jdk.jfr.internal.RepositoryChunk$$Lambda$229/0x0000000100136040/null
+|--com.sun.management.internal.DiagnosticCommandInfo/null
+|--sun.jvmstat.perfdata.monitor.protocol.local.LocalVmManager$2/0x00007fc0c81a5500
+|--java.util.stream.Stream$Builder/null (intf)
+|--java.net.Inet6Address$Inet6AddressHolder/null
+|--jdk.internal.org.objectweb.asm.Handle/null
+|--java.security.SecureRandomSpi/null
+|  |--sun.security.provider.SecureRandom/null
+|  |--sun.security.provider.NativePRNG$NonBlocking/null
+|  |--sun.security.provider.NativePRNG$Blocking/null
+|  |--sun.security.provider.NativePRNG/null
+|--jdk.internal.org.objectweb.asm.Type/null
+|--jdk.jfr.internal.instrument.JDKEvents$$Lambda$204/0x000000010015d040/null
+|--java.util.stream.TerminalOp/null (intf)
+|--jdk.internal.util.Preconditions/null
+|--jdk.jfr.internal.instrument.RandomAccessFileInstrumentor/null
+|--java.security.ProtectionDomain$Key/null
+|--java.util.stream.Collectors$$Lambda$101/0x0000000100170840/null
+|--java.util.spi.LocaleServiceProvider/null
+|  |--java.text.spi.DecimalFormatSymbolsProvider/null
+|  |  |--sun.util.locale.provider.DecimalFormatSymbolsProviderImpl/null
+|  |--java.text.spi.DateFormatSymbolsProvider/null
+|  |  |--sun.util.locale.provider.DateFormatSymbolsProviderImpl/null
+|  |--java.util.spi.CalendarDataProvider/null
+|  |--java.util.spi.LocaleNameProvider/null
+|  |--java.util.spi.CurrencyNameProvider/null
+|  |--java.text.spi.NumberFormatProvider/null
+|  |--java.text.spi.DateFormatProvider/null
+|  |--java.text.spi.CollatorProvider/null
+|  |--java.text.spi.BreakIteratorProvider/null
+|  |--java.util.spi.TimeZoneNameProvider/null
+|  |  |--sun.util.locale.provider.TimeZoneNameProviderImpl/null
+|  |  |  |--sun.util.cldr.CLDRTimeZoneNameProviderImpl/null
+|--sun.jvmstat.perfdata.monitor.protocol.local.LocalVmManager$1/0x00007fc0c81a5500
+|--com.sun.management.internal.DiagnosticCommandImpl$OperationInfoComparator/null
+|--sun.reflect.generics.factory.CoreReflectionFactory/null
+|--java.io.Writer/null
+|  |--sun.nio.cs.StreamEncoder/null
+|  |--java.io.OutputStreamWriter/null
+|  |--java.io.PrintWriter/null
+|  |--java.io.StringWriter/null
+|  |--java.io.BufferedWriter/null
+|--sun.security.provider.SunEntries$1/null
+|--java.util.stream.ForEachOps/null
+|--jdk.internal.jimage.BasicImageReader/null
+|  |--jdk.internal.jimage.ImageReader$SharedImageReader/null
+|--sun.security.provider.PolicyFile$8/null
+|--jdk.jfr.internal.instrument.FileOutputStreamInstrumentor/null
+|--jdk.internal.org.xml.sax.helpers.DefaultHandler/null
+|  |--jdk.jfr.internal.jfc.JFCParserHandler/null
+|  |--jdk.jfr.internal.MetadataHandler/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100135c40/null
+|--java.net.InetAddress$NameServiceAddresses/null
+|--java.security.ProtectionDomain$JavaSecurityAccessImpl/null
+|--sun.jvmstat.PlatformSupportImpl$1/0x00007fc0c81a5500
+|--sun.reflect.generics.factory.GenericsFactory/null (intf)
+|--sun.security.provider.SunEntries/null
+|--java.text.DecimalFormatSymbols/null
+|--sun.management.ClassLoadingImpl/null
+|--jdk.jfr.internal.PlatformRecorder$$Lambda$205/0x000000010015cc40/null
+|--java.util.function.Consumer/null (intf)
+|--java.lang.invoke.AbstractValidatingLambdaMetafactory/null
+|  |--java.lang.invoke.InnerClassLambdaMetafactory/null
+|--jdk.internal.jimage.ImageReader/null
+|--jdk.jfr.internal.instrument.FileInputStreamInstrumentor/null
+|--jdk.internal.org.xml.sax.ErrorHandler/null (intf)
+|--sun.security.provider.PolicyFile$6/null
+|--java.util.function.Function$$Lambda$100/0x0000000100170440/null
+|--java.net.InetAddress$Addresses/null (intf)
+|--java.util.stream.FindOps$FindOp/null
+|--jdk.internal.misc.JavaSecurityAccess/null (intf)
+|--java.util.Locale$1/null
+|--java.lang.management.ClassLoadingMXBean/null (intf)
+|--jdk.internal.org.xml.sax.ContentHandler/null (intf)
+|--java.lang.invoke.LambdaForm$MH/0x0000000100135840/null
+|--java.net.InetAddress$PlatformNameService/null
+|--jdk.internal.jimage.ImageReaderFactory$1/null
+|--java.lang.invoke.MethodHandleImpl$1/null
+|--sun.jvmstat.PlatformSupport/0x00007fc0c81a5500
+|  |--sun.jvmstat.PlatformSupportImpl/0x00007fc0c81a5500
+|--com.sun.jmx.remote.util.ClassLogger/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010015c840/null
+|--sun.reflect.generics.scope.AbstractScope/null
+|  |--sun.reflect.generics.scope.MethodScope/null
+|  |--sun.reflect.generics.scope.ClassScope/null
+|--javax.management.MBeanInfo$ArrayGettersSafeAction/null
+|--jdk.internal.org.xml.sax.DTDHandler/null (intf)
+|--java.net.InetAddress$NameService/null (intf)
+|--jdk.internal.module.ModuleBootstrap$SafeModuleFinder$$Lambda$99/0x0000000100170040/null
+|--jdk.internal.loader.ClassLoaders/null
+|--jdk.internal.misc.JavaLangInvokeAccess/null (intf)
+|--java.util.concurrent.ConcurrentSkipListMap$Iter/null
+|  |--java.util.concurrent.ConcurrentSkipListMap$KeyIterator/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010010e440/null
+|--java.net.URI$Parser/null
+|--sun.jvmstat.perfdata.monitor.protocol.local.PerfDataFile/0x00007fc0c81a5500
+|--javax.management.NotificationBroadcasterSupport$1/null
+|--sun.reflect.generics.scope.Scope/null (intf)
+|--jdk.internal.org.xml.sax.EntityResolver/null (intf)
+|--java.util.stream.FindOps$FindSink/null
+|  |--java.util.stream.FindOps$FindSink$OfRef/null
+|--java.util.Comparator$$Lambda$231/0x0000000100135440/null
+|--java.lang.invoke.Invokers$Holder/null
+|--java.net.Inet4AddressImpl/null
+|--java.util.jar.Manifest/null
+|--sun.jvmstat.perfdata.monitor.protocol.local.LocalVmManager/0x00007fc0c81a5500
+|--java.lang.invoke.LambdaForm$DMH/0x000000010015c440/null
+|--java.util.AbstractList$Itr/null
+|--com.sun.jmx.mbeanserver.MBeanAnalyzer$AttrMethods/null
+|--java.util.regex.Pattern$TreeInfo/null
+|--com.sun.jmx.mbeanserver.SunJmxMBeanServer/null (intf)
+|--javax.management.NotificationBroadcasterSupport/null
+|  |--javax.management.remote.JMXConnectorServer/null
+|  |  |--javax.management.remote.rmi.RMIConnectorServer/null
+|--jdk.jfr.internal.jfc.JFCParser/null
+|--javax.management.openmbean.OpenMBeanOperationInfo/null (intf)
+|--java.lang.invoke.BootstrapMethodInvoker/null
+|--java.net.InetAddressImpl/null (intf)
+|--sun.rmi.transport.DGCAckHandler$$Lambda$68/0x000000010010e040/null
+|--java.net.URL/null
+|--java.util.stream.FindOps/null
+|--java.nio.charset.CoderResult/null
+|--sun.security.jca.ProviderList$2/null
+|--javax.management.MBeanServer/null (intf)
+|--sun.security.util.PolicyUtil/null
+|--jdk.jfr.internal.dcmd.AbstractDCmd$$Lambda$230/0x0000000100135040/null
+|--java.lang.invoke.InvokerBytecodeGenerator$2/null
+|--java.net.InetAddressImplFactory/null
+|--sun.nio.fs.UnixFileAttributes$UnixAsBasicFileAttributes/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$206/0x000000010015c040/null
+|--sun.jvmstat.monitor.MonitoredVm/0x00007fc0c81a5500 (intf)
+|--java.util.ArrayList$ArrayListSpliterator/null
+|--javax.management.MBeanServerConnection/null (intf)
+|--jdk.internal.math.FloatingDecimal$ASCIIToBinaryBuffer/null
+|--java.rmi.registry.LocateRegistry/null
+|--java.util.concurrent.ConcurrentSkipListMap$Node/null
+|--jdk.jfr.internal.EventInstrumentation$$Lambda$185/0x000000010010dc40/null
+|--java.nio.file.attribute.UserDefinedFileAttributeView/null (intf)
+|--javax.management.MBeanServerBuilder/null
+|--jdk.jfr.internal.PlatformRecording$$Lambda$233/0x0000000100134c40/null
+|--java.util.Hashtable$Enumerator/null
+|--jdk.internal.math.FloatingDecimal$PreparedASCIIToBinaryBuffer/null
+|--java.io.InputStream/null
+|  |--java.io.FilterInputStream/null
+|  |  |--sun.security.provider.FileInputStreamPool$UnclosableInputStream/null
+|  |  |--java.io.BufferedInputStream/null
+|  |  |--java.io.DataInputStream/null
+|  |--java.io.ByteArrayInputStream/null
+|  |--java.io.FileInputStream/null
+|  |  |--java.net.SocketInputStream/null
+|  |--sun.nio.ch.ChannelInputStream/null
+|  |--java.io.ObjectInputStream$PeekInputStream/null
+|  |--java.io.ObjectInputStream$BlockDataInputStream/null
+|  |--java.io.ObjectInputStream/null
+|  |  |--sun.rmi.server.MarshalInputStream/null
+|  |  |  |--sun.rmi.transport.ConnectionInputStream/null
+|--java.util.Formatter/null
+|--sun.net.www.ParseUtil/null
+|--java.lang.invoke.InvokerBytecodeGenerator/null
+|--java.rmi.Naming$ParsedNamingURL/null
+|--java.nio.file.attribute.DosFileAttributeView/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$170/0x000000010015bc40/null
+|--java.util.logging.Logging/null
+|--com.sun.jmx.mbeanserver.GetPropertyAction/null
+|--jdk.internal.math.FloatingDecimal$ASCIIToBinaryConverter/null (intf)
+|--java.io.Closeable/null (intf)
+|--javax.management.ObjectName$Property/null
+|--jdk.internal.loader.BuiltinClassLoader$3/null
+|--java.io.OutputStream/null
+|  |--java.io.FilterOutputStream/null
+|  |  |--java.io.BufferedOutputStream/null
+|  |  |--java.io.PrintStream/null
+|  |  |  |--java.rmi.server.LogStream/null
+|  |  |--java.security.DigestOutputStream/null
+|  |  |--java.io.DataOutputStream/null
+|  |--java.io.FileOutputStream/null
+|  |  |--java.net.SocketOutputStream/null
+|  |--java.io.ByteArrayOutputStream/null
+|  |--java.io.ObjectOutputStream$BlockDataOutputStream/null
+|  |--java.io.ObjectOutputStream/null
+|  |  |--sun.rmi.server.MarshalOutputStream/null
+|  |  |  |--sun.rmi.transport.ConnectionOutputStream/null
+|  |--java.nio.channels.Channels$1/null
+|--java.rmi.Naming/null
+|--sun.security.provider.PolicyFile$4/null
+|--java.io.ObjectInputStream$$Lambda$69/0x000000010010d840/null
+|--java.nio.file.attribute.DosFileAttributes/null (intf)
+|--sun.reflect.annotation.AnnotationSupport/null
+|--jdk.internal.org.objectweb.asm.FieldVisitor/null
+|  |--jdk.internal.org.objectweb.asm.FieldWriter/null
+|  |--jdk.internal.org.objectweb.asm.tree.FieldNode/null
+|--java.util.logging.Level$$Lambda$28/0x00000001000abc40/null
+|--javax.management.MBeanServerFactory/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$232/0x0000000100134840/null
+|--java.lang.AutoCloseable/null (intf)
+|--java.io.Flushable/null (intf)
+|--java.util.StringJoiner/null
+|--jdk.jfr.internal.jfc.JFC$KnownConfiguration/null
+|--com.sun.jmx.mbeanserver.MXBeanMapping/null
+|  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$NonNullMXBeanMapping/null
+|  |  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$IdentityMapping/null
+|  |  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$EnumMapping/null
+|  |  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$ArrayMapping/null
+|  |  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$CompositeMapping/null
+|  |  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$TabularMapping/null
+|  |  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$CollectionMapping/null
+|--java.util.Collections$3/null
+|--java.util.function.Predicate/null (intf)
+|--sun.rmi.transport.DGCClient$$Lambda$93/0x000000010015b840/null
+|--java.util.concurrent.ConcurrentSkipListMap$Index/null
+|--javax.management.ObjectName/null
+|--java.lang.Readable/null (intf)
+|--jdk.internal.module.Modules/null
+|--java.lang.annotation.Target/null (intf)
+|--sun.jvmstat.perfdata.monitor.protocol.local.MonitoredHostLocalService/0x00007fc0c81a5500
+|--sun.rmi.server.MarshalInputStream$$Lambda$71/0x000000010010d440/null
+|--java.lang.invoke.LambdaForm$Holder/null
+|--java.util.logging.LogManager$6/null
+|--sun.reflect.misc.ReflectUtil/null
+|--java.io.FileDescriptor$1/null
+|--jdk.internal.math.FloatingDecimal$BinaryToASCIIBuffer/null
+|--sun.nio.fs.UnixDirectoryStream$UnixDirectoryIterator/null
+|--java.lang.invoke.LambdaForm$MH/0x00000001000ab840/null
+|--jdk.jfr.internal.EventInstrumentation$$Lambda$184/0x0000000100120c40/null
+|--javax.management.QueryExp/null (intf)
+|--sun.nio.fs.UnixMountEntry/null
+|--jdk.internal.misc.Unsafe/null
+|--java.lang.management.ManagementFactory/null
+|--jdk.internal.misc.JavaIOFileDescriptorAccess/null (intf)
+|--java.util.logging.LogManager$LoggerContext$1/null
+|--sun.rmi.transport.DGCClient$$Lambda$92/0x000000010015b440/null
+|--com.sun.jmx.mbeanserver.Util/null
+|--jdk.internal.math.FloatingDecimal$ExceptionalBinaryToASCIIBuffer/null
+|--sun.nio.fs.UnixDirectoryStream/null
+|--sun.nio.fs.UnixFileStoreAttributes/null
+|--sun.management.jmxremote.ConnectorBootstrap$PermanentExporter/null
+|--java.io.ObjectInputStream$$Lambda$70/0x000000010010d040/null
+|--sun.reflect.annotation.AnnotationInvocationHandler/null
+|--java.io.FileDescriptor/null
+|--java.util.stream.FindOps$FindSink$OfRef$$Lambda$30/0x00000001000ab440/null
+|--java.lang.invoke.LambdaForm$MH/0x0000000100120840/null
+|--java.util.logging.LogManager$VisitedLoggers/null
+|--jdk.internal.math.FloatingDecimal$BinaryToASCIIConverter/null (intf)
+|--java.util.ResourceBundle$ResourceBundleProviderHelper/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$234/0x0000000100134040/null
+|--javax.management.MBeanInfo/null
+|--com.sun.jmx.remote.internal.rmi.RMIExporter/null (intf)
+|--javax.management.openmbean.TabularData/null (intf)
+|--sun.reflect.annotation.AnnotationParser$1/null
+|--sun.rmi.transport.DGCClient$$Lambda$91/0x000000010015b040/null
+|--sun.nio.fs.UnixSecureDirectoryStream/null
+|--sun.nio.fs.UnixFileAttributes/null
+|--jdk.internal.math.FloatingDecimal/null
+|--java.util.ResourceBundle$3/null
+|--java.lang.ClassLoader$ParallelLoaders/null
+|--sun.management.jmxremote.ConnectorBootstrap/null
+|--javax.management.openmbean.CompositeData/null (intf)
+|--java.util.logging.Level$KnownLevel$$Lambda$29/0x00000001000ab040/null
+|--sun.rmi.transport.Transport$$Lambda$74/0x0000000100120440/null
+|--java.nio.file.SecureDirectoryStream/null (intf)
+|--java.nio.file.attribute.PosixFileAttributes/null (intf)
+|--java.security.Provider$EngineDescription/null
+|--java.lang.VersionProps/null
+|--jdk.internal.reflect.Reflection/null
+|--java.util.ComparableTimSort/null
+|--java.lang.invoke.LambdaForm$Name/null
+|--java.util.concurrent.ConcurrentNavigableMap/null (intf)
+|--sun.management.jdp.JdpController/null
+|--java.io.ObjectStreamClass$$Lambda$90/0x000000010015ac40/null
+|--java.nio.file.DirectoryStream/null (intf)
+|--java.nio.file.attribute.BasicFileAttributes/null (intf)
+|--java.security.Provider$ServiceKey/null
+|--jdk.internal.util.StaticProperty/null
+|--java.util.ResourceBundle$CacheKeyReference/null (intf)
+|--java.util.Arrays$LegacyMergeSort/null
+|--java.util.NavigableMap/null (intf)
+|--sun.rmi.server.UnicastServerRef$HashToMethod_Maps$1/null
+|--jdk.internal.agent.Agent/null
+|--jdk.internal.org.objectweb.asm.Opcodes/null (intf)
+|--java.util.stream.FindOps$FindSink$OfRef$$Lambda$32/0x00000001000aac40/null
+|--java.io.ObjectInputFilter$Config$$Lambda$73/0x0000000100120040/null
+|--java.lang.Math/null
+|--java.util.logging.LogManager$2/null
+|--java.util.ResourceBundle$CacheKey/null
+|--java.nio.file.Files$AcceptAllFilter/null
+|--java.util.SortedMap/null (intf)
+|--sun.rmi.server.WeakClassHashMap$ValueCell/null
+|--java.net.HostPortrange/null
+|--java.util.ImmutableCollections$MapN$MapNIterator/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$171/0x000000010015a840/null
+|--java.lang.annotation.Documented/null (intf)
+|--javax.management.openmbean.OpenType/null
+|  |--javax.management.openmbean.ArrayType/null
+|  |--javax.management.openmbean.SimpleType/null
+|  |--javax.management.openmbean.TabularType/null
+|  |--javax.management.openmbean.CompositeType/null
+|--java.lang.AbstractStringBuilder/null
+|  |--java.lang.StringBuilder/null
+|  |--java.lang.StringBuffer/null
+|--java.util.Enumeration/null (intf)
+|--java.time.temporal.TemporalAccessor/null (intf)
+|--java.lang.invoke.VarHandle$AccessDescriptor/null
+|--java.nio.file.DirectoryStream$Filter/null (intf)
+|--javax.management.MBeanFeatureInfo/null
+|  |--javax.management.MBeanConstructorInfo/null
+|  |--javax.management.MBeanOperationInfo/null
+|  |  |--javax.management.openmbean.OpenMBeanOperationInfoSupport/null
+|  |--javax.management.MBeanAttributeInfo/null
+|  |  |--javax.management.openmbean.OpenMBeanAttributeInfoSupport/null
+|  |--javax.management.MBeanNotificationInfo/null
+|  |--javax.management.MBeanParameterInfo/null
+|  |  |--javax.management.openmbean.OpenMBeanParameterInfoSupport/null
+|--sun.rmi.transport.GC$Daemon$1/null
+|--java.net.URLPermission$Authority/null
+|--java.util.stream.FindOps$FindSink$OfRef$$Lambda$31/0x00000001000aa840/null
+|--java.lang.annotation.Inherited/null (intf)
+|--java.lang.Appendable/null (intf)
+|--jdk.jfr.internal.SecuritySupport$1/null
+|--javax.management.DescriptorRead/null (intf)
+|--java.util.ResourceBundle$Control/null
+|  |--java.util.ResourceBundle$SingleFormatControl/null
+|  |  |--java.util.ResourceBundle$NoFallbackControl/null
+|--sun.rmi.transport.GC$Daemon/null
+|--java.util.logging.LogRecord/null
+|--sun.util.logging.internal.LoggingProviderImpl$$Lambda$89/0x000000010015a440/null
+|--jdk.internal.loader.AbstractClassLoaderValue/null
+|  |--jdk.internal.loader.ClassLoaderValue/null
+|  |--jdk.internal.loader.AbstractClassLoaderValue$Sub/null
+|--java.lang.annotation.Retention/null (intf)
+|--java.lang.AssertionStatusDirectives/null
+|--jdk.jfr.internal.jfc.JFC/null
+|--java.util.regex.Pattern$$Lambda$21/0x00000001000aa440/null
+|--java.util.TreeMap$Entry/null
+|--sun.security.util.SecurityConstants/null
+|--jdk.internal.module.ServicesCatalog/null
+|--sun.reflect.annotation.ExceptionProxy/null
+|  |--sun.reflect.annotation.AnnotationTypeMismatchExceptionProxy/null
+|--java.util.AbstractMap$2$1/null
+|--java.util.ArrayDeque$DeqIterator/null
+|--java.lang.System$LoggerFinder/null
+|  |--jdk.internal.logger.DefaultLoggerFinder/null
+|  |  |--sun.util.logging.internal.LoggingProviderImpl/null
+|--java.util.NavigableSet/null (intf)
+|--jdk.internal.logger.LoggerFinderLoader$$Lambda$88/0x000000010015a040/null
+|--jdk.internal.loader.BootLoader/null
+|--java.util.concurrent.ConcurrentHashMap$MapEntry/null
+|--java.lang.ClassLoader$NativeLibrary/null
+|--sun.reflect.annotation.AnnotationType$1/null
+|--java.util.ResourceBundle$1/null
+|--com.sun.jmx.mbeanserver.MXBeanMappingFactory/null
+|  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory/null
+|--java.lang.invoke.Invokers/null
+|--jdk.internal.org.objectweb.asm.commons.Remapper/null
+|  |--jdk.internal.org.objectweb.asm.commons.SimpleRemapper/null
+|--java.security.AccessController$1/null
+|--jdk.internal.math.FormattedFloatingDecimal$2/null
+|--java.util.SortedSet/null (intf)
+|--java.util.regex.Pattern$$Lambda$20/0x00000001000aa040/null
+|--javax.management.MBeanServerDelegate/null
+|  |--com.sun.jmx.mbeanserver.MBeanServerDelegateImpl/null
+|--java.util.Optional/null
+|--jdk.internal.misc.JavaUtilResourceBundleAccess/null (intf)
+|--java.io.ExpiringCache$Entry/null
+|--sun.reflect.annotation.AnnotationType/null
+|--com.sun.jmx.mbeanserver.ConvertingMethod/null
+|--java.lang.invoke.MethodHandleImpl/null
+|--jdk.jfr.internal.instrument.JIMethodCallInliner$CatchBlock/null
+|--jdk.internal.misc.InnocuousThread$2/null
+|--java.net.InetAddress$InetAddressHolder/null
+|--jdk.internal.logger.LoggerFinderLoader$$Lambda$87/0x0000000100159c40/null
+|--javax.management.NotificationEmitter/null (intf)
+|--jdk.internal.module.ModuleBootstrap$Counters/null
+|--java.util.ResourceBundle/null
+|  |--java.util.ListResourceBundle/null
+|  |  |--sun.util.logging.resources.logging/null
+|  |  |--jdk.internal.agent.resources.agent/null
+|  |  |--sun.text.resources.cldr.FormatData_en/null
+|  |  |--sun.text.resources.cldr.FormatData/null
+|  |--java.util.ResourceBundle$2/null
+|  |--sun.util.resources.OpenListResourceBundle/null
+|  |  |--sun.util.resources.TimeZoneNamesBundle/null
+|  |  |  |--sun.util.resources.cldr.TimeZoneNames_en/null
+|  |  |  |--sun.util.resources.cldr.TimeZoneNames/null
+|  |--sun.util.resources.Bundles$1/null
+|--sun.invoke.util.ValueConversions/null
+|--sun.security.provider.PolicyFile$PolicyEntry/null
+|--java.util.TimSort/null
+|--jdk.internal.misc.InnocuousThread$3/null
+|--java.lang.invoke.MethodHandleNatives$CallSiteContext/null
+|--java.util.regex.Pattern$BitClass$$Lambda$19/0x00000001000a9c40/null
+|--javax.management.NotificationBroadcaster/null (intf)
+|--java.net.InetAddress$2/null
+|--java.lang.Deprecated/null (intf)
+|--jdk.internal.math.FDBigInteger/null
+|--jdk.internal.module.SystemModuleFinders$SystemModuleFinder/null
+|--java.util.logging.Level$RbAccess/null
+|--java.lang.invoke.DirectMethodHandle$Holder/null
+|--java.util.concurrent.ConcurrentHashMap$Traverser/null
+|  |--java.util.concurrent.ConcurrentHashMap$BaseIterator/null
+|  |  |--java.util.concurrent.ConcurrentHashMap$KeyIterator/null
+|  |  |--java.util.concurrent.ConcurrentHashMap$ValueIterator/null
+|  |  |--java.util.concurrent.ConcurrentHashMap$EntryIterator/null
+|--java.util.Vector$1/null
+|--com.sun.jmx.mbeanserver.MBeanAnalyzer$MethodOrder/null
+|--java.util.logging.LogManager$LoggingProviderAccess/null
+|--java.lang.System$LoggerFinder$$Lambda$86/0x0000000100159840/null
+|--javax.management.MBeanServerDelegateMBean/null (intf)
+|--jdk.internal.misc.JavaNetInetAddressAccess/null (intf)
+|--java.util.logging.LoggingMXBean/null (intf)
+|--java.lang.invoke.CallSite/null
+|  |--java.lang.invoke.VolatileCallSite/null
+|  |--java.lang.invoke.MutableCallSite/null
+|  |--java.lang.invoke.ConstantCallSite/null
+|--java.lang.module.ModuleFinder/null (intf)
+|--java.util.Iterator/null (intf)
+|--java.lang.ClassLoader$2/null
+|--java.io.ObjectInputFilter$Config$$Lambda$72/0x000000010010b440/null
+|--sun.security.util.PropertyExpander/null
+|--sun.util.logging.internal.LoggingProviderImpl$LogManagerAccess/null (intf)
+|--com.sun.jmx.mbeanserver.MBeanAnalyzer/null
+|--java.lang.invoke.LambdaForm$MH/0x00000001000a9840/null
+|--javax.management.MBeanRegistration/null (intf)
+|--java.net.InetAddress$1/null
+|--sun.management.ManagementFactoryHelper$PlatformLoggingImpl/null
+|--jdk.internal.module.SystemModuleFinders$3/null
+|--jdk.internal.math.FormattedFloatingDecimal/null
+|--java.lang.reflect.Array/null
+|--sun.nio.fs.UnixNativeDispatcher$1/null
+|--java.lang.invoke.LambdaForm$NamedFunction/null
+|--sun.security.provider.PolicyParser$PermissionEntry/null
+|--java.time.LocalTime/null
+|--jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode/null
+|--jdk.internal.logger.LazyLoggers$$Lambda$85/0x0000000100159440/null
+|--javax.management.DynamicMBean/null (intf)
+|--java.lang.management.PlatformLoggingMXBean/null (intf)
+|--jdk.internal.module.ModuleHashes$HashSupplier/null (intf)
+|--jdk.internal.ref.CleanerFactory$1$1/null
+|--java.lang.invoke.MethodType/null
+|--java.net.InetAddress/null
+|  |--java.net.Inet6Address/null
+|  |--java.net.Inet4Address/null
+|--java.lang.StackTraceElement$HashedModules/null
+|--sun.nio.fs.UnixNativeDispatcher/null
+|--java.lang.invoke.LambdaForm$MH/0x000000010010b040/null
+|--java.lang.Shutdown$Lock/null
+|--sun.management.CompilationImpl/null
+|--java.util.stream.DistinctOps/null
+|--java.util.KeyValueHolder/null
+|--java.net.AbstractPlainSocketImpl$1/null
+|--sun.nio.fs.Util/null
+|--jdk.internal.logger.LazyLoggers$$Lambda$84/0x0000000100159040/null
+|--java.lang.invoke.LambdaForm/null
+|--java.lang.Shutdown/null
+|--java.lang.management.CompilationMXBean/null (intf)
+|--jdk.jfr.internal.Utils/null
+|--jdk.jfr.internal.EventInstrumentation$$Lambda$186/0x000000010010ac40/null
+|--com.sun.jmx.mbeanserver.JmxMBeanServer/null
+|--sun.invoke.util.Wrapper$Format/null
+|--java.net.NetworkInterface/null
+|--java.time.temporal.ValueRange/null
+|--java.lang.invoke.MethodHandleNatives/null
+|--java.lang.ApplicationShutdownHooks$1/null
+|--java.util.Collections$SynchronizedCollection/null
+|  |--java.util.Collections$SynchronizedSet/null
+|--sun.management.VMManagementImpl$1/null
+|--sun.security.jca.ProviderConfig/null
+|--jdk.internal.module.SystemModuleFinders$2/null
+|--java.net.StandardSocketOptions$StdSocketOption/null
+|--java.time.Period/null
+|--java.lang.invoke.ResolvedMethodName/null
+|--java.util.stream.ReduceOps$Box/null
+|  |--java.util.stream.ReduceOps$3ReducingSink/null
+|--java.lang.ApplicationShutdownHooks/null
+|--sun.nio.fs.UnixPath/null
+|--jdk.jfr.internal.instrument.JIInstrumentationMethod/null (intf)
+|--sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$65/0x000000010010a840/null
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$138/0x000000010017fc40/null
+|--java.util.function.Supplier/null (intf)
+|--java.net.SocketOption/null (intf)
+|--sun.invoke.util.VerifyAccess/null
+|--java.time.chrono.ChronoPeriod/null (intf)
+|--java.time.temporal.TemporalField/null (intf)
+|--java.util.stream.ReduceOps$AccumulatingSink/null (intf)
+|--java.lang.invoke.MemberName/null
+|--sun.rmi.transport.Transport$$Lambda$42/0x00000001000cfc40/null
+|--java.lang.management.MemoryUsage/null
+|--java.net.StandardSocketOptions/null
+|--com.sun.jmx.mbeanserver.MBeanIntrospector/null
+|  |--com.sun.jmx.mbeanserver.MXBeanIntrospector/null
+|--java.time.format.DateTimeFormatterBuilder$TextPrinterParser/null
+|--java.lang.invoke.VarHandle/null
+|  |--java.lang.invoke.VarHandleObjects$FieldInstanceReadOnly/null
+|  |  |--java.lang.invoke.VarHandleObjects$FieldInstanceReadWrite/null
+|  |--java.lang.invoke.VarHandleLongs$FieldInstanceReadOnly/null
+|  |  |--java.lang.invoke.VarHandleLongs$FieldInstanceReadWrite/null
+|  |--java.lang.invoke.VarHandleInts$FieldInstanceReadOnly/null
+|  |  |--java.lang.invoke.VarHandleInts$FieldInstanceReadWrite/null
+|--java.lang.invoke.LambdaForm$MH/0x000000010010a440/null
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$137/0x000000010017f840/null
+|--java.lang.module.ModuleReference/null
+|  |--jdk.internal.module.ModuleReferenceImpl/null
+|--java.lang.Class$AnnotationData/null
+|--java.time.LocalDate/null
+|--sun.security.provider.PolicyParser$GrantEntry/null
+|--jdk.jfr.internal.instrument.JIClassInstrumentation/null
+|--java.util.stream.ReduceOps$ReduceOp/null
+|  |--java.util.stream.ReduceOps$3/null
+|--sun.rmi.transport.tcp.TCPEndpoint$$Lambda$41/0x00000001000cf840/null
+|--javax.management.MXBean/null (intf)
+|--sun.rmi.server.UnicastServerRef$$Lambda$83/0x0000000100158440/null
+|--java.time.chrono.ChronoLocalDate/null (intf)
+|--java.lang.invoke.MemberName$Factory/null
+|--sun.nio.ch.IOStatus/null
+|--java.nio.file.FileSystem/null
+|  |--sun.nio.fs.UnixFileSystem/null
+|  |  |--sun.nio.fs.LinuxFileSystem/null
+|--java.time.format.DateTimeTextProvider$1/null
+|--java.util.stream.ReduceOps/null
+|--jdk.jfr.internal.MetadataHandler$$Lambda$194/0x0000000100094c40/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010010a040/null
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$140/0x000000010017f440/null
+|--java.util.concurrent.locks.AbstractQueuedSynchronizer$Node/null
+|--jdk.internal.module.ModuleResolution/null
+|--java.lang.invoke.MethodHandles/null
+|--java.nio.DirectByteBuffer$Deallocator/null
+|--sun.management.Sensor/null
+|  |--sun.management.MemoryPoolImpl$CollectionSensor/null
+|  |--sun.management.MemoryPoolImpl$PoolSensor/null
+|--java.lang.invoke.MethodHandle/null
+|  |--java.lang.invoke.DirectMethodHandle/null
+|  |  |--java.lang.invoke.DirectMethodHandle$Special/null
+|  |  |--java.lang.invoke.DirectMethodHandle$Constructor/null
+|  |  |--java.lang.invoke.DirectMethodHandle$Interface/null
+|  |  |--java.lang.invoke.DirectMethodHandle$Accessor/null
+|  |--java.lang.invoke.DelegatingMethodHandle/null
+|  |  |--java.lang.invoke.MethodHandleImpl$IntrinsicMethodHandle/null
+|  |  |--java.lang.invoke.MethodHandleImpl$AsVarargsCollector/null
+|  |--java.lang.invoke.BoundMethodHandle/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLIIL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLII/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLI/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLIILL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLIIL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLII/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLI/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLIILLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLIILLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLIILL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LIILLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LIILL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LIIL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LII/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LI/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLIILLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLIILL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLIIL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLII/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLI/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_L/null
+|  |  |--java.lang.invoke.SimpleMethodHandle/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLIIL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLII/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLI/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLIILL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLIIL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLII/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLI/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLLIIL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLLII/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLLI/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLLL/null
+|  |  |--java.lang.invoke.BoundMethodHandle$Species_LLLLLLLLL/null
+|--java.util.function.BinaryOperator/null (intf)
+|--java.time.format.DateTimeTextProvider/null
+|  |--java.time.format.DateTimeFormatterBuilder$1/null
+|--sun.rmi.transport.tcp.TCPTransport$$Lambda$44/0x00000001000cf440/null
+|--sun.util.cldr.CLDRLocaleProviderAdapter$$Lambda$161/0x00000001001b9c40/null
+|--java.lang.ref.Cleaner$Cleanable/null (intf)
+|--sun.util.locale.provider.JRELocaleProviderAdapter$$Lambda$82/0x0000000100158040/null
+|--java.time.ZonedDateTime/null
+|--jdk.internal.reflect.CallerSensitive/null (intf)
+|--java.util.function.BiConsumer/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100094840/null
+|--java.util.Collections$UnmodifiableMap/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100109c40/null
+|--com.sun.management.internal.PlatformMBeanProviderImpl$$Lambda$139/0x000000010017f040/null
+|--java.time.format.DateTimeTextProvider$LocaleStore/null
+|--com.sun.jmx.mbeanserver.MBeanSupport/null
+|  |--com.sun.jmx.mbeanserver.MXBeanSupport/null
+|--jdk.internal.ref.CleanerImpl/null
+|--java.util.List/null (intf)
+|--java.lang.invoke.MethodTypeForm/null
+|--java.time.chrono.ChronoZonedDateTime/null (intf)
+|--sun.management.MemoryPoolImpl/null
+|--java.lang.annotation.Annotation/null (intf)
+|--sun.rmi.transport.tcp.TCPTransport$$Lambda$43/0x00000001000cf040/null
+|--java.util.Comparator$$Lambda$160/0x00000001001b9840/null
+|--com.sun.jmx.mbeanserver.DescriptorCache/null
+|--java.util.stream.Collectors$CollectorImpl/null
+|--java.util.RandomAccess/null (intf)
+|--java.lang.ref.Cleaner$1/null
+|--sun.nio.ch.Util$BufferCache/null
+|--java.nio.file.OpenOption/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$193/0x0000000100094440/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100109840/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010017ec40/null
+|--javax.management.JMX/null
+|--java.util.stream.Collector/null (intf)
+|--java.lang.ref.Cleaner/null
+|--java.lang.management.MemoryPoolMXBean/null (intf)
+|--sun.rmi.transport.tcp.TCPTransport$$Lambda$46/0x00000001000cec40/null
+|--java.lang.ref.FinalizerHistogram$$Lambda$159/0x00000001001b9440/null
+|--java.time.format.DateTimeFormatterBuilder$InstantPrinterParser/null
+|--java.net.SocketImpl/null
+|  |--java.net.AbstractPlainSocketImpl/null
+|  |  |--java.net.PlainSocketImpl/null
+|  |  |  |--java.net.SocksSocketImpl/null
+|--jdk.internal.ref.CleanerFactory$1/null
+|--sun.rmi.transport.tcp.TCPChannel$$Lambda$60/0x00000001000f5c40/null
+|--java.lang.invoke.MethodType$ConcurrentWeakInternSet/null
+|--java.nio.file.CopyOption/null (intf)
+|--javax.management.StandardMBean/null
+|  |--javax.management.StandardEmitterMBean/null
+|  |  |--jdk.management.jfr.FlightRecorderMXBeanImpl/null
+|--sun.nio.ch.Util/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100094040/null
+|--jdk.jfr.internal.instrument.JDKEvents$$Lambda$187/0x0000000100109440/null
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$141/0x000000010017e840/null
+|--java.util.EventObject/null
+|  |--sun.jvmstat.monitor.event.HostEvent/0x00007fc0c81a5500
+|  |  |--sun.jvmstat.monitor.event.VmStatusChangeEvent/0x00007fc0c81a5500
+|  |--javax.management.Notification/null
+|  |  |--javax.management.AttributeChangeNotification/null
+|  |  |--javax.management.MBeanServerNotification/null
+|--java.time.format.DateTimeFormatterBuilder$StringLiteralPrinterParser/null
+|--java.net.SocketOptions/null (intf)
+|--java.lang.invoke.VarForm/null
+|--java.util.HashMap$Node/null
+|  |--java.util.LinkedHashMap$Entry/null
+|  |  |--java.util.HashMap$TreeNode/null
+|--java.util.Collections/null
+|--java.util.concurrent.ThreadFactory/null (intf)
+|--java.lang.invoke.MethodHandles$Lookup/null
+|--sun.rmi.transport.tcp.TCPTransport$$Lambda$45/0x00000001000ce840/null
+|--sun.nio.ch.NativeThread/null
+|--java.lang.ref.FinalizerHistogram$$Lambda$158/0x00000001001b9040/null
+|--java.util.AbstractMap$SimpleImmutableEntry/null
+|--java.rmi.dgc.Lease/null
+|--java.net.SocksConsts/null (intf)
+|--java.nio.channels.NetworkChannel/null (intf)
+|--java.lang.invoke.VarHandleGuards/null
+|--java.time.format.DateTimeFormatterBuilder$ZoneIdPrinterParser/null
+|--jdk.internal.module.ModuleHashes$Builder/null
+|--jdk.internal.ref.CleanerFactory/null
+|--java.lang.invoke.LambdaForm$MH/0x00000001000f5840/null
+|--java.lang.invoke.LambdaMetafactory/null
+|--java.util.regex.IntHashSet/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$192/0x0000000100093c40/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100109040/null
+|--java.util.stream.Collectors$$Lambda$143/0x000000010017e440/null
+|--sun.nio.ch.SelChImpl/null (intf)
+|--java.net.ServerSocket$2/null
+|--jdk.internal.util.Preconditions$1/null
+|--java.lang.invoke.InvokerBytecodeGenerator$CpPatch/null
+|--java.lang.reflect.Proxy$ProxyBuilder$$Lambda$48/0x00000001000ce440/null
+|--java.util.regex.Matcher/null
+|--jdk.internal.misc.JavaNetSocketAccess/null (intf)
+|--jdk.internal.module.ModuleHashes/null
+|--sun.rmi.transport.DGCClient$EndpointEntry$RefEntry/null
+|--java.io.StreamTokenizer/null
+|--sun.rmi.transport.tcp.TCPChannel$$Lambda$62/0x00000001000f5440/null
+|--java.lang.invoke.VarHandle$1/null
+|--java.lang.invoke.LambdaFormBuffer/null
+|--java.time.format.DateTimeFormatterBuilder$OffsetIdPrinterParser/null
+|--jdk.internal.reflect.FieldAccessor/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100093840/null
+|--java.util.regex.MatchResult/null (intf)
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$142/0x000000010017e040/null
+|--java.util.concurrent.ConcurrentHashMap$CollectionView/null
+|  |--java.util.concurrent.ConcurrentHashMap$ValuesView/null
+|  |--java.util.concurrent.ConcurrentHashMap$EntrySetView/null
+|  |--java.util.concurrent.ConcurrentHashMap$KeySetView/null
+|--sun.management.Util/null
+|--java.nio.file.spi.FileSystemProvider/null
+|  |--sun.nio.fs.AbstractFileSystemProvider/null
+|  |  |--sun.nio.fs.UnixFileSystemProvider/null
+|  |  |  |--sun.nio.fs.LinuxFileSystemProvider/null
+|--jdk.jfr.internal.instrument.JITypeMapping/null (intf)
+|--sun.management.RuntimeImpl/null
+|--java.lang.invoke.LambdaForm$MH/0x000000010012fc40/null
+|--java.net.ServerSocket/null
+|  |--sun.management.jmxremote.LocalRMIServerSocketFactory$1/null
+|--java.lang.reflect.Proxy$$Lambda$47/0x00000001000ce040/null
+|--sun.nio.fs.DefaultFileSystemProvider/null
+|--jdk.internal.reflect.ConstantPool/null
+|--sun.security.provider.PolicyParser/null
+|--jdk.internal.module.ModuleTarget/null
+|--java.time.LocalDateTime/null
+|--java.util.stream.Collectors/null
+|--java.lang.management.RuntimeMXBean/null (intf)
+|--java.io.RandomAccessFile$2/null
+|--sun.rmi.transport.tcp.TCPChannel$$Lambda$61/0x00000001000f5040/null
+|--jdk.internal.org.objectweb.asm.tree.InnerClassNode/null
+|--java.lang.invoke.LambdaForm$MH/0x0000000100093440/null
+|--sun.rmi.transport.ObjectTable/null
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$145/0x000000010017dc40/null
+|--java.util.Properties$EntrySet/null
+|--java.lang.invoke.LambdaFormEditor/null
+|--java.nio.file.FileSystems$DefaultFileSystemHolder$1/null
+|--java.time.chrono.ChronoLocalDateTime/null (intf)
+|--jdk.internal.misc.JavaIORandomAccessFileAccess/null (intf)
+|--java.lang.invoke.LambdaForm$BMH/0x000000010012f840/null
+|--java.lang.invoke.VarHandles/null
+|--java.time.format.DecimalStyle/null
+|--sun.reflect.annotation.AnnotationParser/null
+|--java.lang.Module$$Lambda$50/0x00000001000cdc40/null
+|--java.io.ObjectInputFilter$Config$Global$$Lambda$157/0x00000001001b8440/null
+|--java.lang.StringLatin1/null
+|--java.lang.invoke.DelegatingMethodHandle$Holder/null
+|--java.nio.file.FileSystems$DefaultFileSystemHolder/null
+|--sun.rmi.registry.RegistryImpl$$Lambda$64/0x00000001000f4c40/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100093040/null
+|--java.util.stream.Collectors$$Lambda$144/0x000000010017d840/null
+|--java.lang.Class$3/null
+|--jdk.internal.misc.VM/null
+|--java.util.Collections$2/null
+|--sun.rmi.transport.Target/null
+|--java.nio.file.FileSystems/null
+|--com.sun.management.GarbageCollectorMXBean/null (intf)
+|--java.time.zone.ZoneOffsetTransitionRule/null
+|--java.io.RandomAccessFile/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010012f440/null
+|--java.lang.module.ModuleDescriptor$Builder$$Lambda$49/0x00000001000cd840/null
+|--java.time.format.DateTimeFormatterBuilder$CompositePrinterParser/null
+|--java.io.ObjectInputFilter$Config$Global$$Lambda$156/0x00000001001b8040/null
+|--java.util.EnumMap$1/null
+|--jdk.internal.reflect.ConstructorAccessor/null (intf)
+|--jdk.management.jfr.internal.FlightRecorderMXBeanProvider$SingleMBeanComponent/null
+|--java.nio.file.Paths/null
+|--java.lang.management.GarbageCollectorMXBean/null (intf)
+|--java.time.zone.ZoneRules/null
+|--sun.rmi.registry.RegistryImpl$$Lambda$63/0x00000001000f4840/null
+|--sun.rmi.transport.Transport$1/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010017d440/null
+|--java.lang.reflect.Proxy$ProxyBuilder$1/null
+|--jdk.management.jfr.FlightRecorderMXBean/null (intf)
+|--jdk.internal.jimage.ImageReaderFactory/null
+|--java.util.regex.Pattern$BmpCharPredicate/null (intf)
+|--jdk.internal.misc.SharedSecrets/null
+|--java.lang.invoke.LambdaForm$MH/0x000000010012f040/null
+|--java.time.zone.Ser/null
+|--java.nio.channels.Channels/null
+|--jdk.jfr.internal.instrument.JIInstrumentationTarget/null (intf)
+|--java.lang.reflect.Proxy$$Lambda$52/0x00000001000cd440/null
+|--jdk.internal.reflect.MethodAccessor/null (intf)
+|--java.lang.management.PlatformManagedObject/null (intf)
+|--jdk.internal.module.SystemModuleFinders$SystemImage/null
+|--java.util.regex.Pattern$CharPredicate/null (intf)
+|--java.lang.ref.Reference$1/null
+|--sun.invoke.util.Wrapper$1/null
+|--sun.nio.ch.FileChannelImpl$Closer/null
+|--java.util.logging.LogManager$LogNode/null
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$146/0x000000010017d040/null
+|--java.util.stream.StreamOpFlag$MaskBuilder/null
+|--jdk.internal.reflect.MagicAccessorImpl/null
+|  |--jdk.internal.reflect.FieldAccessorImpl/null
+|  |  |--jdk.internal.reflect.UnsafeFieldAccessorImpl/null
+|  |  |  |--jdk.internal.reflect.UnsafeStaticFieldAccessorImpl/null
+|  |  |  |  |--jdk.internal.reflect.UnsafeQualifiedStaticFieldAccessorImpl/null
+|  |  |  |  |  |--jdk.internal.reflect.UnsafeQualifiedStaticObjectFieldAccessorImpl/null
+|  |  |  |  |  |--jdk.internal.reflect.UnsafeQualifiedStaticLongFieldAccessorImpl/null
+|  |  |  |  |--jdk.internal.reflect.UnsafeStaticObjectFieldAccessorImpl/null
+|  |--jdk.internal.reflect.ConstructorAccessorImpl/null
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor10/0x00007fc044123060 (invokes: com/sun/proxy/$Proxy9::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.SerializationConstructorAccessorImpl/null
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor9/0x00007fc044123320 (invokes: com/sun/proxy/$Proxy18::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor11/0x00007fc044126680 (invokes: com/sun/proxy/$Proxy11::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor12/0x00007fc04411e290 (invokes: jdk/jfr/internal/instrument/$Proxy28::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor13/0x00007fc044144230 (invokes: java/nio/DirectByteBufferR::<init> (IJLjava/io/FileDescriptor;Ljava/lang/Runnable;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor3/0x00007fc0440f0830 (invokes: com/sun/proxy/$Proxy5::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor2/0x00007fc044022b10 (invokes: com/sun/proxy/$Proxy2::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor5/0x00007fc04411eb20 (invokes: com/sun/proxy/$Proxy8::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor4/0x00007fc04411ed20 (invokes: com/sun/proxy/$Proxy4::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor6/0x00007fc044121010 (invokes: com/sun/proxy/$Proxy15::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.DelegatingConstructorAccessorImpl/null
+|  |  |--jdk.internal.reflect.NativeConstructorAccessorImpl/null
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor8/0x00007fc044120d60 (invokes: com/sun/proxy/$Proxy14::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.GeneratedConstructorAccessor7/0x00007fc044120a50 (invokes: com/sun/proxy/$Proxy16::<init> (Ljava/lang/reflect/InvocationHandler;)V)
+|  |  |--jdk.internal.reflect.BootstrapConstructorAccessorImpl/null
+|  |--jdk.internal.reflect.MethodAccessorImpl/null
+|  |  |--jdk.internal.reflect.DelegatingMethodAccessorImpl/null
+|  |  |--jdk.internal.reflect.NativeMethodAccessorImpl/null
+|--jdk.internal.misc.JavaLangRefAccess/null (intf)
+|--java.lang.management.DefaultPlatformMBeanProvider$11/null
+|--java.lang.reflect.ProxyGenerator$ExceptionTableEntry/null
+|--jdk.internal.module.ModulePatcher$PatchedModuleReader/null
+|--jdk.internal.reflect.AccessorGenerator/null
+|  |--jdk.internal.reflect.MethodAccessorGenerator/null
+|--java.util.stream.SliceOps/null
+|--java.time.zone.ZoneRulesProvider$1/null
+|--java.lang.WeakPairMap$$Lambda$51/0x00000001000cd040/null
+|--java.time.chrono.AbstractChronology/null
+|  |--java.time.chrono.IsoChronology/null
+|--java.lang.reflect.ProxyGenerator$FieldInfo/null
+|--jdk.internal.reflect.ClassFileConstants/null (intf)
+|--java.lang.management.MemoryManagerMXBean/null (intf)
+|--sun.net.ResourceManager/null
+|--java.lang.management.DefaultPlatformMBeanProvider$10/null
+|--java.time.zone.ZoneRulesProvider/null
+|  |--java.time.zone.TzdbZoneRulesProvider/null
+|--java.lang.ClassLoader$$Lambda$191/0x0000000100092440/null
+|--java.lang.management.ManagementFactory$$Lambda$148/0x000000010017cc40/null
+|--jdk.jfr.events.CertificateId/null (intf)
+|--sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread/null
+|--jdk.internal.module.SystemModuleFinders$SystemModuleReader/null
+|--java.lang.Enum/null
+|  |--java.net.Proxy$Type/null
+|  |--jdk.jfr.RecordingState/null
+|  |--com.sun.management.VMOption$Origin/null
+|  |--jdk.internal.logger.BootstrapLogger$LoggingBackend/null
+|  |--sun.util.locale.provider.LocaleProviderAdapter$Type/null
+|  |--sun.security.provider.NativePRNG$Variant/null
+|  |--java.util.Locale$Category/null
+|  |--java.lang.invoke.MethodHandleImpl$Intrinsic/null
+|  |--java.util.stream.StreamShape/null
+|  |--java.lang.annotation.RetentionPolicy/null
+|  |--java.lang.invoke.LambdaForm$BasicType/null
+|  |--java.lang.invoke.LambdaForm$Kind/null
+|  |--java.io.File$PathStatus/null
+|  |--jdk.internal.math.FormattedFloatingDecimal$Form/null
+|  |--sun.invoke.util.Wrapper/null
+|  |--java.time.temporal.ChronoField/null
+|  |--java.lang.management.MemoryType/null
+|  |--java.nio.file.StandardOpenOption/null
+|  |--java.lang.invoke.VarHandle$AccessMode/null
+|  |--java.time.format.TextStyle/null
+|  |--java.nio.file.LinkOption/null
+|  |--java.lang.invoke.VarHandle$AccessType/null
+|  |--java.util.stream.Collector$Characteristics/null
+|  |--java.time.format.DateTimeFormatterBuilder$SettingsParser/null
+|  |--java.lang.module.ModuleDescriptor$Requires$Modifier/null
+|  |--java.lang.module.ModuleDescriptor$Modifier/null
+|  |--java.util.stream.StreamOpFlag$Type/null
+|  |--java.util.stream.StreamOpFlag/null
+|  |--java.time.format.ResolverStyle/null
+|  |--java.time.temporal.ChronoUnit/null
+|  |--java.util.Comparators$NaturalOrderComparator/null
+|  |--java.time.format.SignStyle/null
+|  |--java.time.temporal.JulianFields$Field/null
+|  |--jdk.jfr.internal.EventWriterMethod/null
+|  |--java.time.temporal.IsoFields$Unit/null
+|  |--java.lang.annotation.ElementType/null
+|  |--jdk.internal.module.IllegalAccessLogger$Mode/null
+|  |--java.time.temporal.IsoFields$Field/null
+|  |  |--java.time.temporal.IsoFields$Field$4/null
+|  |  |--java.time.temporal.IsoFields$Field$3/null
+|  |  |--java.time.temporal.IsoFields$Field$2/null
+|  |  |--java.time.temporal.IsoFields$Field$1/null
+|  |--java.lang.invoke.StringConcatFactory$Mode/null
+|  |--jdk.jfr.internal.LogLevel/null
+|  |--java.lang.invoke.StringConcatFactory$Strategy/null
+|  |--jdk.jfr.internal.LogTag/null
+|  |--java.io.ObjectInputFilter$Status/null
+|  |--java.util.concurrent.TimeUnit/null
+|  |--java.util.regex.Pattern$Qtype/null
+|  |--java.lang.Thread$State/null
+|  |--sun.util.logging.PlatformLogger$Level/null
+|  |--java.lang.System$Logger$Level/null
+|  |--java.nio.file.AccessMode/null
+|--java.time.chrono.Chronology/null (intf)
+|--java.util.logging.LogManager$LoggerContext/null
+|  |--java.util.logging.LogManager$SystemLoggerContext/null
+|--java.lang.invoke.DirectMethodHandle$1/null
+|--sun.reflect.annotation.AnnotationParser$$Lambda$189/0x00000001000ccc40/null
+|--java.lang.module.ModuleReader/null (intf)
+|--sun.rmi.transport.DGCClient$EndpointEntry/null
+|--java.lang.management.DefaultPlatformMBeanProvider$9/null
+|--java.util.logging.LogManager$1/null
+|--sun.invoke.empty.Empty/null
+|--java.lang.ref.ReferenceQueue$Lock/null
+|--java.lang.ref.Finalizer$1/null
+|--sun.nio.ch.NativeDispatcher/null
+|  |--sun.nio.ch.SocketDispatcher/null
+|  |--sun.nio.ch.FileDispatcher/null
+|  |  |--sun.nio.ch.FileDispatcherImpl/null
+|--java.lang.invoke.LambdaForm$MH/0x0000000100092040/null
+|--java.lang.management.ManagementFactory$$Lambda$147/0x000000010017c840/null
+|--java.time.Duration/null
+|--sun.management.ManagementFactoryHelper$LoggingMXBeanAccess$1/null
+|--jdk.internal.loader.BuiltinClassLoader$5/null
+|--java.lang.management.MemoryMXBean/null (intf)
+|--sun.invoke.util.VerifyType/null
+|--java.lang.ref.Finalizer$2/null
+|--sun.nio.ch.NativeThreadSet/null
+|--sun.rmi.transport.ObjectTable$$Lambda$53/0x00000001000cc840/null
+|--java.util.logging.LogManager/null
+|--sun.util.calendar.ZoneInfoFile$ZoneOffsetTransitionRule/null
+|--java.time.temporal.TemporalAmount/null (intf)
+|--java.rmi.dgc.VMID/null
+|--java.io.DataOutput/null (intf)
+|--java.lang.StringCoding$Result/null
+|--java.time.format.DateTimeFormatterBuilder$CharLiteralPrinterParser/null
+|--java.util.IdentityHashMap$IdentityHashMapIterator/null
+|  |--java.util.IdentityHashMap$KeyIterator/null
+|--sun.management.ManagementFactoryHelper$LoggingMXBeanAccess/null
+|--java.lang.ref.ReferenceQueue/null
+|  |--java.lang.ref.ReferenceQueue$Null/null
+|--java.lang.management.ManagementFactory$$Lambda$150/0x000000010017c440/null
+|--sun.nio.ch.IOUtil$1/null
+|--java.util.Collections$ReverseComparator2/null
+|--java.util.logging.Logger$ConfigurationData/null
+|--java.lang.module.ModuleDescriptor$Version/null
+|--jdk.internal.misc.JavaObjectInputFilterAccess/null (intf)
+|--sun.rmi.transport.DGCClient/null
+|--java.time.format.DateTimeFormatterBuilder$NumberPrinterParser/null
+|  |--java.time.format.DateTimeFormatterBuilder$FractionPrinterParser/null
+|--sun.rmi.transport.tcp.TCPChannel$1/null
+|--sun.nio.ch.IOUtil/null
+|--java.util.logging.Logger$LoggerBundle/null
+|--java.lang.management.DefaultPlatformMBeanProvider$8/null
+|--sun.util.calendar.ZoneInfoFile$1/null
+|--sun.management.BaseOperatingSystemImpl/null
+|  |--com.sun.management.internal.OperatingSystemImpl/null
+|--java.time.format.DateTimeFormatterBuilder$DateTimePrinterParser/null (intf)
+|--java.lang.reflect.ProxyGenerator$ConstantPool$Entry/null
+|  |--java.lang.reflect.ProxyGenerator$ConstantPool$IndirectEntry/null
+|  |--java.lang.reflect.ProxyGenerator$ConstantPool$ValueEntry/null
+|--sun.rmi.transport.DGCClient$EndpointEntry$1/null
+|--java.lang.management.ManagementFactory$$Lambda$149/0x000000010017c040/null
+|--sun.util.calendar.ZoneInfoFile/null
+|--java.io.ObjectInputStream$FieldValues/null
+|--java.lang.reflect.Parameter/null
+|--java.lang.management.DefaultPlatformMBeanProvider$7/null
+|--java.time.temporal.TemporalUnit/null (intf)
+|--com.sun.management.UnixOperatingSystemMXBean/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x000000010012dc40/null
+|--jdk.internal.reflect.UnsafeFieldAccessorFactory/null
+|--java.util.logging.Handler/null
+|  |--java.util.logging.StreamHandler/null
+|  |  |--java.util.logging.ConsoleHandler/null
+|  |  |--sun.rmi.runtime.Log$InternalStreamHandler/null
+|--com.sun.management.OperatingSystemMXBean/null (intf)
+|--java.util.concurrent.TimeUnit$1/null
+|--java.lang.management.DefaultPlatformMBeanProvider$6/null
+|--jdk.internal.reflect.ReflectionFactory/null
+|--java.lang.ThreadLocal$ThreadLocalMap/null
+|--java.lang.management.DefaultPlatformMBeanProvider$5$$Lambda$152/0x000000010017bc40/null
+|--java.util.regex.Pattern$Node/null
+|  |--java.util.regex.Pattern$Start/null
+|  |--java.util.regex.Pattern$First/null
+|  |--java.util.regex.Pattern$SliceNode/null
+|  |  |--java.util.regex.Pattern$Slice/null
+|  |  |  |--java.util.regex.Pattern$SliceS/null
+|  |--java.util.regex.Pattern$Dollar/null
+|  |--java.util.regex.Pattern$CharPropertyGreedy/null
+|  |  |--java.util.regex.Pattern$BmpCharPropertyGreedy/null
+|  |--java.util.regex.Pattern$CharProperty/null
+|  |  |--java.util.regex.Pattern$BmpCharProperty/null
+|  |  |  |--java.util.regex.Pattern$BitClass/null
+|  |--java.util.regex.Pattern$Begin/null
+|  |--java.util.regex.Pattern$GroupHead/null
+|  |--java.util.regex.Pattern$LastNode/null
+|  |--java.util.regex.Pattern$1/null
+|  |--java.util.regex.Pattern$Branch/null
+|  |--java.util.regex.Pattern$BranchConn/null
+|  |--java.util.regex.Pattern$Ques/null
+|  |--java.util.regex.Pattern$GroupTail/null
+|  |--java.util.regex.Pattern$BnM/null
+|--jdk.jfr.internal.StringPool$SimpleStringIdPool/null
+|--java.lang.reflect.ProxyGenerator$MethodInfo/null
+|--java.io.ObjectStreamClass$2/null
+|--java.lang.management.OperatingSystemMXBean/null (intf)
+|--java.io.ObjectInputFilter$Config/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$176/0x000000010012d840/null
+|--sun.jvmstat.perfdata.monitor.protocol.file.MonitoredHostFileService/0x00007fc0c81a5500
+|--java.util.Collections$ReverseComparator/null
+|--java.util.TimeZone/null
+|  |--sun.util.calendar.ZoneInfo/null
+|--java.lang.reflect.Member/null (intf)
+|--java.lang.management.DefaultPlatformMBeanProvider$5/null
+|--java.util.stream.PipelineHelper/null
+|  |--java.util.stream.AbstractPipeline/null
+|  |  |--java.util.stream.ReferencePipeline/null
+|  |  |  |--java.util.stream.ReferencePipeline$StatelessOp/null
+|  |  |  |  |--java.util.stream.ReferencePipeline$7/null
+|  |  |  |  |--java.util.stream.ReferencePipeline$2/null
+|  |  |  |  |--java.util.stream.ReferencePipeline$3/null
+|  |  |  |--java.util.stream.ReferencePipeline$StatefulOp/null
+|  |  |  |  |--java.util.stream.DistinctOps$1/null
+|  |  |  |  |--java.util.stream.SliceOps$1/null
+|  |  |  |--java.util.stream.ReferencePipeline$Head/null
+|--java.util.regex.Pattern/null
+|--java.time.format.DateTimeFormatterBuilder$2/null
+|--java.lang.annotation.Repeatable/null (intf)
+|--java.lang.reflect.ProxyGenerator$PrimitiveTypeInfo/null
+|--java.io.ObjectStreamClass$EntryFuture/null
+|--com.sun.jmx.mbeanserver.PerInterface$MethodAndSig/null
+|--java.util.logging.Logger/null
+|  |--java.util.logging.LogManager$RootLogger/null
+|--java.io.ObjectInputStream$ValidationList/null
+|--java.util.concurrent.atomic.Striped64$1/null
+|--java.util.function.ToIntFunction/null (intf)
+|--java.util.concurrent.locks.LockSupport/null
+|--java.lang.management.DefaultPlatformMBeanProvider$5$$Lambda$151/0x000000010017b840/null
+|--java.util.stream.Stream/null (intf)
+|--java.lang.management.DefaultPlatformMBeanProvider$4/null
+|--java.lang.reflect.ProxyGenerator$ProxyMethod/null
+|--java.nio.channels.spi.AbstractInterruptibleChannel/null
+|  |--java.nio.channels.SelectableChannel/null
+|  |  |--java.nio.channels.spi.AbstractSelectableChannel/null
+|  |  |  |--java.nio.channels.SocketChannel/null
+|  |  |  |  |--sun.nio.ch.SocketChannelImpl/null
+|  |--java.nio.channels.FileChannel/null
+|  |  |--sun.nio.ch.FileChannelImpl/null
+|--java.io.ObjectStreamClass$Caches/null
+|--java.lang.reflect.AccessibleObject/null
+|  |--java.lang.reflect.Executable/null
+|  |  |--java.lang.reflect.Constructor/null
+|  |  |--java.lang.reflect.Method/null
+|  |--java.lang.reflect.Field/null
+|--sun.rmi.runtime.Log$LoggerLogFactory/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010012d440/null
+|--jdk.internal.logger.LoggerFinderLoader/null
+|--java.lang.module.ModuleDescriptor$Provides/null
+|--java.util.stream.BaseStream/null (intf)
+|--java.nio.channels.InterruptibleChannel/null (intf)
+|--java.time.ZoneId/null
+|  |--java.time.ZoneRegion/null
+|  |--java.time.ZoneOffset/null
+|--java.lang.management.DefaultPlatformMBeanProvider$3/null
+|--java.lang.reflect.ProxyGenerator$ConstantPool/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100167c40/null
+|--java.io.ObjectInputStream$HandleTable$HandleList/null
+|--java.lang.Module/null
+|--jdk.internal.org.objectweb.asm.Edge/null
+|--java.lang.ref.FinalizerHistogram$Entry/null
+|--jdk.internal.logger.LazyLoggers$LazyLoggerFactories/null
+|--java.lang.Class$$Lambda$18/0x0000000100090c40/null
+|--sun.rmi.runtime.Log$LogFactory/null (intf)
+|--java.lang.management.DefaultPlatformMBeanProvider$10$$Lambda$153/0x000000010017b440/null
+|--java.util.stream.StreamSupport/null
+|--java.lang.invoke.ClassSpecializer$Factory/null
+|  |--java.lang.invoke.BoundMethodHandle$Specializer$Factory/null
+|--java.nio.channels.ScatteringByteChannel/null (intf)
+|--java.time.temporal.JulianFields/null
+|--java.lang.StringCoding/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$177/0x000000010012d040/null
+|--sun.rmi.server.MarshalOutputStream$1/null
+|--java.lang.ref.FinalizerHistogram/null
+|--java.lang.management.DefaultPlatformMBeanProvider$2/null
+|--java.io.ObjectInputStream$HandleTable/null
+|--jdk.internal.logger.LazyLoggers$1/null
+|--java.util.concurrent.ConcurrentHashMap$Node/null
+|  |--java.util.concurrent.ConcurrentHashMap$ReservationNode/null
+|  |--java.util.concurrent.ConcurrentHashMap$ForwardingNode/null
+|--java.lang.module.ModuleDescriptor$Opens/null
+|--java.nio.channels.GatheringByteChannel/null (intf)
+|--java.util.Spliterators$IteratorSpliterator/null
+|--java.time.Clock/null
+|  |--java.time.Clock$SystemClock/null
+|--sun.launcher.LauncherHelper/null
+|--sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread$$Lambda$94/0x0000000100167840/null
+|--java.io.Bits/null
+|--java.util.ServiceLoader$$Lambda$17/0x0000000100090840/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$164/0x000000010017b040/null
+|--jdk.internal.logger.LazyLoggers/null
+|--java.util.Map$Entry/null (intf)
+|--java.lang.management.DefaultPlatformMBeanProvider$1/null
+|--java.lang.reflect.ProxyGenerator/null
+|--java.nio.channels.SeekableByteChannel/null (intf)
+|--java.lang.invoke.ClassSpecializer$SpeciesData/null
+|  |--java.lang.invoke.BoundMethodHandle$SpeciesData/null
+|--jdk.internal.module.ModuleBootstrap$SafeModuleFinder/null
+|--java.io.ObjectOutputStream$ReplaceTable/null
+|--jdk.internal.org.objectweb.asm.Handler/null
+|--java.lang.Throwable$PrintStreamOrWriter/null
+|  |--java.lang.Throwable$WrappedPrintStream/null
+|--java.time.Instant/null
+|--java.io.ObjectInputStream$Logging/null
+|--java.util.concurrent.ConcurrentHashMap$CounterCell/null
+|--java.lang.module.ModuleDescriptor$Exports/null
+|--java.util.logging.Level/null
+|--java.nio.channels.ByteChannel/null (intf)
+|--java.lang.invoke.LambdaForm$MH/0x0000000100167440/null
+|--java.lang.invoke.ClassSpecializer$1/null
+|--jdk.internal.module.IllegalAccessLogger/null
+|--jdk.jfr.internal.ASMToolkit/null
+|--java.util.ServiceLoader$ModuleServicesLookupIterator$$Lambda$16/0x0000000100090440/null
+|--java.time.temporal.TemporalAdjuster/null (intf)
+|--javax.management.remote.JMXConnectorServerFactory$$Lambda$155/0x000000010017ac40/null
+|--java.io.ObjectOutputStream$HandleTable/null
+|--java.util.Spliterator$OfDouble/null (intf)
+|--sun.rmi.runtime.Log/null
+|  |--sun.rmi.runtime.Log$LoggerLog/null
+|--java.nio.channels.WritableByteChannel/null (intf)
+|--com.sun.management.internal.PlatformMBeanProviderImpl$5/null
+|--jdk.jfr.internal.EventControl/null
+|--jdk.internal.module.ModuleBootstrap$2/null
+|--java.time.temporal.Temporal/null (intf)
+|--java.util.Dictionary/null
+|  |--java.util.Hashtable/null
+|  |  |--java.util.Properties/null
+|  |  |  |--java.security.Provider/null
+|  |  |  |  |--sun.security.provider.Sun/null
+|  |  |  |  |--sun.security.jca.ProviderList$1/null
+|--java.lang.module.ModuleDescriptor$Requires/null
+|--java.io.ObjectInputStream$FilterValues/null
+|--java.nio.channels.ReadableByteChannel/null (intf)
+|--jdk.jfr.internal.MirrorEvent/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100167040/null
+|--java.lang.invoke.ClassSpecializer/null
+|  |--java.lang.invoke.BoundMethodHandle$Specializer/null
+|--jdk.jfr.EventType/null
+|--java.lang.ModuleLayer$$Lambda$15/0x0000000100090040/null
+|--javax.management.remote.JMXConnectorServerFactory$$Lambda$154/0x000000010017a840/null
+|--jdk.internal.module.IllegalAccessLogger$Builder/null
+|--java.util.Map/null (intf)
+|--jdk.internal.module.Builder/null
+|--java.nio.channels.Channel/null (intf)
+|--jdk.jfr.internal.RequestEngine/null
+|--java.lang.module.ModuleDescriptor$Builder/null
+|--java.util.Spliterator$OfLong/null (intf)
+|--java.io.ObjectInputStream$1/null
+|--java.util.ResourceBundle$ResourceBundleProviderHelper$$Lambda$77/0x000000010013fc40/null
+|--sun.rmi.server.Util/null
+|--sun.management.VMManagementImpl/null
+|--java.net.URLClassLoader$7/null
+|--jdk.jfr.internal.RequestEngine$RequestHook/null
+|--java.lang.ThreadGroup/null
+|--java.lang.ModuleLayer$$Lambda$96/0x0000000100166c40/null
+|--java.util.Collections$1/null
+|--java.io.ObjectInputStream$Caches/null
+|--java.lang.management.ManagementFactory$$Lambda$136/0x000000010017a440/null
+|--sun.management.VMManagement/null (intf)
+|--sun.rmi.transport.DGCAckHandler/null
+|--jdk.jfr.internal.StringPool/null
+|--jdk.internal.module.SystemModules$all/null
+|--jdk.internal.misc.JavaNetURLClassLoaderAccess/null (intf)
+|--sun.nio.fs.NativeBuffer$Deallocator/null
+|--java.lang.Thread$UncaughtExceptionHandler/null (intf)
+|--java.util.concurrent.locks.ReentrantLock/null
+|  |--java.util.concurrent.ConcurrentHashMap$Segment/null
+|--sun.management.counter.Units/null
+|--java.rmi.activation.ActivationGroupDesc/null
+|--java.lang.invoke.InnerClassLambdaMetafactory$1/null
+|--java.lang.invoke.LambdaForm$MH/0x00000001000ca440/null
+|--java.util.ResourceBundle$ResourceBundleProviderHelper$$Lambda$76/0x000000010013f840/null
+|--java.lang.ModuleLayer$Controller/null
+|--sun.management.ManagementFactoryHelper/null
+|--java.util.Spliterator$OfInt/null (intf)
+|--jdk.internal.module.SystemModules/null (intf)
+|--java.io.ObjectOutputStream$1/null
+|--jdk.jfr.internal.EventHandlerCreator/null
+|--sun.nio.fs.NativeBuffer/null
+|--sun.rmi.transport.DGCImpl$2$$Lambda$59/0x00000001000f1440/null
+|--java.lang.ModuleLayer$$Lambda$95/0x0000000100166840/null
+|--java.util.concurrent.locks.Lock/null (intf)
+|--jdk.internal.perf.Perf/null
+|--java.lang.Thread/null
+|  |--jdk.internal.misc.InnocuousThread/null
+|  |--java.util.logging.LogManager$Cleaner/null
+|  |--java.lang.ref.Finalizer$FinalizerThread/null
+|  |--java.lang.ref.Reference$ReferenceHandler/null
+|  |--java.util.TimerThread/null
+|--jdk.internal.module.Modules$$Lambda$135/0x000000010017a040/null
+|--jdk.internal.module.ServicesCatalog$ServiceProvider/null
+|--java.lang.management.LockInfo/null
+|  |--java.lang.management.MonitorInfo/null
+|--java.util.Spliterator$OfPrimitive/null (intf)
+|--jdk.internal.module.SystemModulesMap/null
+|--sun.rmi.server.UnicastRef/null
+|  |--sun.rmi.server.UnicastServerRef/null
+|  |  |--sun.rmi.server.UnicastServerRef2/null
+|  |--sun.rmi.server.UnicastRef2/null
+|--jdk.jfr.internal.AnnotationConstruct/null
+|--jdk.internal.agent.ConnectorAddressLink/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$188/0x00000001000ca040/null
+|--java.util.regex.CharPredicates$$Lambda$79/0x000000010013f440/null
+|--java.lang.Runnable/null (intf)
+|--java.lang.Runtime/null
+|--java.rmi.activation.ActivationDesc/null
+|--java.lang.reflect.Proxy$ProxyBuilder/null
+|--sun.rmi.server.Dispatcher/null (intf)
+|--sun.invoke.util.ValueConversions$WrapperCache/null
+|--java.net.URI$1/null
+|--sun.rmi.transport.DGCImpl$$Lambda$58/0x00000001000f1040/null
+|--java.lang.module.Configuration$$Lambda$98/0x0000000100166440/null
+|--jdk.jfr.internal.Type/null
+|  |--jdk.jfr.internal.PlatformEventType/null
+|--jdk.internal.module.Modules$$Lambda$134/0x0000000100179c40/null
+|--sun.management.NotificationEmitterSupport/null
+|  |--sun.management.MemoryManagerImpl/null
+|  |  |--sun.management.GarbageCollectorImpl/null
+|  |  |  |--com.sun.management.internal.GarbageCollectorExtImpl/null
+|  |--sun.management.MemoryImpl/null
+|  |--com.sun.management.internal.DiagnosticCommandImpl/null
+|--java.io.ObjectStreamClass/null
+|--java.rmi.activation.ActivationID/null
+|--java.rmi.server.ServerRef/null (intf)
+|--jdk.internal.misc.JavaNetUriAccess/null (intf)
+|--java.lang.ClassValue$Version/null
+|--java.time.temporal.IsoFields/null
+|--java.lang.management.ThreadInfo/null
+|--java.util.Spliterators$EmptySpliterator/null
+|  |--java.util.Spliterators$EmptySpliterator$OfDouble/null
+|  |--java.util.Spliterators$EmptySpliterator$OfLong/null
+|  |--java.util.Spliterators$EmptySpliterator$OfInt/null
+|  |--java.util.Spliterators$EmptySpliterator$OfRef/null
+|--java.util.concurrent.CopyOnWriteArrayList/null
+|--jdk.jfr.internal.EventInstrumentation$FieldInfo/null
+|--java.rmi.server.ObjID$$Lambda$40/0x00000001000c9c40/null
+|--java.util.ResourceBundle$ResourceBundleProviderHelper$$Lambda$78/0x000000010013f040/null
+|--com.sun.management.DiagnosticCommandMBean/null (intf)
+|--jdk.jfr.internal.settings.BooleanValue/null
+|--java.io.ObjectOutputStream$Caches/null
+|--java.rmi.server.RemoteRef/null (intf)
+|--sun.rmi.server.LoaderHandler$1/null
+|--sun.rmi.server.Util$1/null
+|--java.net.URI/null
+|--java.lang.ClassValue$Identity/null
+|--sun.rmi.runtime.RuntimeUtil$$Lambda$57/0x00000001000f0c40/null
+|--java.lang.module.Configuration$$Lambda$97/0x0000000100166040/null
+|--java.util.Spliterator/null (intf)
+|--jdk.jfr.SettingDefinition/null (intf)
+|--jdk.internal.module.Modules$$Lambda$133/0x0000000100179840/null
+|--com.sun.management.internal.PlatformMBeanProviderImpl$4/null
+|--java.io.Externalizable/null (intf)
+|--java.lang.invoke.ClassSpecializer$Factory$1Var/null
+|--jdk.internal.module.SystemModuleFinders/null
+|--java.lang.Character$CharacterCache/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010012b440/null
+|--sun.security.provider.PolicyFile$7/null
+|--javax.management.remote.rmi.RMIConnection/null (intf)
+|--java.util.Spliterators/null
+|--sun.rmi.server.UnicastServerRef$$Lambda$39/0x00000001000c9840/null
+|--sun.util.locale.provider.JRELocaleProviderAdapter$$Lambda$81/0x000000010013ec40/null
+|--jdk.internal.org.objectweb.asm.tree.LocalVariableNode/null
+|--java.util.concurrent.ConcurrentMap/null (intf)
+|--java.lang.invoke.LambdaForm$MH/0x0000000100067c40/null
+|--java.lang.invoke.MethodHandles$1/null
+|--java.time.temporal.TemporalQuery/null (intf)
+|--jdk.internal.module.ArchivedModuleGraph/null
+|--sun.rmi.transport.DGCImpl$$Lambda$56/0x00000001000f0840/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100165c40/null
+|--com.sun.management.internal.PlatformMBeanProviderImpl$3/null
+|--sun.rmi.server.LoaderHandler$2/null
+|--java.lang.Void/null
+|--jdk.internal.module.Modules$$Lambda$132/0x0000000100179440/null
+|--jdk.internal.module.ModuleLoaderMap$Mapper/null
+|--java.lang.invoke.LambdaForm$DMH/0x000000010012b040/null
+|--java.time.format.DateTimeFormatterBuilder/null
+|--sun.rmi.server.LoaderHandler$LoaderKey/null
+|--java.lang.PublicMethods$Key/null
+|--sun.nio.fs.NativeBuffers/null
+|--sun.rmi.server.UnicastServerRef$$Lambda$38/0x00000001000c9440/null
+|--java.util.regex.Pattern$BmpCharPredicate$$Lambda$80/0x000000010013e840/null
+|--com.sun.management.internal.PlatformMBeanProviderImpl$2/null
+|--java.rmi.activation.ActivationMonitor/null (intf)
+|--java.util.function.Function/null (intf)
+|--java.lang.SecurityManager$$Lambda$1/0x0000000100067840/null
+|--java.lang.Byte$ByteCache/null
+|--java.lang.ref.Reference/null
+|  |--java.lang.ref.PhantomReference/null
+|  |  |--jdk.internal.ref.PhantomCleanable/null
+|  |  |  |--java.io.FileCleanable/null
+|  |  |  |--java.net.SocketCleanable/null
+|  |  |  |--jdk.internal.ref.CleanerImpl$CleanerCleanable/null
+|  |  |  |--jdk.internal.ref.CleanerImpl$PhantomCleanableRef/null
+|  |  |--sun.rmi.transport.DGCClient$EndpointEntry$RefEntry$PhantomLiveRef/null
+|  |  |--jdk.internal.ref.Cleaner/null
+|  |--java.lang.ref.FinalReference/null
+|  |  |--java.lang.ref.Finalizer/null
+|  |--java.lang.ref.WeakReference/null
+|  |  |--sun.security.provider.FileInputStreamPool$StreamRef/null
+|  |  |--java.util.WeakHashMap$Entry/null
+|  |  |--java.util.logging.LogManager$LoggerWeakRef/null
+|  |  |--java.util.ResourceBundle$KeyElementReference/null
+|  |  |--jdk.internal.jimage.ImageBufferCache$BufferReference/null
+|  |  |--jdk.internal.ref.WeakCleanable/null
+|  |  |  |--jdk.internal.ref.CleanerImpl$WeakCleanableRef/null
+|  |  |--java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry/null
+|  |  |--sun.rmi.transport.WeakRef/null
+|  |  |--java.lang.ThreadLocal$ThreadLocalMap$Entry/null
+|  |  |--java.util.logging.Level$KnownLevel/null
+|  |  |--java.lang.WeakPairMap$WeakRefPeer/null
+|  |  |  |--java.lang.WeakPairMap$Pair$Weak$1/null
+|  |  |  |--java.lang.WeakPairMap$Pair$Weak/null
+|  |  |--sun.rmi.server.LoaderHandler$LoaderEntry/null
+|  |  |--java.io.ObjectStreamClass$WeakClassKey/null
+|  |  |--java.lang.ClassValue$Entry/null
+|  |  |--java.lang.Thread$WeakClassKey/null
+|  |  |--com.sun.jmx.mbeanserver.WeakIdentityHashMap$IdentityWeakReference/null
+|  |  |--java.io.ObjectStreamClass$FieldReflectorKey/null
+|  |--java.lang.ref.SoftReference/null
+|  |  |--java.util.ResourceBundle$BundleReference/null
+|  |  |--jdk.internal.ref.SoftCleanable/null
+|  |  |  |--jdk.internal.ref.CleanerImpl$SoftCleanableRef/null
+|  |  |--java.lang.invoke.LambdaFormEditor$Transform/null
+|  |  |--sun.util.locale.provider.LocaleResources$ResourceReference/null
+|  |  |--sun.util.resources.Bundles$BundleReference/null
+|  |  |--sun.util.locale.LocaleObjectCache$CacheEntry/null
+|--sun.rmi.transport.DGCImpl$$Lambda$55/0x00000001000f0440/null
+|--java.lang.invoke.LambdaForm$MH/0x0000000100165840/null
+|--sun.management.ThreadImpl/null
+|  |--com.sun.management.internal.HotSpotThreadImpl/null
+|--java.time.format.DateTimeFormatter/null
+|--java.rmi.server.RemoteObject/null
+|  |--java.rmi.server.RemoteStub/null
+|  |  |--sun.rmi.registry.RegistryImpl_Stub/null
+|  |  |--javax.management.remote.rmi.RMIServerImpl_Stub/null
+|  |  |--sun.rmi.server.Activation$ActivationSystemImpl_Stub/null
+|  |  |--sun.rmi.transport.DGCImpl_Stub/null
+|  |--java.rmi.server.RemoteObjectInvocationHandler/null
+|  |--java.rmi.server.RemoteServer/null
+|  |  |--sun.rmi.registry.RegistryImpl/null
+|  |  |--java.rmi.server.UnicastRemoteObject/null
+|--java.lang.PublicMethods$MethodList/null
+|--sun.security.util.SecurityProperties/null
+|--jdk.internal.module.Modules$$Lambda$131/0x0000000100179040/null
+|--java.rmi.activation.ActivationInstantiator/null (intf)
+|--jdk.internal.module.ModuleLoaderMap/null
+|--java.lang.ClassValue/null
+|  |--java.lang.invoke.StringConcatFactory$Stringifiers$StringifierAny/null
+|  |--java.lang.invoke.StringConcatFactory$Stringifiers$StringifierMost/null
+|--com.sun.management.internal.PlatformMBeanProviderImpl$1/null
+|--com.sun.management.ThreadMXBean/null (intf)
+|--jdk.internal.module.ModulePatcher/null
+|--jdk.jfr.internal.Repository/null
+|--java.util.Timer$1/null
+|--java.util.AbstractMap/null
+|  |--java.util.WeakHashMap/null
+|  |  |--com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory$Mappings/null
+|  |  |--com.sun.jmx.mbeanserver.MBeanIntrospector$MBeanInfoMap/null
+|  |  |--com.sun.jmx.mbeanserver.MBeanIntrospector$PerInterfaceMap/null
+|  |  |--java.lang.ClassValue$ClassValueMap/null
+|  |--java.util.concurrent.ConcurrentSkipListMap/null
+|  |--java.util.ImmutableCollections$AbstractImmutableMap/null
+|  |  |--java.util.ImmutableCollections$MapN/null
+|  |  |--java.util.ImmutableCollections$Map1/null
+|  |--java.util.TreeMap/null
+|  |--java.util.Collections$EmptyMap/null
+|  |--java.util.Collections$SingletonMap/null
+|  |--java.util.EnumMap/null
+|  |--sun.util.PreHashedMap/null
+|  |  |--sun.nio.cs.StandardCharsets$Cache/null
+|  |  |--sun.nio.cs.StandardCharsets$Aliases/null
+|  |--java.util.IdentityHashMap/null
+|  |--java.util.concurrent.ConcurrentHashMap/null
+|  |--java.util.HashMap/null
+|  |  |--java.util.LinkedHashMap/null
+|  |  |  |--java.io.ExpiringCache$1/null
+|--sun.rmi.registry.RegistryImpl$4/null
+|--sun.rmi.server.UnicastServerRef$$Lambda$37/0x00000001000c9040/null
+|--sun.security.util.FilePermCompat/null
+|--java.rmi.activation.ActivationGroupID/null
+|--jdk.jfr.SettingDescriptor/null
+|--java.lang.invoke.StringConcatFactory$Stringifiers/null
+|--java.lang.SecurityManager$$Lambda$2/0x0000000100067440/null
+|--sun.management.spi.PlatformMBeanProvider$PlatformComponent/null (intf)
+|--sun.rmi.transport.DGCImpl$$Lambda$54/0x00000001000f0040/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100165440/null
+|--java.util.ImmutableCollections/null
+|--jdk.jfr.internal.Options/null
+|--java.lang.PublicMethods/null
+|--sun.util.resources.provider.NonBaseLocaleDataMetaInfo/0x00007fc0c816b9c0
+|--java.lang.Thread$1/null
+|--jdk.internal.module.Modules$$Lambda$130/0x0000000100178c40/null
+|--sun.rmi.registry.RegistryImpl$3/null
+|--java.io.FilePermission$1/null
+|--java.lang.management.ThreadMXBean/null (intf)
+|--java.io.ObjectInputFilter$Config$Global/null
+|--java.lang.StringConcatHelper/null
+|--jdk.jfr.internal.JVM/null
+|--java.util.LinkedList$Node/null
+|--sun.rmi.server.UnicastRef$$Lambda$36/0x00000001000c8c40/null
+|--sun.util.resources.cldr.provider.CLDRLocaleDataMetaInfo/0x00007fc0c816b9c0
+|--java.util.logging.LogManager$CloseOnReset/null
+|--jdk.internal.misc.JavaIOFilePermissionAccess/null (intf)
+|--java.lang.module.ModuleDescriptor$1/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100067040/null
+|--java.lang.invoke.StringConcatFactory$MethodHandleInlineCopyStrategy$3/null
+|--java.rmi.activation.ActivationSystem/null (intf)
+|--jdk.jfr.internal.AnnotationConstruct$AnnotationInvokationHandler/null
+|--java.io.ObjectStreamConstants/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$165/0x0000000100165040/null
+|--jdk.internal.org.objectweb.asm.tree.AbstractInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.TableSwitchInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.LookupSwitchInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.IincInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.LdcInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.TypeInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.IntInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.FrameNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.JumpInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.FieldInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.InsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.MethodInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.VarInsnNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.LineNumberNode/null
+|  |--jdk.internal.org.objectweb.asm.tree.LabelNode/null
+|--jdk.jfr.internal.SecuritySupport$4/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100178840/null
+|--java.lang.Thread$Caches/null
+|--jdk.internal.misc.JavaLangModuleAccess/null (intf)
+|--com.sun.jmx.mbeanserver.WeakIdentityHashMap/null
+|--sun.management.spi.PlatformMBeanProvider/null
+|  |--java.lang.management.DefaultPlatformMBeanProvider/null
+|  |--com.sun.management.internal.PlatformMBeanProviderImpl/null
+|  |--jdk.management.jfr.internal.FlightRecorderMXBeanProvider/null
+|--jdk.internal.misc.JavaObjectInputStreamReadString/null (intf)
+|--java.io.ObjectOutput/null (intf)
+|--java.lang.invoke.StringConcatFactory$MethodHandleInlineCopyStrategy$2/null
+|--java.rmi.Remote/null (intf)
+|--jdk.jfr.internal.SecuritySupport$CallableWithoutCheckException/null (intf)
+|--sun.rmi.server.Util$$Lambda$35/0x00000001000c8840/null
+|--java.util.ResourceBundle$$Lambda$75/0x000000010013dc40/null
+|--java.rmi.server.RMISocketFactory/null
+|  |--sun.rmi.transport.tcp.TCPDirectSocketFactory/null
+|--javax.management.remote.rmi.RMIServerImpl/null
+|  |--javax.management.remote.rmi.RMIJRMPServerImpl/null
+|--java.lang.SecurityManager$$Lambda$4/0x0000000100066c40/null
+|--java.util.Formattable/null (intf)
+|--java.util.Collections$EmptyIterator/null
+|--java.lang.management.ManagementFactory$PlatformMBeanFinder/null
+|--jdk.internal.misc.JavaObjectInputStreamAccess/null (intf)
+|--java.lang.module.ModuleDescriptor/null
+|--com.sun.jmx.mbeanserver.MXBeanLookup/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100164c40/null
+|--java.lang.invoke.StringConcatFactory$MethodHandleInlineCopyStrategy$1/null
+|--sun.rmi.transport.StreamRemoteCall/null
+|--jdk.jfr.internal.SecuritySupport$SafePath/null
+|--jdk.internal.module.Modules$$Lambda$129/0x0000000100178440/null
+|--java.rmi.server.RMIServerSocketFactory/null (intf)
+|--javax.management.remote.rmi.RMIServer/null (intf)
+|--jdk.internal.org.objectweb.asm.tree.InsnList/null
+|--java.time.LocalTime$1/null
+|--sun.nio.fs.UnixChannelFactory$Flags/null
+|--jdk.internal.module.ModuleBootstrap/null
+|--java.util.concurrent.Executors$RunnableAdapter/null
+|--com.sun.jmx.mbeanserver.JmxMBeanServer$3/null
+|--com.sun.jmx.mbeanserver.PerInterface$InitMaps/null
+|--java.lang.invoke.StringConcatFactory$MethodHandleInlineCopyStrategy/null
+|--java.rmi.server.RemoteCall/null (intf)
+|--java.util.logging.SimpleFormatter$$Lambda$34/0x00000001000c8440/null
+|--java.lang.invoke.LambdaForm$MH/0x000000010013d840/null
+|--java.security.cert.Certificate/null
+|--java.rmi.server.RMIClientSocketFactory/null (intf)
+|--java.lang.SecurityManager$$Lambda$3/0x0000000100066840/null
+|--sun.nio.fs.UnixChannelFactory/null
+|--java.util.concurrent.Callable/null (intf)
+|--javax.management.ObjectInstance/null
+|--com.sun.jmx.mbeanserver.PerInterface/null
+|--java.util.TaskQueue/null
+|--java.time.format.DateTimeFormatterBuilder$$Lambda$166/0x0000000100164840/null
+|--java.lang.invoke.StringConcatFactory$RecipeElement/null
+|--java.util.ArrayList$Itr/null
+|  |--java.util.ArrayList$ListItr/null
+|--jdk.internal.module.Modules$$Lambda$128/0x0000000100178040/null
+|--jdk.internal.reflect.ReflectionFactory$GetReflectionFactoryAction/null
+|--java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject/null
+|--sun.nio.fs.UnixFileModeAttribute/null
+|--java.util.concurrent.Executors/null
+|--java.lang.invoke.StringConcatFactory$Recipe/null
+|--java.lang.module.ResolvedModule/null
+|--java.util.stream.FindOps$FindSink$OfRef$$Lambda$33/0x00000001000c8040/null
+|--java.lang.invoke.LambdaForm$MH/0x000000010013d440/null
+|--java.security.PrivilegedAction/null (intf)
+|--com.sun.jmx.remote.protocol.rmi.ServerProvider/null
+|--jdk.internal.event.Event/null
+|  |--jdk.internal.event.X509ValidationEvent/null
+|  |--jdk.internal.event.X509CertificateEvent/null
+|  |--jdk.internal.event.TLSHandshakeEvent/null
+|  |--jdk.internal.event.SecurityPropertyModificationEvent/null
+|  |--jdk.jfr.Event/null
+|  |  |--jdk.jfr.events.AbstractJDKEvent/null
+|  |  |  |--jdk.jfr.events.ActiveRecordingEvent/null
+|  |  |  |--jdk.jfr.events.ActiveSettingEvent/null
+|  |  |  |--jdk.jfr.events.ErrorThrownEvent/null
+|  |  |  |--jdk.jfr.events.ExceptionStatisticsEvent/null
+|  |  |  |--jdk.jfr.events.ExceptionThrownEvent/null
+|  |  |  |--jdk.jfr.events.SocketWriteEvent/null
+|  |  |  |--jdk.jfr.events.SocketReadEvent/null
+|  |  |  |--jdk.jfr.events.FileWriteEvent/null
+|  |  |  |--jdk.jfr.events.FileReadEvent/null
+|  |  |  |--jdk.jfr.events.FileForceEvent/null
+|  |  |  |--jdk.jfr.events.X509ValidationEvent/null
+|  |  |  |--jdk.jfr.events.X509CertificateEvent/null
+|  |  |  |--jdk.jfr.events.TLSHandshakeEvent/null
+|  |  |  |--jdk.jfr.events.SecurityPropertyModificationEvent/null
+|--java.lang.SecurityManager$$Lambda$5/0x0000000100066440/null
+|--sun.rmi.transport.GC$LatencyRequest/null
+|--java.util.concurrent.locks.Condition/null (intf)
+|--java.util.concurrent.FutureTask$WaitNode/null
+|--java.lang.CharacterData/null
+|  |--java.lang.CharacterDataLatin1/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100164440/null
+|--java.lang.NamedPackage/null
+|  |--java.lang.Package/null
+|--java.text.DateFormatSymbols/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100177c40/null
+|--java.util.Objects/null
+|--java.util.Collections$UnmodifiableCollection$1/null
+|--javax.management.remote.JMXConnectorFactory$ProviderFinder/null
+|--javax.management.openmbean.OpenMBeanAttributeInfo/null (intf)
+|--sun.rmi.transport.GC$1/null
+|--sun.rmi.transport.tcp.TCPTransport$1/null
+|--java.nio.file.attribute.FileAttribute/null (intf)
+|--java.lang.invoke.MethodHandleStatics/null
+|--sun.security.util.Debug/null
+|--sun.security.jca.ProviderList/null
+|--java.time.LocalDate$1/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$207/0x000000010013d040/null
+|--jdk.internal.org.objectweb.asm.Context/null
+|--jdk.jfr.BooleanFlag/null (intf)
+|--java.util.regex.ASCII/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100066040/null
+|--jdk.jfr.internal.SecuritySupport/null
+|--javax.management.openmbean.OpenMBeanParameterInfo/null (intf)
+|--sun.rmi.transport.GC$LatencyLock/null
+|--java.util.concurrent.SynchronousQueue$TransferStack$SNode/null
+|--java.util.ServiceLoader$ProviderSpliterator/null
+|--java.time.format.DateTimeFormatter$$Lambda$167/0x0000000100164040/null
+|--java.security.SecureClassLoader$DebugHolder/null
+|--java.lang.invoke.StringConcatFactory$1/null
+|--java.time.ZonedDateTime$1/null
+|--java.lang.Module$$Lambda$127/0x0000000100177840/null
+|--jdk.jfr.internal.JVMSupport/null
+|--jdk.internal.loader.URLClassPath$1/null
+|--sun.rmi.transport.GC/null
+|--javax.management.remote.JMXConnectorProvider/null (intf)
+|--java.lang.invoke.LambdaForm$MH/0x0000000100129440/null
+|--java.util.concurrent.FutureTask/null
+|  |--java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$209/0x000000010013cc40/null
+|--sun.security.jca.Providers/null
+|--java.io.Reader/null
+|  |--java.io.CharArrayReader/null
+|  |--java.io.BufferedReader/null
+|  |--sun.nio.cs.StreamDecoder/null
+|  |--java.io.InputStreamReader/null
+|  |--jdk.internal.util.xml.impl.ReaderUTF8/null
+|--sun.nio.ch.Util$4/null
+|--java.lang.SecurityManager$$Lambda$6/0x0000000100065c40/null
+|--jdk.jfr.internal.Logger/null
+|--java.lang.CompoundEnumeration/null
+|--sun.rmi.transport.ObjectTable$Reaper/null
+|--com.sun.jmx.mbeanserver.MBeanIntrospector$MBeanInfoMaker/null
+|--java.util.concurrent.SynchronousQueue$Transferer/null
+|  |--java.util.concurrent.SynchronousQueue$TransferStack/null
+|--sun.util.calendar.CalendarSystem/null
+|  |--sun.util.calendar.AbstractCalendar/null
+|  |  |--sun.util.calendar.BaseCalendar/null
+|  |  |  |--sun.util.calendar.Gregorian/null
+|--javax.management.remote.JMXConnectorFactory$ConnectorFactory/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100163c40/null
+|--java.util.Arrays$ArrayItr/null
+|--java.util.Calendar/null
+|--java.util.Collections$UnmodifiableCollection/null
+|  |--java.util.Collections$UnmodifiableList/null
+|  |  |--java.util.Collections$UnmodifiableRandomAccessList/null
+|  |--java.util.Collections$UnmodifiableSet/null
+|--java.lang.Module$$Lambda$126/0x0000000100177440/null
+|--sun.nio.ch.FileChannelImpl$Unmapper/null
+|--jdk.jfr.internal.SettingsManager/null
+|--com.sun.jmx.mbeanserver.MBeanAnalyzer$MBeanVisitor/null (intf)
+|--sun.rmi.transport.DGCImpl$2$1/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100129040/null
+|--jdk.internal.loader.BuiltinClassLoader$1/null
+|--sun.security.action.GetPropertyAction$1/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$208/0x000000010013c840/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100065840/null
+|--java.util.Date/null
+|--java.security.AccessControlContext/null
+|--jdk.internal.org.objectweb.asm.Attribute/null
+|  |--jdk.internal.org.objectweb.asm.Attribute$NestHost/null
+|  |--jdk.internal.org.objectweb.asm.Attribute$NestMembers/null
+|--jdk.jfr.TransitionFrom/null (intf)
+|--java.nio.charset.CharsetDecoder/null
+|  |--sun.nio.cs.UTF_8$Decoder/null
+|--java.time.format.DateTimeFormatter$$Lambda$168/0x0000000100163840/null
+|--sun.rmi.transport.DGCImpl_Skel/null
+|--java.util.Collections$EmptyEnumeration/null
+|--java.nio.channels.FileChannel$MapMode/null
+|--java.lang.ModuleLayer$$Lambda$125/0x0000000100177040/null
+|--java.security.Permissions$1/null
+|--javax.management.remote.JMXAddressable/null (intf)
+|--java.security.ProtectionDomain/null
+|--jdk.jfr.Unsigned/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$178/0x0000000100128c40/null
+|--java.rmi.server.Skeleton/null (intf)
+|--jdk.internal.loader.BuiltinClassLoader$2/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$211/0x000000010013c440/null
+|--java.nio.channels.spi.AbstractInterruptibleChannel$1/null
+|--java.util.Random/null
+|  |--java.util.concurrent.ThreadLocalRandom/null
+|  |--java.security.SecureRandom/null
+|--jdk.internal.org.objectweb.asm.ClassReader/null
+|--com.sun.jmx.mbeanserver.NamedObject/null
+|--java.lang.SecurityManager$$Lambda$8/0x0000000100065440/null
+|--javax.management.remote.JMXConnectorServerMBean/null (intf)
+|--java.io.ExpiringCache/null
+|--jdk.jfr.Relational/null (intf)
+|--java.util.Formatter$Conversion/null
+|--java.util.AbstractCollection/null
+|  |--java.util.TreeMap$Values/null
+|  |--java.util.ArrayDeque/null
+|  |--java.util.IdentityHashMap$Values/null
+|  |--java.util.AbstractMap$2/null
+|  |--java.util.AbstractList/null
+|  |  |--java.util.Vector/null
+|  |  |--java.util.AbstractList$SubList/null
+|  |  |  |--java.util.AbstractList$RandomAccessSubList/null
+|  |  |--sun.security.jca.ProviderList$3/null
+|  |  |--java.util.AbstractSequentialList/null
+|  |  |  |--java.util.LinkedList/null
+|  |  |--java.util.Collections$EmptyList/null
+|  |  |--java.util.ArrayList/null
+|  |  |--java.util.Collections$SingletonList/null
+|  |  |--java.util.ArrayList$SubList/null
+|  |  |--java.util.Arrays$ArrayList/null
+|  |--java.util.LinkedHashMap$LinkedValues/null
+|  |--java.util.AbstractSet/null
+|  |  |--java.util.LinkedHashMap$LinkedKeySet/null
+|  |  |--java.util.Collections$SingletonSet/null
+|  |  |--java.util.TreeMap$KeySet/null
+|  |  |--java.util.TreeMap$EntrySet/null
+|  |  |--java.util.WeakHashMap$KeySet/null
+|  |  |--java.util.concurrent.ConcurrentSkipListMap$KeySet/null
+|  |  |--java.util.Collections$SetFromMap/null
+|  |  |--java.util.ImmutableCollections$MapN$1/null
+|  |  |--java.util.concurrent.ConcurrentSkipListSet/null
+|  |  |--java.util.Collections$EmptySet/null
+|  |  |--java.util.EnumSet/null
+|  |  |  |--java.util.RegularEnumSet/null
+|  |  |--java.util.IdentityHashMap$KeySet/null
+|  |  |--java.util.HashSet/null
+|  |  |  |--java.util.LinkedHashSet/null
+|  |  |--java.util.HashMap$EntrySet/null
+|  |  |--java.util.TreeSet/null
+|  |  |--java.util.LinkedHashMap$LinkedEntrySet/null
+|  |  |--java.util.HashMap$KeySet/null
+|  |--java.util.ImmutableCollections$AbstractImmutableCollection/null
+|  |  |--java.util.ImmutableCollections$AbstractImmutableList/null
+|  |  |  |--java.util.ImmutableCollections$ListN/null
+|  |  |  |--java.util.ImmutableCollections$List12/null
+|  |  |  |--java.util.ImmutableCollections$SubList/null
+|  |  |--java.util.ImmutableCollections$AbstractImmutableSet/null
+|  |  |  |--java.util.ImmutableCollections$SetN/null
+|  |  |  |--java.util.ImmutableCollections$Set12/null
+|  |--java.util.AbstractQueue/null
+|  |  |--java.util.concurrent.SynchronousQueue/null
+|  |  |--java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue/null
+|  |--java.util.HashMap$Values/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100163440/null
+|--java.lang.invoke.StringConcatFactory/null
+|--java.lang.SecurityManager/null
+|  |--java.rmi.RMISecurityManager/null
+|--java.util.stream.Collectors$$Lambda$124/0x0000000100176c40/null
+|--sun.nio.ch.Interruptible/null (intf)
+|--java.rmi.server.UID/null
+|--com.sun.jmx.interceptor.DefaultMBeanServerInterceptor$ResourceContext$1/null
+|--jdk.jfr.Experimental/null (intf)
+|--javax.management.remote.JMXConnectorFactory$1/null
+|--java.util.Set/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100128840/null
+|--java.util.Formatter$FixedString/null
+|--java.rmi.server.Operation/null
+|--jdk.internal.vm.VMSupport/null
+|--java.net.Socket$2/null
+|--jdk.jfr.internal.PlatformRecorder$$Lambda$210/0x000000010013c040/null
+|--java.util.ServiceLoader$LazyClassPathLookupIterator$1/null
+|--java.rmi.server.ObjID/null
+|--jdk.jfr.internal.ChunksChannel/null
+|--java.lang.SecurityManager$$Lambda$7/0x0000000100065040/null
+|--com.sun.jmx.interceptor.DefaultMBeanServerInterceptor$ResourceContext/null (intf)
+|--sun.rmi.transport.DGCAckHandler$1/null
+|--java.util.concurrent.BlockingQueue/null (intf)
+|--jdk.internal.org.objectweb.asm.commons.Method/null
+|--jdk.jfr.internal.Cutoff/null (intf)
+|--javax.management.remote.JMXConnectorFactory/null
+|--java.util.Collection/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$169/0x0000000100163040/null
+|--java.security.Permission/null
+|  |--sun.security.provider.PolicyFile$SelfPermission/null
+|  |--java.net.URLPermission/null
+|  |--java.net.SocketPermission/null
+|  |--java.io.FilePermission/null
+|  |--java.security.UnresolvedPermission/null
+|  |--java.security.AllPermission/null
+|  |--java.security.BasicPermission/null
+|  |  |--jdk.jfr.FlightRecorderPermission/null
+|  |  |--javax.management.MBeanServerPermission/null
+|  |  |--java.net.NetPermission/null
+|  |  |--java.util.logging.LoggingPermission/null
+|  |  |--java.lang.reflect.ReflectPermission/null
+|  |  |--java.lang.management.ManagementPermission/null
+|  |  |--java.io.SerializablePermission/null
+|  |  |--java.lang.RuntimePermission/null
+|  |  |--javax.management.MBeanTrustPermission/null
+|  |  |--java.security.SecurityPermission/null
+|  |  |--java.util.PropertyPermission/null
+|  |--javax.management.MBeanPermission/null
+|--java.lang.ModuleLayer/null
+|--java.lang.module.Resolver$$Lambda$123/0x0000000100176840/null
+|--sun.rmi.transport.LiveRef/null
+|--com.sun.jmx.mbeanserver.Repository$RegistrationContext/null (intf)
+|--jdk.jfr.internal.WriteableUserPath$1/null
+|--java.nio.charset.StandardCharsets/null
+|--java.io.SerialCallbackContext/null
+|--java.io.FileSystem/null
+|  |--java.io.UnixFileSystem/null
+|--javax.management.remote.JMXConnectorServerProvider/null (intf)
+|--java.lang.Iterable/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$179/0x0000000100128440/null
+|--java.util.Formatter$DateTime/null
+|--java.security.Guard/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$213/0x000000010013bc40/null
+|--java.util.ImmutableCollections$Set12$1/null
+|--java.lang.SecurityManager$$Lambda$10/0x0000000100064c40/null
+|--com.sun.jmx.mbeanserver.DynamicMBean2/null (intf)
+|--java.nio.file.Files/null
+|--java.io.DataInput/null (intf)
+|--java.io.DefaultFileSystem/null
+|--com.sun.jmx.remote.util.EnvHelp/null
+|--java.security.AccessController/null
+|--jdk.jfr.internal.TypeLibrary$$Lambda$196/0x0000000100162c40/null
+|--jdk.jfr.Category/null (intf)
+|--jdk.jfr.internal.Control/null
+|  |--jdk.jfr.internal.settings.CutoffSetting/null
+|  |--jdk.jfr.internal.settings.PeriodSetting/null
+|  |--jdk.jfr.internal.settings.StackTraceSetting/null
+|  |--jdk.jfr.internal.settings.ThresholdSetting/null
+|  |--jdk.jfr.internal.settings.EnabledSetting/null
+|  |--jdk.jfr.SettingControl/null
+|--java.util.Formatter$Flags/null
+|--java.lang.module.Resolver$$Lambda$122/0x0000000100176440/null
+|--java.io.ObjectInputFilter$FilterInfo/null (intf)
+|--com.sun.jmx.defaults.JmxProperties/null
+|--sun.rmi.server.WeakClassHashMap/null
+|  |--java.rmi.server.RemoteObjectInvocationHandler$MethodToHash_Maps/null
+|  |--sun.rmi.server.UnicastServerRef$HashToMethod_Maps/null
+|--java.io.FilenameFilter/null (intf)
+|--sun.security.provider.PolicyFile$2/null
+|--java.util.concurrent.ThreadPoolExecutor$AbortPolicy/null
+|--javax.management.remote.JMXConnectorServerFactory/null
+|--sun.nio.fs.UnixChannelFactory$1/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100128040/null
+|--jdk.jfr.Frequency/null (intf)
+|--jdk.jfr.internal.SecuritySupport$$Lambda$212/0x000000010013b840/null
+|--sun.rmi.transport.DGCImpl$2/null
+|--jdk.jfr.internal.dcmd.AbstractDCmd/null
+|  |--jdk.jfr.internal.dcmd.DCmdStart/null
+|  |--jdk.jfr.internal.dcmd.DCmdConfigure/null
+|  |--jdk.jfr.internal.dcmd.DCmdDump/null
+|  |--jdk.jfr.internal.dcmd.DCmdCheck/null
+|--java.util.HashMap$HashIterator/null
+|  |--java.util.HashMap$EntryIterator/null
+|  |--java.util.HashMap$ValueIterator/null
+|  |--java.util.HashMap$KeyIterator/null
+|--java.lang.SecurityManager$$Lambda$9/0x0000000100064840/null
+|--java.io.File/null
+|--com.sun.jmx.interceptor.DefaultMBeanServerInterceptor$1/null
+|--java.lang.reflect.GenericArrayType/null (intf)
+|--sun.rmi.runtime.Log$LoggerLog$2/null
+|--java.util.concurrent.RejectedExecutionHandler/null (intf)
+|--java.util.Timer/null
+|  |--sun.jvmstat.perfdata.monitor.protocol.local.LocalEventTimer/0x00007fc0c81a5500
+|--java.security.ProtectionDomain$JavaSecurityAccessImpl$1/null
+|--jdk.jfr.internal.TypeLibrary$$Lambda$195/0x0000000100162840/null
+|--jdk.jfr.internal.handlers.EventHandler/null
+|  |--jdk.jfr.internal.handlers.EventHandler3300_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3297_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3294_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3291_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3288_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3285_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3282_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3279_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3275_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3272_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3269_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3266_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3263_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3259_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3256_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3253_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3250_1616837425220-1/null
+|  |--jdk.jfr.internal.handlers.EventHandler3195_1616837425220-1/null
+|--sun.management.jmxremote.LocalRMIServerSocketFactory/null
+|--jdk.jfr.Percentage/null (intf)
+|--java.util.Formatter$FormatSpecifier/null
+|--jdk.jfr.internal.WriteableUserPath/null
+|--java.lang.module.Resolver$$Lambda$121/0x0000000100176040/null
+|--java.io.ObjectInputFilter/null (intf)
+|--java.security.PermissionCollection/null
+|  |--java.util.PropertyPermissionCollection/null
+|  |--java.net.SocketPermissionCollection/null
+|  |--java.security.AllPermissionCollection/null
+|  |--java.security.BasicPermissionCollection/null
+|  |--java.security.Permissions/null
+|  |--sun.security.util.LazyCodeSourcePermissionCollection/null
+|  |--java.security.Policy$UnsupportedEmptyCollection/null
+|--java.lang.Throwable/null
+|  |--java.lang.Exception/null
+|  |  |--java.security.GeneralSecurityException/null
+|  |  |  |--sun.security.provider.PolicyParser$ParsingException/null
+|  |  |--sun.jvmstat.monitor.MonitorException/0x00007fc0c81a5500
+|  |  |--java.lang.InterruptedException/null
+|  |  |--sun.management.jdp.JdpException/null
+|  |  |--java.rmi.activation.ActivationException/null
+|  |  |  |--java.rmi.activation.UnknownObjectException/null
+|  |  |  |--java.rmi.activation.UnknownGroupException/null
+|  |  |--java.io.IOException/null
+|  |  |  |--java.net.SocketException/null
+|  |  |  |  |--java.net.ConnectException/null
+|  |  |  |--java.io.FileNotFoundException/null
+|  |  |  |--java.net.MalformedURLException/null
+|  |  |  |--java.rmi.RemoteException/null
+|  |  |  |  |--java.rmi.UnmarshalException/null
+|  |  |  |  |--java.rmi.UnknownHostException/null
+|  |  |  |  |--java.rmi.server.SkeletonNotFoundException/null
+|  |  |  |  |--java.rmi.ConnectException/null
+|  |  |  |  |--java.rmi.NoSuchObjectException/null
+|  |  |  |  |--java.rmi.AccessException/null
+|  |  |  |--java.io.ObjectStreamException/null
+|  |  |  |  |--java.io.InvalidObjectException/null
+|  |  |  |--java.net.UnknownHostException/null
+|  |  |  |--java.io.UnsupportedEncodingException/null
+|  |  |--java.lang.ReflectiveOperationException/null
+|  |  |  |--java.lang.NoSuchMethodException/null
+|  |  |  |--java.lang.NoSuchFieldException/null
+|  |  |  |--java.lang.ClassNotFoundException/null
+|  |  |--java.lang.RuntimeException/null
+|  |  |  |--java.lang.IndexOutOfBoundsException/null
+|  |  |  |  |--java.lang.ArrayIndexOutOfBoundsException/null
+|  |  |  |--java.lang.reflect.UndeclaredThrowableException/null
+|  |  |  |--java.lang.SecurityException/null
+|  |  |  |  |--java.security.AccessControlException/null
+|  |  |  |--java.lang.IllegalMonitorStateException/null
+|  |  |  |--java.lang.ArrayStoreException/null
+|  |  |  |--java.lang.ClassCastException/null
+|  |  |  |--java.lang.IllegalArgumentException/null
+|  |  |  |  |--java.lang.NumberFormatException/null
+|  |  |  |--java.lang.ArithmeticException/null
+|  |  |  |--java.lang.NullPointerException/null
+|  |  |  |--java.lang.IllegalStateException/null
+|  |  |--sun.nio.fs.UnixException/null
+|  |  |--javax.management.JMException/null
+|  |  |  |--javax.management.OperationsException/null
+|  |  |  |  |--javax.management.ListenerNotFoundException/null
+|  |  |--java.rmi.AlreadyBoundException/null
+|  |  |--java.rmi.NotBoundException/null
+|  |  |--java.lang.CloneNotSupportedException/null
+|  |  |--java.net.URISyntaxException/null
+|  |--java.lang.Error/null
+|  |  |--jdk.internal.agent.AgentConfigurationError/null
+|  |  |--java.lang.VirtualMachineError/null
+|  |  |  |--java.lang.StackOverflowError/null
+|  |  |  |--java.lang.OutOfMemoryError/null
+|  |  |  |--java.lang.InternalError/null
+|  |  |--java.lang.LinkageError/null
+|  |  |  |--java.lang.IncompatibleClassChangeError/null
+|  |  |  |  |--java.lang.NoSuchMethodError/null
+|  |  |  |--java.lang.BootstrapMethodError/null
+|  |  |  |--java.lang.NoClassDefFoundError/null
+|  |  |--java.lang.ThreadDeath/null
+|  |  |--java.lang.AssertionError/null
+|--java.util.logging.StreamHandler$1/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$180/0x0000000100127c40/null
+|--jdk.jfr.Enabled/null (intf)
+|--jdk.jfr.MemoryAddress/null (intf)
+|--java.util.Formatter$FormatString/null (intf)
+|--java.time.Instant$1/null
+|--java.util.TimerTask/null
+|  |--sun.jvmstat.perfdata.monitor.CountedTimerTask/0x00007fc0c81a5500
+|  |  |--sun.jvmstat.perfdata.monitor.protocol.local.MonitoredHostProvider$NotifierTask/0x00007fc0c81a5500
+|--jdk.jfr.internal.RequestEngine$$Lambda$215/0x000000010013b440/null
+|--java.util.BitSet/null
+|--sun.security.util.SecurityProperties$$Lambda$12/0x0000000100064440/null
+|--java.security.SecureClassLoader$1/null
+|--java.lang.System/null
+|--java.lang.System$2/null
+|--com.sun.jmx.mbeanserver.Introspector/null
+|--java.util.ArrayDeque$$Lambda$198/0x0000000100162440/null
+|--jdk.jfr.Registered/null (intf)
+|--jdk.jfr.DataAmount/null (intf)
+|--jdk.jfr.internal.test.WhiteBox/null
+|--java.util.logging.Handler$1/null
+|--java.util.ServiceLoader$ProviderImpl$2/null
+|--java.lang.String$CaseInsensitiveComparator/null
+|--java.lang.module.Resolver$$Lambda$120/0x0000000100175c40/null
+|--sun.reflect.generics.reflectiveObjects.LazyReflectiveObjectGenerator/null
+|  |--sun.reflect.generics.reflectiveObjects.TypeVariableImpl/null
+|--jdk.internal.misc.JavaSecurityAccess$ProtectionDomainCache/null (intf)
+|--java.io.ObjectStreamClass$ClassDataSlot/null
+|--javax.management.remote.JMXServiceURL/null
+|--java.security.SecureClassLoader$CodeSourceKey/null
+|--jdk.internal.misc.JavaLangAccess/null (intf)
+|--java.util.ImmutableCollections$ListItr/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100127840/null
+|--jdk.jfr.Name/null (intf)
+|--jdk.jfr.internal.MetadataHandler$XmlType/null
+|--com.sun.jmx.mbeanserver.JmxMBeanServer$2/null
+|--java.util.logging.ErrorManager/null
+|--java.util.Comparator/null (intf)
+|--jdk.jfr.internal.MetadataWriter$$Lambda$214/0x000000010013b040/null
+|--java.util.ServiceLoader$ProviderImpl/null
+|--java.lang.ClassLoader/null
+|  |--jdk.internal.reflect.DelegatingClassLoader/null
+|  |--java.security.SecureClassLoader/null
+|  |  |--jdk.internal.loader.BuiltinClassLoader/null
+|  |  |  |--jdk.internal.loader.ClassLoaders$PlatformClassLoader/null
+|  |  |  |--jdk.internal.loader.ClassLoaders$AppClassLoader/null
+|  |  |  |--jdk.internal.loader.ClassLoaders$BootClassLoader/null
+|  |  |--java.net.URLClassLoader/null
+|  |  |  |--sun.rmi.server.LoaderHandler$Loader/null
+|--java.lang.SecurityManager$$Lambda$11/0x0000000100064040/null
+|--java.util.concurrent.AbstractExecutorService/null
+|  |--java.util.concurrent.ThreadPoolExecutor/null
+|  |  |--java.util.concurrent.ScheduledThreadPoolExecutor/null
+|--sun.rmi.server.LoaderHandler/null
+|--sun.util.locale.InternalLocaleBuilder$CaseInsensitiveChar/null
+|--sun.rmi.transport.tcp.TCPTransport$ConnectionHandler/null
+|--jdk.internal.misc.OSEnvironment/null
+|--java.util.ListIterator/null (intf)
+|--jdk.jfr.internal.TypeLibrary$$Lambda$197/0x0000000100162040/null
+|--jdk.jfr.internal.EventInstrumentation/null
+|--jdk.jfr.internal.MetadataHandler$FieldElement/null
+|--jdk.internal.logger.SimpleConsoleLogger$Formatting/null
+|--java.util.stream.Collectors$$Lambda$119/0x0000000100175840/null
+|--java.util.ServiceLoader$Provider/null (intf)
+|--java.util.Collections$SynchronizedMap/null
+|--java.lang.reflect.TypeVariable/null (intf)
+|--java.lang.Cloneable/null (intf)
+|--java.util.concurrent.ExecutorService/null (intf)
+|--java.rmi.server.RMIClassLoader$1/null
+|--sun.util.locale.InternalLocaleBuilder/null
+|--java.net.Socket$3/null
+|--java.util.regex.CharPredicates/null
+|--jdk.jfr.internal.ASMToolkit$$Lambda$181/0x0000000100127440/null
+|--java.lang.module.ModuleFinder$1/null
+|--jdk.jfr.internal.MetadataHandler$TypeElement/null
+|--jdk.jfr.internal.PlatformRecording$$Lambda$217/0x000000010013ac40/null
+|--sun.util.resources.Bundles$CacheKeyReference/null (intf)
+|--java.util.ServiceLoader$1/null
+|--sun.security.provider.PolicyFile$PolicyInfo/null
+|--sun.util.cldr.CLDRBaseLocaleDataMetaInfo$TZCanonicalIDMapHolder/null
+|--jdk.internal.loader.BuiltinClassLoader$$Lambda$14/0x0000000100063c40/null
+|--java.util.concurrent.Executor/null (intf)
+|--sun.reflect.generics.tree.TypeVariableSignature/null
+|--sun.util.locale.LocaleUtils/null
+|--java.lang.Class/null
+|--sun.rmi.transport.tcp.TCPConnection/null
+|--java.util.stream.Collectors$$Lambda$118/0x0000000100175440/null
+|--java.util.concurrent.RunnableScheduledFuture/null (intf)
+|--java.io.ObjectStreamField/null
+|--java.security.PrivilegedExceptionAction/null (intf)
+|--com.sun.jmx.interceptor.DefaultMBeanServerInterceptor/null
+|--sun.security.provider.PolicyFile$1/null
+|--sun.nio.fs.UnixCopyFile$Flags/null
+|--sun.util.locale.provider.BaseLocaleDataMetaInfo/null
+|--java.lang.reflect.Type/null (intf)
+|--sun.reflect.generics.tree.ClassSignature/null
+|--java.lang.Integer$IntegerCache/null
+|--java.rmi.server.RMIClassLoaderSpi/null
+|  |--java.rmi.server.RMIClassLoader$2/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100127040/null
+|--sun.nio.fs.AbstractBasicFileAttributeView$AttributesBuilder/null
+|--jdk.jfr.internal.instrument.JDKEvents/null
+|--jdk.jfr.internal.RequestEngine$RequestHook$$Lambda$216/0x000000010013a840/null
+|--java.util.concurrent.ScheduledFuture/null (intf)
+|--com.sun.jmx.interceptor.MBeanServerInterceptor/null (intf)
+|--sun.net.www.protocol.jrt.JavaRuntimeURLConnection$$Lambda$13/0x0000000100063840/null
+|--sun.util.logging.PlatformLogger/null
+|--java.util.ServiceLoader$3/null
+|--jdk.internal.jimage.ImageBufferCache$2/null
+|--sun.nio.fs.UnixCopyFile$2/null
+|--java.lang.reflect.GenericDeclaration/null (intf)
+|--jdk.management.jfr.FlightRecorderMXBeanImpl$MXBeanListener/null
+|--sun.rmi.transport.Connection/null (intf)
+|--java.rmi.server.RMIClassLoader/null
+|--sun.rmi.transport.Transport/null
+|  |--sun.rmi.transport.tcp.TCPTransport/null
+|--jdk.internal.misc.Signal$NativeHandler/null
+|--sun.util.locale.BaseLocale$Key/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100175040/null
+|--java.util.concurrent.Delayed/null (intf)
+|--jdk.jfr.internal.SecuritySupport$2/null
+|--sun.nio.fs.UnixCopyFile/null
+|--java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock/null
+|--java.lang.reflect.AnnotatedElement/null (intf)
+|--jdk.jfr.FlightRecorderListener/null (intf)
+|--java.util.ServiceLoader$2/null
+|--java.io.ObjectStreamClass$ExceptionInfo/null
+|--jdk.jfr.internal.EventInstrumentation$$Lambda$182/0x0000000100126c40/null
+|--java.nio.file.Path/null (intf)
+|--sun.jvmstat.monitor.MonitoredHostService/0x00007fc0c81a5500 (intf)
+|--sun.rmi.transport.tcp.TCPEndpoint/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$172/0x000000010013a440/null
+|--java.util.concurrent.RunnableFuture/null (intf)
+|--jdk.jfr.internal.JVMUpcalls/null
+|--javax.management.NotificationFilter/null (intf)
+|--jdk.internal.jimage.ImageBufferCache/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100161440/null
+|--java.nio.file.Watchable/null (intf)
+|--java.util.ServiceLoader$LazyClassPathLookupIterator/null
+|--java.lang.String/null
+|--java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock/null
+|--sun.util.locale.provider.TimeZoneNameUtility$TimeZoneNameGetter/null
+|--java.util.Hashtable$Entry/null
+|--sun.util.locale.BaseLocale/null
+|--sun.util.resources.Bundles$CacheKey/null
+|--sun.rmi.transport.Endpoint/null (intf)
+|--java.util.stream.Collectors$$Lambda$117/0x0000000100174c40/null
+|--java.util.concurrent.Future/null (intf)
+|--sun.jvmstat.monitor.MonitoredHost/0x00007fc0c81a5500
+|  |--sun.jvmstat.perfdata.monitor.protocol.local.MonitoredHostProvider/0x00007fc0c81a5500
+|  |--sun.jvmstat.perfdata.monitor.protocol.file.MonitoredHostProvider/0x00007fc0c81a5500
+|  |--sun.jvmstat.perfdata.monitor.protocol.rmi.MonitoredHostProvider/0x00007fc0c81a5500
+|--jdk.jfr.internal.EventWriter/null
+|--javax.management.NotificationListener/null (intf)
+|--java.lang.Long$LongCache/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100126840/null
+|--java.lang.module.Resolver/null
+|--java.lang.CharSequence/null (intf)
+|--sun.util.locale.provider.LocaleServiceProviderPool$LocalizedObjectGetter/null (intf)
+|--jdk.internal.misc.Signal/null
+|--jdk.internal.agent.Agent$StatusCollector/null
+|  |--jdk.internal.agent.Agent$TextStatusCollector/null
+|--sun.security.provider.ByteArrayAccess/null
+|--java.lang.invoke.LambdaForm$MH/0x000000010013a040/null
+|--java.util.concurrent.CopyOnWriteArrayList$COWIterator/null
+|--jdk.jfr.internal.SecuritySupport$RunnableWithCheckedException/null (intf)
+|--sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl/null
+|--sun.tools.jstatd.RemoteHostImpl/0x00007fc0c81a5500
+|--jdk.jfr.FlightRecorder/null
+|--java.lang.invoke.LambdaForm$MH/0x0000000100161040/null
+|--java.lang.Comparable/null (intf)
+|--java.lang.module.Configuration/null
+|--java.io.ObjectStreamClass$FieldReflector/null
+|--jdk.jfr.internal.Bits/null
+|--java.lang.Terminator$1/null
+|--java.lang.module.Resolver$$Lambda$116/0x0000000100174840/null
+|--sun.util.resources.Bundles/null
+|--jdk.internal.loader.Resource/null
+|  |--sun.net.www.protocol.jrt.JavaRuntimeURLConnection$1/null
+|--java.security.Policy$1/null
+|--sun.util.locale.LocaleObjectCache/null
+|  |--java.util.ResourceBundle$Control$CandidateListCache/null
+|  |--sun.util.locale.BaseLocale$Cache/null
+|  |--java.util.Locale$Cache/null
+|--java.time.format.DateTimeFormatterBuilder$3/null
+|--java.lang.reflect.ParameterizedType/null (intf)
+|--java.util.Spliterators$1Adapter/null
+|--sun.rmi.registry.RegistryImpl_Skel/null
+|--sun.nio.fs.AbstractBasicFileAttributeView/null
+|  |--sun.nio.fs.UnixFileAttributeViews$Basic/null
+|  |  |--sun.nio.fs.UnixFileAttributeViews$Posix/null
+|  |  |  |--sun.nio.fs.UnixFileAttributeViews$Unix/null
+|--java.lang.invoke.LambdaForm$MH/0x0000000100126440/null
+|--jdk.jfr.Recording/null
+|--java.io.Serializable/null (intf)
+|--java.util.ImmutableCollections$SetN$SetNIterator/null
+|--jdk.internal.misc.Signal$Handler/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100139c40/null
+|--jdk.jfr.internal.SettingsManager$InternalSetting/null
+|--java.security.Policy$PolicyInfo/null
+|--java.util.Locale/null
+|--java.time.format.DateTimePrintContext/null
+|--sun.util.resources.LocaleData$LocaleDataStrategy/null
+|--sun.security.util.MessageDigestSpi2/null (intf)
+|--java.util.Spliterators$ArraySpliterator/null
+|--sun.nio.fs.DynamicFileAttributeView/null (intf)
+|--sun.reflect.generics.visitor.Reifier/null
+|--javax.management.StandardMBean$MBeanInfoSafeAction/null
+|--sun.net.util.IPAddressUtil/null
+|--java.lang.Terminator/null
+|--java.lang.module.Resolver$$Lambda$115/0x0000000100174440/null
+|--sun.rmi.runtime.RuntimeUtil$1/null
+|--sun.jvmstat.perfdata.monitor.protocol.rmi.MonitoredHostRmiService/0x00007fc0c81a5500
+|--jdk.jfr.internal.MetadataDescriptor$Attribute/null
+|--sun.net.util.URLUtil/null
+|--sun.util.resources.Bundles$Strategy/null (intf)
+|--sun.nio.fs.UnixFileSystemProvider$3/null
+|--sun.util.logging.PlatformLogger$ConfigurableBridge$LoggerConfiguration/null
+|  |--sun.util.logging.internal.LoggingProviderImpl$JULWrapper/null
+|  |--jdk.internal.logger.SimpleConsoleLogger/null
+|  |  |--jdk.internal.logger.SurrogateLogger/null
+|--sun.security.jca.GetInstance$Instance/null
+|--jdk.internal.loader.AbstractClassLoaderValue$Memoizer/null
+|--java.nio.file.attribute.PosixFileAttributeView/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100126040/null
+|--sun.reflect.generics.visitor.TypeTreeVisitor/null (intf)
+|--jdk.jfr.Timestamp/null (intf)
+|--jdk.management.jfr.StreamManager/null
+|--sun.net.util.SocketExceptions/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$173/0x0000000100139840/null
+|--jdk.jfr.internal.MetadataDescriptor$Element/null
+|--java.lang.StringUTF16/null
+|--sun.util.resources.LocaleData$1/null
+|--sun.jvmstat.monitor.HostIdentifier/0x00007fc0c81a5500
+|--java.security.Policy/null
+|  |--sun.security.provider.PolicyFile/null
+|--java.nio.file.attribute.FileOwnerAttributeView/null (intf)
+|--jdk.jfr.internal.RepositoryChunk$$Lambda$224/0x0000000100160840/null
+|--java.util.ServiceLoader$ModuleServicesLookupIterator/null
+|--jdk.management.jfr.EventTypeInfo/null
+|--sun.reflect.generics.tree.MethodTypeSignature/null
+|--java.util.concurrent.locks.ReentrantReadWriteLock/null
+|--java.lang.module.Resolver$$Lambda$114/0x0000000100174040/null
+|--jdk.jfr.internal.MetadataWriter/null
+|--sun.util.locale.provider.CalendarDataUtility/null
+|--java.util.logging.Formatter/null
+|  |--java.util.logging.SimpleFormatter/null
+|--jdk.internal.jimage.ImageLocation/null
+|--java.nio.ByteOrder/null
+|--java.nio.file.attribute.BasicFileAttributeView/null (intf)
+|--jdk.jfr.internal.EventInstrumentation$$Lambda$183/0x0000000100125c40/null
+|--java.util.ServiceLoader/null
+|--jdk.management.jfr.ConfigurationInfo/null
+|--sun.reflect.generics.tree.Signature/null (intf)
+|--java.util.concurrent.locks.ReadWriteLock/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100139440/null
+|--jdk.jfr.internal.MetadataDescriptor/null
+|--java.lang.Class$1/null
+|--sun.net.spi.DefaultProxySelector$4/null
+|--jdk.jfr.internal.PlatformRecorder/null
+|--jdk.internal.jimage.decompressor.Decompressor/null
+|--java.util.concurrent.ScheduledExecutorService/null (intf)
+|--java.nio.file.attribute.FileAttributeView/null (intf)
+|--java.lang.ClassLoader$1/null
+|--java.io.ObjectInput/null (intf)
+|--jdk.management.jfr.RecordingInfo/null
+|--java.lang.module.Resolver$$Lambda$113/0x0000000100173c40/null
+|--sun.security.jca.GetInstance/null
+|--jdk.internal.org.objectweb.asm.AnnotationVisitor/null
+|  |--jdk.internal.org.objectweb.asm.commons.RemappingAnnotationAdapter/null
+|  |--jdk.internal.org.objectweb.asm.tree.AnnotationNode/null
+|  |--jdk.internal.org.objectweb.asm.AnnotationWriter/null
+|--com.sun.jmx.mbeanserver.Repository/null
+|--sun.reflect.generics.tree.ClassTypeSignature/null
+|--sun.net.spi.DefaultProxySelector$NonProxyInfo/null
+|--java.io.RandomAccessFile$1/null
+|--jdk.jfr.internal.OldObjectSample/null
+|--sun.util.locale.provider.AvailableLanguageTags/null (intf)
+|--jdk.internal.jimage.ImageStringsReader/null
+|--sun.rmi.runtime.RuntimeUtil/null
+|--java.nio.file.attribute.AttributeView/null (intf)
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100125840/null
+|--java.lang.reflect.InvocationHandler/null (intf)
+|--java.lang.reflect.ReflectAccess/null
+|--jdk.jfr.internal.SecuritySupport$$Lambda$174/0x0000000100139040/null
+|--sun.reflect.generics.tree.VoidDescriptor/null
+|--jdk.jfr.Description/null (intf)
+|--jdk.internal.org.objectweb.asm.Frame/null
+|--jdk.jfr.Configuration/null
+|--java.util.concurrent.atomic.AtomicBoolean/null
+|--sun.net.NetProperties$1/null
+|--sun.util.locale.provider.LocaleServiceProviderPool/null
+|--sun.reflect.generics.tree.SimpleClassTypeSignature/null
+|--sun.util.cldr.CLDRLocaleProviderAdapter$1/null
+|--jdk.internal.jimage.ImageStrings/null (intf)
+|--sun.nio.fs.UnixFileAttributeViews/null
+|--java.lang.reflect.Proxy/null
+|  |--com.sun.proxy.$Proxy6/null
+|  |--com.sun.proxy.$Proxy5/null
+|  |--com.sun.proxy.$Proxy4/null
+|  |--com.sun.proxy.jdk.proxy1.$Proxy0/0x00007fc0c81a5500
+|  |--com.sun.proxy.$Proxy3/null
+|  |--com.sun.proxy.$Proxy2/null
+|  |--jdk.jfr.internal.instrument.$Proxy28/null
+|  |--com.sun.proxy.jdk.proxy2.$Proxy1/0x00007fc054109290
+|  |--jdk.jfr.internal.instrument.$Proxy27/null
+|  |--jdk.jfr.internal.instrument.$Proxy26/null
+|  |--com.sun.proxy.$Proxy25/null
+|  |--com.sun.proxy.jdk.proxy3.$Proxy24/null
+|  |--com.sun.proxy.$Proxy23/null
+|  |--com.sun.proxy.$Proxy22/null
+|  |--com.sun.proxy.$Proxy21/null
+|  |--com.sun.proxy.jdk.proxy3.$Proxy20/null
+|  |--com.sun.proxy.$Proxy19/null
+|  |--com.sun.proxy.$Proxy18/null
+|  |--com.sun.proxy.jdk.proxy3.$Proxy17/null
+|  |--com.sun.proxy.$Proxy16/null
+|  |--com.sun.proxy.$Proxy15/null
+|  |--com.sun.proxy.$Proxy14/null
+|  |--com.sun.proxy.$Proxy13/null
+|  |--com.sun.proxy.$Proxy12/null
+|  |--com.sun.proxy.$Proxy11/null
+|  |--com.sun.proxy.$Proxy10/null
+|  |--com.sun.proxy.$Proxy9/null
+|  |--com.sun.proxy.$Proxy8/null
+|  |--com.sun.proxy.$Proxy7/null
+|--sun.rmi.runtime.RuntimeUtil$GetInstanceAction/null
+|--jdk.internal.reflect.LangReflectAccess/null (intf)
+|--java.nio.Buffer$1/null
+|--java.lang.module.Resolver$$Lambda$112/0x0000000100173840/null
+|--java.util.stream.IntStream/null (intf)
+|--sun.rmi.runtime.Log$LoggerLog$1/null
+|--sun.reflect.generics.tree.LongSignature/null
+|--jdk.jfr.ContentType/null (intf)
+|--sun.net.NetProperties/null
+|--java.security.MessageDigestSpi/null
+|  |--sun.security.provider.DigestBase/null
+|  |  |--sun.security.provider.SHA/null
+|  |--java.security.MessageDigest/null
+|  |  |--java.security.MessageDigest$Delegate/null
+|--java.util.EventListener/null (intf)
+|--com.sun.jmx.mbeanserver.JmxMBeanServer$1/null
+|--jdk.jfr.internal.RepositoryChunk$1/null
+|--sun.util.locale.StringTokenIterator/null
+|--java.lang.reflect.Modifier/null
+|--jdk.internal.misc.JavaNioAccess/null (intf)
+|--java.util.StringTokenizer/null
+|--java.lang.invoke.LambdaForm$DMH/0x0000000100138c40/null
+|--jdk.jfr.Timespan/null (intf)
+|--sun.net.spi.DefaultProxySelector$1/null
+|--sun.util.locale.provider.TimeZoneNameUtility/null
+|--jdk.internal.org.objectweb.asm.Label/null

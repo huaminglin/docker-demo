@@ -1,0 +1,3 @@
+docker exec demoattach jcmd 1 ManagementAgent.stop
+1:
+Command executed successfully

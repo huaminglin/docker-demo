@@ -1,0 +1,11 @@
+docker exec demoattach jcmd 1 VM.symboltable
+1:
+SymbolTable statistics:
+Number of buckets       :     20011 =    160088 bytes, each 8
+Number of entries       :     54136 =   1299264 bytes, each 24
+Number of literals      :     54136 =   2179792 bytes, avg  40.265
+Total footprint         :           =   3639144 bytes
+Average bucket size     :     2.705
+Variance of bucket size :     2.703
+Std. dev. of bucket size:     1.644
+Maximum bucket size     :        12

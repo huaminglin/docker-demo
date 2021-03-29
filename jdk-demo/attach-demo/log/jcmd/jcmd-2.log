@@ -1,0 +1,12 @@
+docker exec demoattach jcmd 1 Compiler.codecache
+1:
+CodeHeap 'non-profiled nmethods': size=120032Kb used=647Kb max_used=1096Kb free=119384Kb
+ bounds [0x00007fc0b83ca000, 0x00007fc0b863a000, 0x00007fc0bf902000]
+CodeHeap 'profiled nmethods': size=120028Kb used=874Kb max_used=4310Kb free=119153Kb
+ bounds [0x00007fc0b0e93000, 0x00007fc0b12d3000, 0x00007fc0b83ca000]
+CodeHeap 'non-nmethods': size=5700Kb used=1135Kb max_used=1170Kb free=4564Kb
+ bounds [0x00007fc0b0902000, 0x00007fc0b0b72000, 0x00007fc0b0e93000]
+ total_blobs=1364 nmethods=869 adapters=407
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0

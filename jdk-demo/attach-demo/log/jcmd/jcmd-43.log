@@ -1,0 +1,155 @@
+docker exec demoattach jcmd 1 VM.systemdictionary
+1:
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @30b078c0 class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @5ff4244b class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @26de5443 class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @4d05613d class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @5326996c class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @5faf568b class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @4dc5c358 class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @603f55f9 class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @1dd7cbbc class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @1775b0db class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @2eab0106 class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for jdk.internal.reflect.DelegatingClassLoader @19a3771d class loader statistics:
+Number of buckets       :         1 =         8 bytes, each 8
+Number of entries       :         1 =        24 bytes, each 24
+Total footprint         :           =        32 bytes
+Average bucket size     :     1.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         1
+System Dictionary for sun.rmi.server.LoaderHandler$Loader @6641e5f6 class loader statistics:
+Number of buckets       :       107 =       856 bytes, each 8
+Number of entries       :        21 =       504 bytes, each 24
+Total footprint         :           =      1360 bytes
+Average bucket size     :     0.196
+Variance of bucket size :     0.195
+Std. dev. of bucket size:     0.442
+Maximum bucket size     :         2
+System Dictionary for 'app' class loader statistics:
+Number of buckets       :      1009 =      8072 bytes, each 8
+Number of entries       :        92 =      2208 bytes, each 24
+Total footprint         :           =     10280 bytes
+Average bucket size     :     0.091
+Variance of bucket size :     0.095
+Std. dev. of bucket size:     0.308
+Maximum bucket size     :         2
+System Dictionary for 'platform' class loader statistics:
+Number of buckets       :       107 =       856 bytes, each 8
+Number of entries       :        12 =       288 bytes, each 24
+Total footprint         :           =      1144 bytes
+Average bucket size     :     0.112
+Variance of bucket size :     0.100
+Std. dev. of bucket size:     0.316
+Maximum bucket size     :         1
+System Dictionary for 'bootstrap' class loader statistics:
+Number of buckets       :      1009 =      8072 bytes, each 8
+Number of entries       :      2233 =     53592 bytes, each 24
+Total footprint         :           =     61664 bytes
+Average bucket size     :     2.213
+Variance of bucket size :     2.245
+Std. dev. of bucket size:     1.498
+Maximum bucket size     :         8
+Placeholder Table statistics:
+Number of buckets       :      1009 =      8072 bytes, each 8
+Number of entries       :         0 =         0 bytes, each 0
+Total footprint         :           =      8072 bytes
+Average bucket size     :     0.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.000
+Maximum bucket size     :         0
+LoaderConstraints Table statistics:
+Number of buckets       :       107 =       856 bytes, each 8
+Number of entries       :        17 =       408 bytes, each 24
+Total footprint         :           =      1264 bytes
+Average bucket size     :     0.159
+Variance of bucket size :     0.152
+Std. dev. of bucket size:     0.390
+Maximum bucket size     :         2
+ProtectionDomainCache Table statistics:
+Number of buckets       :      1009 =      8072 bytes, each 8
+Number of entries       :         3 =        72 bytes, each 24
+Number of literals      :         3 =        15 bytes, avg   5.000
+Total footprint         :           =      8159 bytes
+Average bucket size     :     0.003
+Variance of bucket size :     0.003
+Std. dev. of bucket size:     0.054
+Maximum bucket size     :         1

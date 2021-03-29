@@ -1,0 +1,3 @@
+docker exec demoattach jcmd 1 JFR.stop
+1:
+java.lang.IllegalArgumentException: The option 'name' is mandatory.

@@ -1,0 +1,47 @@
+docker exec demoattach jcmd 1 VM.metaspace
+1:
+
+Total Usage - 320 loaders, 2824 classes:
+  Non-Class:  755 chunks,     15.20 MB capacity,    14.93 MB ( 98%) used,   234.84 KB (  2%) free,   696 bytes ( <1%) waste,    47.19 KB ( <1%) overhead, deallocated: 676 blocks with 87.05 KB
+      Class:  365 chunks,      1.89 MB capacity,     1.69 MB ( 90%) used,   177.83 KB (  9%) free,     8 bytes ( <1%) waste,    22.81 KB (  1%) overhead, deallocated: 73 blocks with 32.61 KB
+       Both: 1120 chunks,     17.09 MB capacity,    16.62 MB ( 97%) used,   412.66 KB (  2%) free,   704 bytes ( <1%) waste,    70.00 KB ( <1%) overhead, deallocated: 749 blocks with 119.66 KB
+
+
+Virtual space:
+  Non-class space:       16.00 MB reserved,      15.75 MB ( 98%) committed 
+      Class space:        1.00 GB reserved,       2.12 MB ( <1%) committed 
+             Both:        1.02 GB reserved,      17.88 MB (  2%) committed 
+
+
+
+Chunk freelists:
+   Non-Class:
+
+ specialized chunks:    3, capacity 3.00 KB
+       small chunks:   83, capacity 332.00 KB
+      medium chunks: (none)
+   humongous chunks: (none)
+              Total:   86, capacity=335.00 KB
+       Class:
+
+ specialized chunks: (none)
+       small chunks:   72, capacity 144.00 KB
+      medium chunks: (none)
+   humongous chunks: (none)
+              Total:   72, capacity=144.00 KB
+
+Waste (percentages refer to total committed size 17.88 MB):
+              Committed unused:    320.00 KB (  2%)
+        Waste in chunks in use:    704 bytes ( <1%)
+         Free in chunks in use:    412.66 KB (  2%)
+     Overhead in chunks in use:     70.00 KB ( <1%)
+                In free chunks:    479.00 KB (  3%)
+Deallocated from chunks in use:    119.66 KB ( <1%) (749 blocks)
+                       -total-:      1.37 MB (  8%)
+
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+
+InitialBootClassLoaderMetaspaceSize: 4.00 MB
+

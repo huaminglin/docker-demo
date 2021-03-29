@@ -1,0 +1,5 @@
+docker exec demoattach jcmd 1 JFR.start
+1:
+Started recording 2. No limit specified, using maxsize=250MB as default.
+
+Use jcmd 1 JFR.dump name=2 filename=FILEPATH to copy recording data to file.

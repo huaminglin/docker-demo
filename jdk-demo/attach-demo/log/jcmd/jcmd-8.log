@@ -1,0 +1,10 @@
+docker exec demoattach jcmd 1 Compiler.queue
+1:
+Current compiles: 
+
+C1 compile queue:
+Empty
+
+C2 compile queue:
+Empty
+

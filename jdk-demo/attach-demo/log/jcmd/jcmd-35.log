@@ -1,0 +1,12 @@
+docker exec demoattach jcmd 1 VM.log
+1:
+Syntax : VM.log [options]
+
+Options: (options must be specified using the <key> or <key>=<value> syntax)
+	output : [optional] The name or index (#<index>) of output to configure. (STRING, no default value)
+	output_options : [optional] Options for the output. (STRING, no default value)
+	what : [optional] Configures what tags to log. (STRING, no default value)
+	decorators : [optional] Configures which decorators to use. Use 'none' or an empty value to remove all. (STRING, no default value)
+	disable : [optional] Turns off all logging and clears the log configuration. (BOOLEAN, no default value)
+	list : [optional] Lists current log configuration. (BOOLEAN, no default value)
+	rotate : [optional] Rotates all logs. (BOOLEAN, no default value)

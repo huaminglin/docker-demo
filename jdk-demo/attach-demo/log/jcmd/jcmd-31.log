@@ -1,0 +1,7 @@
+docker exec demoattach jcmd 1 VM.command_line
+1:
+VM Arguments:
+jvm_args: -Dapplication.home=/usr/local/openjdk-11 -Xms8m -Djava.rmi.server.hostname=server01 -XX:-DisableAttachMechanism -Djava.rmi.server.logCalls=true -Djava.security.policy=/jstatd.policy -Djdk.module.main=jdk.jstatd 
+java_command: jdk.jstatd/sun.tools.jstatd.Jstatd -p 10086
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD

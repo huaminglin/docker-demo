@@ -1,0 +1,3 @@
+docker exec demoattach jcmd 1 VM.print_touched_methods
+1:
+VM.print_touched_methods command requires -XX:+LogTouchedMethods
