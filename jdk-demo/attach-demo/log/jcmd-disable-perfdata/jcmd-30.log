@@ -1,0 +1,16 @@
+docker exec demoattach jcmd 1 VM.classloaders
+1:
++-- <bootstrap>
+      |     
+      +-- jdk.internal.reflect.DelegatingClassLoader (+ 20 more)
+      |           
+      +-- "platform", jdk.internal.loader.ClassLoaders$PlatformClassLoader
+            |     
+            +-- "app", jdk.internal.loader.ClassLoaders$AppClassLoader
+                  |     
+                  +-- jdk.internal.reflect.DelegatingClassLoader
+                  |           
+                  +-- sun.rmi.server.LoaderHandler$Loader
+                        |     
+                        +-- jdk.internal.reflect.DelegatingClassLoader
+                                    

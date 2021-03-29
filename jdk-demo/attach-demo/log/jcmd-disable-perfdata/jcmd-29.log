@@ -1,0 +1,34 @@
+docker exec demoattach jcmd 1 VM.classloader_stats
+1:
+ClassLoader         Parent              CLD*               Classes   ChunkSz   BlockSz  Type
+0x000000010000a550  0x0000000000000000  0x00007f9d142c3e70       1      6144      3872  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ecc320       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ee2a70       1      6144      3872  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0f079c0       1      3072      2024  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ec94a0       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9d142c90f0       1      6144      3872  jdk.internal.reflect.DelegatingClassLoader
+0x0000000100010a38  0x0000000100010eb0  0x00007f9d1413eab0      30    188416    118176  jdk.internal.loader.ClassLoaders$AppClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ebd490       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ec63b0       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ee3870       1      6144      3872  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ecdb80       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0f07050       1      3072      2024  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ecb3f0       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x0000000100152e00  0x0000000100010a38  0x00007f9c941201f0       1     10240      5360  sun.rmi.server.LoaderHandler$Loader
+0x0000000000000000  0x0000000000000000  0x00007f9d1408f9d0    2477  16633856  16549376  <boot class loader>
+                                                               504   1464320    931344   + unsafe anonymous classes
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ecb940       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ec91a0       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x0000000100010eb0  0x0000000000000000  0x00007f9d1417e4d0       2     10240      6312  jdk.internal.loader.ClassLoaders$PlatformClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0ecd810       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0eca020       1      3072      2024  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9d142c6f70       1      6144      3872  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0f09250       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0f11320       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9cb0f34480       1      6144      3960  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000100010a38  0x00007f9d142c6d00       1      6144      3872  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000000000000  0x00007f9d142c8b60       1      6144      3952  jdk.internal.reflect.DelegatingClassLoader
+0x000000010000a550  0x0000000100152e00  0x00007f9c94135700       1      6144      3952  jdk.internal.reflect.DelegatingClassLoader
+Total = 27                                                    3037  18439168  17695296  
+ChunkSz: Total size of all allocated metaspace chunks
+BlockSz: Total size of all allocated metaspace blocks (each chunk has several blocks)

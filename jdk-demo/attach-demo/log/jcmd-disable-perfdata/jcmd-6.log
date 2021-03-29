@@ -1,0 +1,13 @@
+docker exec demoattach jcmd 1 Compiler.directives_print
+1:
+
+Directive: (default)
+ matching: *.*
+ c1 directives:
+  inline: -
+  Enable:true Exclude:false BreakAtExecute:false BreakAtCompile:false Log:false PrintAssembly:false PrintInlining:false PrintNMethods:false BackgroundCompilation:true ReplayInline:false DumpReplay:false DumpInline:false CompilerDirectivesIgnoreCompileCommands:false DisableIntrinsic: BlockLayoutByFrequency:true PrintOptoAssembly:false PrintIntrinsics:false TraceSpilling:false Vectorize:false VectorizeDebug:0 CloneMapDebug:false IGVPrintLevel:0 MaxNodeLimit:80000 ZOptimizeLoadBarriers:true 
+
+ c2 directives:
+  inline: -
+  Enable:true Exclude:false BreakAtExecute:false BreakAtCompile:false Log:false PrintAssembly:false PrintInlining:false PrintNMethods:false BackgroundCompilation:true ReplayInline:false DumpReplay:false DumpInline:false CompilerDirectivesIgnoreCompileCommands:false DisableIntrinsic: BlockLayoutByFrequency:true PrintOptoAssembly:false PrintIntrinsics:false TraceSpilling:false Vectorize:false VectorizeDebug:0 CloneMapDebug:false IGVPrintLevel:0 MaxNodeLimit:80000 ZOptimizeLoadBarriers:true 
+

@@ -3,7 +3,8 @@
 cd $(dirname $0)
 
 # attachflag="-XX:+DisableAttachMechanism"
-attachflag="-XX:-DisableAttachMechanism"
+# attachflag="-XX:-DisableAttachMechanism"
+attachflag="-XX:-UsePerfData"
 
 docker stop demoattach
 docker rm demoattach

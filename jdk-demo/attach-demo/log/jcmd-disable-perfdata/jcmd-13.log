@@ -1,0 +1,6 @@
+docker exec demoattach jcmd 1 GC.heap_info
+1:
+ garbage-first heap   total 12288K, used 4292K [0x0000000083600000, 0x0000000100000000)
+  region size 1024K, 1 young (1024K), 0 survivors (0K)
+ Metaspace       used 17222K, capacity 17937K, committed 18304K, reserved 1064960K
+  class space    used 1828K, capacity 2102K, committed 2176K, reserved 1048576K

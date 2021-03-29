@@ -1,0 +1,5 @@
+docker exec demoattach jcmd 1 JFR.dump
+1:
+Dumped recording, 700.4 kB written to:
+
+/hotspot-pid-1-2021_03_29_11_29_39.jfr

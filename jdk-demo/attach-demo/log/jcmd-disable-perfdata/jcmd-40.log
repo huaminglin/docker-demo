@@ -1,0 +1,11 @@
+docker exec demoattach jcmd 1 VM.stringtable
+1:
+StringTable statistics:
+Number of buckets       :     65536 =    524288 bytes, each 8
+Number of entries       :      8535 =    136560 bytes, each 16
+Number of literals      :      8535 =    541984 bytes, avg  63.501
+Total footprsize_t         :           =   1202832 bytes
+Average bucket size     :     0.130
+Variance of bucket size :     0.131
+Std. dev. of bucket size:     0.362
+Maximum bucket size     :         4

@@ -1,0 +1,4 @@
+docker exec demoattach jcmd 1 VM.version
+1:
+OpenJDK 64-Bit Server VM version 11.0.8+10
+JDK 11.0.8
