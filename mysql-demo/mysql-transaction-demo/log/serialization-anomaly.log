@@ -1,0 +1,8 @@
+sql 1   sleep(1)
+sql 1   0
+sql 1: commit
+sql 1: commit
+sql 2   sleep(2)
+sql 2   0
+sql 2: commit
+sql 2: commit

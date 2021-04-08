@@ -1,0 +1,32 @@
+sql 1   @amount := value
+sql 1   100
+sql 2   @amount := value
+sql 2   100
+sql 1: sleep 1 second   now()
+sql 1: sleep 1 second   2021-04-08 09:55:42
+sql 2: sleeping 2 seconds ...   now()
+sql 2: sleeping 2 seconds ...   2021-04-08 09:55:42
+sql 1   now()   sleep(1)
+sql 1   2021-04-08 09:55:42     0
+sql 1: sleep 5 seconds ...      now()
+sql 1: sleep 5 seconds ...      2021-04-08 09:55:43
+sql 2   now()   sleep(2)
+sql 2   2021-04-08 09:55:42     0
+sql 1   now()   sleep(5)
+sql 1   2021-04-08 09:55:43     0
+sql 1   now()   id      value
+sql 1   2021-04-08 09:55:48     1       99
+sql 1: commit
+sql 1: commit
+sql 2: sleeping 2 seconds ...   now()   @amount - 1
+sql 2: sleeping 2 seconds ...   2021-04-08 09:55:48     99
+sql 1   now()   id      value
+sql 1   2021-04-08 09:55:48     1       99
+sql 2   now()   sleep(2)
+sql 2   2021-04-08 09:55:48     0
+sql 2   now()   id      value
+sql 2   2021-04-08 09:55:50     1       100
+sql 2: commit
+sql 2: commit
+sql 2   now()   id      value
+sql 2   2021-04-08 09:55:50     1       99

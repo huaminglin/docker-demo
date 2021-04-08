@@ -1,0 +1,20 @@
+sql 2: sleeping 2 seconds ...
+sql 2: sleeping 2 seconds ...
+sql 1: sleep 1 second
+sql 1: sleep 1 second
+SLEEP(1)
+0
+sql 1: sleep 5 seconds after 0 -> 1 ...
+sql 1: sleep 5 seconds after 0 -> 1 ...
+sleep(2)
+0
+sql 2   id
+sql 2   0
+sql 2: commit
+sql 2: commit
+SLEEP(5)
+0
+sql 1   id
+sql 1   1
+sql 1: commit
+sql 1: commit

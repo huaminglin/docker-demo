@@ -1,0 +1,5 @@
+1
+1
+1/0
+NULL
+ERROR 1054 (42S22) at line 4: Unknown column 'a' in 'field list'

@@ -1,0 +1,37 @@
+sql 1: sleep 2 second
+sql 1: sleep 2 second
+sleep(0.1)
+0
+sql 2   id      name
+sql 2   0       name0
+sql 2: sleeping 1 seconds ...
+sql 2: sleeping 1 seconds ...
+sleep(1)
+0
+sql 2 first read: before txn-1 insert   id      name
+sql 2 first read: before txn-1 insert   0       name0
+sql 2: sleeping 2 seconds ...
+sql 2: sleeping 2 seconds ...
+sleep(2)
+0
+sql1 inserted
+sql1 inserted
+sql 1: sleep 5 seconds ...
+sql 1: sleep 5 seconds ...
+sleep(2)
+0
+sql 2 second read: when txn-1 is runing insert  id      name
+sql 2 second read: when txn-1 is runing insert  0       name0
+sql 2: sleeping 5 seconds ...
+sql 2: sleeping 5 seconds ...
+sleep(5)
+0
+sql 1: commit
+sql 1: commit
+sleep(5)
+0
+sql 2 third read: after txn-1 insert    id      name
+sql 2 third read: after txn-1 insert    0       name0
+sql 2 third read: after txn-1 insert    1       txn1
+sql 2: commit
+sql 2: commit
