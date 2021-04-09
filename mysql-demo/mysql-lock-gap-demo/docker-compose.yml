@@ -1,0 +1,30 @@
+version: '3.3'
+networks:
+  mysql:
+    driver: bridge
+services:
+  server:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=demo
+      - MYSQL_DATABASE=demo
+      - MYSQL_USER=demo
+      - MYSQL_PASSWORD=demo
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 6603:3306
+    command: ["--character-set-server=utf8", "--collation-server=utf8_general_ci"]
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./sql:/sql
+    networks:
+      - mysql
+  client:
+    image: mysql:8.0
+    entrypoint: /bin/bash
+    volumes:
+      - ./sql:/sql
+    stdin_open: true
+    tty: true
+    networks:
+      - mysql
