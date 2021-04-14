@@ -1,0 +1,33 @@
+# http-nio-8080-BlockPoller
++org.apache.tomcat.util.net.AbstractEndpoint
+# org.apache.tomcat.util.net.NioEndpoint
++org.apache.tomcat.util.net.NioBlockingSelector$BlockPoller
+org.apache.tomcat.util.net.NioBlockingSelector
+org.apache.tomcat.util.net.NioSelectorPool
+
+# Catalina-utility-1
+org.apache.catalina.core.StandardServer
+org.apache.tomcat.util.threads.ScheduledThreadPoolExecutor
+org.apache.tomcat.util.threads.TaskThreadFactory
+org.apache.tomcat.util.threads.TaskThread
+org.apache.tomcat.util.threads.TaskThread.WrappingRunnable
+
+
+## http-nio-8080-exec-1
++org.apache.tomcat.util.net.AbstractEndpoint
+#org.apache.tomcat.util.net.NioEndpoint
+org.apache.tomcat.util.threads.TaskQueue
+org.apache.catalina.connector.Connector
++org.apache.coyote.AbstractProtocol
+
+# http-nio-8080-ClientPoller
+org.apache.tomcat.util.net.NioEndpoint
+org.apache.tomcat.util.net.NioEndpoint.Poller
+
+# http-nio-8080-Acceptor
+org.apache.tomcat.util.net.Acceptor
+
+# Shutdown Hook
++org.apache.catalina.startup.Catalina$CatalinaShutdownHook
+
++java.lang.Thread&&&&context||stacktrace

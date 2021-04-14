@@ -110,7 +110,7 @@
   <!--                       that RFC 7233 clarified that Range headers are -->
   <!--                       only valid for GET requests. [true]            -->
 
-    <servlet>
+    <!-- <servlet>
         <servlet-name>default</servlet-name>
         <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
         <init-param>
@@ -122,7 +122,7 @@
             <param-value>false</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
-    </servlet>
+    </servlet> -->
 
 
   <!-- The JSP page compiler and execution servlet, which is the mechanism  -->
@@ -432,10 +432,10 @@
   <!-- web.xml deployment descriptor) to enable these services              -->
 
     <!-- The mapping for the default servlet -->
-    <servlet-mapping>
+    <!-- <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping> -->
 
     <!-- The mappings for the JSP servlet -->
     <servlet-mapping>

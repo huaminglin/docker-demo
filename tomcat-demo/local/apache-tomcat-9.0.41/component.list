@@ -1,0 +1,47 @@
+org.apache.catalina.startup.Bootstrap
+org.apache.catalina.startup.Catalina
+org.apache.catalina.servlets.DefaultServlet&&<init>||service
+
+org.apache.tomcat.websocket.server.WsFilter
+org.apache.tomcat.util.net.NioChannel
+org.apache.tomcat.util.net.NioEndpoint
+org.apache.catalina.connector.RequestFacade
+org.apache.catalina.connector.ResponseFacade
+
+# Thread main
+org.apache.coyote.ProtocolHandler
+# org.apache.coyote.http11.Http11NioProtocol
++org.apache.tomcat.util.net.AbstractEndpoint$Handler
+# org.apache.coyote.AbstractProtocol.ConnectionHandler
++org.apache.catalina.Valve&&<init>||invoke
+# org.apache.catalina.core.StandardEngineValve
+# org.apache.catalina.core.StandardHostValve
+# org.apache.catalina.valves.AbstractAccessLogValve
+# org.apache.catalina.core.StandardContextValve
+# org.apache.catalina.connector.CoyoteAdapter
+# org.apache.catalina.valves.ErrorReportValve
+# ErrorReportValve[StandardEngine[Catalina].StandardHost[localhost]]
+# org.apache.catalina.core.StandardWrapperValve
+org.apache.catalina.authenticator.AuthenticatorBase
+# NonLoginAuthenticator[StandardEngine[Catalina].StandardHost[localhost].StandardContext[/app01]]
+org.apache.tomcat.util.threads.TaskThread.WrappingRunnable
+
+# Thread http-nio-8080-Acceptor
++org.apache.tomcat.util.net.SocketWrapperBase
+# org.apache.tomcat.util.net.NioEndpoint.NioSocketWrapper
+
+# Thread http-nio-8080-ClientPoller
++org.apache.tomcat.util.net.SocketProcessorBase&&<init>||run
+# org.apache.tomcat.util.net.NioEndpoint$SocketProcessor
+
+
+# Thread http-nio-8080-exec-1
+# org.apache.tomcat.util.threads.TaskThread.WrappingRunnable
+# org.apache.tomcat.util.net.SocketProcessorBase
+# org.apache.coyote.AbstractProtocol.ConnectionHandler
++org.apache.coyote.Processor
+# org.apache.coyote.AbstractProcessorLight
+# org.apache.coyote.http11.Http11Processor
+# org.apache.tomcat.util.net.NioEndpoint.NioSocketWrapper
+org.apache.catalina.core.ApplicationFilterChain
+
