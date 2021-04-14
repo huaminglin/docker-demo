@@ -98,10 +98,12 @@ java.lang.IllegalArgumentException: requirement failed: inter.broker.listener.na
 ```
 
 Question: If inter.broker.listener.name must be a listener name defined in advertised.listeners, in which case we need to define a for KAFKA_LISTENERS but not for KAFKA_ADVERTISED_LISTENERS?
+Answer: We can define more items in KAFKA_ADVERTISED_LISTENERS than KAFKA_LISTENERS.
 
 ## Client from external network
 
 sudo docker run --rm -it confluentinc/cp-kafkacat:5.5.2 kafkacat -L -b $MY_HOST_IP:9092
+sudo docker run --rm -it confluentinc/cp-kafkacat:5.5.2 kafkacat -L -b $MY_HOST_IP:9093
 
 ```
 Metadata for all topics (from broker -1: 10.0.0.211:9092/bootstrap):
@@ -119,3 +121,32 @@ When connecting to a broker, the listener that will be returned to the client wi
 
 Question: If a client connects to 9092 on kafka01, can the client be redirected to 9093 on kafka02?
 Can kafka01 use kafka02 in its KAFKA_ADVERTISED_LISTENERS?
+Yes, we can.
+Question: Can we define two liseners with same port?
+
+Question: If KAFKA_ADVERTISED_LISTENERS are different on each brokers, does Kafka cluster merge the list and return it to its clients?
+Can we use kafkacat to print the KAFKA_ADVERTISED_LISTENERS the broker return to it?
+
+
+```
+[2021-04-14 17:41:31,990] ERROR Fatal error during SupportedServerStartable startup. Prepare to shutdown (io.confluent.support.metrics.SupportedKafka)
+java.lang.IllegalArgumentException: requirement failed: Each listener must have a different port, listeners: INTERNAL01://kafka01:9090,INTERNAL02://kafka02:9090,OUTSIDE01://kafka01:9092,OUTSIDE02://kafka02:9093
+        at kafka.utils.CoreUtils$.validate$1(CoreUtils.scala:280)
+        at kafka.utils.CoreUtils$.listenerListToEndPoints(CoreUtils.scala:291)
+        at kafka.server.KafkaConfig.advertisedListeners(KafkaConfig.scala:1653)
+        at kafka.server.KafkaConfig.validateValues(KafkaConfig.scala:1728)
+        at kafka.server.KafkaConfig.<init>(KafkaConfig.scala:1706)
+        at kafka.server.KafkaConfig.<init>(KafkaConfig.scala:1270)
+        at kafka.server.KafkaConfig$.fromProps(KafkaConfig.scala:1218)
+        at kafka.server.KafkaConfig$.fromProps(KafkaConfig.scala:1215)
+        at kafka.server.KafkaConfig.fromProps(KafkaConfig.scala)
+        at io.confluent.support.metrics.SupportedServerStartable.<init>(SupportedServerStartable.java:52)
+        at io.confluent.support.metrics.SupportedKafka.main(SupportedKafka.java:45)
+```
+
+Conclusion: "Each listener must have a different port". From this we can have a conclusion that KAFKA_ADVERTISED_LISTENERS is not supposed to export other kafka nodes.
+
+"inter.broker.listener.name must be a listener name defined in advertised.listeners" and "Each listener must have a different port", based on this, in which case KAFKA_LISTENERS and KAFKA_ADVERTISED_LISTENERS have different values?
+
+"KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka01:9090,OUTSIDE://kafka01:9092": The hostname kafka01 is not accessible on the docker host.
+But "docker run --rm -it confluentinc/cp-kafkacat:5.5.2 kafkacat -L -b $MY_HOST_IP:9092" works. Weird.
