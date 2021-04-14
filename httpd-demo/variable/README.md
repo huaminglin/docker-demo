@@ -55,6 +55,17 @@ SCRIPT_NAME=/cgi-bin/myenv.sh
 SERVER_NAME=127.0.0.1
 ```
 
+```
+ScriptAlias /cgi-bin/ "/usr/local/apache2/cgi-bin/"
+
+<Directory "/usr/local/apache2/cgi-bin">
+    AllowOverride None
+    Options None
+    Require all granted
+</Directory>
+
+```
+
 Conclusion: "REDIRECT_TARGET" is not exposed to the CGI script.
 
 ## Verify "httpd-foreground -D REDIRECT_TARGET=f -D REDIRECT_TARGET2=g" and ${REDIRECT_TARGET2}
