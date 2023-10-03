@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  master:
+    image: mysql/mysql-server:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test
+      SERVER_ID: 1
+      LOG_BIN: mysql-bin
+      LOG_SLAVE_UPDATES: 1
+    volumes:
+      - master:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - mysql-cluster
+
+  slave:
+    image: mysql/mysql-server:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test
+      SERVER_ID: 2
+      LOG_BIN: mysql-bin
+      LOG_SLAVE_UPDATES: 1
+      MYSQL_MASTER_HOST: master
+      MYSQL_MASTER_PORT: 3306
+      MYSQL_MASTER_USER: root
+      MYSQL_MASTER_PASSWORD: password
+    volumes:
+      - slave:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    networks:
+      - mysql-cluster
+
+volumes:
+  master:
+  slave:
+
+networks:
+  mysql-cluster:
